@@ -21,361 +21,345 @@ import shardhaUniversity from '../assets/home/shardhaUniversityUzbekistan.webp';
 import synaptic from '../assets/home/synaptic.webp';
 
 const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
   :root {
-    --gold: #C9A84C;
-    --gold-light: #E8C96A;
-    --gold-pale: rgba(201,168,76,0.10);
-    --cream: #FAF8F3;
-    --beige: #F2EDE4;
-    --charcoal: #1C1A17;
-    --mid: #6B6560;
-    --divider: rgba(201,168,76,0.2);
+    --brand-indigo: #6366f1;
+    --brand-indigo-light: #818cf8;
+    --brand-violet: #8b5cf6;
+    --brand-violet-light: #a78bfa;
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-500: #64748b;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+    --slate-950: #0b0f19;
+    --divider: #f1f5f9;
   }
 
   .lux-section-eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.28em;
+    gap: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--brand-indigo);
     margin-bottom: 16px;
+    background: rgba(99, 102, 241, 0.06);
+    padding: 6px 14px;
+    border-radius: 9999px;
+    border: 1px solid rgba(99, 102, 241, 0.1);
   }
 
   .lux-section-eyebrow-line {
     display: block;
-    width: 32px;
-    height: 1px;
-    background: var(--gold);
-    opacity: 0.6;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--brand-indigo);
+    opacity: 0.8;
   }
 
   .lux-serif-heading {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    line-height: 1.1;
-    color: var(--charcoal);
-    letter-spacing: -0.01em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--slate-900);
+    letter-spacing: -0.02em;
   }
 
   .lux-serif-heading em {
-    font-style: italic;
-    color: var(--gold);
+    font-style: normal;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
   }
 
   .lux-body {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
-    color: var(--mid);
-    line-height: 1.75;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    color: var(--slate-500);
+    line-height: 1.625;
   }
 
   .lux-gold-rule {
     width: 48px;
-    height: 1px;
-    background: var(--gold);
-    opacity: 0.5;
-    margin: 20px 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--brand-indigo), var(--brand-violet));
+    border-radius: 9999px;
+    margin: 16px 0;
   }
 
   /* ── Welcome ── */
   .lux-welcome {
-    background: var(--cream);
-    padding: 112px 24px;
+    background: var(--slate-50);
+    padding: 96px 24px;
     position: relative;
     overflow: hidden;
   }
 
-  .lux-welcome::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold) 40%, var(--gold) 60%, transparent);
-    opacity: 0.5;
-  }
-
   .lux-welcome-deco {
-    position: absolute;
-    top: 40px;
-    right: -20px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 320px;
-    font-weight: 600;
-    color: rgba(201,168,76,0.045);
-    line-height: 1;
-    pointer-events: none;
-    user-select: none;
-    letter-spacing: -0.05em;
+    display: none;
   }
 
   .lux-welcome-inner {
-    max-width: 1320px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
     align-items: center;
     position: relative;
     z-index: 1;
   }
 
-  .lux-welcome-heading { font-size: clamp(52px, 6vw, 80px); }
+  .lux-welcome-heading { font-size: clamp(36px, 5vw, 56px); }
 
   .lux-welcome-card {
-    border: 1px solid var(--divider);
-    background: #fff;
-    padding: 32px 36px;
-    margin: 28px 0;
+    border: 1px solid var(--slate-100);
+    background: #ffffff;
+    padding: 24px 28px;
+    margin: 24px 0;
     position: relative;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
   }
 
   .lux-welcome-card::before {
     content: '';
     position: absolute;
-    top: 0; left: 0;
-    width: 3px; height: 100%;
-    background: var(--gold);
+    top: 12px; left: 0;
+    width: 4px; height: calc(100% - 24px);
+    background: linear-gradient(to bottom, var(--brand-indigo), var(--brand-violet));
+    border-radius: 0 4px 4px 0;
   }
 
   .lux-btn-primary {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 14px 32px;
-    background: var(--charcoal);
-    color: var(--gold-light);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    gap: 8px;
+    padding: 12px 28px;
+    background: var(--slate-900);
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     border: none;
+    border-radius: 9999px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
   }
 
   .lux-btn-primary::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--gold);
-    transform: translateX(-101%);
-    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
-  .lux-btn-primary:hover::before { transform: translateX(0); }
-  .lux-btn-primary:hover { color: var(--charcoal); }
+  .lux-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.25);
+    color: #ffffff;
+  }
+  .lux-btn-primary:hover::before { opacity: 1; }
   .lux-btn-primary span, .lux-btn-primary svg { position: relative; z-index: 1; }
-  .lux-btn-primary svg { transition: transform 0.3s ease; }
+  .lux-btn-primary svg { transition: transform 0.2s ease; }
   .lux-btn-primary:hover svg { transform: translateX(3px); }
 
   .lux-welcome-panel {
-    border: 1px solid var(--divider);
-    background: #fff;
-    padding: 56px 48px;
+    border: 1px solid var(--slate-100);
+    background: #ffffff;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 28px;
+    gap: 24px;
     position: relative;
-    min-height: 420px;
-    overflow: hidden;
+    min-height: 400px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   }
 
-  .lux-welcome-panel::after {
-    content: '';
-    position: absolute;
-    bottom: 0; right: 0;
-    width: 80px; height: 80px;
-    border-right: 2px solid var(--gold);
-    border-bottom: 2px solid var(--gold);
-    opacity: 0.25;
-  }
-
-  .lux-welcome-panel::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 80px; height: 80px;
-    border-left: 2px solid var(--gold);
-    border-top: 2px solid var(--gold);
-    opacity: 0.25;
+  .lux-welcome-panel::after, .lux-welcome-panel::before {
+    display: none;
   }
 
   .lux-welcome-community-img {
     width: 100%;
-    height: 260px;
+    height: 220px;
     object-fit: cover;
     display: block;
-    border: 1px solid var(--divider);
+    border-radius: 16px;
+    border: 1px solid var(--slate-100);
   }
 
   .lux-icon-ring {
-    width: 120px; height: 120px;
-    border: 1px solid var(--divider);
+    width: 96px; height: 96px;
+    border: 1px solid var(--slate-100);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background: var(--cream);
-    overflow: hidden;
+    background: var(--slate-50);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
   }
 
   .lux-icon-ring::before {
-    content: '';
-    position: absolute;
-    inset: 6px;
-    border: 1px solid var(--gold);
-    opacity: 0.3;
+    display: none;
   }
 
   .lux-icon-ring img {
-    width: 72px; height: 72px;
+    width: 56px; height: 56px;
     object-fit: contain;
-    position: relative;
-    z-index: 1;
   }
 
   .lux-badge-pill {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    border: 1px solid var(--divider);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--brand-indigo);
+    border: 1px solid rgba(99, 102, 241, 0.15);
     padding: 6px 16px;
-    background: var(--cream);
+    background: rgba(99, 102, 241, 0.04);
+    border-radius: 9999px;
   }
 
   /* ── Services ── */
   .lux-services {
-    background: #fff;
-    padding: 112px 24px;
+    background: #ffffff;
+    padding: 96px 24px;
   }
 
-  .lux-services-inner { max-width: 1320px; margin: 0 auto; }
+  .lux-services-inner { max-width: 1200px; margin: 0 auto; }
 
   .lux-services-header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin-bottom: 72px;
+    margin-bottom: 56px;
     gap: 40px;
   }
 
-  .lux-services-heading { font-size: clamp(42px, 5vw, 64px); }
+  .lux-services-heading { font-size: clamp(32px, 4.5vw, 48px); }
 
   .lux-services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--divider);
-    border: 1px solid var(--divider);
+    gap: 24px;
+    background: transparent;
+    border: none;
   }
 
   .lux-service-card {
-    background: #fff;
-    padding: 40px 28px;
+    background: #ffffff;
+    border: 1px solid var(--slate-100);
+    border-radius: 20px;
+    padding: 32px 28px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     position: relative;
-    transition: background 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: default;
-    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
   }
 
   .lux-service-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%; height: 2px;
-    background: var(--gold);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    display: none;
   }
 
-  .lux-service-card:hover { background: var(--cream); }
-  .lux-service-card:hover::after { transform: scaleX(1); }
+  .lux-service-card:hover {
+    background: #ffffff;
+    border-color: rgba(99, 102, 241, 0.25);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.06);
+  }
 
   .lux-service-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--gold);
-    letter-spacing: 0.1em;
-    opacity: 0.8;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--brand-indigo-light);
+    opacity: 0.6;
+    position: absolute;
+    top: 24px; right: 28px;
   }
 
   .lux-service-icon {
-    width: 64px; height: 64px;
-    border: 1px solid var(--divider);
+    width: 52px; height: 52px;
+    border-radius: 12px;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
-    transition: border-color 0.3s ease, background 0.3s ease;
-    overflow: hidden;
+    background: rgba(99, 102, 241, 0.05);
+    transition: all 0.3s ease;
   }
 
   .lux-service-card:hover .lux-service-icon {
-    border-color: var(--gold);
-    background: var(--gold-pale);
+    background: rgba(99, 102, 241, 0.12);
+    transform: scale(1.05);
   }
 
-  .lux-service-icon svg { width: 32px; height: 32px; }
+  .lux-service-icon svg { width: 28px; height: 28px; }
 
   .lux-service-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--charcoal);
-    letter-spacing: 0.04em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--slate-900);
+    letter-spacing: -0.01em;
   }
 
   .lux-service-subtitle {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.2em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--brand-indigo-light);
   }
 
   .lux-service-desc {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    color: var(--mid);
-    line-height: 1.7;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--slate-500);
+    line-height: 1.6;
   }
 
   .lux-service-more {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--brand-indigo);
     margin-top: auto;
     opacity: 0;
     transform: translateY(6px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     background: none;
     border: none;
     cursor: pointer;
@@ -386,8 +370,8 @@ const styles = `
 
   /* ── Partners ── */
   .lux-partners {
-    background: var(--charcoal);
-    padding: 112px 24px;
+    background: var(--slate-950);
+    padding: 96px 24px;
     position: relative;
     overflow: hidden;
   }
@@ -397,34 +381,38 @@ const styles = `
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold) 40%, var(--gold) 60%, transparent);
-    opacity: 0.3;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
   }
 
-  .lux-partners-inner { max-width: 1320px; margin: 0 auto; }
+  .lux-partners-inner { max-width: 1200px; margin: 0 auto; }
 
   .lux-partners-top {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 64px;
-    align-items: start;
-    margin-bottom: 80px;
+    align-items: center;
+    margin-bottom: 72px;
   }
 
   .lux-partners-heading {
-    font-size: clamp(40px, 4.5vw, 60px);
-    color: var(--cream);
+    font-size: clamp(30px, 4vw, 44px);
+    color: #ffffff;
   }
 
-  .lux-partners-heading em { color: var(--gold-light); }
+  .lux-partners-heading em {
+    font-style: normal;
+    background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   .lux-partners-text {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 15px;
-    font-weight: 300;
-    color: rgba(250,248,243,0.65);
-    line-height: 1.8;
-    margin-bottom: 32px;
+    font-weight: 400;
+    color: #94a3b8;
+    line-height: 1.625;
+    margin-bottom: 24px;
   }
 
   .lux-btn-outline-gold {
@@ -432,133 +420,150 @@ const styles = `
     align-items: center;
     gap: 8px;
     padding: 12px 28px;
-    border: 1px solid rgba(201,168,76,0.4);
-    color: var(--gold-light);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     background: transparent;
+    border-radius: 9999px;
     cursor: pointer;
     transition: all 0.3s ease;
   }
 
   .lux-btn-outline-gold:hover {
-    background: var(--gold);
-    border-color: var(--gold);
-    color: var(--charcoal);
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--slate-950);
+    transform: translateY(-2px);
   }
 
   .lux-partners-right-label {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    letter-spacing: 0.24em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: rgba(250,248,243,0.35);
-    margin-bottom: 28px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 20px;
   }
 
   .lux-partner-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: rgba(201,168,76,0.1);
-    border: 1px solid rgba(201,168,76,0.1);
+    gap: 12px;
+    background: transparent;
+    border: none;
   }
 
   .lux-partner-item {
-    background: rgba(250,248,243,0.03);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 12px;
-    transition: background 0.25s ease;
+    padding: 24px 16px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
-    gap: 10px;
+    gap: 12px;
+    min-height: 120px;
   }
 
-  .lux-partner-item:hover { background: rgba(201,168,76,0.08); }
+  .lux-partner-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-3px);
+  }
 
   .lux-partner-photo {
-    width: 64px; height: 64px;
+    width: 48px; height: 48px;
     border-radius: 50%;
-    border: 1px solid rgba(201,168,76,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     object-fit: contain;
-    background: rgba(255,255,255,0.9);
+    background: #ffffff;
     display: block;
     padding: 4px;
-    transition: border-color 0.25s ease;
+    transition: all 0.3s ease;
   }
 
-  .lux-partner-item:hover .lux-partner-photo { border-color: var(--gold); }
+  .lux-partner-item:hover .lux-partner-photo {
+    border-color: var(--brand-indigo-light);
+    transform: scale(1.05);
+  }
 
   .lux-partner-name {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(250,248,243,0.5);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: rgba(255, 255, 255, 0.6);
     text-align: center;
-    transition: color 0.25s ease;
+    transition: color 0.3s ease;
   }
 
-  .lux-partner-item:hover .lux-partner-name { color: var(--gold-light); }
+  .lux-partner-item:hover .lux-partner-name { color: #ffffff; }
 
   .lux-brand-strip {
-    border-top: 1px solid rgba(201,168,76,0.12);
-    padding-top: 64px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 56px;
+    margin-top: 24px;
   }
 
   .lux-brand-strip-label {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    letter-spacing: 0.28em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: rgba(250,248,243,0.3);
-    margin-bottom: 32px;
+    color: rgba(255, 255, 255, 0.35);
+    margin-bottom: 24px;
     text-align: center;
   }
 
   .lux-brand-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 1px;
-    background: rgba(201,168,76,0.08);
-    border: 1px solid rgba(201,168,76,0.08);
+    gap: 12px;
+    background: transparent;
+    border: none;
   }
 
   .lux-brand-item {
-    background: transparent;
-    padding: 20px 12px;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 16px 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    color: rgba(250,248,243,0.3);
-    letter-spacing: 0.06em;
-    transition: color 0.25s ease, background 0.25s ease;
+    gap: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 500;
+    transition: all 0.3s ease;
     cursor: pointer;
     text-align: center;
   }
 
   .lux-brand-item:hover {
-    color: var(--gold-light);
-    background: rgba(201,168,76,0.05);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
   }
 
   .lux-brand-item img {
-    width: 52px; height: 52px;
+    width: 40px; height: 40px;
     object-fit: contain;
-    opacity: 0.5;
-    transition: opacity 0.25s ease;
-    background: rgba(255,255,255,0.9);
-    border-radius: 4px;
-    padding: 4px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 3px;
     display: block;
   }
 
@@ -566,36 +571,38 @@ const styles = `
 
   /* ── Glimpses ── */
   .lux-glimpses {
-    background: var(--cream);
-    padding: 112px 24px;
+    background: var(--slate-50);
+    padding: 96px 24px;
   }
 
-  .lux-glimpses-inner { max-width: 1320px; margin: 0 auto; }
+  .lux-glimpses-inner { max-width: 1200px; margin: 0 auto; }
 
   .lux-glimpses-header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin-bottom: 56px;
+    margin-bottom: 48px;
     gap: 32px;
   }
 
-  .lux-glimpses-heading { font-size: clamp(40px, 5vw, 60px); }
+  .lux-glimpses-heading { font-size: clamp(30px, 4vw, 44px); }
 
   .lux-glimpse-slide {
-    border: 1px solid var(--divider);
+    border: 1px solid var(--slate-100);
+    border-radius: 24px;
     overflow: hidden;
     position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
   }
 
   .lux-glimpse-track {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .lux-glimpse-frame {
     min-width: 100%;
-    height: 480px;
+    height: 460px;
     position: relative;
     overflow: hidden;
   }
@@ -607,12 +614,17 @@ const styles = `
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.8s ease;
+  }
+
+  .lux-glimpse-slide:hover .lux-glimpse-frame img {
+    transform: scale(1.03);
   }
 
   .lux-glimpse-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(28,26,23,0.70) 0%, transparent 60%);
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0) 60%);
     z-index: 1;
   }
 
@@ -624,62 +636,66 @@ const styles = `
   }
 
   .lux-glimpse-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: 0.02em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.01em;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .lux-glimpse-sub {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 0.22em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--gold-light);
+    color: var(--brand-indigo-light);
   }
 
   .lux-slider-nav { display: flex; align-items: center; gap: 8px; }
 
   .lux-arrow-btn {
-    width: 48px; height: 48px;
-    border: 1px solid var(--divider);
-    background: #fff;
+    width: 44px; height: 44px;
+    border: 1px solid var(--slate-200);
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
     cursor: pointer;
-    color: var(--charcoal);
+    color: var(--slate-700);
     transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
   }
 
   .lux-arrow-btn:hover {
-    background: var(--charcoal);
-    border-color: var(--charcoal);
-    color: var(--gold-light);
+    background: var(--slate-900);
+    border-color: var(--slate-900);
+    color: #ffffff;
+    transform: scale(1.05);
   }
 
   .lux-glimpse-indicators {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     margin-top: 24px;
   }
 
   .lux-glimpse-dot {
-    height: 1px;
-    background: rgba(28,26,23,0.2);
+    height: 4px;
+    background: rgba(15, 23, 42, 0.1);
     transition: all 0.4s ease;
     cursor: pointer;
-    width: 20px;
+    width: 12px;
     border: none;
     padding: 0;
+    border-radius: 9999px;
   }
 
-  .lux-glimpse-dot.active { background: var(--gold); width: 40px; }
+  .lux-glimpse-dot.active { background: var(--brand-indigo); width: 28px; }
 
   /* ── Responsive ── */
   @media (max-width: 1024px) {
