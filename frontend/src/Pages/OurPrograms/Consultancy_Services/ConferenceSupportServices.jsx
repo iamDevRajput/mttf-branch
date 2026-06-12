@@ -186,12 +186,12 @@ export default function ConferenceSupportServices() {
           position: absolute;
           top: 0; left: 0;
           width: 0; height: 2px;
-          background: linear-gradient(90deg, #C9A84C, #E8C96A, transparent);
+          background: linear-gradient(90deg, #2563eb, #E8C96A, transparent);
           transition: width 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .svc-card:hover::before { width: 100%; }
         .svc-card:hover {
-          border-color: #C9A84C;
+          border-color: #2563eb;
           transform: translateY(-5px);
           box-shadow: 0 20px 44px rgba(139,109,56,0.12);
           background: #FEFCF7;
@@ -207,7 +207,7 @@ export default function ConferenceSupportServices() {
           transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
         }
         .type-card:hover {
-          border-color: #C9A84C;
+          border-color: #2563eb;
           transform: translateY(-4px);
           box-shadow: 0 16px 36px rgba(139,109,56,0.1);
           background: #FEFCF7;
@@ -228,21 +228,21 @@ export default function ConferenceSupportServices() {
           position: absolute;
           top: 0; left: 0; right: 0;
           height: 2px;
-          background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+          background: linear-gradient(90deg, transparent, #2563eb, transparent);
           opacity: 0;
           transition: opacity 0.3s;
         }
         .stat-box:hover::before { opacity: 1; }
-        .stat-box:hover { border-color: #C9A84C; transform: translateY(-3px); box-shadow: 0 12px 28px rgba(139,109,56,0.1); }
+        .stat-box:hover { border-color: #2563eb; transform: translateY(-3px); box-shadow: 0 12px 28px rgba(139,109,56,0.1); }
 
         /* Luxury buttons */
         .btn-gold {
           display: inline-flex; align-items: center; gap: 0.5rem;
           padding: 0.85rem 2.25rem;
-          background: #C9A84C; color: #fff;
+          background: #2563eb; color: #fff;
           font-family: 'DM Sans', sans-serif; font-size: 0.75rem;
           font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
-          border: 1px solid #C9A84C; border-radius: 2px;
+          border: 1px solid #2563eb; border-radius: 2px;
           cursor: pointer; transition: all 0.35s ease; text-decoration: none;
         }
         .btn-gold:hover { background: #B8965A; border-color: #B8965A; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(201,168,76,0.28); }
@@ -256,21 +256,21 @@ export default function ConferenceSupportServices() {
           border: 1px solid #1C1208; border-radius: 2px;
           cursor: pointer; transition: all 0.35s ease; text-decoration: none;
         }
-        .btn-dark:hover { background: #C9A84C; border-color: #C9A84C; color: #fff; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(201,168,76,0.28); }
+        .btn-dark:hover { background: #2563eb; border-color: #2563eb; color: #fff; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(201,168,76,0.28); }
 
-        .gold-rule { height: 1px; background: linear-gradient(90deg, transparent, #C9A84C70, transparent); }
+        .gold-rule { height: 1px; background: linear-gradient(90deg, transparent, #2563eb70, transparent); }
 
         .eyebrow {
           font-family: 'DM Sans', sans-serif; font-size: 0.65rem;
-          letter-spacing: 0.22em; color: #C9A84C; text-transform: uppercase;
+          letter-spacing: 0.22em; color: #2563eb; text-transform: uppercase;
           font-weight: 500; display: flex; align-items: center;
           gap: 0.5rem; justify-content: center; margin-bottom: 1rem;
         }
-        .eyebrow-line { display: inline-block; width: 28px; height: 1px; background: #C9A84C; }
+        .eyebrow-line { display: inline-block; width: 28px; height: 1px; background: #2563eb; }
 
         ::-webkit-scrollbar { width: 3px; }
         ::-webkit-scrollbar-track { background: #F7F3EA; }
-        ::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 2px; }
+        ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
       `}</style>
 
       <div className="conf-page">
@@ -284,11 +284,11 @@ export default function ConferenceSupportServices() {
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
                 fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem',
-                color: '#C9A84C', textDecoration: 'none', letterSpacing: '0.06em',
+                color: '#2563eb', textDecoration: 'none', letterSpacing: '0.06em',
                 transition: 'color 0.2s',
               }}
               onMouseEnter={e => e.currentTarget.style.color = '#8B6D38'}
-              onMouseLeave={e => e.currentTarget.style.color = '#C9A84C'}
+              onMouseLeave={e => e.currentTarget.style.color = '#2563eb'}
             >
               <ArrowLeft size={15} />
               Back to Consultancy Services
@@ -319,10 +319,10 @@ export default function ConferenceSupportServices() {
           }} />
           {/* Corner brackets */}
           {[
-            { top:'1.8rem', left:'1.8rem', borderTop:'1px solid #C9A84C', borderLeft:'1px solid #C9A84C' },
-            { top:'1.8rem', right:'1.8rem', borderTop:'1px solid #C9A84C', borderRight:'1px solid #C9A84C' },
-            { bottom:'1.8rem', left:'1.8rem', borderBottom:'1px solid #C9A84C', borderLeft:'1px solid #C9A84C' },
-            { bottom:'1.8rem', right:'1.8rem', borderBottom:'1px solid #C9A84C', borderRight:'1px solid #C9A84C' },
+            { top:'1.8rem', left:'1.8rem', borderTop:'1px solid #2563eb', borderLeft:'1px solid #2563eb' },
+            { top:'1.8rem', right:'1.8rem', borderTop:'1px solid #2563eb', borderRight:'1px solid #2563eb' },
+            { bottom:'1.8rem', left:'1.8rem', borderBottom:'1px solid #2563eb', borderLeft:'1px solid #2563eb' },
+            { bottom:'1.8rem', right:'1.8rem', borderBottom:'1px solid #2563eb', borderRight:'1px solid #2563eb' },
           ].map((s,i) => <div key={i} style={{ position:'absolute', width:52, height:52, opacity:0.45, ...s }} />)}
 
           <div style={{ position:'relative', zIndex:1, animation:'fadeUp 0.9s ease both' }}>
@@ -332,7 +332,7 @@ export default function ConferenceSupportServices() {
               background:'rgba(201,168,76,0.1)', border:'1px solid rgba(201,168,76,0.3)',
               borderRadius:'2px', padding:'0.4rem 1.2rem', marginBottom:'1.75rem',
             }}>
-              <span style={{ width:5, height:5, borderRadius:'50%', background:'#C9A84C', display:'inline-block', animation:'pulseGold 2s ease infinite' }} />
+              <span style={{ width:5, height:5, borderRadius:'50%', background:'#2563eb', display:'inline-block', animation:'pulseGold 2s ease infinite' }} />
               <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem', color:'#8B6D38', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500 }}>
                 Section 3 · Conference Services
               </span>
@@ -351,7 +351,7 @@ export default function ConferenceSupportServices() {
               fontSize:'clamp(2.2rem, 5.5vw, 4.5rem)',
               fontWeight:900, lineHeight:1.05, letterSpacing:'-0.02em',
               marginBottom:'1.25rem', fontStyle:'italic',
-              background:'linear-gradient(135deg, #C9A84C 0%, #8B6D38 40%, #E8C96A 100%)',
+              background:'linear-gradient(135deg, #2563eb 0%, #8B6D38 40%, #E8C96A 100%)',
               backgroundSize:'200% auto',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
               animation:'shimmer 4s linear infinite',
@@ -385,7 +385,7 @@ export default function ConferenceSupportServices() {
                   flex:'1 1 120px', padding:'1.1rem 0.75rem', textAlign:'center',
                   borderRight: i < 3 ? '1px solid rgba(201,168,76,0.15)' : 'none',
                 }}>
-                  <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'1.8rem', fontWeight:700, color:'#C9A84C', lineHeight:1 }}>{v}</div>
+                  <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'1.8rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{v}</div>
                   <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.58rem', color:'rgba(90,65,40,0.45)', letterSpacing:'0.14em', textTransform:'uppercase', marginTop:'0.25rem', fontWeight:500 }}>{l}</div>
                 </div>
               ))}
@@ -439,7 +439,7 @@ export default function ConferenceSupportServices() {
                   <div style={{
                     width:'44px', height:'44px', background:'#F5EFD8', border:'1px solid #E8D89A',
                     borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center',
-                    marginBottom:'1.1rem', color:'#C9A84C',
+                    marginBottom:'1.1rem', color:'#2563eb',
                   }}>
                     {type.icon}
                   </div>
@@ -449,7 +449,7 @@ export default function ConferenceSupportServices() {
                     display:'inline-block', padding:'0.25rem 0.75rem',
                     border:'1px solid rgba(201,168,76,0.35)', borderRadius:'1px',
                     fontFamily:"'DM Sans', sans-serif", fontSize:'0.62rem',
-                    color:'#C9A84C', letterSpacing:'0.1em', textTransform:'uppercase', fontWeight:500,
+                    color:'#2563eb', letterSpacing:'0.1em', textTransform:'uppercase', fontWeight:500,
                   }}>{type.capacity}</span>
                 </div>
               ))}
@@ -463,14 +463,14 @@ export default function ConferenceSupportServices() {
         <section style={{ background:'#1C1208', padding:'5.5rem 2rem', borderTop:'1px solid rgba(201,168,76,0.15)' }}>
           <div style={{ maxWidth:'1000px', margin:'0 auto' }}>
             <div style={{ textAlign:'center', marginBottom:'3.5rem' }}>
-              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#C9A84C', textTransform:'uppercase', fontWeight:500, marginBottom:'1rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
-                <span style={{ display:'inline-block', width:22, height:1, background:'#C9A84C' }} />
+              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
+                <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
                 Planning Guide
-                <span style={{ display:'inline-block', width:22, height:1, background:'#C9A84C' }} />
+                <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
               </div>
               <h2 style={{ fontFamily:"'Playfair Display', serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#E8D9C0', letterSpacing:'-0.02em', margin:0 }}>
                 Conference Organizing{' '}
-                <span style={{ fontStyle:'italic', color:'#C9A84C' }}>Timeline</span>
+                <span style={{ fontStyle:'italic', color:'#2563eb' }}>Timeline</span>
               </h2>
             </div>
 
@@ -492,7 +492,7 @@ export default function ConferenceSupportServices() {
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(200px, 1fr))', gap:'1.25rem' }}>
               {[['50+','Conferences Organized'],['20+','Countries Represented'],['15K+','Total Participants'],['95%','Success Rate']].map(([val, label], i) => (
                 <div className="stat-box" key={label} style={{ animationDelay:`${i*0.08}s`, animation:'fadeUp 0.6s ease both' }}>
-                  <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'2.8rem', fontWeight:700, color:'#C9A84C', letterSpacing:'-0.03em', lineHeight:1, marginBottom:'0.4rem' }}>{val}</div>
+                  <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'2.8rem', fontWeight:700, color:'#2563eb', letterSpacing:'-0.03em', lineHeight:1, marginBottom:'0.4rem' }}>{val}</div>
                   <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.72rem', color:'#6B5C3E', letterSpacing:'0.1em', textTransform:'uppercase', fontWeight:500 }}>{label}</div>
                 </div>
               ))}
@@ -511,24 +511,24 @@ export default function ConferenceSupportServices() {
               padding:'4rem 3rem', textAlign:'center', position:'relative', overflow:'hidden',
             }}>
               {/* Gold top */}
-              <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg, transparent, #C9A84C, transparent)' }} />
+              <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg, transparent, #2563eb, transparent)' }} />
               {/* Brackets */}
               {[
-                { top:'1.2rem', left:'1.2rem', borderTop:'1px solid #C9A84C40', borderLeft:'1px solid #C9A84C40' },
-                { top:'1.2rem', right:'1.2rem', borderTop:'1px solid #C9A84C40', borderRight:'1px solid #C9A84C40' },
-                { bottom:'1.2rem', left:'1.2rem', borderBottom:'1px solid #C9A84C40', borderLeft:'1px solid #C9A84C40' },
-                { bottom:'1.2rem', right:'1.2rem', borderBottom:'1px solid #C9A84C40', borderRight:'1px solid #C9A84C40' },
+                { top:'1.2rem', left:'1.2rem', borderTop:'1px solid #2563eb40', borderLeft:'1px solid #2563eb40' },
+                { top:'1.2rem', right:'1.2rem', borderTop:'1px solid #2563eb40', borderRight:'1px solid #2563eb40' },
+                { bottom:'1.2rem', left:'1.2rem', borderBottom:'1px solid #2563eb40', borderLeft:'1px solid #2563eb40' },
+                { bottom:'1.2rem', right:'1.2rem', borderBottom:'1px solid #2563eb40', borderRight:'1px solid #2563eb40' },
               ].map((s,i) => <div key={i} style={{ position:'absolute', width:36, height:36, ...s }} />)}
 
-              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#C9A84C', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
-                <span style={{ display:'inline-block', width:22, height:1, background:'#C9A84C' }} />
+              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
+                <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
                 Get Started
-                <span style={{ display:'inline-block', width:22, height:1, background:'#C9A84C' }} />
+                <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
               </div>
 
               <h2 style={{ fontFamily:"'Playfair Display', serif", fontSize:'clamp(1.8rem,3.5vw,2.8rem)', fontWeight:700, color:'#F7F3EA', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
                 Ready to Organize Your{' '}
-                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg, #C9A84C, #E8C96A)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
+                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg, #2563eb, #E8C96A)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
                   Conference?
                 </span>
               </h2>
@@ -567,15 +567,15 @@ function ServiceCard({ svc, index }) {
       style={{ animationDelay:`${index*0.07}s`, animation:'fadeUp 0.6s ease both' }}
     >
       {/* Clipped corner */}
-      <div style={{ position:'absolute', top:0, right:0, width:18, height:18, background: hovered ? '#C9A84C' : '#E8DFC4', clipPath:'polygon(100% 0, 0 0, 100% 100%)', transition:'background 0.3s' }} />
+      <div style={{ position:'absolute', top:0, right:0, width:18, height:18, background: hovered ? '#2563eb' : '#E8DFC4', clipPath:'polygon(100% 0, 0 0, 100% 100%)', transition:'background 0.3s' }} />
 
       {/* Number + icon row */}
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:'1.25rem' }}>
-        <span style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'0.7rem', color:'#C9A84C', letterSpacing:'0.15em', fontWeight:600 }}>{svc.num}</span>
+        <span style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'0.7rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600 }}>{svc.num}</span>
         <div style={{
           width:'44px', height:'44px', background: hovered ? '#FDF5E0' : '#F5EFD8',
           border:'1px solid #E8D89A', borderRadius:'4px',
-          display:'flex', alignItems:'center', justifyContent:'center', color:'#C9A84C',
+          display:'flex', alignItems:'center', justifyContent:'center', color:'#2563eb',
           transition:'all 0.3s', transform: hovered ? 'scale(1.08) rotate(-4deg)' : 'scale(1)',
         }}>
           {svc.icon}
@@ -590,12 +590,12 @@ function ServiceCard({ svc, index }) {
       </p>
 
       {/* Divider */}
-      <div style={{ height:'1px', background: hovered ? 'linear-gradient(90deg,#C9A84C40,transparent)' : '#EDE4CC', marginBottom:'1rem', transition:'background 0.3s' }} />
+      <div style={{ height:'1px', background: hovered ? 'linear-gradient(90deg,#2563eb40,transparent)' : '#EDE4CC', marginBottom:'1rem', transition:'background 0.3s' }} />
 
       <ul style={{ margin:0, padding:0, listStyle:'none', display:'flex', flexDirection:'column', gap:'0.5rem' }}>
         {svc.features.map((feat, idx) => (
           <li key={idx} style={{ display:'flex', alignItems:'center', gap:'0.6rem' }}>
-            <CheckCircle2 size={14} color="#C9A84C" style={{ flexShrink:0 }} />
+            <CheckCircle2 size={14} color="#2563eb" style={{ flexShrink:0 }} />
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.8rem', color:'#6B5C3E', fontWeight:300 }}>{feat}</span>
           </li>
         ))}
@@ -621,7 +621,7 @@ function TimelineRow({ stage, index, total }) {
     >
       {/* Phase label */}
       <div style={{ flexShrink:0, width:'160px', paddingTop:'0.1rem' }}>
-        <span style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'0.72rem', color: hovered ? '#E8C96A' : '#C9A84C', letterSpacing:'0.1em', fontWeight:600, textTransform:'uppercase', transition:'color 0.3s' }}>
+        <span style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'0.72rem', color: hovered ? '#E8C96A' : '#2563eb', letterSpacing:'0.1em', fontWeight:600, textTransform:'uppercase', transition:'color 0.3s' }}>
           {stage.phase}
         </span>
       </div>
@@ -633,7 +633,7 @@ function TimelineRow({ stage, index, total }) {
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(200px, 1fr))', gap:'0.5rem' }}>
           {stage.tasks.map((task, idx) => (
             <div key={idx} style={{ display:'flex', alignItems:'center', gap:'0.55rem' }}>
-              <CheckCircle2 size={13} color="#C9A84C" style={{ flexShrink:0 }} />
+              <CheckCircle2 size={13} color="#2563eb" style={{ flexShrink:0 }} />
               <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.8rem', color:'rgba(232,217,192,0.55)', fontWeight:300 }}>{task}</span>
             </div>
           ))}

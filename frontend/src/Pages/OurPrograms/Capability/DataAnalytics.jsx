@@ -108,14 +108,14 @@ function DataAnalytics() {
         }
 
         .da-page { background: #F7F3EA; color: #1C1208; font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-        .gold-rule { height: 1px; background: linear-gradient(90deg, transparent, #C9A84C70, transparent); }
+        .gold-rule { height: 1px; background: linear-gradient(90deg, transparent, #2563eb70, transparent); }
 
         .eyebrow {
           font-family: 'DM Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.22em;
-          color: #C9A84C; text-transform: uppercase; font-weight: 500;
+          color: #2563eb; text-transform: uppercase; font-weight: 500;
           display: flex; align-items: center; gap: 0.5rem; justify-content: center; margin-bottom: 1rem;
         }
-        .eyebrow-line { display: inline-block; width: 28px; height: 1px; background: #C9A84C; }
+        .eyebrow-line { display: inline-block; width: 28px; height: 1px; background: #2563eb; }
 
         .cap-card {
           background: #FAF8F2; border: 1px solid #E8E0CC; border-radius: 4px;
@@ -125,11 +125,11 @@ function DataAnalytics() {
         .cap-card::before {
           content: ''; position: absolute; top: 0; left: 0;
           width: 0; height: 2px;
-          background: linear-gradient(90deg, #C9A84C, #E8C96A, transparent);
+          background: linear-gradient(90deg, #2563eb, #E8C96A, transparent);
           transition: width 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .cap-card:hover::before { width: 100%; }
-        .cap-card:hover { border-color: #C9A84C; transform: translateY(-5px); box-shadow: 0 20px 44px rgba(139,109,56,0.12); background: #FEFCF7; }
+        .cap-card:hover { border-color: #2563eb; transform: translateY(-5px); box-shadow: 0 20px 44px rgba(139,109,56,0.12); background: #FEFCF7; }
 
         .ind-card {
           background: #FAF8F2; border: 1px solid #E8E0CC; border-radius: 4px;
@@ -138,33 +138,33 @@ function DataAnalytics() {
         }
         .ind-card::after {
           content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
-          background: linear-gradient(90deg, #C9A84C, transparent);
+          background: linear-gradient(90deg, #2563eb, transparent);
           transform: scaleX(0); transform-origin: left;
           transition: transform 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .ind-card:hover::after { transform: scaleX(1); }
-        .ind-card:hover { border-color: #C9A84C; transform: translateY(-4px); box-shadow: 0 16px 36px rgba(139,109,56,0.1); }
+        .ind-card:hover { border-color: #2563eb; transform: translateY(-4px); box-shadow: 0 16px 36px rgba(139,109,56,0.1); }
 
         .stat-pill {
           background: #FAF8F2; border: 1px solid #E8E0CC; border-radius: 4px;
           padding: 1.25rem 1.5rem; text-align: center;
           transition: all 0.35s ease; cursor: default;
         }
-        .stat-pill:hover { border-color: #C9A84C; transform: translateY(-3px); box-shadow: 0 12px 28px rgba(139,109,56,0.1); }
+        .stat-pill:hover { border-color: #2563eb; transform: translateY(-3px); box-shadow: 0 12px 28px rgba(139,109,56,0.1); }
 
         .btn-gold {
           display: inline-flex; align-items: center; gap: 0.5rem;
-          padding: 0.85rem 2.25rem; background: #C9A84C; color: #fff;
+          padding: 0.85rem 2.25rem; background: #2563eb; color: #fff;
           font-family: 'DM Sans', sans-serif; font-size: 0.75rem; font-weight: 500;
           letter-spacing: 0.14em; text-transform: uppercase;
-          border: 1px solid #C9A84C; border-radius: 2px;
+          border: 1px solid #2563eb; border-radius: 2px;
           cursor: pointer; transition: all 0.35s ease; text-decoration: none;
         }
         .btn-gold:hover { background: #B8965A; border-color: #B8965A; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(201,168,76,0.28); }
 
         ::-webkit-scrollbar { width: 3px; }
         ::-webkit-scrollbar-track { background: #F7F3EA; }
-        ::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 2px; }
+        ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
       `}</style>
 
       <div className="da-page">
@@ -177,11 +177,11 @@ function DataAnalytics() {
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
               fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem',
-              color: '#C9A84C', textDecoration: 'none', letterSpacing: '0.06em',
+              color: '#2563eb', textDecoration: 'none', letterSpacing: '0.06em',
               transition: 'color 0.2s',
             }}
             onMouseEnter={e => e.currentTarget.style.color = '#8B6D38'}
-            onMouseLeave={e => e.currentTarget.style.color = '#C9A84C'}
+            onMouseLeave={e => e.currentTarget.style.color = '#2563eb'}
           >
             <ArrowLeft size={14} />
             Back to Capabilities
@@ -216,10 +216,10 @@ function DataAnalytics() {
           <div style={{ position: 'absolute', top: '50%', left: '50%', width: '640px', height: '640px', border: '1px dashed rgba(201,168,76,0.05)', borderRadius: '50%', animation: 'rotateSlow 65s linear infinite reverse', pointerEvents: 'none' }} />
           {/* Corner brackets */}
           {[
-            { top:'1.8rem', left:'1.8rem', borderTop:'1px solid #C9A84C', borderLeft:'1px solid #C9A84C' },
-            { top:'1.8rem', right:'1.8rem', borderTop:'1px solid #C9A84C', borderRight:'1px solid #C9A84C' },
-            { bottom:'1.8rem', left:'1.8rem', borderBottom:'1px solid #C9A84C', borderLeft:'1px solid #C9A84C' },
-            { bottom:'1.8rem', right:'1.8rem', borderBottom:'1px solid #C9A84C', borderRight:'1px solid #C9A84C' },
+            { top:'1.8rem', left:'1.8rem', borderTop:'1px solid #2563eb', borderLeft:'1px solid #2563eb' },
+            { top:'1.8rem', right:'1.8rem', borderTop:'1px solid #2563eb', borderRight:'1px solid #2563eb' },
+            { bottom:'1.8rem', left:'1.8rem', borderBottom:'1px solid #2563eb', borderLeft:'1px solid #2563eb' },
+            { bottom:'1.8rem', right:'1.8rem', borderBottom:'1px solid #2563eb', borderRight:'1px solid #2563eb' },
           ].map((s,i) => <div key={i} style={{ position:'absolute', width:52, height:52, opacity:0.45, ...s }} />)}
 
           <div style={{
@@ -233,7 +233,7 @@ function DataAnalytics() {
               width: '64px', height: '64px', margin: '0 auto 1.75rem',
               background: '#F5EFD8', border: '1px solid #E8D89A',
               borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-              color: '#C9A84C',
+              color: '#2563eb',
             }}>
               <BarChart3 size={28} />
             </div>
@@ -244,7 +244,7 @@ function DataAnalytics() {
               background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.3)',
               borderRadius: '2px', padding: '0.4rem 1.2rem', marginBottom: '1.75rem',
             }}>
-              <span style={{ width:5, height:5, borderRadius:'50%', background:'#C9A84C', display:'inline-block', animation:'pulseGold 2s ease infinite' }} />
+              <span style={{ width:5, height:5, borderRadius:'50%', background:'#2563eb', display:'inline-block', animation:'pulseGold 2s ease infinite' }} />
               <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.65rem', color:'#8B6D38', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500 }}>
                 Analytics & Intelligence
               </span>
@@ -257,7 +257,7 @@ function DataAnalytics() {
             <h1 style={{
               fontFamily:"'Playfair Display',serif", fontSize:'clamp(2.4rem,6vw,5rem)',
               fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic',
-              background:'linear-gradient(135deg,#C9A84C 0%,#8B6D38 40%,#E8C96A 100%)', backgroundSize:'200% auto',
+              background:'linear-gradient(135deg,#2563eb 0%,#8B6D38 40%,#E8C96A 100%)', backgroundSize:'200% auto',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite',
             }}>
               Analytics
@@ -276,8 +276,8 @@ function DataAnalytics() {
                 const Icon = m.icon;
                 return (
                   <div className="stat-pill" key={i} style={{ flex: '1 1 130px' }}>
-                    <Icon size={16} color="#C9A84C" style={{ margin: '0 auto 0.4rem', display: 'block' }} />
-                    <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.6rem', fontWeight:700, color:'#C9A84C', lineHeight:1 }}>{m.value}</div>
+                    <Icon size={16} color="#2563eb" style={{ margin: '0 auto 0.4rem', display: 'block' }} />
+                    <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.6rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{m.value}</div>
                     <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.6rem', color:'#9C8B6E', letterSpacing:'0.14em', textTransform:'uppercase', marginTop:'0.25rem', fontWeight:500 }}>{m.label}</div>
                   </div>
                 );
@@ -313,24 +313,24 @@ function DataAnalytics() {
               background: '#FAF8F2', border: '1px solid #E8E0CC', borderRadius: '4px',
               padding: '1.75rem', position: 'relative', overflow: 'hidden',
             }}>
-              <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#C9A84C,transparent)' }} />
-              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.62rem', color:'#C9A84C', letterSpacing:'0.18em', textTransform:'uppercase', fontWeight:500, marginBottom:'1rem', display:'flex', alignItems:'center', gap:'0.4rem' }}>
-                <span style={{ width:16, height:1, background:'#C9A84C', display:'inline-block' }} />
+              <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#2563eb,transparent)' }} />
+              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.62rem', color:'#2563eb', letterSpacing:'0.18em', textTransform:'uppercase', fontWeight:500, marginBottom:'1rem', display:'flex', alignItems:'center', gap:'0.4rem' }}>
+                <span style={{ width:16, height:1, background:'#2563eb', display:'inline-block' }} />
                 Analytics Trend
               </div>
               <svg viewBox="0 0 300 160" style={{ width:'100%' }}>
                 <defs>
                   <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#C9A84C" stopOpacity="0.25" />
-                    <stop offset="100%" stopColor="#C9A84C" stopOpacity="0.02" />
+                    <stop offset="0%" stopColor="#2563eb" stopOpacity="0.25" />
+                    <stop offset="100%" stopColor="#2563eb" stopOpacity="0.02" />
                   </linearGradient>
                 </defs>
                 <path d="M0,120 L50,95 L100,110 L150,60 L200,78 L250,42 L300,65 L300,160 L0,160 Z" fill="url(#areaGrad)" />
-                <path d="M0,120 L50,95 L100,110 L150,60 L200,78 L250,42 L300,65" fill="none" stroke="#C9A84C" strokeWidth="2"
+                <path d="M0,120 L50,95 L100,110 L150,60 L200,78 L250,42 L300,65" fill="none" stroke="#2563eb" strokeWidth="2"
                   strokeDasharray="1000" style={{ animation: isVisible[0] ? 'drawLine 2s ease-out forwards' : 'none' }} />
                 {[0,50,100,150,200,250,300].map((x,i) => {
                   const ys = [120,95,110,60,78,42,65];
-                  return <circle key={i} cx={x} cy={ys[i]} r="3.5" fill="#C9A84C" style={{ animation:'pulseGold 2s ease-in-out infinite', animationDelay:`${i*0.2}s` }} />;
+                  return <circle key={i} cx={x} cy={ys[i]} r="3.5" fill="#2563eb" style={{ animation:'pulseGold 2s ease-in-out infinite', animationDelay:`${i*0.2}s` }} />;
                 })}
                 {/* Y-axis guide lines */}
                 {[40,80,120].map(y => <line key={y} x1="0" y1={y} x2="300" y2={y} stroke="rgba(201,168,76,0.08)" strokeWidth="1" />)}
@@ -386,7 +386,7 @@ function DataAnalytics() {
                 return (
                   <div className="ind-card" key={i} style={{ animationDelay:`${i*0.08}s`, animation:'fadeUp 0.6s ease both' }}>
                     <div style={{ position:'absolute', top:0, right:0, width:18, height:18, background:'#E8DFC4', clipPath:'polygon(100% 0,0 0,100% 100%)' }} />
-                    <div style={{ width:'44px', height:'44px', background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', marginBottom:'1rem', color:'#C9A84C' }}>
+                    <div style={{ width:'44px', height:'44px', background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', marginBottom:'1rem', color:'#2563eb' }}>
                       <Icon size={20} />
                     </div>
                     <h4 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.25rem', fontWeight:700, color:'#1C1208', margin:'0 0 0.5rem' }}>{ind.name}</h4>
@@ -409,23 +409,23 @@ function DataAnalytics() {
               border: '1px solid #3D2A0A', borderRadius: '4px',
               padding: '4rem 3rem', textAlign: 'center', position: 'relative', overflow: 'hidden',
             }}>
-              <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#C9A84C,transparent)' }} />
+              <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#2563eb,transparent)' }} />
               {[
-                { top:'1.2rem', left:'1.2rem', borderTop:'1px solid #C9A84C40', borderLeft:'1px solid #C9A84C40' },
-                { top:'1.2rem', right:'1.2rem', borderTop:'1px solid #C9A84C40', borderRight:'1px solid #C9A84C40' },
-                { bottom:'1.2rem', left:'1.2rem', borderBottom:'1px solid #C9A84C40', borderLeft:'1px solid #C9A84C40' },
-                { bottom:'1.2rem', right:'1.2rem', borderBottom:'1px solid #C9A84C40', borderRight:'1px solid #C9A84C40' },
+                { top:'1.2rem', left:'1.2rem', borderTop:'1px solid #2563eb40', borderLeft:'1px solid #2563eb40' },
+                { top:'1.2rem', right:'1.2rem', borderTop:'1px solid #2563eb40', borderRight:'1px solid #2563eb40' },
+                { bottom:'1.2rem', left:'1.2rem', borderBottom:'1px solid #2563eb40', borderLeft:'1px solid #2563eb40' },
+                { bottom:'1.2rem', right:'1.2rem', borderBottom:'1px solid #2563eb40', borderRight:'1px solid #2563eb40' },
               ].map((s,i) => <div key={i} style={{ position:'absolute', width:36, height:36, ...s }} />)}
 
-              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#C9A84C', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
-                <span style={{ display:'inline-block', width:22, height:1, background:'#C9A84C' }} />
+              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
+                <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
                 Get Started
-                <span style={{ display:'inline-block', width:22, height:1, background:'#C9A84C' }} />
+                <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
               </div>
 
               <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3.5vw,2.8rem)', fontWeight:700, color:'#F7F3EA', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
                 Unlock the Power of{' '}
-                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#C9A84C,#E8C96A)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
+                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#2563eb,#E8C96A)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
                   Your Data
                 </span>
               </h2>
@@ -466,16 +466,16 @@ function CapabilityCard({ cap, index, animated, visible }) {
       }}
     >
       {/* Clipped corner */}
-      <div style={{ position:'absolute', top:0, right:0, width:18, height:18, background: hovered ? '#C9A84C' : '#E8DFC4', clipPath:'polygon(100% 0,0 0,100% 100%)', transition:'background 0.3s' }} />
+      <div style={{ position:'absolute', top:0, right:0, width:18, height:18, background: hovered ? '#2563eb' : '#E8DFC4', clipPath:'polygon(100% 0,0 0,100% 100%)', transition:'background 0.3s' }} />
 
       {/* Header row */}
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:'1.25rem' }}>
         <div style={{ display:'flex', alignItems:'center', gap:'0.75rem' }}>
-          <span style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'0.7rem', color:'#C9A84C', letterSpacing:'0.15em', fontWeight:600 }}>{cap.num}</span>
+          <span style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'0.7rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600 }}>{cap.num}</span>
           <div style={{
             width:'44px', height:'44px', background: hovered ? '#FDF5E0' : '#F5EFD8',
             border:'1px solid #E8D89A', borderRadius:'4px',
-            display:'flex', alignItems:'center', justifyContent:'center', color:'#C9A84C',
+            display:'flex', alignItems:'center', justifyContent:'center', color:'#2563eb',
             transition:'all 0.3s', transform: hovered ? 'scale(1.08) rotate(-4deg)' : 'scale(1)',
           }}>
             <Icon size={20} />
@@ -488,13 +488,13 @@ function CapabilityCard({ cap, index, animated, visible }) {
             <circle cx="26" cy="26" r="22" stroke="rgba(201,168,76,0.12)" strokeWidth="3" fill="none" />
             <circle
               cx="26" cy="26" r="22"
-              stroke="#C9A84C" strokeWidth="3" fill="none"
+              stroke="#2563eb" strokeWidth="3" fill="none"
               strokeDasharray={circumference}
               strokeDashoffset={circumference * (1 - (animated ? cap.percentage : 0) / 100)}
               style={{ transition:'stroke-dashoffset 1.2s ease-out' }}
             />
           </svg>
-          <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Cormorant Garamond',serif", fontSize:'0.75rem', fontWeight:700, color:'#C9A84C' }}>
+          <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Cormorant Garamond',serif", fontSize:'0.75rem', fontWeight:700, color:'#2563eb' }}>
             {cap.percentage}%
           </div>
         </div>
@@ -505,7 +505,7 @@ function CapabilityCard({ cap, index, animated, visible }) {
       </h3>
 
       {/* Divider */}
-      <div style={{ height:'1px', background: hovered ? 'linear-gradient(90deg,#C9A84C40,transparent)' : '#EDE4CC', marginBottom:'0.85rem', transition:'background 0.3s' }} />
+      <div style={{ height:'1px', background: hovered ? 'linear-gradient(90deg,#2563eb40,transparent)' : '#EDE4CC', marginBottom:'0.85rem', transition:'background 0.3s' }} />
 
       <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.8, margin:'0 0 1.25rem', fontWeight:300 }}>
         {cap.description}
@@ -515,7 +515,7 @@ function CapabilityCard({ cap, index, animated, visible }) {
       <div style={{ display:'flex', alignItems:'flex-end', gap:'3px', height:'28px' }}>
         {[65,80,45,90,55,75,85,60].map((h, idx) => (
           <div key={idx} style={{
-            flex:1, background: hovered ? 'linear-gradient(180deg,#C9A84C,#E8C97A)' : 'linear-gradient(180deg,#D8CBA8,#EDE4CC)',
+            flex:1, background: hovered ? 'linear-gradient(180deg,#2563eb,#E8C97A)' : 'linear-gradient(180deg,#D8CBA8,#EDE4CC)',
             borderRadius:'2px 2px 0 0',
             height: animated ? `${h}%` : '0%',
             transition: `height 0.8s ease ${idx*0.06}s, background 0.3s`,

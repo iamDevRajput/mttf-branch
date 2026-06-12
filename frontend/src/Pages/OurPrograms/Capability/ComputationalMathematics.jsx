@@ -125,14 +125,14 @@ function ComputationalMathematics() {
         }
 
         .cm-page { background: #F7F3EA; color: #1C1208; font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-        .gold-rule { height: 1px; background: linear-gradient(90deg,transparent,#C9A84C70,transparent); }
+        .gold-rule { height: 1px; background: linear-gradient(90deg,transparent,#2563eb70,transparent); }
 
         .eyebrow {
           font-family: 'DM Sans',sans-serif; font-size: 0.65rem; letter-spacing: 0.22em;
-          color: #C9A84C; text-transform: uppercase; font-weight: 500;
+          color: #2563eb; text-transform: uppercase; font-weight: 500;
           display: flex; align-items: center; gap: 0.5rem; justify-content: center; margin-bottom: 1rem;
         }
-        .eyebrow-line { display: inline-block; width: 28px; height: 1px; background: #C9A84C; }
+        .eyebrow-line { display: inline-block; width: 28px; height: 1px; background: #2563eb; }
 
         .focus-card {
           background: #FAF8F2; border: 1px solid #E8E0CC; border-radius: 4px;
@@ -142,12 +142,12 @@ function ComputationalMathematics() {
         .focus-card::before {
           content:''; position:absolute; top:0; left:0;
           width:0; height:2px;
-          background: linear-gradient(90deg,#C9A84C,#E8C96A,transparent);
+          background: linear-gradient(90deg,#2563eb,#E8C96A,transparent);
           transition: width 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .focus-card:hover::before { width:100%; }
         .focus-card:hover {
-          border-color:#C9A84C; transform:translateY(-5px);
+          border-color:#2563eb; transform:translateY(-5px);
           box-shadow:0 20px 44px rgba(139,109,56,0.12); background:#FEFCF7;
         }
 
@@ -158,33 +158,33 @@ function ComputationalMathematics() {
         }
         .app-card::after {
           content:''; position:absolute; bottom:0; left:0; right:0; height:2px;
-          background: linear-gradient(90deg,#C9A84C,transparent);
+          background: linear-gradient(90deg,#2563eb,transparent);
           transform:scaleX(0); transform-origin:left;
           transition: transform 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .app-card:hover::after { transform:scaleX(1); }
-        .app-card:hover { border-color:#C9A84C; transform:translateY(-4px); box-shadow:0 16px 36px rgba(139,109,56,0.1); }
+        .app-card:hover { border-color:#2563eb; transform:translateY(-4px); box-shadow:0 16px 36px rgba(139,109,56,0.1); }
 
         .stat-pill {
           background:#FAF8F2; border:1px solid #E8E0CC; border-radius:4px;
           padding:1.25rem 1.5rem; text-align:center; flex:1 1 120px;
           transition:all 0.35s ease; cursor:default;
         }
-        .stat-pill:hover { border-color:#C9A84C; transform:translateY(-3px); box-shadow:0 12px 28px rgba(139,109,56,0.1); }
+        .stat-pill:hover { border-color:#2563eb; transform:translateY(-3px); box-shadow:0 12px 28px rgba(139,109,56,0.1); }
 
         .btn-gold {
           display:inline-flex; align-items:center; gap:0.5rem;
-          padding:0.85rem 2.25rem; background:#C9A84C; color:#fff;
+          padding:0.85rem 2.25rem; background:#2563eb; color:#fff;
           font-family:'DM Sans',sans-serif; font-size:0.75rem; font-weight:500;
           letter-spacing:0.14em; text-transform:uppercase;
-          border:1px solid #C9A84C; border-radius:2px;
+          border:1px solid #2563eb; border-radius:2px;
           cursor:pointer; transition:all 0.35s ease; text-decoration:none;
         }
         .btn-gold:hover { background:#B8965A; border-color:#B8965A; transform:translateY(-2px); box-shadow:0 10px 24px rgba(201,168,76,0.28); }
 
         ::-webkit-scrollbar { width:3px; }
         ::-webkit-scrollbar-track { background:#F7F3EA; }
-        ::-webkit-scrollbar-thumb { background:#C9A84C; border-radius:2px; }
+        ::-webkit-scrollbar-thumb { background:#2563eb; border-radius:2px; }
       `}</style>
 
       <div className="cm-page">
@@ -194,9 +194,9 @@ function ComputationalMathematics() {
         <div style={{ maxWidth:'1200px', margin:'0 auto', padding:'7rem 2rem 1.5rem' }}>
           <Link
             to="/programs/capability"
-            style={{ display:'inline-flex', alignItems:'center', gap:'0.5rem', fontFamily:"'DM Sans',sans-serif", fontSize:'0.78rem', color:'#C9A84C', textDecoration:'none', letterSpacing:'0.06em', transition:'color 0.2s' }}
+            style={{ display:'inline-flex', alignItems:'center', gap:'0.5rem', fontFamily:"'DM Sans',sans-serif", fontSize:'0.78rem', color:'#2563eb', textDecoration:'none', letterSpacing:'0.06em', transition:'color 0.2s' }}
             onMouseEnter={e => e.currentTarget.style.color='#8B6D38'}
-            onMouseLeave={e => e.currentTarget.style.color='#C9A84C'}
+            onMouseLeave={e => e.currentTarget.style.color='#2563eb'}
           >
             <ArrowLeft size={14} />
             Back to Capabilities
@@ -236,32 +236,32 @@ function ComputationalMathematics() {
 
           {/* Corner brackets */}
           {[
-            { top:'1.8rem', left:'1.8rem', borderTop:'1px solid #C9A84C', borderLeft:'1px solid #C9A84C' },
-            { top:'1.8rem', right:'1.8rem', borderTop:'1px solid #C9A84C', borderRight:'1px solid #C9A84C' },
-            { bottom:'1.8rem', left:'1.8rem', borderBottom:'1px solid #C9A84C', borderLeft:'1px solid #C9A84C' },
-            { bottom:'1.8rem', right:'1.8rem', borderBottom:'1px solid #C9A84C', borderRight:'1px solid #C9A84C' },
+            { top:'1.8rem', left:'1.8rem', borderTop:'1px solid #2563eb', borderLeft:'1px solid #2563eb' },
+            { top:'1.8rem', right:'1.8rem', borderTop:'1px solid #2563eb', borderRight:'1px solid #2563eb' },
+            { bottom:'1.8rem', left:'1.8rem', borderBottom:'1px solid #2563eb', borderLeft:'1px solid #2563eb' },
+            { bottom:'1.8rem', right:'1.8rem', borderBottom:'1px solid #2563eb', borderRight:'1px solid #2563eb' },
           ].map((s,i) => <div key={i} style={{ position:'absolute', width:52, height:52, opacity:0.45, ...s }} />)}
 
           <div style={{ position:'relative', zIndex:1, opacity:isVisible[0]?1:0, transform:isVisible[0]?'translateY(0)':'translateY(24px)', transition:'opacity 0.9s ease, transform 0.9s ease' }}>
             {/* Icon with orbiting symbols */}
             <div style={{ position:'relative', display:'inline-block', marginBottom:'1.75rem' }}>
-              <div style={{ width:'64px', height:'64px', margin:'0 auto', background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', color:'#C9A84C', position:'relative', zIndex:2 }}>
+              <div style={{ width:'64px', height:'64px', margin:'0 auto', background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', color:'#2563eb', position:'relative', zIndex:2 }}>
                 <Calculator size={26} />
               </div>
               {/* Orbiting Sigma + Infinity */}
               <div style={{ position:'absolute', inset:'-12px', animation:'spinSlow 20s linear infinite', pointerEvents:'none' }}>
-                <Sigma size={14} color="#C9A84C" style={{ position:'absolute', top:0, left:'50%', transform:'translateX(-50%)', opacity:0.6 }} />
-                <Infinity size={14} color="#C9A84C" style={{ position:'absolute', bottom:0, left:'50%', transform:'translateX(-50%)', opacity:0.6 }} />
+                <Sigma size={14} color="#2563eb" style={{ position:'absolute', top:0, left:'50%', transform:'translateX(-50%)', opacity:0.6 }} />
+                <Infinity size={14} color="#2563eb" style={{ position:'absolute', bottom:0, left:'50%', transform:'translateX(-50%)', opacity:0.6 }} />
               </div>
               <div style={{ position:'absolute', inset:'-12px', animation:'spinReverse 25s linear infinite', pointerEvents:'none' }}>
-                <Binary size={14} color="#C9A84C" style={{ position:'absolute', top:'50%', left:0, transform:'translateY(-50%)', opacity:0.6 }} />
-                <span style={{ position:'absolute', top:'50%', right:0, transform:'translateY(-50%)', fontFamily:"'Cormorant Garamond',serif", fontSize:'0.9rem', fontWeight:700, color:'#C9A84C', opacity:0.6 }}>π</span>
+                <Binary size={14} color="#2563eb" style={{ position:'absolute', top:'50%', left:0, transform:'translateY(-50%)', opacity:0.6 }} />
+                <span style={{ position:'absolute', top:'50%', right:0, transform:'translateY(-50%)', fontFamily:"'Cormorant Garamond',serif", fontSize:'0.9rem', fontWeight:700, color:'#2563eb', opacity:0.6 }}>π</span>
               </div>
             </div>
 
             {/* Badge */}
             <div style={{ display:'inline-flex', alignItems:'center', gap:'0.65rem', background:'rgba(201,168,76,0.1)', border:'1px solid rgba(201,168,76,0.3)', borderRadius:'2px', padding:'0.4rem 1.2rem', marginBottom:'1.75rem' }}>
-              <span style={{ width:5, height:5, borderRadius:'50%', background:'#C9A84C', display:'inline-block', animation:'pulseGold 2s ease infinite' }} />
+              <span style={{ width:5, height:5, borderRadius:'50%', background:'#2563eb', display:'inline-block', animation:'pulseGold 2s ease infinite' }} />
               <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.65rem', color:'#8B6D38', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500 }}>
                 Computational Mathematics
               </span>
@@ -270,7 +270,7 @@ function ComputationalMathematics() {
             <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(2.4rem,6vw,4.8rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#1C1208', marginBottom:'0.4rem' }}>
               Mathematical
             </h1>
-            <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(2.4rem,6vw,4.8rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#C9A84C 0%,#8B6D38 40%,#E8C96A 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
+            <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(2.4rem,6vw,4.8rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#2563eb 0%,#8B6D38 40%,#E8C96A 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
               Computation
             </h1>
 
@@ -284,8 +284,8 @@ function ComputationalMathematics() {
                 const Icon = s.icon;
                 return (
                   <div className="stat-pill" key={i}>
-                    <Icon size={16} color="#C9A84C" style={{ margin:'0 auto 0.4rem', display:'block' }} />
-                    <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.6rem', fontWeight:700, color:'#C9A84C', lineHeight:1 }}>{s.value}</div>
+                    <Icon size={16} color="#2563eb" style={{ margin:'0 auto 0.4rem', display:'block' }} />
+                    <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.6rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{s.value}</div>
                     <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.6rem', color:'#9C8B6E', letterSpacing:'0.14em', textTransform:'uppercase', marginTop:'0.25rem', fontWeight:500 }}>{s.label}</div>
                   </div>
                 );
@@ -318,7 +318,7 @@ function ComputationalMathematics() {
 
             {/* Wave visualization */}
             <div style={{ background:'#FAF8F2', border:'1px solid #E8E0CC', borderRadius:'4px', padding:'2rem', position:'relative', overflow:'hidden', minHeight:'220px', display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column' }}>
-              <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#C9A84C,transparent)' }} />
+              <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#2563eb,transparent)' }} />
 
               {/* Gold grid pattern */}
               <div style={{ position:'absolute', inset:0, opacity:0.25 }}>
@@ -335,7 +335,7 @@ function ComputationalMathematics() {
               <svg viewBox="0 0 400 90" style={{ width:'100%', position:'relative', zIndex:1 }}>
                 <defs>
                   <linearGradient id="waveGold" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%"   stopColor="#C9A84C" />
+                    <stop offset="0%"   stopColor="#2563eb" />
                     <stop offset="50%"  stopColor="#E8C96A" />
                     <stop offset="100%" stopColor="#8B6D38" />
                   </linearGradient>
@@ -348,11 +348,11 @@ function ComputationalMathematics() {
                 />
                 {/* Data points on wave */}
                 {[0,100,200,300,400].map((x,i) => (
-                  <circle key={i} cx={x} cy={45} r="4" fill="#C9A84C" style={{ animation:'pulseGold 2s ease-in-out infinite', animationDelay:`${i*0.3}s` }} />
+                  <circle key={i} cx={x} cy={45} r="4" fill="#2563eb" style={{ animation:'pulseGold 2s ease-in-out infinite', animationDelay:`${i*0.3}s` }} />
                 ))}
               </svg>
 
-              <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.1rem', fontWeight:600, color:'#C9A84C', letterSpacing:'0.08em', marginTop:'0.5rem', position:'relative', zIndex:1 }}>
+              <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.1rem', fontWeight:600, color:'#2563eb', letterSpacing:'0.08em', marginTop:'0.5rem', position:'relative', zIndex:1 }}>
                 Σ(n=1→∞)
               </div>
             </div>
@@ -398,7 +398,7 @@ function ComputationalMathematics() {
                 return (
                   <div className="app-card" key={i} style={{ animationDelay:`${i*0.08}s`, animation:'fadeUp 0.6s ease both' }}>
                     <div style={{ position:'absolute', top:0, right:0, width:18, height:18, background:'#E8DFC4', clipPath:'polygon(100% 0,0 0,100% 100%)' }} />
-                    <div style={{ width:'44px', height:'44px', background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', marginBottom:'1rem', color:'#C9A84C' }}>
+                    <div style={{ width:'44px', height:'44px', background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', marginBottom:'1rem', color:'#2563eb' }}>
                       <Icon size={20} />
                     </div>
                     <h4 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.25rem', fontWeight:700, color:'#1C1208', margin:'0 0 0.4rem' }}>{app.title}</h4>
@@ -417,12 +417,12 @@ function ComputationalMathematics() {
         <section style={{ padding:'5rem 2rem', background:'#F7F3EA' }}>
           <div style={{ maxWidth:'780px', margin:'0 auto' }}>
             <div style={{ background:'linear-gradient(158deg,#1C1208 0%,#2E1F08 100%)', border:'1px solid #3D2A0A', borderRadius:'4px', padding:'4rem 3rem', textAlign:'center', position:'relative', overflow:'hidden' }}>
-              <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#C9A84C,transparent)' }} />
+              <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#2563eb,transparent)' }} />
               {[
-                { top:'1.2rem', left:'1.2rem', borderTop:'1px solid #C9A84C40', borderLeft:'1px solid #C9A84C40' },
-                { top:'1.2rem', right:'1.2rem', borderTop:'1px solid #C9A84C40', borderRight:'1px solid #C9A84C40' },
-                { bottom:'1.2rem', left:'1.2rem', borderBottom:'1px solid #C9A84C40', borderLeft:'1px solid #C9A84C40' },
-                { bottom:'1.2rem', right:'1.2rem', borderBottom:'1px solid #C9A84C40', borderRight:'1px solid #C9A84C40' },
+                { top:'1.2rem', left:'1.2rem', borderTop:'1px solid #2563eb40', borderLeft:'1px solid #2563eb40' },
+                { top:'1.2rem', right:'1.2rem', borderTop:'1px solid #2563eb40', borderRight:'1px solid #2563eb40' },
+                { bottom:'1.2rem', left:'1.2rem', borderBottom:'1px solid #2563eb40', borderLeft:'1px solid #2563eb40' },
+                { bottom:'1.2rem', right:'1.2rem', borderBottom:'1px solid #2563eb40', borderRight:'1px solid #2563eb40' },
               ].map((s,i) => <div key={i} style={{ position:'absolute', width:36, height:36, ...s }} />)}
 
               {/* Floating math symbols */}
@@ -439,15 +439,15 @@ function ComputationalMathematics() {
                 </div>
               ))}
 
-              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#C9A84C', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
-                <span style={{ display:'inline-block', width:22, height:1, background:'#C9A84C' }} />
+              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
+                <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
                 Start Learning
-                <span style={{ display:'inline-block', width:22, height:1, background:'#C9A84C' }} />
+                <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
               </div>
 
               <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3.5vw,2.8rem)', fontWeight:700, color:'#F7F3EA', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
                 Master{' '}
-                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#C9A84C,#E8C96A)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
+                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#2563eb,#E8C96A)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
                   Mathematical Computing
                 </span>
               </h2>
@@ -486,7 +486,7 @@ function FocusCard({ area, index, visible }) {
       }}
     >
       {/* Clipped corner */}
-      <div style={{ position:'absolute', top:0, right:0, width:18, height:18, background:hovered?'#C9A84C':'#E8DFC4', clipPath:'polygon(100% 0,0 0,100% 100%)', transition:'background 0.3s' }} />
+      <div style={{ position:'absolute', top:0, right:0, width:18, height:18, background:hovered?'#2563eb':'#E8DFC4', clipPath:'polygon(100% 0,0 0,100% 100%)', transition:'background 0.3s' }} />
 
       {/* Ghost formula watermark */}
       <div style={{
@@ -501,14 +501,14 @@ function FocusCard({ area, index, visible }) {
       {/* Header row */}
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:'1.25rem' }}>
         <div style={{ display:'flex', alignItems:'center', gap:'0.75rem' }}>
-          <span style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'0.7rem', color:'#C9A84C', letterSpacing:'0.15em', fontWeight:600 }}>{area.num}</span>
-          <div style={{ width:'44px', height:'44px', background:hovered?'#FDF5E0':'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', color:'#C9A84C', transition:'all 0.3s', transform:hovered?'scale(1.08) rotate(-4deg)':'scale(1)' }}>
+          <span style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'0.7rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600 }}>{area.num}</span>
+          <div style={{ width:'44px', height:'44px', background:hovered?'#FDF5E0':'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', color:'#2563eb', transition:'all 0.3s', transform:hovered?'scale(1.08) rotate(-4deg)':'scale(1)' }}>
             <Icon size={20} />
           </div>
         </div>
         {/* Stat badge */}
         <div style={{ textAlign:'right' }}>
-          <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.15rem', fontWeight:700, color:'#C9A84C', lineHeight:1 }}>{area.stat}</div>
+          <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.15rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{area.stat}</div>
           <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.6rem', color:'#9C8B6E', letterSpacing:'0.12em', textTransform:'uppercase', fontWeight:500 }}>{area.statLabel}</div>
         </div>
       </div>
@@ -517,7 +517,7 @@ function FocusCard({ area, index, visible }) {
         {area.title}
       </h3>
 
-      <div style={{ height:'1px', background:hovered?'linear-gradient(90deg,#C9A84C40,transparent)':'#EDE4CC', marginBottom:'0.85rem', transition:'background 0.3s' }} />
+      <div style={{ height:'1px', background:hovered?'linear-gradient(90deg,#2563eb40,transparent)':'#EDE4CC', marginBottom:'0.85rem', transition:'background 0.3s' }} />
 
       <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.8, margin:'0 0 1.25rem', fontWeight:300 }}>
         {area.description}
@@ -525,7 +525,7 @@ function FocusCard({ area, index, visible }) {
 
       {/* Formula code badge */}
       <div style={{ display:'inline-block', padding:'0.3rem 0.85rem', border:'1px solid rgba(201,168,76,0.35)', borderRadius:'1px', background:hovered?'rgba(201,168,76,0.06)':'transparent', transition:'background 0.3s' }}>
-        <code style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'0.95rem', color:'#C9A84C', fontWeight:600, letterSpacing:'0.04em' }}>
+        <code style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'0.95rem', color:'#2563eb', fontWeight:600, letterSpacing:'0.04em' }}>
           {area.formula}
         </code>
       </div>

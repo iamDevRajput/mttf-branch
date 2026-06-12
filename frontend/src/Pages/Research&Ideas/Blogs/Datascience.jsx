@@ -9,7 +9,7 @@ const sections = [
     title: "Complex Challenges",
     subtitle: "Beyond Analytical Limits",
     body: "The present era is characterized by increasingly complex scientific and technological challenges. Computational science provides tools to simulate, model, and analyze complex systems — enabling researchers to understand and solve intricate problems that traditional analytical methods alone cannot address.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const sections = [
     title: "Big Data & Insights",
     subtitle: "Mining the Data Ocean",
     body: "We live in the era of big data — vast amounts generated across every field. Computational science handles and analyzes this data to extract meaningful insights, identify patterns, and drive informed decisions. Algorithms for processing and visualizing large datasets lead to valuable discoveries.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const sections = [
     title: "Optimization & Efficiency",
     subtitle: "Peak Performance by Design",
     body: "In a world where efficiency is paramount, computational science offers powerful tools to optimize processes, designs, and systems — from supply chains to energy grids and manufacturing. Computational methods identify optimal solutions, reduce costs, and maximize resource utilization.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const sections = [
     title: "Prediction & Forecasting",
     subtitle: "Seeing Tomorrow, Today",
     body: "Computational models and simulations enable accurate prediction of diverse phenomena — weather patterns, financial trends, disease spread. These capabilities provide invaluable insights that aid in informed decision-making, policy planning, and proactive problem solving.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const sections = [
     title: "Interdisciplinary Collaboration",
     subtitle: "Where Disciplines Converge",
     body: "The present era demands collaboration across disciplines. Computational science serves as common ground where researchers from diverse fields exchange ideas and leverage shared tools to solve multidisciplinary challenges — integrating knowledge and expertise for innovative solutions.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
   {
     id: 6,
@@ -49,7 +49,7 @@ const sections = [
     title: "Technological Advancements",
     subtitle: "Power Beyond Imagination",
     body: "Advances in computing power, algorithms, and software have vastly expanded computational capabilities. High-performance computing, parallel processing, and sophisticated algorithms now let researchers tackle problems and run simulations at scales previously considered unimaginable.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
   {
     id: 7,
@@ -57,7 +57,7 @@ const sections = [
     title: "Innovation & Discovery",
     subtitle: "The Virtual Laboratory",
     body: "Computational science fosters innovation and drives breakthroughs. It lets researchers explore ideas, simulate scenarios, test hypotheses, and uncover patterns that lead to discoveries across fields. By accelerating experimentation, it propels scientific progress and technological innovation.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
 ];
 
@@ -138,7 +138,7 @@ function Card({ section, index }) {
       onMouseLeave={() => setHovered(false)}
       style={{
         background: hovered ? "#FEFCF7" : "#FAF8F2",
-        border: `1px solid ${hovered ? "#C9A84C" : "#E8E0CC"}`,
+        border: `1px solid ${hovered ? "#2563eb" : "#E8E0CC"}`,
         borderRadius: "4px",
         padding: "2.25rem",
         position: "relative",
@@ -161,7 +161,7 @@ function Card({ section, index }) {
           left: 0,
           width: hovered ? "100%" : "0%",
           height: "2px",
-          background: "linear-gradient(90deg, #C9A84C, #E8C96A, transparent)",
+          background: "linear-gradient(90deg, #2563eb, #E8C96A, transparent)",
           transition: "width 0.45s cubic-bezier(0.23,1,0.32,1)",
         }}
       />
@@ -174,7 +174,7 @@ function Card({ section, index }) {
           left: 0,
           height: "2px",
           width: hovered ? "40%" : "0%",
-          background: "linear-gradient(90deg, #C9A84C60, transparent)",
+          background: "linear-gradient(90deg, #2563eb60, transparent)",
           transition: "width 0.5s cubic-bezier(0.23,1,0.32,1) 0.1s",
         }}
       />
@@ -187,7 +187,7 @@ function Card({ section, index }) {
           right: 0,
           width: "18px",
           height: "18px",
-          background: hovered ? "#C9A84C" : "#E8DFC4",
+          background: hovered ? "#2563eb" : "#E8DFC4",
           transition: "background 0.3s ease",
           clipPath: "polygon(100% 0, 0 0, 100% 100%)",
         }}
@@ -236,7 +236,7 @@ function Card({ section, index }) {
         style={{
           fontFamily: "'DM Sans', sans-serif",
           fontSize: "0.65rem",
-          color: "#C9A84C",
+          color: "#2563eb",
           letterSpacing: "0.2em",
           textTransform: "uppercase",
           fontWeight: 500,
@@ -268,7 +268,7 @@ function Card({ section, index }) {
         style={{
           height: "1px",
           background: hovered
-            ? "linear-gradient(90deg, #C9A84C50, transparent)"
+            ? "linear-gradient(90deg, #2563eb50, transparent)"
             : "#EDE4CC",
           marginBottom: "0.9rem",
           transition: "background 0.3s",
@@ -330,7 +330,7 @@ export default function App() {
 
         ::-webkit-scrollbar { width: 3px; }
         ::-webkit-scrollbar-track { background: #F7F3EA; }
-        ::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 2px; }
+        ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
 
         .luxury-cta {
           display: inline-flex;
@@ -351,8 +351,8 @@ export default function App() {
           text-decoration: none;
         }
         .luxury-cta:hover {
-          background: #C9A84C;
-          border-color: #C9A84C;
+          background: #2563eb;
+          border-color: #2563eb;
           color: #fff;
           transform: translateY(-2px);
           box-shadow: 0 10px 24px rgba(201,168,76,0.28);
@@ -431,10 +431,10 @@ export default function App() {
 
           {/* Decorative corner brackets */}
           {[
-            { top: "1.8rem", left: "1.8rem", borderTop: "1px solid #C9A84C", borderLeft: "1px solid #C9A84C" },
-            { top: "1.8rem", right: "1.8rem", borderTop: "1px solid #C9A84C", borderRight: "1px solid #C9A84C" },
-            { bottom: "1.8rem", left: "1.8rem", borderBottom: "1px solid #C9A84C", borderLeft: "1px solid #C9A84C" },
-            { bottom: "1.8rem", right: "1.8rem", borderBottom: "1px solid #C9A84C", borderRight: "1px solid #C9A84C" },
+            { top: "1.8rem", left: "1.8rem", borderTop: "1px solid #2563eb", borderLeft: "1px solid #2563eb" },
+            { top: "1.8rem", right: "1.8rem", borderTop: "1px solid #2563eb", borderRight: "1px solid #2563eb" },
+            { bottom: "1.8rem", left: "1.8rem", borderBottom: "1px solid #2563eb", borderLeft: "1px solid #2563eb" },
+            { bottom: "1.8rem", right: "1.8rem", borderBottom: "1px solid #2563eb", borderRight: "1px solid #2563eb" },
           ].map((style, i) => (
             <div
               key={i}
@@ -467,7 +467,7 @@ export default function App() {
                   width: 5,
                   height: 5,
                   borderRadius: "50%",
-                  background: "#C9A84C",
+                  background: "#2563eb",
                   display: "inline-block",
                   animation: "pulseGold 2s ease infinite",
                 }}
@@ -501,7 +501,7 @@ export default function App() {
               <span
                 style={{
                   background:
-                    "linear-gradient(135deg, #C9A84C 0%, #8B6D38 40%, #E8C96A 100%)",
+                    "linear-gradient(135deg, #2563eb 0%, #8B6D38 40%, #E8C96A 100%)",
                   backgroundSize: "200% auto",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -560,7 +560,7 @@ export default function App() {
           style={{
             height: "1px",
             background:
-              "linear-gradient(90deg, transparent, #C9A84C70, transparent)",
+              "linear-gradient(90deg, transparent, #2563eb70, transparent)",
           }}
         />
 
@@ -587,7 +587,7 @@ export default function App() {
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: "2rem",
                   fontWeight: 700,
-                  color: "#C9A84C",
+                  color: "#2563eb",
                   letterSpacing: "-0.02em",
                   lineHeight: 1,
                   marginBottom: "0.2rem",
@@ -634,7 +634,7 @@ export default function App() {
                 flex: 1,
                 maxWidth: "80px",
                 height: "1px",
-                background: "linear-gradient(90deg, transparent, #C9A84C)",
+                background: "linear-gradient(90deg, transparent, #2563eb)",
               }}
             />
             <span
@@ -642,7 +642,7 @@ export default function App() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: "0.65rem",
                 letterSpacing: "0.22em",
-                color: "#C9A84C",
+                color: "#2563eb",
                 textTransform: "uppercase",
                 fontWeight: 500,
               }}
@@ -654,7 +654,7 @@ export default function App() {
                 flex: 1,
                 maxWidth: "80px",
                 height: "1px",
-                background: "linear-gradient(90deg, #C9A84C, transparent)",
+                background: "linear-gradient(90deg, #2563eb, transparent)",
               }}
             />
           </div>
@@ -671,7 +671,7 @@ export default function App() {
             Computational science holds{" "}
             <span
               style={{
-                color: "#C9A84C",
+                color: "#2563eb",
                 fontStyle: "normal",
                 fontWeight: 700,
               }}
@@ -703,7 +703,7 @@ export default function App() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: "0.65rem",
                 letterSpacing: "0.22em",
-                color: "#C9A84C",
+                color: "#2563eb",
                 textTransform: "uppercase",
                 fontWeight: 500,
                 marginBottom: "0.6rem",
@@ -717,7 +717,7 @@ export default function App() {
                   display: "inline-block",
                   width: "22px",
                   height: "1px",
-                  background: "#C9A84C",
+                  background: "#2563eb",
                 }}
               />
               Seven Pillars

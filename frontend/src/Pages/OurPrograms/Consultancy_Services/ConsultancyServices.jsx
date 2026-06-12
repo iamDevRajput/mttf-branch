@@ -121,7 +121,7 @@ function ServiceCard({ service, index }) {
       <div style={{
         position: "absolute", top: 0, left: 0, right: 0,
         height: hovered ? "2px" : "1px",
-        background: "linear-gradient(90deg, transparent, #C9A84C, #E8C97A, #C9A84C, transparent)",
+        background: "linear-gradient(90deg, transparent, #2563eb, #E8C97A, #2563eb, transparent)",
         transition: "height 0.3s ease",
       }} />
 
@@ -129,7 +129,7 @@ function ServiceCard({ service, index }) {
       <div style={{
         position: "absolute", left: 0, top: 0, bottom: 0,
         width: hovered ? "3px" : "2px",
-        background: "linear-gradient(180deg, #C9A84C 0%, #E8C97A 100%)",
+        background: "linear-gradient(180deg, #2563eb 0%, #E8C97A 100%)",
         transition: "width 0.3s ease",
       }} />
 
@@ -150,7 +150,7 @@ function ServiceCard({ service, index }) {
         display: "flex", alignItems: "center", justifyContent: "center",
         background: hovered ? "rgba(201,168,76,0.12)" : "rgba(201,168,76,0.06)",
         border: `1px solid ${hovered ? "rgba(201,168,76,0.4)" : "rgba(201,168,76,0.18)"}`,
-        borderRadius: "2px", color: "#C9A84C",
+        borderRadius: "2px", color: "#2563eb",
         marginBottom: "1.5rem",
         transition: "background 0.3s, border-color 0.3s, transform 0.35s",
         transform: hovered ? "scale(1.06)" : "scale(1)",
@@ -210,7 +210,7 @@ function ServiceCard({ service, index }) {
           fontSize: "0.7rem",
           letterSpacing: "0.15em",
           textTransform: "uppercase",
-          color: "#C9A84C",
+          color: "#2563eb",
           textDecoration: "none",
           fontWeight: 500,
           transition: "gap 0.25s ease",
@@ -243,7 +243,7 @@ function StatCard({ value, label, index }) {
       <div style={{
         fontFamily: "'Playfair Display', serif",
         fontSize: "clamp(2rem, 4vw, 3rem)",
-        fontWeight: 700, color: "#C9A84C", lineHeight: 1,
+        fontWeight: 700, color: "#2563eb", lineHeight: 1,
         marginBottom: "0.5rem",
         transform: hovered ? "scale(1.06)" : "scale(1)",
         transition: "transform 0.3s ease",
@@ -286,7 +286,7 @@ export default function ConsultancyServices() {
         }
         ::-webkit-scrollbar { width: 3px; }
         ::-webkit-scrollbar-track { background: #FBF6EC; }
-        ::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 1px; }
+        ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 1px; }
       `}</style>
 
       <Header />
@@ -350,7 +350,7 @@ export default function ConsultancyServices() {
           ].map((d, i) => (
             <div key={i} style={{
               position: "absolute", pointerEvents: "none",
-              width: 4, height: 4, borderRadius: "50%", background: "#C9A84C",
+              width: 4, height: 4, borderRadius: "50%", background: "#2563eb",
               animation: `floatDot ${d.dur} ease-in-out infinite`,
               animationDelay: d.delay,
               top: d.top, left: d.left, right: d.right,
@@ -371,11 +371,11 @@ export default function ConsultancyServices() {
               padding: "0.45rem 1.3rem", marginBottom: "2.25rem",
               background: "rgba(201,168,76,0.05)", borderRadius: "1px",
             }}>
-              <Briefcase size={12} style={{ color: "#C9A84C" }} />
+              <Briefcase size={12} style={{ color: "#2563eb" }} />
               <span style={{
                 fontFamily: "'Jost', sans-serif",
                 fontSize: "0.62rem", letterSpacing: "0.25em",
-                textTransform: "uppercase", color: "#C9A84C", fontWeight: 500,
+                textTransform: "uppercase", color: "#2563eb", fontWeight: 500,
               }}>Our Programs</span>
             </div>
 
@@ -390,7 +390,7 @@ export default function ConsultancyServices() {
               Consultancy{" "}
               <span style={{
                 fontStyle: "italic",
-                background: "linear-gradient(120deg, #C9A84C 0%, #E8C97A 38%, #B8965A 72%, #C9A84C 100%)",
+                background: "linear-gradient(120deg, #2563eb 0%, #E8C97A 38%, #B8965A 72%, #2563eb 100%)",
                 backgroundSize: "200% auto",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -424,7 +424,7 @@ export default function ConsultancyServices() {
                   <div style={{
                     fontFamily: "'Playfair Display', serif",
                     fontSize: "1.55rem", fontWeight: 700,
-                    color: "#C9A84C", lineHeight: 1,
+                    color: "#2563eb", lineHeight: 1,
                   }}>{value}</div>
                   <div style={{
                     fontFamily: "'Jost', sans-serif",
@@ -500,7 +500,7 @@ export default function ConsultancyServices() {
               <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
                 <div style={{
                   fontFamily: "'Jost', sans-serif",
-                  fontSize: "0.6rem", color: "#C9A84C",
+                  fontSize: "0.6rem", color: "#2563eb",
                   letterSpacing: "0.25em", textTransform: "uppercase",
                   marginBottom: "0.75rem", fontWeight: 500,
                 }}>Why MTTF</div>
@@ -550,12 +550,12 @@ export default function ConsultancyServices() {
               {/* Top gold bar */}
               <div style={{
                 position: "absolute", top: 0, left: 0, right: 0, height: "2px",
-                background: "linear-gradient(90deg, transparent, #C9A84C, #E8C97A, #C9A84C, transparent)",
+                background: "linear-gradient(90deg, transparent, #2563eb, #E8C97A, #2563eb, transparent)",
               }} />
 
               <div style={{
                 fontFamily: "'Jost', sans-serif",
-                fontSize: "0.6rem", color: "#C9A84C",
+                fontSize: "0.6rem", color: "#2563eb",
                 letterSpacing: "0.25em", textTransform: "uppercase",
                 marginBottom: "1rem", fontWeight: 500,
               }}>Get Started</div>
@@ -585,14 +585,14 @@ export default function ConsultancyServices() {
                   fontFamily: "'Jost', sans-serif",
                   fontSize: "0.72rem", letterSpacing: "0.2em",
                   textTransform: "uppercase", color: "#fff",
-                  background: "#C9A84C", border: "none",
+                  background: "#2563eb", border: "none",
                   padding: "0.9rem 2.4rem", cursor: "pointer",
                   borderRadius: "1px", fontWeight: 500,
                   textDecoration: "none",
                   transition: "background 0.3s ease, transform 0.3s ease",
                 }}
                 onMouseEnter={e => { e.currentTarget.style.background = "#B8965A"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-                onMouseLeave={e => { e.currentTarget.style.background = "#C9A84C"; e.currentTarget.style.transform = "translateY(0)"; }}
+                onMouseLeave={e => { e.currentTarget.style.background = "#2563eb"; e.currentTarget.style.transform = "translateY(0)"; }}
               >
                 Contact Us
                 <ArrowRight size={14} />

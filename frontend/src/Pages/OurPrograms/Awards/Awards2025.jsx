@@ -62,7 +62,7 @@ function Awards2025() {
         }
         ::-webkit-scrollbar { width: 3px; }
         ::-webkit-scrollbar-track { background: #FBF6EC; }
-        ::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 1px; }
+        ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 1px; }
       `}</style>
 
       <Header />
@@ -134,7 +134,7 @@ function Awards2025() {
             <div key={i} style={{
               position: "absolute", pointerEvents: "none",
               width: 4, height: 4, borderRadius: "50%",
-              background: "#C9A84C",
+              background: "#2563eb",
               animation: `floatDot ${d.dur} ease-in-out infinite`,
               animationDelay: d.delay,
               top: d.top, left: d.left, right: d.right,
@@ -159,18 +159,18 @@ function Awards2025() {
               background: "rgba(201,168,76,0.05)",
               borderRadius: "1px",
             }}>
-              <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#C9A84C", flexShrink: 0 }} />
+              <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#2563eb", flexShrink: 0 }} />
               <span style={{
                 fontFamily: "'Jost', sans-serif",
                 fontSize: "0.62rem",
                 letterSpacing: "0.25em",
                 textTransform: "uppercase",
-                color: "#C9A84C",
+                color: "#2563eb",
                 fontWeight: 500,
               }}>
                 Awards · 2025
               </span>
-              <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#C9A84C", flexShrink: 0 }} />
+              <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#2563eb", flexShrink: 0 }} />
             </div>
 
             {/* Headline */}
@@ -186,7 +186,7 @@ function Awards2025() {
               MTTF{" "}
               <span style={{
                 fontStyle: "italic",
-                background: "linear-gradient(120deg, #C9A84C 0%, #E8C97A 38%, #B8965A 72%, #C9A84C 100%)",
+                background: "linear-gradient(120deg, #2563eb 0%, #E8C97A 38%, #B8965A 72%, #2563eb 100%)",
                 backgroundSize: "200% auto",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -234,7 +234,7 @@ function Awards2025() {
                     fontFamily: "'Playfair Display', serif",
                     fontSize: "1.7rem",
                     fontWeight: 700,
-                    color: "#C9A84C",
+                    color: "#2563eb",
                     lineHeight: 1,
                   }}>{val}</div>
                   <div style={{
@@ -352,7 +352,7 @@ function Awards2025() {
               letterSpacing: "0.2em",
               textTransform: "uppercase",
               color: "#fff",
-              background: "#C9A84C",
+              background: "#2563eb",
               border: "none",
               padding: "0.9rem 2.4rem",
               cursor: "pointer",
@@ -361,7 +361,7 @@ function Awards2025() {
               transition: "background 0.3s ease, transform 0.3s ease",
             }}
               onMouseEnter={e => { e.target.style.background = "#B8965A"; e.target.style.transform = "translateY(-2px)"; }}
-              onMouseLeave={e => { e.target.style.background = "#C9A84C"; e.target.style.transform = "translateY(0)"; }}
+              onMouseLeave={e => { e.target.style.background = "#2563eb"; e.target.style.transform = "translateY(0)"; }}
             >
               Apply Now
             </button>
@@ -370,7 +370,7 @@ function Awards2025() {
               fontSize: "0.72rem",
               letterSpacing: "0.2em",
               textTransform: "uppercase",
-              color: "#C9A84C",
+              color: "#2563eb",
               background: "transparent",
               border: "1px solid rgba(201,168,76,0.4)",
               padding: "0.9rem 2.4rem",
@@ -397,7 +397,7 @@ function Awards2025() {
           <div style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "0.65rem",
-            color: "#C9A84C",
+            color: "#2563eb",
             letterSpacing: "0.28em",
             textTransform: "uppercase",
             marginBottom: "1rem",

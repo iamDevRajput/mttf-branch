@@ -9,7 +9,7 @@ const sections = [
     title: "Computational Power",
     subtitle: "The Engine of Intelligence",
     body: "AI and ML algorithms require substantial computational power to process large datasets, train complex models, and make accurate predictions. High-performance resources—including GPUs and TPUs—are essential for handling these demanding tasks.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const sections = [
     title: "Data Processing",
     subtitle: "Turning Raw Into Refined",
     body: "AI and ML rely on extensive data processing and analysis. Computing enables efficient preprocessing, cleaning, and transformation of raw data. Parallel processing and distributed computing handle large-scale tasks with speed and precision.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const sections = [
     title: "Model Training",
     subtitle: "Learning Through Iteration",
     body: "Training AI and ML models involves iterative computations and optimizations. Techniques like gradient descent, backpropagation, and stochastic optimization rely heavily on computational power to update model parameters and minimize errors.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const sections = [
     title: "Deep Learning",
     subtitle: "Layers of Intelligence",
     body: "Deep Learning uses neural networks with multiple layers, requiring extensive resources for forward and backward passes, gradient computation, and weight updates. High-performance computing enables faster training and breakthroughs across domains.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const sections = [
     title: "Real-Time Inference",
     subtitle: "Thinking at the Speed of Now",
     body: "AI and ML models must make predictions in real-time. Computing resources enable efficient deployment for rapid decision-making in image recognition, NLP, autonomous vehicles, and recommendation systems.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
   {
     id: 6,
@@ -49,7 +49,7 @@ const sections = [
     title: "Algorithm Optimization",
     subtitle: "Refining the Edge",
     body: "Computing facilitates development and optimization of AI algorithms. Researchers fine-tune models, explore hyperparameter spaces, and conduct experiments to enhance performance, increase accuracy, and reduce computational complexity.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
   {
     id: 7,
@@ -57,7 +57,7 @@ const sections = [
     title: "Scalability & Deployment",
     subtitle: "From Lab to the World",
     body: "Cloud computing and distributed systems allow flexible, scalable deployment of AI/ML applications. Organizations handle increasing workloads, adapt to changing demands, and deploy solutions in production environments at any scale.",
-    accent: "#C9A84C",
+    accent: "#2563eb",
   },
 ];
 
@@ -142,7 +142,7 @@ function Card({ section, index }) {
       onMouseLeave={() => setHovered(false)}
       style={{
         background: hovered ? "#FEFCF7" : "#FAF8F2",
-        border: `1px solid ${hovered ? "#C9A84C" : "#E8E0CC"}`,
+        border: `1px solid ${hovered ? "#2563eb" : "#E8E0CC"}`,
         borderRadius: "4px",
         padding: "2.25rem",
         position: "relative",
@@ -165,7 +165,7 @@ function Card({ section, index }) {
           left: 0,
           width: hovered ? "100%" : "0%",
           height: "2px",
-          background: "linear-gradient(90deg, #C9A84C, #E8C96A)",
+          background: "linear-gradient(90deg, #2563eb, #E8C96A)",
           transition: "width 0.45s cubic-bezier(0.23,1,0.32,1)",
         }}
       />
@@ -178,7 +178,7 @@ function Card({ section, index }) {
           left: 0,
           width: "3px",
           height: hovered ? "100%" : "0%",
-          background: "linear-gradient(180deg, #C9A84C, transparent)",
+          background: "linear-gradient(180deg, #2563eb, transparent)",
           transition: "height 0.4s cubic-bezier(0.23,1,0.32,1)",
         }}
       />
@@ -189,7 +189,7 @@ function Card({ section, index }) {
           fontFamily: "'Cormorant Garamond', serif",
           fontSize: "0.7rem",
           fontWeight: 600,
-          color: "#C9A84C",
+          color: "#2563eb",
           letterSpacing: "0.2em",
           textTransform: "uppercase",
           marginBottom: "1.25rem",
@@ -203,13 +203,13 @@ function Card({ section, index }) {
             width: "24px",
             height: "24px",
             borderRadius: "50%",
-            background: hovered ? "#C9A84C" : "transparent",
-            border: "1px solid #C9A84C",
+            background: hovered ? "#2563eb" : "transparent",
+            border: "1px solid #2563eb",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             fontSize: "0.65rem",
-            color: hovered ? "#fff" : "#C9A84C",
+            color: hovered ? "#fff" : "#2563eb",
             transition: "all 0.3s ease",
             fontFamily: "'DM Sans', sans-serif",
           }}
@@ -267,7 +267,7 @@ function Card({ section, index }) {
         style={{
           height: "1px",
           background: hovered
-            ? "linear-gradient(90deg, #C9A84C40, transparent)"
+            ? "linear-gradient(90deg, #2563eb40, transparent)"
             : "#E8E0CC",
           marginBottom: "1rem",
           transition: "background 0.3s ease",
@@ -324,7 +324,7 @@ export default function App() {
 
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: #F7F3EA; }
-        ::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 2px; }
+        ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
 
         .luxury-btn {
           display: inline-flex;
@@ -345,8 +345,8 @@ export default function App() {
           text-decoration: none;
         }
         .luxury-btn:hover {
-          background: #C9A84C;
-          border-color: #C9A84C;
+          background: #2563eb;
+          border-color: #2563eb;
           color: #fff;
           transform: translateY(-1px);
           box-shadow: 0 8px 20px rgba(201,168,76,0.3);
@@ -408,8 +408,8 @@ export default function App() {
               left: "2rem",
               width: "60px",
               height: "60px",
-              borderTop: "1px solid #C9A84C",
-              borderLeft: "1px solid #C9A84C",
+              borderTop: "1px solid #2563eb",
+              borderLeft: "1px solid #2563eb",
               opacity: 0.5,
             }}
           />
@@ -420,8 +420,8 @@ export default function App() {
               right: "2rem",
               width: "60px",
               height: "60px",
-              borderTop: "1px solid #C9A84C",
-              borderRight: "1px solid #C9A84C",
+              borderTop: "1px solid #2563eb",
+              borderRight: "1px solid #2563eb",
               opacity: 0.5,
             }}
           />
@@ -432,8 +432,8 @@ export default function App() {
               left: "2rem",
               width: "60px",
               height: "60px",
-              borderBottom: "1px solid #C9A84C",
-              borderLeft: "1px solid #C9A84C",
+              borderBottom: "1px solid #2563eb",
+              borderLeft: "1px solid #2563eb",
               opacity: 0.5,
             }}
           />
@@ -444,8 +444,8 @@ export default function App() {
               right: "2rem",
               width: "60px",
               height: "60px",
-              borderBottom: "1px solid #C9A84C",
-              borderRight: "1px solid #C9A84C",
+              borderBottom: "1px solid #2563eb",
+              borderRight: "1px solid #2563eb",
               opacity: 0.5,
             }}
           />
@@ -476,7 +476,7 @@ export default function App() {
                   display: "inline-block",
                   width: 5,
                   height: 5,
-                  background: "#C9A84C",
+                  background: "#2563eb",
                   borderRadius: "50%",
                 }}
               />
@@ -498,7 +498,7 @@ export default function App() {
                   display: "inline-block",
                   width: 5,
                   height: 5,
-                  background: "#C9A84C",
+                  background: "#2563eb",
                   borderRadius: "50%",
                 }}
               />
@@ -519,7 +519,7 @@ export default function App() {
               <br />
               <span
                 style={{
-                  background: "linear-gradient(135deg, #C9A84C 0%, #8B6D38 40%, #E8C96A 100%)",
+                  background: "linear-gradient(135deg, #2563eb 0%, #8B6D38 40%, #E8C96A 100%)",
                   backgroundSize: "200% auto",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -556,7 +556,7 @@ export default function App() {
         </div>
 
         {/* ── Thin Gold Divider ── */}
-        <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #C9A84C60, transparent)" }} />
+        <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #2563eb60, transparent)" }} />
 
         {/* ── Stats Bar ── */}
         <div
@@ -582,7 +582,7 @@ export default function App() {
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: "2rem",
                   fontWeight: 700,
-                  color: "#C9A84C",
+                  color: "#2563eb",
                   letterSpacing: "-0.02em",
                   lineHeight: 1,
                   marginBottom: "0.2rem",
@@ -626,7 +626,7 @@ export default function App() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: "0.68rem",
                 letterSpacing: "0.22em",
-                color: "#C9A84C",
+                color: "#2563eb",
                 textTransform: "uppercase",
                 fontWeight: 500,
                 marginBottom: "0.75rem",
@@ -635,7 +635,7 @@ export default function App() {
                 gap: "0.5rem",
               }}
             >
-              <span style={{ display: "inline-block", width: "24px", height: "1px", background: "#C9A84C" }} />
+              <span style={{ display: "inline-block", width: "24px", height: "1px", background: "#2563eb" }} />
               Core Framework
             </div>
             <h2

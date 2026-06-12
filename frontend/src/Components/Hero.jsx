@@ -4,10 +4,10 @@ const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
   :root {
-    --brand-indigo: #6366f1;
-    --brand-indigo-light: #818cf8;
-    --brand-violet: #8b5cf6;
-    --charcoal: #090d16;
+    --mttf-primary: #2563eb;
+    --mttf-primary-light: #60a5fa;
+    --mttf-accent: #3b82f6;
+    --mttf-charcoal: #0b1329;
   }
 
   /* Slide ken-burns */
@@ -42,10 +42,10 @@ const styles = `
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--brand-indigo-light);
+    color: var(--mttf-primary-light);
     margin-bottom: 24px;
-    background: rgba(99, 102, 241, 0.08);
-    border: 1px solid rgba(99, 102, 241, 0.15);
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.15);
     padding: 6px 16px;
     border-radius: 9999px;
   }
@@ -55,7 +55,7 @@ const styles = `
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--brand-indigo-light);
+    background: var(--mttf-primary-light);
     opacity: 0.8;
   }
 
@@ -71,7 +71,7 @@ const styles = `
   }
 
   .hero-headline-accent {
-    background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #f472b6 100%);
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
@@ -82,7 +82,7 @@ const styles = `
   .hero-rule {
     width: 80px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.4), transparent);
     margin: 20px auto;
   }
 
@@ -149,7 +149,7 @@ const styles = `
     align-items: center;
     gap: 8px;
     padding: 14px 32px;
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     color: #ffffff;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
@@ -160,7 +160,7 @@ const styles = `
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.25);
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.25);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -168,13 +168,13 @@ const styles = `
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
 
   .hero-btn-primary:hover {
-    box-shadow: 0 6px 24px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 6px 24px rgba(37, 99, 235, 0.4);
     transform: translateY(-2px);
   }
 
@@ -229,7 +229,7 @@ const styles = `
   }
 
   .hero-indicator.active {
-    background: var(--brand-indigo-light);
+    background: var(--mttf-primary-light);
     width: 32px;
   }
 
@@ -250,7 +250,7 @@ const styles = `
   }
 
   .hero-counter-current {
-    color: var(--brand-indigo-light);
+    color: var(--mttf-primary-light);
     font-size: 15px;
     font-weight: 700;
   }
@@ -325,7 +325,7 @@ export default function MTTFHero() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/20" />
           
           {/* Ambient neon radial glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/15 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/15 rounded-full blur-[120px] pointer-events-none" />
         </div>
 
         {/* Vertical label */}

@@ -24,10 +24,10 @@ const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
   :root {
-    --brand-indigo: #6366f1;
-    --brand-indigo-light: #818cf8;
-    --brand-violet: #8b5cf6;
-    --brand-violet-light: #a78bfa;
+    --mttf-primary: #2563eb;
+    --mttf-primary-light: #60a5fa;
+    --mttf-accent: #3b82f6;
+    --mttf-accent-light: #93c5fd;
     --slate-50: #f8fafc;
     --slate-100: #f1f5f9;
     --slate-200: #e2e8f0;
@@ -49,12 +49,12 @@ const styles = `
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--brand-indigo);
+    color: var(--mttf-primary);
     margin-bottom: 16px;
-    background: rgba(99, 102, 241, 0.06);
+    background: rgba(37, 99, 235, 0.06);
     padding: 6px 14px;
     border-radius: 9999px;
-    border: 1px solid rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(37, 99, 235, 0.1);
   }
 
   .lux-section-eyebrow-line {
@@ -62,7 +62,7 @@ const styles = `
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: var(--brand-indigo);
+    background: var(--mttf-primary);
     opacity: 0.8;
   }
 
@@ -76,7 +76,7 @@ const styles = `
 
   .lux-serif-heading em {
     font-style: normal;
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
@@ -92,7 +92,7 @@ const styles = `
   .lux-gold-rule {
     width: 48px;
     height: 3px;
-    background: linear-gradient(90deg, var(--brand-indigo), var(--brand-violet));
+    background: linear-gradient(90deg, var(--mttf-primary), var(--mttf-accent));
     border-radius: 9999px;
     margin: 16px 0;
   }
@@ -137,7 +137,7 @@ const styles = `
     position: absolute;
     top: 12px; left: 0;
     width: 4px; height: calc(100% - 24px);
-    background: linear-gradient(to bottom, var(--brand-indigo), var(--brand-violet));
+    background: linear-gradient(to bottom, var(--mttf-primary), var(--mttf-accent));
     border-radius: 0 4px 4px 0;
   }
 
@@ -166,14 +166,14 @@ const styles = `
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
 
   .lux-btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.25);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
     color: #ffffff;
   }
   .lux-btn-primary:hover::before { opacity: 1; }
@@ -235,10 +235,10 @@ const styles = `
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.02em;
-    color: var(--brand-indigo);
-    border: 1px solid rgba(99, 102, 241, 0.15);
+    color: var(--mttf-primary);
+    border: 1px solid rgba(37, 99, 235, 0.15);
     padding: 6px 16px;
-    background: rgba(99, 102, 241, 0.04);
+    background: rgba(37, 99, 235, 0.04);
     border-radius: 9999px;
   }
 
@@ -288,16 +288,16 @@ const styles = `
 
   .lux-service-card:hover {
     background: #ffffff;
-    border-color: rgba(99, 102, 241, 0.25);
+    border-color: rgba(37, 99, 235, 0.25);
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.06);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.06);
   }
 
   .lux-service-num {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 12px;
     font-weight: 700;
-    color: var(--brand-indigo-light);
+    color: var(--mttf-primary-light);
     opacity: 0.6;
     position: absolute;
     top: 24px; right: 28px;
@@ -310,12 +310,12 @@ const styles = `
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(99, 102, 241, 0.05);
+    background: rgba(37, 99, 235, 0.05);
     transition: all 0.3s ease;
   }
 
   .lux-service-card:hover .lux-service-icon {
-    background: rgba(99, 102, 241, 0.12);
+    background: rgba(37, 99, 235, 0.12);
     transform: scale(1.05);
   }
 
@@ -335,7 +335,7 @@ const styles = `
     font-weight: 600;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--brand-indigo-light);
+    color: var(--mttf-primary-light);
   }
 
   .lux-service-desc {
@@ -355,7 +355,7 @@ const styles = `
     font-weight: 600;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--brand-indigo);
+    color: var(--mttf-primary);
     margin-top: auto;
     opacity: 0;
     transform: translateY(6px);
@@ -370,7 +370,7 @@ const styles = `
 
   /* ── Partners ── */
   .lux-partners {
-    background: var(--slate-950);
+    background: #0b1329;
     padding: 96px 24px;
     position: relative;
     overflow: hidden;
@@ -381,7 +381,7 @@ const styles = `
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.2), transparent);
   }
 
   .lux-partners-inner { max-width: 1200px; margin: 0 auto; }
@@ -401,7 +401,7 @@ const styles = `
 
   .lux-partners-heading em {
     font-style: normal;
-    background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -474,7 +474,7 @@ const styles = `
 
   .lux-partner-item:hover {
     background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(99, 102, 241, 0.3);
+    border-color: rgba(37, 99, 235, 0.3);
     transform: translateY(-3px);
   }
 
@@ -490,7 +490,7 @@ const styles = `
   }
 
   .lux-partner-item:hover .lux-partner-photo {
-    border-color: var(--brand-indigo-light);
+    border-color: var(--mttf-primary-light);
     transform: scale(1.05);
   }
 
@@ -651,7 +651,7 @@ const styles = `
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--brand-indigo-light);
+    color: var(--mttf-primary-light);
   }
 
   .lux-slider-nav { display: flex; align-items: center; gap: 8px; }
@@ -695,7 +695,7 @@ const styles = `
     border-radius: 9999px;
   }
 
-  .lux-glimpse-dot.active { background: var(--brand-indigo); width: 28px; }
+  .lux-glimpse-dot.active { background: var(--mttf-primary); width: 28px; }
 
   /* ── Responsive ── */
   @media (max-width: 1024px) {
@@ -823,7 +823,7 @@ const MTTFHomepage = () => {
     <>
       <style>{styles}</style>
 
-      <div style={{ fontFamily: "'DM Sans', sans-serif" }}>
+      <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
 
         {/* ── Welcome ── */}
         <section className="lux-welcome">
@@ -922,7 +922,7 @@ const MTTFHomepage = () => {
             <div className="lux-partners-top">
 
               <div>
-                <div className="lux-section-eyebrow" style={{ color: "rgba(232,201,106,0.7)" }}>
+                <div className="lux-section-eyebrow" style={{ color: "rgba(96,165,250,0.9)" }}>
                   <span className="lux-section-eyebrow-line" />
                   Team · Customer · Community
                 </div>

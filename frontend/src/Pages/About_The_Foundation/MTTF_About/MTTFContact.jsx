@@ -33,14 +33,14 @@ function MTTFContact() {
           align-items: center;
           gap: 0.55rem;
           padding: 0.9rem 2.4rem;
-          background: #C9A84C;
+          background: #2563eb;
           color: #fff;
           font-family: 'DM Sans', sans-serif;
           font-size: 0.75rem;
           font-weight: 500;
           letter-spacing: 0.16em;
           text-transform: uppercase;
-          border: 1px solid #C9A84C;
+          border: 1px solid #2563eb;
           border-radius: 2px;
           cursor: pointer;
           transition: all 0.35s ease;
@@ -107,10 +107,10 @@ function MTTFContact() {
 
         {/* Corner brackets */}
         {[
-          { top: '2rem', left: '2rem', borderTop: '1px solid #C9A84C', borderLeft: '1px solid #C9A84C' },
-          { top: '2rem', right: '2rem', borderTop: '1px solid #C9A84C', borderRight: '1px solid #C9A84C' },
-          { bottom: '2rem', left: '2rem', borderBottom: '1px solid #C9A84C', borderLeft: '1px solid #C9A84C' },
-          { bottom: '2rem', right: '2rem', borderBottom: '1px solid #C9A84C', borderRight: '1px solid #C9A84C' },
+          { top: '2rem', left: '2rem', borderTop: '1px solid #2563eb', borderLeft: '1px solid #2563eb' },
+          { top: '2rem', right: '2rem', borderTop: '1px solid #2563eb', borderRight: '1px solid #2563eb' },
+          { bottom: '2rem', left: '2rem', borderBottom: '1px solid #2563eb', borderLeft: '1px solid #2563eb' },
+          { bottom: '2rem', right: '2rem', borderBottom: '1px solid #2563eb', borderRight: '1px solid #2563eb' },
         ].map((s, i) => (
           <div key={i} style={{ position: 'absolute', width: 52, height: 52, opacity: 0.4, ...s }} />
         ))}
@@ -124,7 +124,7 @@ function MTTFContact() {
         ].map((dot, i) => (
           <div key={i} style={{
             position: 'absolute', width: 4, height: 4, borderRadius: '50%',
-            background: '#C9A84C',
+            background: '#2563eb',
             animation: `floatDot ${dot.dur} ease-in-out infinite`,
             animationDelay: dot.delay,
             top: dot.top, left: dot.left, right: dot.right,
@@ -149,13 +149,13 @@ function MTTFContact() {
           {/* Gold top bar */}
           <div style={{
             position: 'absolute', top: 0, left: 0, right: 0, height: '2px',
-            background: 'linear-gradient(90deg, transparent, #C9A84C, #E8C96A, #C9A84C, transparent)',
+            background: 'linear-gradient(90deg, transparent, #2563eb, #E8C96A, #2563eb, transparent)',
           }} />
 
           {/* Clipped corner accent */}
           <div style={{
             position: 'absolute', top: 0, right: 0,
-            width: 20, height: 20, background: '#C9A84C',
+            width: 20, height: 20, background: '#2563eb',
             clipPath: 'polygon(100% 0, 0 0, 100% 100%)',
           }} />
 
@@ -167,7 +167,7 @@ function MTTFContact() {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             margin: '0 auto 1.75rem',
           }}>
-            <svg width="28" height="28" fill="none" stroke="#C9A84C" strokeWidth="1.6" viewBox="0 0 24 24">
+            <svg width="28" height="28" fill="none" stroke="#2563eb" strokeWidth="1.6" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </div>
@@ -177,14 +177,14 @@ function MTTFContact() {
             display: 'inline-flex', alignItems: 'center', gap: '0.6rem',
             marginBottom: '1.25rem',
           }}>
-            <span style={{ display: 'inline-block', width: 22, height: 1, background: '#C9A84C', opacity: 0.6 }} />
+            <span style={{ display: 'inline-block', width: 22, height: 1, background: '#2563eb', opacity: 0.6 }} />
             <span style={{
               fontFamily: "'DM Sans', sans-serif", fontSize: '0.62rem',
-              letterSpacing: '0.22em', color: '#C9A84C', textTransform: 'uppercase', fontWeight: 500,
+              letterSpacing: '0.22em', color: '#2563eb', textTransform: 'uppercase', fontWeight: 500,
             }}>
               Get In Touch
             </span>
-            <span style={{ display: 'inline-block', width: 22, height: 1, background: '#C9A84C', opacity: 0.6 }} />
+            <span style={{ display: 'inline-block', width: 22, height: 1, background: '#2563eb', opacity: 0.6 }} />
           </div>
 
           {/* Title */}
@@ -202,7 +202,7 @@ function MTTFContact() {
             fontWeight: 700, letterSpacing: '-0.02em',
             margin: '0 0 1.25rem', lineHeight: 1.1,
             fontStyle: 'italic',
-            background: 'linear-gradient(135deg, #C9A84C 0%, #8B6D38 40%, #E8C96A 100%)',
+            background: 'linear-gradient(135deg, #2563eb 0%, #8B6D38 40%, #E8C96A 100%)',
             backgroundSize: '200% auto',
             WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
             animation: 'shimmer 4s linear infinite',
@@ -213,7 +213,7 @@ function MTTFContact() {
           {/* Divider */}
           <div style={{
             height: '1px',
-            background: 'linear-gradient(90deg, transparent, #C9A84C50, transparent)',
+            background: 'linear-gradient(90deg, transparent, #2563eb50, transparent)',
             margin: '0 auto 1.5rem', maxWidth: '200px',
           }} />
 

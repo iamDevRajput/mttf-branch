@@ -47,7 +47,7 @@ function AwardCard({ award }) {
         position: "absolute",
         left: 0, top: 0, bottom: 0,
         width: hovered ? "3px" : "2px",
-        background: "linear-gradient(180deg, #C9A84C 0%, #E8C97A 100%)",
+        background: "linear-gradient(180deg, #2563eb 0%, #E8C97A 100%)",
         transition: "width 0.3s ease",
         zIndex: 2,
       }} />
@@ -86,7 +86,7 @@ function AwardCard({ award }) {
           transition: "opacity 0.4s ease",
           pointerEvents: "none",
         }}>
-          <Icon style={{ width: "5rem", height: "5rem", color: "#C9A84C" }} />
+          <Icon style={{ width: "5rem", height: "5rem", color: "#2563eb" }} />
         </div>
 
         {/* Header row */}
@@ -108,7 +108,7 @@ function AwardCard({ award }) {
             border: `1px solid ${hovered ? "rgba(201,168,76,0.4)" : "rgba(201,168,76,0.18)"}`,
             borderRadius: "2px",
             transition: "background 0.3s ease, border-color 0.3s ease",
-            color: "#C9A84C",
+            color: "#2563eb",
           }}>
             <Icon style={{ width: "1.1rem", height: "1.1rem" }} />
           </div>
@@ -204,7 +204,7 @@ function AwardCard({ award }) {
                 <span style={{
                   width: 3, height: 3,
                   borderRadius: "50%",
-                  background: "#C9A84C",
+                  background: "#2563eb",
                   flexShrink: 0,
                   marginTop: "0.45rem",
                 }} />
@@ -233,7 +233,7 @@ function AwardCard({ award }) {
             display: "inline-block",
             width: 5, height: 5,
             borderRadius: "50%",
-            background: "#C9A84C",
+            background: "#2563eb",
             flexShrink: 0,
           }} />
           <span style={{

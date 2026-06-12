@@ -5,7 +5,7 @@ import Footer from "../Components/Footer";
 
 const MainPage = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-slate-50">
       <Header />
 
       <main>

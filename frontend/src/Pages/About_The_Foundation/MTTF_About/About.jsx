@@ -34,14 +34,14 @@ function About() {
         /* ── Utility ── */
         .gold-rule {
           height: 1px;
-          background: linear-gradient(90deg, transparent, #C9A84C70, transparent);
+          background: linear-gradient(90deg, transparent, #2563eb70, transparent);
           margin: 0;
         }
         .eyebrow {
           font-family: 'DM Sans', sans-serif;
           font-size: 0.65rem;
           letter-spacing: 0.22em;
-          color: #C9A84C;
+          color: #2563eb;
           text-transform: uppercase;
           font-weight: 500;
           display: flex;
@@ -54,7 +54,7 @@ function About() {
           display: inline-block;
           width: 28px;
           height: 1px;
-          background: #C9A84C;
+          background: #2563eb;
         }
 
         /* ── Luxury button ── */
@@ -77,8 +77,8 @@ function About() {
           text-decoration: none;
         }
         .btn-dark:hover {
-          background: #C9A84C;
-          border-color: #C9A84C;
+          background: #2563eb;
+          border-color: #2563eb;
           color: #fff;
           transform: translateY(-2px);
           box-shadow: 0 10px 24px rgba(201,168,76,0.28);
@@ -95,13 +95,13 @@ function About() {
           font-weight: 500;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          border: 1px solid #C9A84C;
+          border: 1px solid #2563eb;
           border-radius: 2px;
           cursor: pointer;
           transition: all 0.35s ease;
         }
         .btn-outline:hover {
-          background: #C9A84C;
+          background: #2563eb;
           color: #fff;
           transform: translateY(-2px);
           box-shadow: 0 10px 24px rgba(201,168,76,0.2);
@@ -122,12 +122,12 @@ function About() {
           position: absolute;
           top: 0; left: 0;
           width: 0; height: 2px;
-          background: linear-gradient(90deg, #C9A84C, #E8C96A, transparent);
+          background: linear-gradient(90deg, #2563eb, #E8C96A, transparent);
           transition: width 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .mv-card:hover::before { width: 100%; }
         .mv-card:hover {
-          border-color: #C9A84C;
+          border-color: #2563eb;
           transform: translateY(-6px);
           box-shadow: 0 24px 48px rgba(139,109,56,0.13);
           background: #FEFCF7;
@@ -148,12 +148,12 @@ function About() {
           position: absolute;
           bottom: 0; left: 0;
           width: 0; height: 2px;
-          background: linear-gradient(90deg, #C9A84C, transparent);
+          background: linear-gradient(90deg, #2563eb, transparent);
           transition: width 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .value-card:hover::after { width: 100%; }
         .value-card:hover {
-          border-color: #C9A84C;
+          border-color: #2563eb;
           transform: translateY(-5px);
           box-shadow: 0 20px 40px rgba(139,109,56,0.12);
           background: #FEFCF7;
@@ -170,7 +170,7 @@ function About() {
           animation: fadeUp 0.6s ease both;
         }
         .what-card:hover {
-          border-color: #C9A84C;
+          border-color: #2563eb;
           transform: translateY(-6px);
           box-shadow: 0 24px 48px rgba(139,109,56,0.13);
           background: #FEFCF7;
@@ -188,7 +188,7 @@ function About() {
 
         ::-webkit-scrollbar { width: 3px; }
         ::-webkit-scrollbar-track { background: #F7F3EA; }
-        ::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 2px; }
+        ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
       `}</style>
 
       <div className="about-page">
@@ -206,10 +206,10 @@ function About() {
         }}>
           {/* Corner brackets */}
           {[
-            { top:'1.8rem', left:'1.8rem', borderTop:'1px solid #C9A84C', borderLeft:'1px solid #C9A84C' },
-            { top:'1.8rem', right:'1.8rem', borderTop:'1px solid #C9A84C', borderRight:'1px solid #C9A84C' },
-            { bottom:'1.8rem', left:'1.8rem', borderBottom:'1px solid #C9A84C', borderLeft:'1px solid #C9A84C' },
-            { bottom:'1.8rem', right:'1.8rem', borderBottom:'1px solid #C9A84C', borderRight:'1px solid #C9A84C' },
+            { top:'1.8rem', left:'1.8rem', borderTop:'1px solid #2563eb', borderLeft:'1px solid #2563eb' },
+            { top:'1.8rem', right:'1.8rem', borderTop:'1px solid #2563eb', borderRight:'1px solid #2563eb' },
+            { bottom:'1.8rem', left:'1.8rem', borderBottom:'1px solid #2563eb', borderLeft:'1px solid #2563eb' },
+            { bottom:'1.8rem', right:'1.8rem', borderBottom:'1px solid #2563eb', borderRight:'1px solid #2563eb' },
           ].map((s, i) => (
             <div key={i} style={{ position:'absolute', width:52, height:52, opacity:0.45, ...s }} />
           ))}
@@ -231,7 +231,7 @@ function About() {
               borderRadius:'2px', padding:'0.4rem 1.2rem', marginBottom:'1.75rem',
             }}>
               <span style={{
-                width:5, height:5, borderRadius:'50%', background:'#C9A84C',
+                width:5, height:5, borderRadius:'50%', background:'#2563eb',
                 display:'inline-block', animation:'pulseGold 2s ease infinite',
               }} />
               <span style={{
@@ -255,7 +255,7 @@ function About() {
               fontSize:'clamp(2.6rem, 6.5vw, 5.2rem)',
               fontWeight:900, lineHeight:1.05, letterSpacing:'-0.02em',
               marginBottom:'1.5rem',
-              background:'linear-gradient(135deg, #C9A84C 0%, #8B6D38 40%, #E8C96A 100%)',
+              background:'linear-gradient(135deg, #2563eb 0%, #8B6D38 40%, #E8C96A 100%)',
               backgroundSize:'200% auto',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
               animation:'shimmer 4s linear infinite',
@@ -304,13 +304,13 @@ function About() {
                 borderRadius:'4px', display:'flex', alignItems:'center',
                 justifyContent:'center', marginBottom:'1.25rem',
               }}>
-                <svg width="24" height="24" fill="none" stroke="#C9A84C" strokeWidth="1.8" viewBox="0 0 24 24">
+                <svg width="24" height="24" fill="none" stroke="#2563eb" strokeWidth="1.8" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               <div style={{
                 fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem',
-                letterSpacing:'0.2em', color:'#C9A84C', textTransform:'uppercase',
+                letterSpacing:'0.2em', color:'#2563eb', textTransform:'uppercase',
                 fontWeight:500, marginBottom:'0.4rem',
               }}>
                 Our Mission
@@ -336,14 +336,14 @@ function About() {
                 borderRadius:'4px', display:'flex', alignItems:'center',
                 justifyContent:'center', marginBottom:'1.25rem',
               }}>
-                <svg width="24" height="24" fill="none" stroke="#C9A84C" strokeWidth="1.8" viewBox="0 0 24 24">
+                <svg width="24" height="24" fill="none" stroke="#2563eb" strokeWidth="1.8" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
               <div style={{
                 fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem',
-                letterSpacing:'0.2em', color:'#C9A84C', textTransform:'uppercase',
+                letterSpacing:'0.2em', color:'#2563eb', textTransform:'uppercase',
                 fontWeight:500, marginBottom:'0.4rem',
               }}>
                 Our Vision
@@ -391,7 +391,7 @@ function About() {
                   label:'Excellence',
                   desc:'Pursuing the highest standards in mathematical thinking and innovation',
                   icon: (
-                    <svg width="22" height="22" fill="none" stroke="#C9A84C" strokeWidth="1.8" viewBox="0 0 24 24">
+                    <svg width="22" height="22" fill="none" stroke="#2563eb" strokeWidth="1.8" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   ),
@@ -400,7 +400,7 @@ function About() {
                   label:'Collaboration',
                   desc:'Building partnerships that foster growth and innovation',
                   icon: (
-                    <svg width="22" height="22" fill="none" stroke="#C9A84C" strokeWidth="1.8" viewBox="0 0 24 24">
+                    <svg width="22" height="22" fill="none" stroke="#2563eb" strokeWidth="1.8" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   ),
@@ -409,7 +409,7 @@ function About() {
                   label:'Learning',
                   desc:'Continuous education and knowledge sharing for all members',
                   icon: (
-                    <svg width="22" height="22" fill="none" stroke="#C9A84C" strokeWidth="1.8" viewBox="0 0 24 24">
+                    <svg width="22" height="22" fill="none" stroke="#2563eb" strokeWidth="1.8" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
                   ),
@@ -418,7 +418,7 @@ function About() {
                   label:'Innovation',
                   desc:'Encouraging creative solutions and groundbreaking ideas',
                   icon: (
-                    <svg width="22" height="22" fill="none" stroke="#C9A84C" strokeWidth="1.8" viewBox="0 0 24 24">
+                    <svg width="22" height="22" fill="none" stroke="#2563eb" strokeWidth="1.8" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                     </svg>
                   ),
@@ -490,7 +490,7 @@ function About() {
                 title:'Research & Development',
                 desc:'Conducting cutting-edge research in mathematics and technology, pushing the boundaries of what\'s possible.',
                 icon:(
-                  <svg width="24" height="24" fill="none" stroke="#C9A84C" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <svg width="24" height="24" fill="none" stroke="#2563eb" strokeWidth="1.8" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                   </svg>
                 ),
@@ -500,7 +500,7 @@ function About() {
                 title:'Education & Training',
                 desc:'Providing comprehensive training programs, workshops, and courses to enhance mathematical and technological skills.',
                 icon:(
-                  <svg width="24" height="24" fill="none" stroke="#C9A84C" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <svg width="24" height="24" fill="none" stroke="#2563eb" strokeWidth="1.8" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 ),
@@ -510,7 +510,7 @@ function About() {
                 title:'Consultancy Services',
                 desc:'Offering expert consultancy services to organizations seeking mathematical and technological solutions.',
                 icon:(
-                  <svg width="24" height="24" fill="none" stroke="#C9A84C" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <svg width="24" height="24" fill="none" stroke="#2563eb" strokeWidth="1.8" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 ),
@@ -526,7 +526,7 @@ function About() {
                 }}>
                   <span style={{
                     fontFamily:"'Cormorant Garamond', serif", fontSize:'0.75rem',
-                    fontWeight:700, color:'#C9A84C', letterSpacing:'0.1em',
+                    fontWeight:700, color:'#2563eb', letterSpacing:'0.1em',
                   }}>
                     {item.num}
                   </span>
@@ -588,7 +588,7 @@ function About() {
               {/* Gold top bar */}
               <div style={{
                 position:'absolute', top:0, left:0, right:0, height:'2px',
-                background:'linear-gradient(90deg, transparent, #C9A84C, transparent)',
+                background:'linear-gradient(90deg, transparent, #2563eb, transparent)',
               }} />
 
               {[
@@ -600,7 +600,7 @@ function About() {
                 <div className="stat-item" key={label}>
                   <div style={{
                     fontFamily:"'Cormorant Garamond', serif", fontSize:'3rem',
-                    fontWeight:700, color:'#C9A84C', letterSpacing:'-0.03em', lineHeight:1,
+                    fontWeight:700, color:'#2563eb', letterSpacing:'-0.03em', lineHeight:1,
                     marginBottom:'0.4rem',
                   }}>
                     {val}
@@ -632,27 +632,27 @@ function About() {
               {/* Gold top accent */}
               <div style={{
                 position:'absolute', top:0, left:0, right:0, height:'2px',
-                background:'linear-gradient(90deg, transparent, #C9A84C, transparent)',
+                background:'linear-gradient(90deg, transparent, #2563eb, transparent)',
               }} />
               {/* Corner brackets */}
               {[
-                { top:'1.2rem', left:'1.2rem', borderTop:'1px solid #C9A84C40', borderLeft:'1px solid #C9A84C40' },
-                { top:'1.2rem', right:'1.2rem', borderTop:'1px solid #C9A84C40', borderRight:'1px solid #C9A84C40' },
-                { bottom:'1.2rem', left:'1.2rem', borderBottom:'1px solid #C9A84C40', borderLeft:'1px solid #C9A84C40' },
-                { bottom:'1.2rem', right:'1.2rem', borderBottom:'1px solid #C9A84C40', borderRight:'1px solid #C9A84C40' },
+                { top:'1.2rem', left:'1.2rem', borderTop:'1px solid #2563eb40', borderLeft:'1px solid #2563eb40' },
+                { top:'1.2rem', right:'1.2rem', borderTop:'1px solid #2563eb40', borderRight:'1px solid #2563eb40' },
+                { bottom:'1.2rem', left:'1.2rem', borderBottom:'1px solid #2563eb40', borderLeft:'1px solid #2563eb40' },
+                { bottom:'1.2rem', right:'1.2rem', borderBottom:'1px solid #2563eb40', borderRight:'1px solid #2563eb40' },
               ].map((s, i) => (
                 <div key={i} style={{ position:'absolute', width:36, height:36, ...s }} />
               ))}
 
               <div style={{
                 fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem',
-                letterSpacing:'0.22em', color:'#C9A84C', textTransform:'uppercase',
+                letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase',
                 fontWeight:500, marginBottom:'1.25rem',
                 display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem',
               }}>
-                <span style={{ display:'inline-block', width:22, height:'1px', background:'#C9A84C' }} />
+                <span style={{ display:'inline-block', width:22, height:'1px', background:'#2563eb' }} />
                 Join Our Community
-                <span style={{ display:'inline-block', width:22, height:'1px', background:'#C9A84C' }} />
+                <span style={{ display:'inline-block', width:22, height:'1px', background:'#2563eb' }} />
               </div>
 
               <h2 style={{
@@ -663,7 +663,7 @@ function About() {
                 Shape the Future of{' '}
                 <span style={{
                   fontStyle:'italic',
-                  background:'linear-gradient(135deg, #C9A84C, #E8C96A)',
+                  background:'linear-gradient(135deg, #2563eb, #E8C96A)',
                   WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
                 }}>
                   Mathematical Thinking
@@ -680,9 +680,9 @@ function About() {
               </p>
 
               <div style={{ display:'flex', gap:'1rem', justifyContent:'center', flexWrap:'wrap' }}>
-                <button className="btn-dark" style={{ background:'#C9A84C', borderColor:'#C9A84C', color:'#fff' }}
+                <button className="btn-dark" style={{ background:'#2563eb', borderColor:'#2563eb', color:'#fff' }}
                   onMouseEnter={e => { e.currentTarget.style.background='#B8973B'; e.currentTarget.style.transform='translateY(-2px)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.background='#C9A84C'; e.currentTarget.style.transform='translateY(0)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.background='#2563eb'; e.currentTarget.style.transform='translateY(0)'; }}
                 >
                   Become a Member
                 </button>

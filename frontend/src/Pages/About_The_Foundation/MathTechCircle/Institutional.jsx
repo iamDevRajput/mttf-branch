@@ -171,7 +171,7 @@ function BenefitCard({ benefit, index }) {
         position: "absolute",
         left: 0, top: 0, bottom: 0,
         width: hovered ? "3px" : "2px",
-        background: "linear-gradient(180deg, #C9A84C 0%, #E8C97A 100%)",
+        background: "linear-gradient(180deg, #2563eb 0%, #E8C97A 100%)",
         transition: "width 0.3s ease",
       }} />
 
@@ -192,7 +192,7 @@ function BenefitCard({ benefit, index }) {
       <div style={{
         fontFamily: "'Cormorant Garamond', serif",
         fontSize: "0.65rem",
-        color: "#C9A84C",
+        color: "#2563eb",
         letterSpacing: "0.2em",
         marginBottom: "0.5rem",
         fontWeight: 600,
@@ -235,14 +235,14 @@ function BenefitCard({ benefit, index }) {
               <span style={{
                 width: 4, height: 4,
                 borderRadius: "50%",
-                background: "#C9A84C",
+                background: "#2563eb",
                 flexShrink: 0,
               }} />
               <span style={{
                 fontFamily: "'Playfair Display', serif",
                 fontSize: "0.88rem",
                 fontWeight: 700,
-                color: "#C9A84C",
+                color: "#2563eb",
                 letterSpacing: "0.01em",
               }}>
                 {item.title}
@@ -304,7 +304,7 @@ function PricingCard({ plan, index }) {
         top: 0, left: 0, right: 0,
         height: plan.featured ? "2px" : "1px",
         background: plan.featured
-          ? "linear-gradient(90deg, transparent, #C9A84C, #E8C97A, #C9A84C, transparent)"
+          ? "linear-gradient(90deg, transparent, #2563eb, #E8C97A, #2563eb, transparent)"
           : "rgba(139,112,72,0.15)",
       }} />
 
@@ -314,7 +314,7 @@ function PricingCard({ plan, index }) {
         fontSize: "0.6rem",
         letterSpacing: "0.2em",
         textTransform: "uppercase",
-        color: plan.featured ? "#C9A84C" : "#8B7048",
+        color: plan.featured ? "#2563eb" : "#8B7048",
         marginBottom: "1.5rem",
         padding: "0.25rem 0.65rem",
         border: `1px solid ${plan.featured ? "rgba(201,168,76,0.35)" : "rgba(139,112,72,0.2)"}`,
@@ -369,7 +369,7 @@ function PricingCard({ plan, index }) {
         fontFamily: "'Playfair Display', serif",
         fontSize: "1.9rem",
         fontWeight: 700,
-        color: "#C9A84C",
+        color: "#2563eb",
         letterSpacing: "-0.02em",
         lineHeight: 1,
       }}>
@@ -407,7 +407,7 @@ export default function Institutional() {
         }
         ::-webkit-scrollbar { width: 3px; }
         ::-webkit-scrollbar-track { background: #FBF6EC; }
-        ::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 1px; }
+        ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 1px; }
       `}</style>
 
       <Header />
@@ -483,7 +483,7 @@ export default function Institutional() {
               position: "absolute",
               width: 4, height: 4,
               borderRadius: "50%",
-              background: "#C9A84C",
+              background: "#2563eb",
               animation: `floatDot ${dot.dur} ease-in-out infinite`,
               animationDelay: dot.delay,
               top: dot.top, left: dot.left, right: dot.right,
@@ -509,18 +509,18 @@ export default function Institutional() {
               background: "rgba(201,168,76,0.05)",
               borderRadius: "1px",
             }}>
-              <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#C9A84C", flexShrink: 0 }} />
+              <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#2563eb", flexShrink: 0 }} />
               <span style={{
                 fontFamily: "'Jost', sans-serif",
                 fontSize: "0.62rem",
                 letterSpacing: "0.25em",
                 textTransform: "uppercase",
-                color: "#C9A84C",
+                color: "#2563eb",
                 fontWeight: 500,
               }}>
                 MathTech Thinking Foundation
               </span>
-              <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#C9A84C", flexShrink: 0 }} />
+              <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#2563eb", flexShrink: 0 }} />
             </div>
 
             {/* Headline */}
@@ -537,7 +537,7 @@ export default function Institutional() {
               <br />
               <span style={{
                 fontStyle: "italic",
-                background: "linear-gradient(120deg, #C9A84C 0%, #E8C97A 40%, #B8965A 75%, #C9A84C 100%)",
+                background: "linear-gradient(120deg, #2563eb 0%, #E8C97A 40%, #B8965A 75%, #2563eb 100%)",
                 backgroundSize: "200% auto",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -584,7 +584,7 @@ export default function Institutional() {
                     fontFamily: "'Playfair Display', serif",
                     fontSize: "2rem",
                     fontWeight: 700,
-                    color: "#C9A84C",
+                    color: "#2563eb",
                     lineHeight: 1,
                   }}>{val}</div>
                   <div style={{
@@ -608,7 +608,7 @@ export default function Institutional() {
               letterSpacing: "0.2em",
               textTransform: "uppercase",
               color: "#fff",
-              background: "#C9A84C",
+              background: "#2563eb",
               border: "none",
               padding: "0.9rem 2.4rem",
               cursor: "pointer",
@@ -617,7 +617,7 @@ export default function Institutional() {
               fontWeight: 500,
             }}
               onMouseEnter={e => { e.target.style.background = "#B8965A"; e.target.style.transform = "translateY(-2px)"; }}
-              onMouseLeave={e => { e.target.style.background = "#C9A84C"; e.target.style.transform = "translateY(0)"; }}
+              onMouseLeave={e => { e.target.style.background = "#2563eb"; e.target.style.transform = "translateY(0)"; }}
             >
               Contact Now
             </button>
@@ -714,7 +714,7 @@ export default function Institutional() {
                 fontSize: "0.62rem",
                 letterSpacing: "0.25em",
                 textTransform: "uppercase",
-                color: "#C9A84C",
+                color: "#2563eb",
                 marginBottom: "1rem",
                 fontWeight: 500,
               }}>
