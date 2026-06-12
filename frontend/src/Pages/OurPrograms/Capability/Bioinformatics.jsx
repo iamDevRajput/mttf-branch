@@ -85,7 +85,7 @@ function Bioinformatics() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
         .bio-page * { box-sizing: border-box; }
 
@@ -99,13 +99,13 @@ function Bioinformatics() {
           --text-mid: #4A3F35;
           --text-light: #8A7A6E;
           --border: #E8E0D4;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           background: var(--cream);
           min-height: 100vh;
         }
 
         .bio-page h1, .bio-page h2, .bio-page h3, .bio-page h4 {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Plus Jakarta Sans', serif;
         }
 
         /* Hero */
@@ -163,7 +163,7 @@ function Bioinformatics() {
           letter-spacing: 2.5px;
           text-transform: uppercase;
           color: var(--accent-yellow);
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-weight: 500;
         }
 
@@ -211,7 +211,7 @@ function Bioinformatics() {
           text-decoration: none;
           border-radius: 2px;
           transition: all 0.3s ease;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         .bio-btn-primary:hover {
@@ -241,7 +241,7 @@ function Bioinformatics() {
           font-weight: 500;
           margin-bottom: 16px;
           display: block;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         .bio-section-title {
@@ -303,7 +303,7 @@ function Bioinformatics() {
         }
 
         .bio-quote p {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Plus Jakarta Sans', serif;
           font-size: 20px;
           font-style: italic;
           color: var(--text-dark);
@@ -352,7 +352,7 @@ function Bioinformatics() {
         .bio-area-card:hover::after { transform: scaleX(1); }
 
         .bio-area-num {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Plus Jakarta Sans', serif;
           font-size: 64px;
           font-weight: 300;
           color: var(--border);
@@ -412,7 +412,7 @@ function Bioinformatics() {
           transform: translateX(-8px);
           transition: all 0.3s ease;
           font-weight: 500;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         .bio-area-card:hover .bio-area-arrow { opacity: 1; transform: translateX(0); }

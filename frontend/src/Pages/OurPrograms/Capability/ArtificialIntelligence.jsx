@@ -67,7 +67,7 @@ function ArtificialIntelligence() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
         .ai-page * { box-sizing: border-box; }
 
@@ -81,13 +81,13 @@ function ArtificialIntelligence() {
           --text-mid: #4A3F35;
           --text-light: #8A7A6E;
           --border: #E8E0D4;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           background: var(--cream);
           min-height: 100vh;
         }
 
         .ai-page h1, .ai-page h2, .ai-page h3 {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Plus Jakarta Sans', serif;
         }
 
         /* Hero */
@@ -142,7 +142,7 @@ function ArtificialIntelligence() {
           letter-spacing: 2.5px;
           text-transform: uppercase;
           color: var(--accent-yellow);
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-weight: 500;
         }
 
@@ -190,7 +190,7 @@ function ArtificialIntelligence() {
           text-decoration: none;
           border-radius: 2px;
           transition: all 0.3s ease;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         .ai-btn-primary:hover {
@@ -283,7 +283,7 @@ function ArtificialIntelligence() {
         }
 
         .ai-overview-stat .num {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Plus Jakarta Sans', serif;
           font-size: 52px;
           font-weight: 300;
           color: var(--accent-yellow);
@@ -350,7 +350,7 @@ function ArtificialIntelligence() {
         }
 
         .ai-area-num {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Plus Jakarta Sans', serif;
           font-size: 72px;
           font-weight: 300;
           color: var(--border);

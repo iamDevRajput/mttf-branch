@@ -77,7 +77,7 @@ function BusinessIntelligence() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
         .bi-page * { box-sizing: border-box; }
 
@@ -90,13 +90,13 @@ function BusinessIntelligence() {
           --text-mid: #4A3F35;
           --text-light: #8A7A6E;
           --border: #E8E0D4;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           background: var(--cream);
           min-height: 100vh;
         }
 
         .bi-page h1, .bi-page h2, .bi-page h3, .bi-page h4 {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Plus Jakarta Sans', serif;
         }
 
         /* Hero */
@@ -136,7 +136,7 @@ function BusinessIntelligence() {
           font-weight: 500;
           transition: color 0.3s ease;
           margin-bottom: 40px;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         .bi-back:hover { color: var(--accent-yellow); }
@@ -154,7 +154,7 @@ function BusinessIntelligence() {
           letter-spacing: 2.5px;
           text-transform: uppercase;
           color: var(--accent-yellow);
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-weight: 500;
         }
 
@@ -203,7 +203,7 @@ function BusinessIntelligence() {
           text-decoration: none;
           border-radius: 2px;
           transition: all 0.3s ease;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         .bi-btn-primary:hover {
@@ -233,7 +233,7 @@ function BusinessIntelligence() {
           font-weight: 500;
           margin-bottom: 16px;
           display: block;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         .bi-section-title {
@@ -288,7 +288,7 @@ function BusinessIntelligence() {
         }
 
         .bi-metric .val {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Plus Jakarta Sans', serif;
           font-size: 40px;
           font-weight: 300;
           color: var(--text-dark);
@@ -418,7 +418,7 @@ function BusinessIntelligence() {
         .bi-service-item:hover::before { transform: scaleY(1); }
 
         .bi-service-num {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Plus Jakarta Sans', serif;
           font-size: 40px;
           font-weight: 300;
           color: var(--border);
@@ -472,7 +472,7 @@ function BusinessIntelligence() {
         }
 
         .bi-service-stat .val {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Plus Jakarta Sans', serif;
           font-size: 36px;
           font-weight: 300;
           color: var(--accent-yellow);
@@ -667,7 +667,7 @@ function BusinessIntelligence() {
               </p>
             </div>
             <div className="bi-overview-chart">
-              <p style={{ color: 'rgba(250,247,242,0.4)', fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', margin: '0 0 20px', fontFamily: 'DM Sans', fontWeight: 500 }}>
+              <p style={{ color: 'rgba(250,247,242,0.4)', fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', margin: '0 0 20px', fontFamily: 'Plus Jakarta Sans', fontWeight: 500 }}>
                 Performance Overview
               </p>
               {[

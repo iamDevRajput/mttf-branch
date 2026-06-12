@@ -8,7 +8,7 @@ function About() {
       <Header />
 
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:ital,wght@0,700;0,900;1,600;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(24px); }
@@ -24,9 +24,9 @@ function About() {
         }
 
         .about-page {
-          background: #F7F3EA;
-          color: #1C1208;
-          font-family: 'DM Sans', sans-serif;
+          background: #f8fafc;
+          color: #0f172a;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           min-height: 100vh;
           padding-top: 5rem;
         }
@@ -38,7 +38,7 @@ function About() {
           margin: 0;
         }
         .eyebrow {
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.65rem;
           letter-spacing: 0.22em;
           color: #2563eb;
@@ -63,14 +63,14 @@ function About() {
           align-items: center;
           gap: 0.5rem;
           padding: 0.85rem 2.25rem;
-          background: #1C1208;
-          color: #F7F3EA;
-          font-family: 'DM Sans', sans-serif;
+          background: #0f172a;
+          color: #f8fafc;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.75rem;
           font-weight: 500;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          border: 1px solid #1C1208;
+          border: 1px solid #0f172a;
           border-radius: 2px;
           cursor: pointer;
           transition: all 0.35s ease;
@@ -81,7 +81,7 @@ function About() {
           border-color: #2563eb;
           color: #fff;
           transform: translateY(-2px);
-          box-shadow: 0 10px 24px rgba(201,168,76,0.28);
+          box-shadow: 0 10px 24px rgba(37, 99, 235,0.28);
         }
         .btn-outline {
           display: inline-flex;
@@ -89,8 +89,8 @@ function About() {
           gap: 0.5rem;
           padding: 0.85rem 2.25rem;
           background: transparent;
-          color: #1C1208;
-          font-family: 'DM Sans', sans-serif;
+          color: #0f172a;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.75rem;
           font-weight: 500;
           letter-spacing: 0.14em;
@@ -104,13 +104,13 @@ function About() {
           background: #2563eb;
           color: #fff;
           transform: translateY(-2px);
-          box-shadow: 0 10px 24px rgba(201,168,76,0.2);
+          box-shadow: 0 10px 24px rgba(37, 99, 235,0.2);
         }
 
         /* ── Cards ── */
         .mv-card {
-          background: #FAF8F2;
-          border: 1px solid #E8E0CC;
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
           border-radius: 4px;
           padding: 2.5rem;
           position: relative;
@@ -122,20 +122,20 @@ function About() {
           position: absolute;
           top: 0; left: 0;
           width: 0; height: 2px;
-          background: linear-gradient(90deg, #2563eb, #E8C96A, transparent);
+          background: linear-gradient(90deg, #2563eb, #60a5fa, transparent);
           transition: width 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .mv-card:hover::before { width: 100%; }
         .mv-card:hover {
           border-color: #2563eb;
           transform: translateY(-6px);
-          box-shadow: 0 24px 48px rgba(139,109,56,0.13);
+          box-shadow: 0 24px 48px rgba(37, 99, 235,0.13);
           background: #FEFCF7;
         }
 
         .value-card {
-          background: #FAF8F2;
-          border: 1px solid #E8E0CC;
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
           border-radius: 4px;
           padding: 2rem;
           text-align: center;
@@ -155,13 +155,13 @@ function About() {
         .value-card:hover {
           border-color: #2563eb;
           transform: translateY(-5px);
-          box-shadow: 0 20px 40px rgba(139,109,56,0.12);
+          box-shadow: 0 20px 40px rgba(37, 99, 235,0.12);
           background: #FEFCF7;
         }
 
         .what-card {
-          background: #FAF8F2;
-          border: 1px solid #E8E0CC;
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
           border-radius: 4px;
           padding: 2.5rem;
           position: relative;
@@ -172,7 +172,7 @@ function About() {
         .what-card:hover {
           border-color: #2563eb;
           transform: translateY(-6px);
-          box-shadow: 0 24px 48px rgba(139,109,56,0.13);
+          box-shadow: 0 24px 48px rgba(37, 99, 235,0.13);
           background: #FEFCF7;
         }
 
@@ -187,7 +187,7 @@ function About() {
         }
 
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #F7F3EA; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
       `}</style>
 
@@ -199,7 +199,7 @@ function About() {
         <section style={{
           position: 'relative',
           overflow: 'hidden',
-          background: 'linear-gradient(158deg, #F7F3EA 0%, #EDE5CC 55%, #E4D5A8 100%)',
+          background: 'linear-gradient(158deg, #f8fafc 0%, #f1f5f9 55%, #e2e8f0 100%)',
           padding: '6rem 1.5rem 5rem',
           textAlign: 'center',
           borderBottom: '1px solid #D8CBA8',
@@ -219,7 +219,7 @@ function About() {
             position:'absolute', top:'50%', left:'50%',
             transform:'translate(-50%,-50%)',
             width:'700px', height:'400px',
-            background:'radial-gradient(ellipse, rgba(201,168,76,0.1) 0%, transparent 70%)',
+            background:'radial-gradient(ellipse, rgba(37, 99, 235,0.1) 0%, transparent 70%)',
             pointerEvents:'none',
           }} />
 
@@ -227,7 +227,7 @@ function About() {
             {/* Badge */}
             <div style={{
               display:'inline-flex', alignItems:'center', gap:'0.65rem',
-              background:'rgba(201,168,76,0.1)', border:'1px solid rgba(201,168,76,0.3)',
+              background:'rgba(37, 99, 235,0.1)', border:'1px solid rgba(37, 99, 235,0.3)',
               borderRadius:'2px', padding:'0.4rem 1.2rem', marginBottom:'1.75rem',
             }}>
               <span style={{
@@ -235,7 +235,7 @@ function About() {
                 display:'inline-block', animation:'pulseGold 2s ease infinite',
               }} />
               <span style={{
-                fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem',
+                fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.65rem',
                 color:'#8B6D38', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500,
               }}>
                 🏛️ About MTTF
@@ -243,19 +243,19 @@ function About() {
             </div>
 
             <h1 style={{
-              fontFamily:"'Playfair Display', serif",
+              fontFamily:"'Plus Jakarta Sans', serif",
               fontSize:'clamp(2.6rem, 6.5vw, 5.2rem)',
               fontWeight:900, lineHeight:1.05, letterSpacing:'-0.02em',
-              color:'#1C1208', marginBottom:'0.5rem',
+              color:'#0f172a', marginBottom:'0.5rem',
             }}>
               MathTech Thinking
             </h1>
             <h1 style={{
-              fontFamily:"'Playfair Display', serif",
+              fontFamily:"'Plus Jakarta Sans', serif",
               fontSize:'clamp(2.6rem, 6.5vw, 5.2rem)',
               fontWeight:900, lineHeight:1.05, letterSpacing:'-0.02em',
               marginBottom:'1.5rem',
-              background:'linear-gradient(135deg, #2563eb 0%, #8B6D38 40%, #E8C96A 100%)',
+              background:'linear-gradient(135deg, #2563eb 0%, #8B6D38 40%, #60a5fa 100%)',
               backgroundSize:'200% auto',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
               animation:'shimmer 4s linear infinite',
@@ -265,7 +265,7 @@ function About() {
             </h1>
 
             <p style={{
-              fontFamily:"'DM Sans', sans-serif", fontSize:'1.1rem',
+              fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.1rem',
               color:'#6B5C3E', maxWidth:'560px', margin:'0 auto',
               lineHeight:1.75, fontWeight:300,
             }}>
@@ -286,9 +286,9 @@ function About() {
             <span className="eyebrow-line" />
           </div>
           <h2 style={{
-            fontFamily:"'Playfair Display', serif",
+            fontFamily:"'Plus Jakarta Sans', serif",
             fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700,
-            color:'#1C1208', textAlign:'center', marginBottom:'3rem',
+            color:'#0f172a', textAlign:'center', marginBottom:'3rem',
             letterSpacing:'-0.02em',
           }}>
             Mission &{' '}
@@ -309,20 +309,20 @@ function About() {
                 </svg>
               </div>
               <div style={{
-                fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem',
+                fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.65rem',
                 letterSpacing:'0.2em', color:'#2563eb', textTransform:'uppercase',
                 fontWeight:500, marginBottom:'0.4rem',
               }}>
                 Our Mission
               </div>
               <h3 style={{
-                fontFamily:"'Cormorant Garamond', serif", fontSize:'1.6rem',
-                fontWeight:700, color:'#1C1208', margin:'0 0 1rem',
+                fontFamily:"'Plus Jakarta Sans', serif", fontSize:'1.6rem',
+                fontWeight:700, color:'#0f172a', margin:'0 0 1rem',
               }}>
                 Transform Ideas Into Reality
               </h3>
               <div style={{ height:'1px', background:'#E8DFC4', marginBottom:'1rem' }} />
-              <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, margin:0, fontWeight:300 }}>
+              <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, margin:0, fontWeight:300 }}>
                 To foster mathematical thinking and technological innovation among students and professionals,
                 creating a platform where ideas transform into reality through collaborative learning and research.
               </p>
@@ -342,20 +342,20 @@ function About() {
                 </svg>
               </div>
               <div style={{
-                fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem',
+                fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.65rem',
                 letterSpacing:'0.2em', color:'#2563eb', textTransform:'uppercase',
                 fontWeight:500, marginBottom:'0.4rem',
               }}>
                 Our Vision
               </div>
               <h3 style={{
-                fontFamily:"'Cormorant Garamond', serif", fontSize:'1.6rem',
-                fontWeight:700, color:'#1C1208', margin:'0 0 1rem',
+                fontFamily:"'Plus Jakarta Sans', serif", fontSize:'1.6rem',
+                fontWeight:700, color:'#0f172a', margin:'0 0 1rem',
               }}>
                 A Global Hub of Excellence
               </h3>
               <div style={{ height:'1px', background:'#E8DFC4', marginBottom:'1rem' }} />
-              <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, margin:0, fontWeight:300 }}>
+              <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, margin:0, fontWeight:300 }}>
                 To become a global hub for mathematical excellence and technological advancement,
                 where innovation knows no boundaries and every mind has the opportunity to shine.
               </p>
@@ -376,9 +376,9 @@ function About() {
               <span className="eyebrow-line" />
             </div>
             <h2 style={{
-              fontFamily:"'Playfair Display', serif",
+              fontFamily:"'Plus Jakarta Sans', serif",
               fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700,
-              color:'#1C1208', textAlign:'center', marginBottom:'3rem',
+              color:'#0f172a', textAlign:'center', marginBottom:'3rem',
               letterSpacing:'-0.02em',
             }}>
               Core{' '}
@@ -445,13 +445,13 @@ function About() {
                     {v.icon}
                   </div>
                   <h3 style={{
-                    fontFamily:"'Cormorant Garamond', serif", fontSize:'1.25rem',
-                    fontWeight:700, color:'#1C1208', marginBottom:'0.5rem',
+                    fontFamily:"'Plus Jakarta Sans', serif", fontSize:'1.25rem',
+                    fontWeight:700, color:'#0f172a', marginBottom:'0.5rem',
                   }}>
                     {v.label}
                   </h3>
                   <p style={{
-                    fontFamily:"'DM Sans', sans-serif", fontSize:'0.83rem',
+                    fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.83rem',
                     color:'#6B5C3E', lineHeight:1.7, margin:0, fontWeight:300,
                   }}>
                     {v.desc}
@@ -474,9 +474,9 @@ function About() {
             <span className="eyebrow-line" />
           </div>
           <h2 style={{
-            fontFamily:"'Playfair Display', serif",
+            fontFamily:"'Plus Jakarta Sans', serif",
             fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700,
-            color:'#1C1208', textAlign:'center', marginBottom:'3rem',
+            color:'#0f172a', textAlign:'center', marginBottom:'3rem',
             letterSpacing:'-0.02em',
           }}>
             What We{' '}
@@ -525,7 +525,7 @@ function About() {
                   display:'flex', alignItems:'center', gap:'0.75rem', marginBottom:'1.25rem',
                 }}>
                   <span style={{
-                    fontFamily:"'Cormorant Garamond', serif", fontSize:'0.75rem',
+                    fontFamily:"'Plus Jakarta Sans', serif", fontSize:'0.75rem',
                     fontWeight:700, color:'#2563eb', letterSpacing:'0.1em',
                   }}>
                     {item.num}
@@ -540,15 +540,15 @@ function About() {
                   </div>
                 </div>
                 <h3 style={{
-                  fontFamily:"'Cormorant Garamond', serif", fontSize:'1.4rem',
-                  fontWeight:700, color:'#1C1208', margin:'0 0 0.75rem',
+                  fontFamily:"'Plus Jakarta Sans', serif", fontSize:'1.4rem',
+                  fontWeight:700, color:'#0f172a', margin:'0 0 0.75rem',
                   letterSpacing:'-0.01em',
                 }}>
                   {item.title}
                 </h3>
                 <div style={{ height:'1px', background:'#E8DFC4', marginBottom:'0.85rem' }} />
                 <p style={{
-                  fontFamily:"'DM Sans', sans-serif", fontSize:'0.875rem',
+                  fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.875rem',
                   color:'#6B5C3E', lineHeight:1.8, margin:0, fontWeight:300,
                 }}>
                   {item.desc}
@@ -571,9 +571,9 @@ function About() {
               <span className="eyebrow-line" />
             </div>
             <h2 style={{
-              fontFamily:"'Playfair Display', serif",
+              fontFamily:"'Plus Jakarta Sans', serif",
               fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700,
-              color:'#1C1208', textAlign:'center', marginBottom:'3.5rem',
+              color:'#0f172a', textAlign:'center', marginBottom:'3.5rem',
               letterSpacing:'-0.02em',
             }}>
               Numbers That{' '}
@@ -581,7 +581,7 @@ function About() {
             </h2>
 
             <div style={{
-              background:'#FAF8F2', border:'1px solid #E8E0CC', borderRadius:'4px',
+              background:'#ffffff', border:'1px solid #e2e8f0', borderRadius:'4px',
               display:'flex', flexWrap:'wrap', justifyContent:'center',
               position:'relative', overflow:'hidden',
             }}>
@@ -599,14 +599,14 @@ function About() {
               ].map(([val, label]) => (
                 <div className="stat-item" key={label}>
                   <div style={{
-                    fontFamily:"'Cormorant Garamond', serif", fontSize:'3rem',
+                    fontFamily:"'Plus Jakarta Sans', serif", fontSize:'3rem',
                     fontWeight:700, color:'#2563eb', letterSpacing:'-0.03em', lineHeight:1,
                     marginBottom:'0.4rem',
                   }}>
                     {val}
                   </div>
                   <div style={{
-                    fontFamily:"'DM Sans', sans-serif", fontSize:'0.75rem',
+                    fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.75rem',
                     color:'#6B5C3E', letterSpacing:'0.1em', textTransform:'uppercase',
                     fontWeight:500,
                   }}>
@@ -621,10 +621,10 @@ function About() {
         {/* ══════════════════════════════════
             CTA
         ══════════════════════════════════ */}
-        <section style={{ padding:'5rem 1.5rem', background:'#F7F3EA' }}>
+        <section style={{ padding:'5rem 1.5rem', background:'#f8fafc' }}>
           <div style={{ maxWidth:'820px', margin:'0 auto' }}>
             <div style={{
-              background:'linear-gradient(158deg, #1C1208 0%, #2E1F08 100%)',
+              background:'linear-gradient(158deg, #0f172a 0%, #2E1F08 100%)',
               border:'1px solid #3D2A0A',
               borderRadius:'4px', padding:'4rem 3rem', textAlign:'center',
               position:'relative', overflow:'hidden',
@@ -645,7 +645,7 @@ function About() {
               ))}
 
               <div style={{
-                fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem',
+                fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.65rem',
                 letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase',
                 fontWeight:500, marginBottom:'1.25rem',
                 display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem',
@@ -656,14 +656,14 @@ function About() {
               </div>
 
               <h2 style={{
-                fontFamily:"'Playfair Display', serif",
+                fontFamily:"'Plus Jakarta Sans', serif",
                 fontSize:'clamp(1.8rem,3.5vw,3rem)', fontWeight:700,
-                color:'#F7F3EA', letterSpacing:'-0.02em', margin:'0 0 1.25rem',
+                color:'#f8fafc', letterSpacing:'-0.02em', margin:'0 0 1.25rem',
               }}>
                 Shape the Future of{' '}
                 <span style={{
                   fontStyle:'italic',
-                  background:'linear-gradient(135deg, #2563eb, #E8C96A)',
+                  background:'linear-gradient(135deg, #2563eb, #60a5fa)',
                   WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
                 }}>
                   Mathematical Thinking
@@ -671,7 +671,7 @@ function About() {
               </h2>
 
               <p style={{
-                fontFamily:"'DM Sans', sans-serif", fontSize:'0.95rem',
+                fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.95rem',
                 color:'rgba(247,243,234,0.65)', maxWidth:'520px', margin:'0 auto 2.5rem',
                 lineHeight:1.78, fontWeight:300,
               }}>
@@ -686,7 +686,7 @@ function About() {
                 >
                   Become a Member
                 </button>
-                <button className="btn-outline" style={{ borderColor:'rgba(247,243,234,0.35)', color:'#F7F3EA' }}
+                <button className="btn-outline" style={{ borderColor:'rgba(247,243,234,0.35)', color:'#f8fafc' }}
                   onMouseEnter={e => { e.currentTarget.style.background='rgba(247,243,234,0.1)'; e.currentTarget.style.transform='translateY(-2px)'; }}
                   onMouseLeave={e => { e.currentTarget.style.background='transparent'; e.currentTarget.style.transform='translateY(0)'; }}
                 >

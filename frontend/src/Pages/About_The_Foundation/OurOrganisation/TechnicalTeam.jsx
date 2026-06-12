@@ -89,21 +89,21 @@ function MemberCard({ member, index }) {
           ? hovered ? "translateY(-6px)" : "translateY(0)"
           : "translateY(32px)",
         transition: `opacity 0.65s ease ${index * 0.12}s, transform 0.5s ease, box-shadow 0.35s ease`,
-        background: hovered ? "rgba(201,168,76,0.04)" : "#FBF6EC",
-        border: `1px solid ${hovered ? "rgba(201,168,76,0.4)" : "rgba(139,112,72,0.15)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(100, 116, 139,0.15)"}`,
         borderRadius: "2px",
         overflow: "hidden",
         cursor: "default",
         display: "flex",
         flexDirection: "column",
-        boxShadow: hovered ? "0 20px 48px rgba(139,112,72,0.12)" : "none",
+        boxShadow: hovered ? "0 20px 48px rgba(100, 116, 139,0.12)" : "none",
         position: "relative",
       }}
     >
       {/* Top gold bar */}
       <div style={{
         height: hovered ? "2px" : "1px",
-        background: "linear-gradient(90deg, transparent, #2563eb, #E8C97A, #2563eb, transparent)",
+        background: "linear-gradient(90deg, transparent, #2563eb, #60a5fa, #2563eb, transparent)",
         transition: "height 0.3s ease",
         flexShrink: 0,
       }} />
@@ -123,8 +123,8 @@ function MemberCard({ member, index }) {
           top: "1.25rem", right: "1.25rem",
           width: "34px", height: "34px",
           display: "flex", alignItems: "center", justifyContent: "center",
-          background: hovered ? "rgba(201,168,76,0.14)" : "rgba(201,168,76,0.07)",
-          border: `1px solid ${hovered ? "rgba(201,168,76,0.45)" : "rgba(201,168,76,0.2)"}`,
+          background: hovered ? "rgba(37, 99, 235,0.14)" : "rgba(37, 99, 235,0.07)",
+          border: `1px solid ${hovered ? "rgba(37, 99, 235,0.45)" : "rgba(37, 99, 235,0.2)"}`,
           borderRadius: "2px", color: "#2563eb",
           transition: "background 0.3s, border-color 0.3s",
           zIndex: 1,
@@ -136,7 +136,7 @@ function MemberCard({ member, index }) {
         <div style={{
           position: "absolute",
           top: "1.25rem", left: "1.25rem",
-          fontFamily: "'Cormorant Garamond', serif",
+          fontFamily: "'Plus Jakarta Sans', serif",
           fontSize: "0.68rem", color: "#2563eb",
           letterSpacing: "0.15em", fontWeight: 600,
           zIndex: 1,
@@ -173,7 +173,7 @@ function MemberCard({ member, index }) {
             width: "26px", height: "26px",
             background: "#2563eb", borderRadius: "50%",
             display: "flex", alignItems: "center", justifyContent: "center",
-            border: "2px solid #FBF6EC", zIndex: 2,
+            border: "2px solid #f8fafc", zIndex: 2,
           }}>
             <Zap size={11} color="#fff" />
           </div>
@@ -182,13 +182,13 @@ function MemberCard({ member, index }) {
         {/* Name + role */}
         <div style={{ textAlign: "center" }}>
           <h3 style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Plus Jakarta Sans', serif",
             fontSize: "1.25rem", fontWeight: 700,
-            color: "#1A120A", margin: "0 0 0.25rem",
+            color: "#0f172a", margin: "0 0 0.25rem",
             letterSpacing: "-0.01em",
           }}>{member.name}</h3>
           <p style={{
-            fontFamily: "'Jost', sans-serif",
+            fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "0.7rem", color: "#2563eb",
             letterSpacing: "0.12em", textTransform: "uppercase",
             margin: 0, fontWeight: 500,
@@ -199,7 +199,7 @@ function MemberCard({ member, index }) {
       {/* Animated divider */}
       <div style={{
         height: "1px",
-        background: "rgba(201,168,76,0.15)",
+        background: "rgba(37, 99, 235,0.15)",
         margin: "1.25rem 2rem",
         width: hovered ? "calc(100% - 4rem)" : "40%",
         transition: "width 0.4s ease",
@@ -209,7 +209,7 @@ function MemberCard({ member, index }) {
       <div style={{ padding: "0 2rem 2rem", display: "flex", flexDirection: "column", flex: 1, gap: "1rem" }}>
         {/* Bio */}
         <p style={{
-          fontFamily: "'Jost', sans-serif",
+          fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "0.82rem", color: "#7A6040",
           lineHeight: 1.78, margin: 0, fontWeight: 300,
           textAlign: "center",
@@ -219,10 +219,10 @@ function MemberCard({ member, index }) {
         <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", justifyContent: "center" }}>
           {member.tech.map((t, i) => (
             <span key={i} style={{
-              fontFamily: "'Jost', sans-serif",
-              fontSize: "0.6rem", color: "#8B7048",
-              background: "rgba(201,168,76,0.07)",
-              border: "1px solid rgba(201,168,76,0.2)",
+              fontFamily: "'Plus Jakarta Sans', sans-serif",
+              fontSize: "0.6rem", color: "#475569",
+              background: "rgba(37, 99, 235,0.07)",
+              border: "1px solid rgba(37, 99, 235,0.2)",
               padding: "0.2rem 0.6rem", borderRadius: "1px",
               letterSpacing: "0.08em", fontWeight: 400,
             }}>{t}</span>
@@ -232,9 +232,9 @@ function MemberCard({ member, index }) {
         {/* Contributions row */}
         <div style={{
           display: "flex",
-          border: "1px solid rgba(201,168,76,0.15)",
+          border: "1px solid rgba(37, 99, 235,0.15)",
           borderRadius: "1px", overflow: "hidden",
-          background: "rgba(201,168,76,0.03)",
+          background: "rgba(37, 99, 235,0.03)",
         }}>
           <div style={{
             padding: "0.85rem 0.75rem",
@@ -242,8 +242,8 @@ function MemberCard({ member, index }) {
             flex: 1,
           }}>
             <span style={{
-              fontFamily: "'Jost', sans-serif",
-              fontSize: "0.68rem", color: "#8B7048",
+              fontFamily: "'Plus Jakarta Sans', sans-serif",
+              fontSize: "0.68rem", color: "#475569",
               lineHeight: 1.5, textAlign: "center", fontWeight: 300,
             }}>{member.contributions}</span>
           </div>
@@ -326,7 +326,7 @@ const TechnicalTeam = () => {
   }, []);
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#FBF6EC", color: "#1A120A" }}>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#f8fafc", color: "#0f172a" }}>
       <style>{`
         @keyframes goldShimmer {
           0%   { background-position: -200% center; }
@@ -341,7 +341,7 @@ const TechnicalTeam = () => {
           to   { transform: translate(-50%, -50%) rotate(360deg); }
         }
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #FBF6EC; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 1px; }
       `}</style>
 
@@ -359,15 +359,15 @@ const TechnicalTeam = () => {
             alignItems: "center", justifyContent: "center",
             padding: "7rem 2rem 5rem",
             textAlign: "center", overflow: "hidden",
-            borderBottom: "1px solid rgba(139,112,72,0.1)",
+            borderBottom: "1px solid rgba(100, 116, 139,0.1)",
           }}
         >
           {/* Grid */}
           <div style={{
             position: "absolute", inset: 0, pointerEvents: "none",
             backgroundImage: `
-              linear-gradient(rgba(201,168,76,0.05) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(201,168,76,0.05) 1px, transparent 1px)
+              linear-gradient(rgba(37, 99, 235,0.05) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(37, 99, 235,0.05) 1px, transparent 1px)
             `,
             backgroundSize: "72px 72px",
           }} />
@@ -376,7 +376,7 @@ const TechnicalTeam = () => {
             position: "absolute", pointerEvents: "none",
             top: "50%", left: "50%",
             width: "700px", height: "480px",
-            background: "radial-gradient(ellipse, rgba(201,168,76,0.1) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse, rgba(37, 99, 235,0.1) 0%, transparent 70%)",
             transform: "translate(-50%,-50%)",
           }} />
           {/* Rings */}
@@ -384,14 +384,14 @@ const TechnicalTeam = () => {
             position: "absolute", pointerEvents: "none",
             top: "50%", left: "50%",
             width: "440px", height: "440px",
-            border: "1px solid rgba(201,168,76,0.08)", borderRadius: "50%",
+            border: "1px solid rgba(37, 99, 235,0.08)", borderRadius: "50%",
             animation: "rotateSlow 42s linear infinite",
           }} />
           <div style={{
             position: "absolute", pointerEvents: "none",
             top: "50%", left: "50%",
             width: "620px", height: "620px",
-            border: "1px dashed rgba(201,168,76,0.05)", borderRadius: "50%",
+            border: "1px dashed rgba(37, 99, 235,0.05)", borderRadius: "50%",
             animation: "rotateSlow 68s linear infinite reverse",
           }} />
           {/* Floating dots */}
@@ -421,8 +421,8 @@ const TechnicalTeam = () => {
             <div style={{
               width: "72px", height: "72px",
               display: "flex", alignItems: "center", justifyContent: "center",
-              background: "rgba(201,168,76,0.07)",
-              border: "1px solid rgba(201,168,76,0.25)",
+              background: "rgba(37, 99, 235,0.07)",
+              border: "1px solid rgba(37, 99, 235,0.25)",
               borderRadius: "2px", color: "#2563eb",
               margin: "0 auto 2rem",
             }}>
@@ -432,13 +432,13 @@ const TechnicalTeam = () => {
             {/* Eyebrow */}
             <div style={{
               display: "inline-flex", alignItems: "center", gap: "0.7rem",
-              border: "1px solid rgba(201,168,76,0.28)",
+              border: "1px solid rgba(37, 99, 235,0.28)",
               padding: "0.45rem 1.3rem", marginBottom: "2.25rem",
-              background: "rgba(201,168,76,0.05)", borderRadius: "1px",
+              background: "rgba(37, 99, 235,0.05)", borderRadius: "1px",
             }}>
               <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#2563eb", flexShrink: 0 }} />
               <span style={{
-                fontFamily: "'Jost', sans-serif",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.62rem", letterSpacing: "0.25em",
                 textTransform: "uppercase", color: "#2563eb", fontWeight: 500,
               }}>MathTech Thinking Foundation</span>
@@ -447,16 +447,16 @@ const TechnicalTeam = () => {
 
             {/* Headline */}
             <h1 style={{
-              fontFamily: "'Playfair Display', serif",
+              fontFamily: "'Plus Jakarta Sans', serif",
               fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
               fontWeight: 700, lineHeight: 1.02,
-              letterSpacing: "-0.025em", color: "#1A120A",
+              letterSpacing: "-0.025em", color: "#0f172a",
               margin: "0 0 0.5rem",
             }}>
               Technical{" "}
               <span style={{
                 fontStyle: "italic",
-                background: "linear-gradient(120deg, #2563eb 0%, #E8C97A 38%, #B8965A 72%, #2563eb 100%)",
+                background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 38%, #1d4ed8 72%, #2563eb 100%)",
                 backgroundSize: "200% auto",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -466,7 +466,7 @@ const TechnicalTeam = () => {
             </h1>
 
             <p style={{
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Plus Jakarta Sans', serif",
               fontSize: "clamp(1rem, 2.2vw, 1.3rem)",
               fontStyle: "italic", color: "rgba(90,65,40,0.52)",
               maxWidth: "560px", margin: "1.25rem auto 2.5rem",
@@ -478,22 +478,22 @@ const TechnicalTeam = () => {
             {/* Stats bar */}
             <div style={{
               display: "inline-flex", flexWrap: "wrap",
-              border: "1px solid rgba(201,168,76,0.2)",
-              background: "rgba(201,168,76,0.03)",
+              border: "1px solid rgba(37, 99, 235,0.2)",
+              background: "rgba(37, 99, 235,0.03)",
               borderRadius: "2px",
             }}>
               {stats.map(({ value, label }, i, arr) => (
                 <div key={label} style={{
                   padding: "1rem 1.5rem", textAlign: "center",
-                  borderRight: i < arr.length - 1 ? "1px solid rgba(201,168,76,0.15)" : "none",
+                  borderRight: i < arr.length - 1 ? "1px solid rgba(37, 99, 235,0.15)" : "none",
                 }}>
                   <div style={{
-                    fontFamily: "'Playfair Display', serif",
+                    fontFamily: "'Plus Jakarta Sans', serif",
                     fontSize: "1.55rem", fontWeight: 700,
                     color: "#2563eb", lineHeight: 1,
                   }}>{value}</div>
                   <div style={{
-                    fontFamily: "'Jost', sans-serif",
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
                     fontSize: "0.52rem", color: "rgba(90,65,40,0.38)",
                     letterSpacing: "0.15em", textTransform: "uppercase",
                     marginTop: "0.3rem", fontWeight: 400,
@@ -506,12 +506,12 @@ const TechnicalTeam = () => {
 
         {/* ── INTRO STRIP ── */}
         <div style={{
-          background: "rgba(201,168,76,0.03)",
-          borderBottom: "1px solid rgba(139,112,72,0.1)",
+          background: "rgba(37, 99, 235,0.03)",
+          borderBottom: "1px solid rgba(100, 116, 139,0.1)",
           padding: "3rem 2rem", textAlign: "center",
         }}>
           <p style={{
-            fontFamily: "'Cormorant Garamond', serif",
+            fontFamily: "'Plus Jakarta Sans', serif",
             fontSize: "clamp(1rem, 2.3vw, 1.4rem)",
             fontStyle: "italic", color: "rgba(90,65,40,0.58)",
             maxWidth: "780px", margin: "0 auto", lineHeight: 1.75,
@@ -529,15 +529,15 @@ const TechnicalTeam = () => {
               gap: "1.25rem", marginBottom: "3rem", flexWrap: "wrap",
             }}>
               <h2 style={{
-                fontFamily: "'Playfair Display', serif",
+                fontFamily: "'Plus Jakarta Sans', serif",
                 fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
-                fontWeight: 700, color: "#1A120A",
+                fontWeight: 700, color: "#0f172a",
                 letterSpacing: "-0.02em", margin: 0, flexShrink: 0,
               }}>Meet the Team</h2>
-              <div style={{ flex: 1, height: "1px", background: "rgba(139,112,72,0.15)", minWidth: "24px" }} />
+              <div style={{ flex: 1, height: "1px", background: "rgba(100, 116, 139,0.15)", minWidth: "24px" }} />
               <div style={{
-                fontFamily: "'Jost', sans-serif",
-                fontSize: "0.6rem", color: "rgba(201,168,76,0.65)",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
+                fontSize: "0.6rem", color: "rgba(37, 99, 235,0.65)",
                 letterSpacing: "0.2em", textTransform: "uppercase",
                 fontWeight: 500, flexShrink: 0,
               }}>{techTeam.length} Developers</div>
@@ -560,8 +560,8 @@ const TechnicalTeam = () => {
 
         {/* ── CTA ── */}
         <section style={{
-          background: "#1A120A",
-          borderTop: "1px solid rgba(201,168,76,0.15)",
+          background: "#0f172a",
+          borderTop: "1px solid rgba(37, 99, 235,0.15)",
           padding: "5rem 2rem",
         }}>
           <div style={{ maxWidth: "760px", margin: "0 auto" }}>
@@ -570,8 +570,8 @@ const TechnicalTeam = () => {
                 <div style={{
                   width: "60px", height: "60px",
                   display: "flex", alignItems: "center", justifyContent: "center",
-                  background: "rgba(201,168,76,0.1)",
-                  border: "1px solid rgba(201,168,76,0.3)",
+                  background: "rgba(37, 99, 235,0.1)",
+                  border: "1px solid rgba(37, 99, 235,0.3)",
                   borderRadius: "2px", color: "#2563eb",
                   margin: "0 auto 1.5rem",
                 }}>
@@ -579,14 +579,14 @@ const TechnicalTeam = () => {
                 </div>
 
                 <div style={{
-                  fontFamily: "'Jost', sans-serif",
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.6rem", color: "#2563eb",
                   letterSpacing: "0.25em", textTransform: "uppercase",
                   marginBottom: "1rem", fontWeight: 500,
                 }}>Join the Team</div>
 
                 <h2 style={{
-                  fontFamily: "'Playfair Display', serif",
+                  fontFamily: "'Plus Jakarta Sans', serif",
                   fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)",
                   fontWeight: 700, color: "#E8D9C0",
                   letterSpacing: "-0.02em", margin: "0 0 1rem", lineHeight: 1.2,
@@ -595,7 +595,7 @@ const TechnicalTeam = () => {
                 </h2>
 
                 <p style={{
-                  fontFamily: "'Jost', sans-serif",
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.9rem", color: "rgba(232,217,192,0.45)",
                   lineHeight: 1.8, maxWidth: "520px",
                   margin: "0 auto 2.5rem", fontWeight: 300,
@@ -607,7 +607,7 @@ const TechnicalTeam = () => {
                 <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                   <button
                     style={{
-                      fontFamily: "'Jost', sans-serif",
+                      fontFamily: "'Plus Jakarta Sans', sans-serif",
                       fontSize: "0.72rem", letterSpacing: "0.2em",
                       textTransform: "uppercase", color: "#fff",
                       background: "#2563eb", border: "none",
@@ -615,24 +615,24 @@ const TechnicalTeam = () => {
                       borderRadius: "1px", fontWeight: 500,
                       transition: "background 0.3s ease, transform 0.3s ease",
                     }}
-                    onMouseEnter={e => { e.target.style.background = "#B8965A"; e.target.style.transform = "translateY(-2px)"; }}
+                    onMouseEnter={e => { e.target.style.background = "#1d4ed8"; e.target.style.transform = "translateY(-2px)"; }}
                     onMouseLeave={e => { e.target.style.background = "#2563eb"; e.target.style.transform = "translateY(0)"; }}
                   >
                     View Open Positions
                   </button>
                   <button
                     style={{
-                      fontFamily: "'Jost', sans-serif",
+                      fontFamily: "'Plus Jakarta Sans', sans-serif",
                       fontSize: "0.72rem", letterSpacing: "0.2em",
                       textTransform: "uppercase", color: "#2563eb",
                       background: "transparent",
-                      border: "1px solid rgba(201,168,76,0.4)",
+                      border: "1px solid rgba(37, 99, 235,0.4)",
                       padding: "0.9rem 2.2rem", cursor: "pointer",
                       borderRadius: "1px", fontWeight: 400,
                       transition: "border-color 0.3s ease, background 0.3s ease",
                     }}
-                    onMouseEnter={e => { e.target.style.background = "rgba(201,168,76,0.08)"; e.target.style.borderColor = "rgba(201,168,76,0.8)"; }}
-                    onMouseLeave={e => { e.target.style.background = "transparent"; e.target.style.borderColor = "rgba(201,168,76,0.4)"; }}
+                    onMouseEnter={e => { e.target.style.background = "rgba(37, 99, 235,0.08)"; e.target.style.borderColor = "rgba(37, 99, 235,0.8)"; }}
+                    onMouseLeave={e => { e.target.style.background = "transparent"; e.target.style.borderColor = "rgba(37, 99, 235,0.4)"; }}
                   >
                     Contact Us
                   </button>

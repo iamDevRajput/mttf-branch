@@ -107,32 +107,32 @@ function DataAnalytics() {
           to   { transform: translate(-50%,-50%) rotate(360deg); }
         }
 
-        .da-page { background: #F7F3EA; color: #1C1208; font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+        .da-page { background: #f8fafc; color: #0f172a; font-family: 'Plus Jakarta Sans', sans-serif; min-height: 100vh; }
         .gold-rule { height: 1px; background: linear-gradient(90deg, transparent, #2563eb70, transparent); }
 
         .eyebrow {
-          font-family: 'DM Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.22em;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.22em;
           color: #2563eb; text-transform: uppercase; font-weight: 500;
           display: flex; align-items: center; gap: 0.5rem; justify-content: center; margin-bottom: 1rem;
         }
         .eyebrow-line { display: inline-block; width: 28px; height: 1px; background: #2563eb; }
 
         .cap-card {
-          background: #FAF8F2; border: 1px solid #E8E0CC; border-radius: 4px;
+          background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px;
           padding: 2.25rem; position: relative; overflow: hidden;
           transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
         }
         .cap-card::before {
           content: ''; position: absolute; top: 0; left: 0;
           width: 0; height: 2px;
-          background: linear-gradient(90deg, #2563eb, #E8C96A, transparent);
+          background: linear-gradient(90deg, #2563eb, #60a5fa, transparent);
           transition: width 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .cap-card:hover::before { width: 100%; }
-        .cap-card:hover { border-color: #2563eb; transform: translateY(-5px); box-shadow: 0 20px 44px rgba(139,109,56,0.12); background: #FEFCF7; }
+        .cap-card:hover { border-color: #2563eb; transform: translateY(-5px); box-shadow: 0 20px 44px rgba(37, 99, 235,0.12); background: #FEFCF7; }
 
         .ind-card {
-          background: #FAF8F2; border: 1px solid #E8E0CC; border-radius: 4px;
+          background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px;
           padding: 2rem; position: relative; overflow: hidden;
           transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
         }
@@ -143,27 +143,27 @@ function DataAnalytics() {
           transition: transform 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .ind-card:hover::after { transform: scaleX(1); }
-        .ind-card:hover { border-color: #2563eb; transform: translateY(-4px); box-shadow: 0 16px 36px rgba(139,109,56,0.1); }
+        .ind-card:hover { border-color: #2563eb; transform: translateY(-4px); box-shadow: 0 16px 36px rgba(37, 99, 235,0.1); }
 
         .stat-pill {
-          background: #FAF8F2; border: 1px solid #E8E0CC; border-radius: 4px;
+          background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px;
           padding: 1.25rem 1.5rem; text-align: center;
           transition: all 0.35s ease; cursor: default;
         }
-        .stat-pill:hover { border-color: #2563eb; transform: translateY(-3px); box-shadow: 0 12px 28px rgba(139,109,56,0.1); }
+        .stat-pill:hover { border-color: #2563eb; transform: translateY(-3px); box-shadow: 0 12px 28px rgba(37, 99, 235,0.1); }
 
         .btn-gold {
           display: inline-flex; align-items: center; gap: 0.5rem;
           padding: 0.85rem 2.25rem; background: #2563eb; color: #fff;
-          font-family: 'DM Sans', sans-serif; font-size: 0.75rem; font-weight: 500;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem; font-weight: 500;
           letter-spacing: 0.14em; text-transform: uppercase;
           border: 1px solid #2563eb; border-radius: 2px;
           cursor: pointer; transition: all 0.35s ease; text-decoration: none;
         }
-        .btn-gold:hover { background: #B8965A; border-color: #B8965A; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(201,168,76,0.28); }
+        .btn-gold:hover { background: #B8965A; border-color: #B8965A; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(37, 99, 235,0.28); }
 
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #F7F3EA; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
       `}</style>
 
@@ -176,7 +176,7 @@ function DataAnalytics() {
             to="/programs/capability"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-              fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem',
+              fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '0.78rem',
               color: '#2563eb', textDecoration: 'none', letterSpacing: '0.06em',
               transition: 'color 0.2s',
             }}
@@ -193,7 +193,7 @@ function DataAnalytics() {
           ref={el => (observerRefs.current[0] = el)}
           style={{
             position: 'relative', overflow: 'hidden',
-            background: 'linear-gradient(158deg, #F7F3EA 0%, #EDE5CC 55%, #E4D5A8 100%)',
+            background: 'linear-gradient(158deg, #f8fafc 0%, #f1f5f9 55%, #e2e8f0 100%)',
             padding: '3.5rem 2rem 5.5rem', textAlign: 'center',
             borderBottom: '1px solid #D8CBA8',
           }}
@@ -201,19 +201,19 @@ function DataAnalytics() {
           {/* Grid */}
           <div style={{
             position: 'absolute', inset: 0,
-            backgroundImage: `linear-gradient(rgba(201,168,76,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.05) 1px,transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(37, 99, 235,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(37, 99, 235,0.05) 1px,transparent 1px)`,
             backgroundSize: '72px 72px', pointerEvents: 'none',
           }} />
           {/* Glow */}
           <div style={{
             position: 'absolute', top: '50%', left: '50%',
             transform: 'translate(-50%,-50%)', width: '700px', height: '420px',
-            background: 'radial-gradient(ellipse, rgba(201,168,76,0.1) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse, rgba(37, 99, 235,0.1) 0%, transparent 70%)',
             pointerEvents: 'none',
           }} />
           {/* Rotating rings */}
-          <div style={{ position: 'absolute', top: '50%', left: '50%', width: '460px', height: '460px', border: '1px solid rgba(201,168,76,0.08)', borderRadius: '50%', animation: 'rotateSlow 40s linear infinite', pointerEvents: 'none' }} />
-          <div style={{ position: 'absolute', top: '50%', left: '50%', width: '640px', height: '640px', border: '1px dashed rgba(201,168,76,0.05)', borderRadius: '50%', animation: 'rotateSlow 65s linear infinite reverse', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', top: '50%', left: '50%', width: '460px', height: '460px', border: '1px solid rgba(37, 99, 235,0.08)', borderRadius: '50%', animation: 'rotateSlow 40s linear infinite', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', top: '50%', left: '50%', width: '640px', height: '640px', border: '1px dashed rgba(37, 99, 235,0.05)', borderRadius: '50%', animation: 'rotateSlow 65s linear infinite reverse', pointerEvents: 'none' }} />
           {/* Corner brackets */}
           {[
             { top:'1.8rem', left:'1.8rem', borderTop:'1px solid #2563eb', borderLeft:'1px solid #2563eb' },
@@ -241,29 +241,29 @@ function DataAnalytics() {
             {/* Badge */}
             <div style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.65rem',
-              background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.3)',
+              background: 'rgba(37, 99, 235,0.1)', border: '1px solid rgba(37, 99, 235,0.3)',
               borderRadius: '2px', padding: '0.4rem 1.2rem', marginBottom: '1.75rem',
             }}>
               <span style={{ width:5, height:5, borderRadius:'50%', background:'#2563eb', display:'inline-block', animation:'pulseGold 2s ease infinite' }} />
-              <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.65rem', color:'#8B6D38', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500 }}>
+              <span style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.65rem', color:'#8B6D38', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500 }}>
                 Analytics & Intelligence
               </span>
             </div>
 
             {/* Headline */}
-            <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(2.4rem,6vw,5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#1C1208', marginBottom:'0.4rem' }}>
+            <h1 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(2.4rem,6vw,5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#0f172a', marginBottom:'0.4rem' }}>
               Data
             </h1>
             <h1 style={{
-              fontFamily:"'Playfair Display',serif", fontSize:'clamp(2.4rem,6vw,5rem)',
+              fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(2.4rem,6vw,5rem)',
               fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic',
-              background:'linear-gradient(135deg,#2563eb 0%,#8B6D38 40%,#E8C96A 100%)', backgroundSize:'200% auto',
+              background:'linear-gradient(135deg,#2563eb 0%,#8B6D38 40%,#60a5fa 100%)', backgroundSize:'200% auto',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite',
             }}>
               Analytics
             </h1>
 
-            <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.95rem', color:'#6B5C3E', maxWidth:'560px', margin:'0 auto 3rem', lineHeight:1.8, fontWeight:300 }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.95rem', color:'#6B5C3E', maxWidth:'560px', margin:'0 auto 3rem', lineHeight:1.8, fontWeight:300 }}>
               Turning data into actionable intelligence through advanced analytics and visualization.
             </p>
 
@@ -277,8 +277,8 @@ function DataAnalytics() {
                 return (
                   <div className="stat-pill" key={i} style={{ flex: '1 1 130px' }}>
                     <Icon size={16} color="#2563eb" style={{ margin: '0 auto 0.4rem', display: 'block' }} />
-                    <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.6rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{m.value}</div>
-                    <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.6rem', color:'#9C8B6E', letterSpacing:'0.14em', textTransform:'uppercase', marginTop:'0.25rem', fontWeight:500 }}>{m.label}</div>
+                    <div style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.6rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{m.value}</div>
+                    <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.6rem', color:'#9C8B6E', letterSpacing:'0.14em', textTransform:'uppercase', marginTop:'0.25rem', fontWeight:500 }}>{m.label}</div>
                   </div>
                 );
               })}
@@ -296,25 +296,25 @@ function DataAnalytics() {
                 <span className="eyebrow-line" />
                 Overview
               </div>
-              <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3vw,2.6rem)', fontWeight:700, color:'#1C1208', letterSpacing:'-0.02em', margin:'0 0 1.5rem', lineHeight:1.15 }}>
+              <h2 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.8rem,3vw,2.6rem)', fontWeight:700, color:'#0f172a', letterSpacing:'-0.02em', margin:'0 0 1.5rem', lineHeight:1.15 }}>
                 The Analytics{' '}
                 <span style={{ fontStyle:'italic', color:'#8B6D38' }}>Journey</span>
               </h2>
-              <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, marginBottom:'0.75rem', fontWeight:300 }}>
+              <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, marginBottom:'0.75rem', fontWeight:300 }}>
                 From raw data to strategic insights, our comprehensive analytics approach helps organizations make data-driven decisions.
               </p>
-              <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, fontWeight:300 }}>
+              <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, fontWeight:300 }}>
                 We combine descriptive, diagnostic, predictive, and prescriptive analytics to deliver complete business intelligence solutions.
               </p>
             </div>
 
             {/* SVG Chart */}
             <div style={{
-              background: '#FAF8F2', border: '1px solid #E8E0CC', borderRadius: '4px',
+              background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '4px',
               padding: '1.75rem', position: 'relative', overflow: 'hidden',
             }}>
               <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#2563eb,transparent)' }} />
-              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.62rem', color:'#2563eb', letterSpacing:'0.18em', textTransform:'uppercase', fontWeight:500, marginBottom:'1rem', display:'flex', alignItems:'center', gap:'0.4rem' }}>
+              <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.62rem', color:'#2563eb', letterSpacing:'0.18em', textTransform:'uppercase', fontWeight:500, marginBottom:'1rem', display:'flex', alignItems:'center', gap:'0.4rem' }}>
                 <span style={{ width:16, height:1, background:'#2563eb', display:'inline-block' }} />
                 Analytics Trend
               </div>
@@ -333,11 +333,11 @@ function DataAnalytics() {
                   return <circle key={i} cx={x} cy={ys[i]} r="3.5" fill="#2563eb" style={{ animation:'pulseGold 2s ease-in-out infinite', animationDelay:`${i*0.2}s` }} />;
                 })}
                 {/* Y-axis guide lines */}
-                {[40,80,120].map(y => <line key={y} x1="0" y1={y} x2="300" y2={y} stroke="rgba(201,168,76,0.08)" strokeWidth="1" />)}
+                {[40,80,120].map(y => <line key={y} x1="0" y1={y} x2="300" y2={y} stroke="rgba(37, 99, 235,0.08)" strokeWidth="1" />)}
               </svg>
               <div style={{ display:'flex', justifyContent:'space-between', marginTop:'0.5rem' }}>
                 {['Q1','Q2','Q3','Q4','Q5','Q6','Q7'].map(q => (
-                  <span key={q} style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.6rem', color:'#C4B08A', letterSpacing:'0.08em' }}>{q}</span>
+                  <span key={q} style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.6rem', color:'#C4B08A', letterSpacing:'0.08em' }}>{q}</span>
                 ))}
               </div>
             </div>
@@ -354,8 +354,8 @@ function DataAnalytics() {
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <div className="eyebrow"><span className="eyebrow-line" />Capabilities<span className="eyebrow-line" /></div>
             <h2 style={{
-              fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700,
-              color:'#1C1208', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em',
+              fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700,
+              color:'#0f172a', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em',
             }}>
               Our Analytics{' '}
               <span style={{ fontStyle:'italic', color:'#8B6D38' }}>Capabilities</span>
@@ -375,7 +375,7 @@ function DataAnalytics() {
         <section style={{ background: '#FEFCF5', padding: '5rem 2rem' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <div className="eyebrow"><span className="eyebrow-line" />Applications<span className="eyebrow-line" /></div>
-            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#1C1208', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em' }}>
+            <h2 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#0f172a', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em' }}>
               Industry{' '}
               <span style={{ fontStyle:'italic', color:'#8B6D38' }}>Applications</span>
             </h2>
@@ -389,9 +389,9 @@ function DataAnalytics() {
                     <div style={{ width:'44px', height:'44px', background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', marginBottom:'1rem', color:'#2563eb' }}>
                       <Icon size={20} />
                     </div>
-                    <h4 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.25rem', fontWeight:700, color:'#1C1208', margin:'0 0 0.5rem' }}>{ind.name}</h4>
+                    <h4 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.25rem', fontWeight:700, color:'#0f172a', margin:'0 0 0.5rem' }}>{ind.name}</h4>
                     <div style={{ height:'1px', background:'#EDE4CC', marginBottom:'0.75rem' }} />
-                    <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.75, margin:0, fontWeight:300 }}>{ind.impact}</p>
+                    <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.75, margin:0, fontWeight:300 }}>{ind.impact}</p>
                   </div>
                 );
               })}
@@ -402,10 +402,10 @@ function DataAnalytics() {
         <div className="gold-rule" />
 
         {/* ── CTA ── */}
-        <section style={{ padding: '5rem 2rem', background: '#F7F3EA' }}>
+        <section style={{ padding: '5rem 2rem', background: '#f8fafc' }}>
           <div style={{ maxWidth: '780px', margin: '0 auto' }}>
             <div style={{
-              background: 'linear-gradient(158deg,#1C1208 0%,#2E1F08 100%)',
+              background: 'linear-gradient(158deg,#0f172a 0%,#2E1F08 100%)',
               border: '1px solid #3D2A0A', borderRadius: '4px',
               padding: '4rem 3rem', textAlign: 'center', position: 'relative', overflow: 'hidden',
             }}>
@@ -417,20 +417,20 @@ function DataAnalytics() {
                 { bottom:'1.2rem', right:'1.2rem', borderBottom:'1px solid #2563eb40', borderRight:'1px solid #2563eb40' },
               ].map((s,i) => <div key={i} style={{ position:'absolute', width:36, height:36, ...s }} />)}
 
-              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
+              <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
                 <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
                 Get Started
                 <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
               </div>
 
-              <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3.5vw,2.8rem)', fontWeight:700, color:'#F7F3EA', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
+              <h2 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.8rem,3.5vw,2.8rem)', fontWeight:700, color:'#f8fafc', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
                 Unlock the Power of{' '}
-                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#2563eb,#E8C96A)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
+                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#2563eb,#60a5fa)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
                   Your Data
                 </span>
               </h2>
 
-              <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.92rem', color:'rgba(247,243,234,0.55)', maxWidth:'480px', margin:'0 auto 2.5rem', lineHeight:1.78, fontWeight:300 }}>
+              <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.92rem', color:'rgba(247,243,234,0.55)', maxWidth:'480px', margin:'0 auto 2.5rem', lineHeight:1.78, fontWeight:300 }}>
                 Start your analytics journey and transform raw data into strategic insights.
               </p>
 
@@ -471,7 +471,7 @@ function CapabilityCard({ cap, index, animated, visible }) {
       {/* Header row */}
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:'1.25rem' }}>
         <div style={{ display:'flex', alignItems:'center', gap:'0.75rem' }}>
-          <span style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'0.7rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600 }}>{cap.num}</span>
+          <span style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.7rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600 }}>{cap.num}</span>
           <div style={{
             width:'44px', height:'44px', background: hovered ? '#FDF5E0' : '#F5EFD8',
             border:'1px solid #E8D89A', borderRadius:'4px',
@@ -485,7 +485,7 @@ function CapabilityCard({ cap, index, animated, visible }) {
         {/* Progress circle */}
         <div style={{ position:'relative', width:52, height:52 }}>
           <svg width="52" height="52" style={{ transform:'rotate(-90deg)' }}>
-            <circle cx="26" cy="26" r="22" stroke="rgba(201,168,76,0.12)" strokeWidth="3" fill="none" />
+            <circle cx="26" cy="26" r="22" stroke="rgba(37, 99, 235,0.12)" strokeWidth="3" fill="none" />
             <circle
               cx="26" cy="26" r="22"
               stroke="#2563eb" strokeWidth="3" fill="none"
@@ -494,20 +494,20 @@ function CapabilityCard({ cap, index, animated, visible }) {
               style={{ transition:'stroke-dashoffset 1.2s ease-out' }}
             />
           </svg>
-          <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Cormorant Garamond',serif", fontSize:'0.75rem', fontWeight:700, color:'#2563eb' }}>
+          <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.75rem', fontWeight:700, color:'#2563eb' }}>
             {cap.percentage}%
           </div>
         </div>
       </div>
 
-      <h3 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.3rem', fontWeight:700, color:'#1C1208', margin:'0 0 0.5rem', letterSpacing:'-0.01em', lineHeight:1.2 }}>
+      <h3 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.3rem', fontWeight:700, color:'#0f172a', margin:'0 0 0.5rem', letterSpacing:'-0.01em', lineHeight:1.2 }}>
         {cap.title}
       </h3>
 
       {/* Divider */}
       <div style={{ height:'1px', background: hovered ? 'linear-gradient(90deg,#2563eb40,transparent)' : '#EDE4CC', marginBottom:'0.85rem', transition:'background 0.3s' }} />
 
-      <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.8, margin:'0 0 1.25rem', fontWeight:300 }}>
+      <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.8, margin:'0 0 1.25rem', fontWeight:300 }}>
         {cap.description}
       </p>
 

@@ -5,7 +5,7 @@ function MTTFContact() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;0,900;1,600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
         @keyframes pulseGold {
           0%, 100% { opacity: 1; }
@@ -35,7 +35,7 @@ function MTTFContact() {
           padding: 0.9rem 2.4rem;
           background: #2563eb;
           color: #fff;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.75rem;
           font-weight: 500;
           letter-spacing: 0.16em;
@@ -50,13 +50,13 @@ function MTTFContact() {
           background: #B8965A;
           border-color: #B8965A;
           transform: translateY(-2px);
-          box-shadow: 0 12px 28px rgba(201,168,76,0.3);
+          box-shadow: 0 12px 28px rgba(37, 99, 235,0.3);
         }
       `}</style>
 
       <div style={{
         minHeight: '100vh',
-        background: 'linear-gradient(158deg, #F7F3EA 0%, #EDE5CC 55%, #E4D5A8 100%)',
+        background: 'linear-gradient(158deg, #f8fafc 0%, #EDE5CC 55%, #E4D5A8 100%)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -64,15 +64,15 @@ function MTTFContact() {
         position: 'relative',
         overflow: 'hidden',
         marginTop: '5rem',
-        fontFamily: "'DM Sans', sans-serif",
+        fontFamily: "'Plus Jakarta Sans', sans-serif",
       }}>
 
         {/* Subtle grid */}
         <div style={{
           position: 'absolute', inset: 0,
           backgroundImage: `
-            linear-gradient(rgba(201,168,76,0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(201,168,76,0.05) 1px, transparent 1px)
+            linear-gradient(rgba(37, 99, 235,0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(37, 99, 235,0.05) 1px, transparent 1px)
           `,
           backgroundSize: '72px 72px',
           pointerEvents: 'none',
@@ -83,7 +83,7 @@ function MTTFContact() {
           position: 'absolute', top: '50%', left: '50%',
           transform: 'translate(-50%,-50%)',
           width: '700px', height: '500px',
-          background: 'radial-gradient(ellipse, rgba(201,168,76,0.1) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse, rgba(37, 99, 235,0.1) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
 
@@ -91,7 +91,7 @@ function MTTFContact() {
         <div style={{
           position: 'absolute', top: '50%', left: '50%',
           width: '460px', height: '460px',
-          border: '1px solid rgba(201,168,76,0.08)',
+          border: '1px solid rgba(37, 99, 235,0.08)',
           borderRadius: '50%',
           animation: 'rotateSlow 40s linear infinite',
           pointerEvents: 'none',
@@ -99,7 +99,7 @@ function MTTFContact() {
         <div style={{
           position: 'absolute', top: '50%', left: '50%',
           width: '640px', height: '640px',
-          border: '1px dashed rgba(201,168,76,0.05)',
+          border: '1px dashed rgba(37, 99, 235,0.05)',
           borderRadius: '50%',
           animation: 'rotateSlow 65s linear infinite reverse',
           pointerEvents: 'none',
@@ -135,8 +135,8 @@ function MTTFContact() {
         {/* Card */}
         <div style={{
           position: 'relative', zIndex: 1,
-          background: '#FAF8F2',
-          border: '1px solid #E8E0CC',
+          background: '#ffffff',
+          border: '1px solid #e2e8f0',
           borderRadius: '4px',
           padding: '3.5rem 3rem',
           maxWidth: '560px',
@@ -149,7 +149,7 @@ function MTTFContact() {
           {/* Gold top bar */}
           <div style={{
             position: 'absolute', top: 0, left: 0, right: 0, height: '2px',
-            background: 'linear-gradient(90deg, transparent, #2563eb, #E8C96A, #2563eb, transparent)',
+            background: 'linear-gradient(90deg, transparent, #2563eb, #60a5fa, #2563eb, transparent)',
           }} />
 
           {/* Clipped corner accent */}
@@ -179,7 +179,7 @@ function MTTFContact() {
           }}>
             <span style={{ display: 'inline-block', width: 22, height: 1, background: '#2563eb', opacity: 0.6 }} />
             <span style={{
-              fontFamily: "'DM Sans', sans-serif", fontSize: '0.62rem',
+              fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '0.62rem',
               letterSpacing: '0.22em', color: '#2563eb', textTransform: 'uppercase', fontWeight: 500,
             }}>
               Get In Touch
@@ -189,20 +189,20 @@ function MTTFContact() {
 
           {/* Title */}
           <h2 style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Plus Jakarta Sans', serif",
             fontSize: 'clamp(1.8rem, 4vw, 2.6rem)',
             fontWeight: 700, letterSpacing: '-0.02em',
-            color: '#1C1208', margin: '0 0 0.25rem', lineHeight: 1.1,
+            color: '#0f172a', margin: '0 0 0.25rem', lineHeight: 1.1,
           }}>
             Contact
           </h2>
           <h2 style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Plus Jakarta Sans', serif",
             fontSize: 'clamp(1.8rem, 4vw, 2.6rem)',
             fontWeight: 700, letterSpacing: '-0.02em',
             margin: '0 0 1.25rem', lineHeight: 1.1,
             fontStyle: 'italic',
-            background: 'linear-gradient(135deg, #2563eb 0%, #8B6D38 40%, #E8C96A 100%)',
+            background: 'linear-gradient(135deg, #2563eb 0%, #8B6D38 40%, #60a5fa 100%)',
             backgroundSize: '200% auto',
             WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
             animation: 'shimmer 4s linear infinite',
@@ -219,7 +219,7 @@ function MTTFContact() {
 
           {/* Body */}
           <p style={{
-            fontFamily: "'DM Sans', sans-serif", fontSize: '0.9rem',
+            fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '0.9rem',
             color: '#6B5C3E', lineHeight: 1.8, margin: '0 0 2.5rem', fontWeight: 300,
           }}>
             This page is linked from the MTTF About section. For the full contact

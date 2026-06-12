@@ -88,7 +88,7 @@ function MemberCard({ member }) {
       <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
         <AvatarIcon />
         <span style={{
-          fontFamily: "'DM Sans', 'Jost', sans-serif",
+          fontFamily: "'Plus Jakarta Sans', 'Jost', sans-serif",
           fontSize: "0.95rem",
           fontWeight: 500,
           color: "#1C1A17",
@@ -101,7 +101,7 @@ function MemberCard({ member }) {
       {/* Right: Badge + Date */}
       <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "0.3rem", flexShrink: 0 }}>
         <span style={{
-          fontFamily: "'DM Sans', 'Jost', sans-serif",
+          fontFamily: "'Plus Jakarta Sans', 'Jost', sans-serif",
           fontSize: "0.72rem",
           fontWeight: 500,
           color: "#4A7CC9",
@@ -115,7 +115,7 @@ function MemberCard({ member }) {
           Member ID: {member.id}
         </span>
         <span style={{
-          fontFamily: "'DM Sans', 'Jost', sans-serif",
+          fontFamily: "'Plus Jakarta Sans', 'Jost', sans-serif",
           fontSize: "0.72rem",
           color: "#8B8580",
           display: "flex",
@@ -191,7 +191,7 @@ export default function MembersPage() {
               Registered Users
             </h1>
             <p style={{
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "0.82rem",
               color: "#8B8580",
               margin: 0,
@@ -230,7 +230,7 @@ export default function MembersPage() {
                 border: "none",
                 outline: "none",
                 background: "transparent",
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.88rem",
                 color: "#1C1A17",
                 fontWeight: 300,
@@ -265,7 +265,7 @@ export default function MembersPage() {
             <div style={{
               textAlign: "center",
               padding: "4rem 2rem",
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Plus Jakarta Sans', sans-serif",
               color: "#B0A898",
               fontSize: "0.9rem",
             }}>

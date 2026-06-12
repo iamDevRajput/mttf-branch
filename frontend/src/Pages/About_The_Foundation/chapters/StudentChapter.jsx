@@ -170,7 +170,7 @@ function AdvantageCard({ item, index }) {
 
       <p
         style={{
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "0.82rem",
           color: "rgba(240,237,232,0.45)",
           lineHeight: 1.85,
@@ -288,7 +288,7 @@ function ChapterCard() {
 
         <div
           style={{
-            fontFamily: "'DM Sans', sans-serif",
+            fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "0.85rem",
             color: "#C8A96E",
             marginBottom: "1.5rem",
@@ -308,7 +308,7 @@ function ChapterCard() {
 
         <p
           style={{
-            fontFamily: "'DM Sans', sans-serif",
+            fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "0.875rem",
             color: "rgba(240,237,232,0.5)",
             lineHeight: 1.85,
@@ -515,7 +515,7 @@ export default function StudentChapter() {
 
             <p
               style={{
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "1.05rem",
                 color: "rgba(240,237,232,0.45)",
                 maxWidth: "560px",
@@ -698,7 +698,7 @@ export default function StudentChapter() {
               </h2>
               <p
                 style={{
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.88rem",
                   color: "rgba(240,237,232,0.35)",
                   maxWidth: "500px",

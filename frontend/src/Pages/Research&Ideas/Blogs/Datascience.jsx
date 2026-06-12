@@ -234,7 +234,7 @@ function Card({ section, index }) {
       {/* Subtitle */}
       <div
         style={{
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "0.65rem",
           color: "#2563eb",
           letterSpacing: "0.2em",
@@ -278,7 +278,7 @@ function Card({ section, index }) {
       {/* Body */}
       <p
         style={{
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "0.875rem",
           color: "#6B5C3E",
           lineHeight: 1.8,
@@ -339,7 +339,7 @@ export default function App() {
           padding: 0.75rem 2rem;
           background: #1C1208;
           color: #F7F3EA;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.75rem;
           font-weight: 500;
           letter-spacing: 0.14em;
@@ -394,7 +394,7 @@ export default function App() {
         }}
       />
 
-      <main className="flex-grow" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+      <main className="flex-grow" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
         {/* ── Hero Section ── */}
         <div
           style={{
@@ -474,7 +474,7 @@ export default function App() {
               />
               <span
                 style={{
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.65rem",
                   color: "#8B6D38",
                   letterSpacing: "0.22em",
@@ -526,7 +526,7 @@ export default function App() {
 
             <p
               style={{
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "1rem",
                 color: "#6B5C3E",
                 maxWidth: "520px",
@@ -597,7 +597,7 @@ export default function App() {
               </div>
               <div
                 style={{
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.6rem",
                   color: "#9C8B6E",
                   letterSpacing: "0.14em",
@@ -639,7 +639,7 @@ export default function App() {
             />
             <span
               style={{
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.65rem",
                 letterSpacing: "0.22em",
                 color: "#2563eb",
@@ -700,7 +700,7 @@ export default function App() {
           <div>
             <div
               style={{
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.65rem",
                 letterSpacing: "0.22em",
                 color: "#2563eb",
@@ -741,7 +741,7 @@ export default function App() {
           </div>
           <p
             style={{
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "0.88rem",
               color: "#6B5C3E",
               maxWidth: "340px",

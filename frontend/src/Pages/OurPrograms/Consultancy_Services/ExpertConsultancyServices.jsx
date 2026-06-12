@@ -200,7 +200,7 @@ function SectionHeader({ eyebrow, title, subtitle, center = true }) {
     <div style={{ textAlign: center ? "center" : "left", marginBottom: "3rem" }}>
       {eyebrow && (
         <div style={{
-          fontFamily: "'Jost', sans-serif",
+          fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "0.6rem",
           color: "#2563eb",
           letterSpacing: "0.25em",
@@ -210,7 +210,7 @@ function SectionHeader({ eyebrow, title, subtitle, center = true }) {
         }}>{eyebrow}</div>
       )}
       <h2 style={{
-        fontFamily: "'Playfair Display', serif",
+        fontFamily: "'Plus Jakarta Sans', serif",
         fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)",
         fontWeight: 700,
         color: "#1A120A",
@@ -220,7 +220,7 @@ function SectionHeader({ eyebrow, title, subtitle, center = true }) {
       }}>{title}</h2>
       {subtitle && (
         <p style={{
-          fontFamily: "'Jost', sans-serif",
+          fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "0.92rem",
           color: "rgba(90,65,40,0.55)",
           maxWidth: center ? "520px" : "none",
@@ -238,7 +238,7 @@ function GoldDivider() {
   return (
     <div style={{
       height: "1px",
-      background: "linear-gradient(90deg, transparent, rgba(201,168,76,0.4) 30%, rgba(201,168,76,0.6) 50%, rgba(201,168,76,0.4) 70%, transparent)",
+      background: "linear-gradient(90deg, transparent, rgba(37, 99, 235,0.4) 30%, rgba(37, 99, 235,0.6) 50%, rgba(37, 99, 235,0.4) 70%, transparent)",
       margin: "0",
     }} />
   );
@@ -257,7 +257,7 @@ export default function ExpertConsultancyServices() {
   }, []);
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#FBF6EC", color: "#1A120A" }}>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#f8fafc", color: "#1A120A" }}>
       <style>{`
         @keyframes goldShimmer {
           0%   { background-position: -200% center; }
@@ -272,7 +272,7 @@ export default function ExpertConsultancyServices() {
           to   { transform: translate(-50%, -50%) rotate(360deg); }
         }
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #FBF6EC; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 1px; }
       `}</style>
 
@@ -293,15 +293,15 @@ export default function ExpertConsultancyServices() {
             padding: "7rem 2rem 5rem",
             textAlign: "center",
             overflow: "hidden",
-            borderBottom: "1px solid rgba(139,112,72,0.1)",
+            borderBottom: "1px solid rgba(100, 116, 139,0.1)",
           }}
         >
           {/* Grid */}
           <div style={{
             position: "absolute", inset: 0, pointerEvents: "none",
             backgroundImage: `
-              linear-gradient(rgba(201,168,76,0.05) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(201,168,76,0.05) 1px, transparent 1px)
+              linear-gradient(rgba(37, 99, 235,0.05) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(37, 99, 235,0.05) 1px, transparent 1px)
             `,
             backgroundSize: "72px 72px",
           }} />
@@ -311,7 +311,7 @@ export default function ExpertConsultancyServices() {
             position: "absolute", pointerEvents: "none",
             top: "50%", left: "50%",
             width: "700px", height: "480px",
-            background: "radial-gradient(ellipse, rgba(201,168,76,0.1) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse, rgba(37, 99, 235,0.1) 0%, transparent 70%)",
             transform: "translate(-50%,-50%)",
           }} />
 
@@ -320,7 +320,7 @@ export default function ExpertConsultancyServices() {
             position: "absolute", pointerEvents: "none",
             top: "50%", left: "50%",
             width: "440px", height: "440px",
-            border: "1px solid rgba(201,168,76,0.08)",
+            border: "1px solid rgba(37, 99, 235,0.08)",
             borderRadius: "50%",
             animation: "rotateSlow 42s linear infinite",
           }} />
@@ -328,7 +328,7 @@ export default function ExpertConsultancyServices() {
             position: "absolute", pointerEvents: "none",
             top: "50%", left: "50%",
             width: "620px", height: "620px",
-            border: "1px dashed rgba(201,168,76,0.05)",
+            border: "1px dashed rgba(37, 99, 235,0.05)",
             borderRadius: "50%",
             animation: "rotateSlow 68s linear infinite reverse",
           }} />
@@ -361,15 +361,15 @@ export default function ExpertConsultancyServices() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.5rem",
-                fontFamily: "'Jost', sans-serif",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.72rem",
                 letterSpacing: "0.1em",
-                color: "#8B7048",
+                color: "#475569",
                 textDecoration: "none",
                 transition: "color 0.2s ease",
               }}
               onMouseEnter={e => e.currentTarget.style.color = "#2563eb"}
-              onMouseLeave={e => e.currentTarget.style.color = "#8B7048"}
+              onMouseLeave={e => e.currentTarget.style.color = "#475569"}
             >
               <ArrowLeft size={14} />
               Back to Consultancy Services
@@ -388,15 +388,15 @@ export default function ExpertConsultancyServices() {
               display: "inline-flex",
               alignItems: "center",
               gap: "0.65rem",
-              border: "1px solid rgba(201,168,76,0.28)",
+              border: "1px solid rgba(37, 99, 235,0.28)",
               padding: "0.45rem 1.3rem",
               marginBottom: "2.25rem",
-              background: "rgba(201,168,76,0.05)",
+              background: "rgba(37, 99, 235,0.05)",
               borderRadius: "1px",
             }}>
               <Zap size={12} style={{ color: "#2563eb" }} />
               <span style={{
-                fontFamily: "'Jost', sans-serif",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.62rem",
                 letterSpacing: "0.25em",
                 textTransform: "uppercase",
@@ -409,7 +409,7 @@ export default function ExpertConsultancyServices() {
 
             {/* Headline */}
             <h1 style={{
-              fontFamily: "'Playfair Display', serif",
+              fontFamily: "'Plus Jakarta Sans', serif",
               fontSize: "clamp(2.5rem, 6.5vw, 5.2rem)",
               fontWeight: 700,
               lineHeight: 1.04,
@@ -421,7 +421,7 @@ export default function ExpertConsultancyServices() {
               <br />
               <span style={{
                 fontStyle: "italic",
-                background: "linear-gradient(120deg, #2563eb 0%, #E8C97A 38%, #B8965A 72%, #2563eb 100%)",
+                background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 38%, #1d4ed8 72%, #2563eb 100%)",
                 backgroundSize: "200% auto",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -433,7 +433,7 @@ export default function ExpertConsultancyServices() {
             </h1>
 
             <p style={{
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Plus Jakarta Sans', serif",
               fontSize: "clamp(1.1rem, 2.2vw, 1.5rem)",
               fontStyle: "italic",
               color: "rgba(90,65,40,0.5)",
@@ -443,7 +443,7 @@ export default function ExpertConsultancyServices() {
             </p>
 
             <p style={{
-              fontFamily: "'Jost', sans-serif",
+              fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "0.92rem",
               color: "rgba(90,65,40,0.5)",
               maxWidth: "620px",
@@ -460,25 +460,25 @@ export default function ExpertConsultancyServices() {
             <div style={{
               display: "inline-flex",
               flexWrap: "wrap",
-              border: "1px solid rgba(201,168,76,0.2)",
-              background: "rgba(201,168,76,0.03)",
+              border: "1px solid rgba(37, 99, 235,0.2)",
+              background: "rgba(37, 99, 235,0.03)",
               borderRadius: "2px",
             }}>
               {[["4", "Expertise Areas"], ["4", "Service Tracks"], ["3", "Audience Types"]].map(([val, label], i, arr) => (
                 <div key={label} style={{
                   padding: "1rem 1.5rem",
                   textAlign: "center",
-                  borderRight: i < arr.length - 1 ? "1px solid rgba(201,168,76,0.15)" : "none",
+                  borderRight: i < arr.length - 1 ? "1px solid rgba(37, 99, 235,0.15)" : "none",
                 }}>
                   <div style={{
-                    fontFamily: "'Playfair Display', serif",
+                    fontFamily: "'Plus Jakarta Sans', serif",
                     fontSize: "1.7rem",
                     fontWeight: 700,
                     color: "#2563eb",
                     lineHeight: 1,
                   }}>{val}</div>
                   <div style={{
-                    fontFamily: "'Jost', sans-serif",
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
                     fontSize: "0.55rem",
                     color: "rgba(90,65,40,0.38)",
                     letterSpacing: "0.16em",
@@ -495,13 +495,13 @@ export default function ExpertConsultancyServices() {
         {/* ── INTRO STRIP ── */}
         <GoldDivider />
         <div style={{
-          background: "rgba(201,168,76,0.03)",
+          background: "rgba(37, 99, 235,0.03)",
           padding: "3rem 2rem",
           textAlign: "center",
-          borderBottom: "1px solid rgba(139,112,72,0.1)",
+          borderBottom: "1px solid rgba(100, 116, 139,0.1)",
         }}>
           <p style={{
-            fontFamily: "'Cormorant Garamond', serif",
+            fontFamily: "'Plus Jakarta Sans', serif",
             fontSize: "clamp(1rem, 2.3vw, 1.4rem)",
             fontStyle: "italic",
             color: "rgba(90,65,40,0.58)",
@@ -528,8 +528,8 @@ export default function ExpertConsultancyServices() {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
             gap: "1px",
-            background: "rgba(139,112,72,0.1)",
-            border: "1px solid rgba(139,112,72,0.1)",
+            background: "rgba(100, 116, 139,0.1)",
+            border: "1px solid rgba(100, 116, 139,0.1)",
             borderRadius: "2px",
             overflow: "hidden",
           }}>
@@ -541,9 +541,9 @@ export default function ExpertConsultancyServices() {
 
         {/* ── CONSULTANCY SERVICES ── */}
         <section style={{
-          background: "rgba(201,168,76,0.03)",
-          borderTop: "1px solid rgba(139,112,72,0.1)",
-          borderBottom: "1px solid rgba(139,112,72,0.1)",
+          background: "rgba(37, 99, 235,0.03)",
+          borderTop: "1px solid rgba(100, 116, 139,0.1)",
+          borderBottom: "1px solid rgba(100, 116, 139,0.1)",
           padding: "5rem 2rem",
         }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
@@ -594,14 +594,14 @@ export default function ExpertConsultancyServices() {
         {/* ── WHAT YOU GAIN ── */}
         <section style={{
           background: "#1A120A",
-          borderTop: "1px solid rgba(201,168,76,0.15)",
+          borderTop: "1px solid rgba(37, 99, 235,0.15)",
           padding: "5rem 2rem",
         }}>
           <div style={{ maxWidth: "900px", margin: "0 auto" }}>
             <FadeSection>
               <div style={{ textAlign: "center", marginBottom: "3rem" }}>
                 <div style={{
-                  fontFamily: "'Jost', sans-serif",
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.6rem",
                   color: "#2563eb",
                   letterSpacing: "0.25em",
@@ -610,7 +610,7 @@ export default function ExpertConsultancyServices() {
                   fontWeight: 500,
                 }}>Benefits</div>
                 <h2 style={{
-                  fontFamily: "'Playfair Display', serif",
+                  fontFamily: "'Plus Jakarta Sans', serif",
                   fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)",
                   fontWeight: 700,
                   color: "#E8D9C0",
@@ -618,7 +618,7 @@ export default function ExpertConsultancyServices() {
                   margin: "0 0 0.75rem",
                 }}>What You Gain</h2>
                 <p style={{
-                  fontFamily: "'Jost', sans-serif",
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.88rem",
                   color: "rgba(232,217,192,0.4)",
                   fontWeight: 300,
@@ -630,8 +630,8 @@ export default function ExpertConsultancyServices() {
               display: "grid",
               gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
               gap: "1px",
-              background: "rgba(201,168,76,0.12)",
-              border: "1px solid rgba(201,168,76,0.12)",
+              background: "rgba(37, 99, 235,0.12)",
+              border: "1px solid rgba(37, 99, 235,0.12)",
               borderRadius: "2px",
               overflow: "hidden",
             }}>
@@ -669,9 +669,9 @@ export default function ExpertConsultancyServices() {
 
         {/* ── HIGHLIGHT PROJECTS ── */}
         <section style={{
-          background: "rgba(201,168,76,0.03)",
-          borderTop: "1px solid rgba(139,112,72,0.1)",
-          borderBottom: "1px solid rgba(139,112,72,0.1)",
+          background: "rgba(37, 99, 235,0.03)",
+          borderTop: "1px solid rgba(100, 116, 139,0.1)",
+          borderBottom: "1px solid rgba(100, 116, 139,0.1)",
           padding: "5rem 2rem",
         }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
@@ -701,8 +701,8 @@ export default function ExpertConsultancyServices() {
         <section style={{ maxWidth: "860px", margin: "0 auto", padding: "5rem 2rem" }}>
           <FadeSection>
             <div style={{
-              border: "1px solid rgba(201,168,76,0.25)",
-              background: "rgba(201,168,76,0.03)",
+              border: "1px solid rgba(37, 99, 235,0.25)",
+              background: "rgba(37, 99, 235,0.03)",
               borderRadius: "2px",
               padding: "4rem 3rem",
               textAlign: "center",
@@ -714,11 +714,11 @@ export default function ExpertConsultancyServices() {
                 position: "absolute",
                 top: 0, left: 0, right: 0,
                 height: "2px",
-                background: "linear-gradient(90deg, transparent, #2563eb, #E8C97A, #2563eb, transparent)",
+                background: "linear-gradient(90deg, transparent, #2563eb, #60a5fa, #2563eb, transparent)",
               }} />
 
               <div style={{
-                fontFamily: "'Jost', sans-serif",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.6rem",
                 color: "#2563eb",
                 letterSpacing: "0.25em",
@@ -728,7 +728,7 @@ export default function ExpertConsultancyServices() {
               }}>Get Started</div>
 
               <h2 style={{
-                fontFamily: "'Playfair Display', serif",
+                fontFamily: "'Plus Jakarta Sans', serif",
                 fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)",
                 fontWeight: 700,
                 color: "#1A120A",
@@ -739,7 +739,7 @@ export default function ExpertConsultancyServices() {
                 Connect with Our Experts Today
               </h2>
               <p style={{
-                fontFamily: "'Jost', sans-serif",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.92rem",
                 color: "rgba(90,65,40,0.55)",
                 marginBottom: "2.25rem",
@@ -753,7 +753,7 @@ export default function ExpertConsultancyServices() {
                 <Link
                   to="/contacts"
                   style={{
-                    fontFamily: "'Jost', sans-serif",
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
                     fontSize: "0.72rem",
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",
@@ -768,7 +768,7 @@ export default function ExpertConsultancyServices() {
                     display: "inline-block",
                     transition: "background 0.3s ease",
                   }}
-                  onMouseEnter={e => e.currentTarget.style.background = "#B8965A"}
+                  onMouseEnter={e => e.currentTarget.style.background = "#1d4ed8"}
                   onMouseLeave={e => e.currentTarget.style.background = "#2563eb"}
                 >
                   Request Consultation
@@ -776,13 +776,13 @@ export default function ExpertConsultancyServices() {
                 <Link
                   to="/programs/consultancy-services"
                   style={{
-                    fontFamily: "'Jost', sans-serif",
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
                     fontSize: "0.72rem",
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",
                     color: "#2563eb",
                     background: "transparent",
-                    border: "1px solid rgba(201,168,76,0.45)",
+                    border: "1px solid rgba(37, 99, 235,0.45)",
                     padding: "0.9rem 2.2rem",
                     cursor: "pointer",
                     borderRadius: "1px",
@@ -791,8 +791,8 @@ export default function ExpertConsultancyServices() {
                     display: "inline-block",
                     transition: "border-color 0.3s ease, background 0.3s ease",
                   }}
-                  onMouseEnter={e => { e.currentTarget.style.background = "rgba(201,168,76,0.07)"; e.currentTarget.style.borderColor = "rgba(201,168,76,0.8)"; }}
-                  onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "rgba(201,168,76,0.45)"; }}
+                  onMouseEnter={e => { e.currentTarget.style.background = "rgba(37, 99, 235,0.07)"; e.currentTarget.style.borderColor = "rgba(37, 99, 235,0.8)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "rgba(37, 99, 235,0.45)"; }}
                 >
                   View All Services
                 </Link>
@@ -817,7 +817,7 @@ function ExpertiseCard({ area, index }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? "rgba(201,168,76,0.04)" : "#FBF6EC",
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
         padding: "2rem 2rem 2rem 2.25rem",
         position: "relative",
         overflow: "hidden",
@@ -830,7 +830,7 @@ function ExpertiseCard({ area, index }) {
         position: "absolute",
         left: 0, top: 0, bottom: 0,
         width: hovered ? "3px" : "2px",
-        background: "linear-gradient(180deg, #2563eb 0%, #E8C97A 100%)",
+        background: "linear-gradient(180deg, #2563eb 0%, #60a5fa 100%)",
         transition: "width 0.3s ease",
       }} />
 
@@ -838,9 +838,9 @@ function ExpertiseCard({ area, index }) {
       <div style={{
         position: "absolute", right: "1rem", top: "50%",
         transform: "translateY(-50%)",
-        fontFamily: "'Playfair Display', serif",
+        fontFamily: "'Plus Jakarta Sans', serif",
         fontSize: "4.5rem", fontWeight: 700,
-        color: "rgba(201,168,76,0.06)", lineHeight: 1,
+        color: "rgba(37, 99, 235,0.06)", lineHeight: 1,
         userSelect: "none", pointerEvents: "none",
       }}>
         {String(index + 1).padStart(2, "0")}
@@ -850,8 +850,8 @@ function ExpertiseCard({ area, index }) {
       <div style={{
         width: "50px", height: "50px",
         display: "flex", alignItems: "center", justifyContent: "center",
-        background: hovered ? "rgba(201,168,76,0.12)" : "rgba(201,168,76,0.06)",
-        border: `1px solid ${hovered ? "rgba(201,168,76,0.4)" : "rgba(201,168,76,0.18)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.12)" : "rgba(37, 99, 235,0.06)",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(37, 99, 235,0.18)"}`,
         borderRadius: "2px",
         color: "#2563eb",
         marginBottom: "1.25rem",
@@ -861,14 +861,14 @@ function ExpertiseCard({ area, index }) {
       </div>
 
       <h3 style={{
-        fontFamily: "'Playfair Display', serif",
+        fontFamily: "'Plus Jakarta Sans', serif",
         fontSize: "1.08rem", fontWeight: 700,
         color: "#1A120A", margin: "0 0 0.6rem",
         letterSpacing: "-0.01em", lineHeight: 1.3,
       }}>{area.title}</h3>
 
       <div style={{
-        height: "1px", background: "rgba(201,168,76,0.18)",
+        height: "1px", background: "rgba(37, 99, 235,0.18)",
         width: hovered ? "100%" : "36%",
         transition: "width 0.4s ease", marginBottom: "1rem",
       }} />
@@ -878,7 +878,7 @@ function ExpertiseCard({ area, index }) {
           <li key={i} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
             <ChevronRight size={13} style={{ color: "#2563eb", flexShrink: 0, marginTop: "0.2rem" }} />
             <span style={{
-              fontFamily: "'Jost', sans-serif",
+              fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "0.8rem", color: "#7A6040",
               lineHeight: 1.6, fontWeight: 300,
             }}>{point}</span>
@@ -896,8 +896,8 @@ function ServiceCard({ service }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? "rgba(201,168,76,0.04)" : "#FBF6EC",
-        border: `1px solid ${hovered ? "rgba(201,168,76,0.35)" : "rgba(139,112,72,0.15)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.35)" : "rgba(100, 116, 139,0.15)"}`,
         borderRadius: "2px",
         padding: "1.75rem",
         position: "relative",
@@ -916,7 +916,7 @@ function ServiceCard({ service }) {
       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "1rem" }}>
         <Award size={16} style={{ color: "#2563eb", flexShrink: 0 }} />
         <h3 style={{
-          fontFamily: "'Playfair Display', serif",
+          fontFamily: "'Plus Jakarta Sans', serif",
           fontSize: "1rem", fontWeight: 700,
           color: "#1A120A", margin: 0, letterSpacing: "-0.01em",
         }}>{service.title}</h3>
@@ -927,7 +927,7 @@ function ServiceCard({ service }) {
           <li key={i} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
             <CheckCircle2 size={12} style={{ color: "#6B9E5E", flexShrink: 0, marginTop: "0.2rem" }} />
             <span style={{
-              fontFamily: "'Jost', sans-serif",
+              fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "0.78rem", color: "#7A6040",
               lineHeight: 1.6, fontWeight: 300,
             }}>{point}</span>
@@ -945,8 +945,8 @@ function ProcessCard({ step, index, isLast }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? "rgba(201,168,76,0.04)" : "#FBF6EC",
-        border: `1px solid ${hovered ? "rgba(201,168,76,0.35)" : "rgba(139,112,72,0.15)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.35)" : "rgba(100, 116, 139,0.15)"}`,
         borderRadius: "2px",
         padding: "2rem 1.75rem",
         position: "relative",
@@ -957,9 +957,9 @@ function ProcessCard({ step, index, isLast }) {
       {/* Step number badge */}
       <div style={{
         position: "absolute", top: "1rem", right: "1rem",
-        fontFamily: "'Playfair Display', serif",
+        fontFamily: "'Plus Jakarta Sans', serif",
         fontSize: "2.5rem", fontWeight: 700,
-        color: "rgba(201,168,76,0.1)", lineHeight: 1,
+        color: "rgba(37, 99, 235,0.1)", lineHeight: 1,
         userSelect: "none",
       }}>{step.number}</div>
 
@@ -967,8 +967,8 @@ function ProcessCard({ step, index, isLast }) {
       <div style={{
         width: "48px", height: "48px",
         display: "flex", alignItems: "center", justifyContent: "center",
-        background: hovered ? "rgba(201,168,76,0.12)" : "rgba(201,168,76,0.06)",
-        border: `1px solid ${hovered ? "rgba(201,168,76,0.4)" : "rgba(201,168,76,0.18)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.12)" : "rgba(37, 99, 235,0.06)",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(37, 99, 235,0.18)"}`,
         borderRadius: "2px", color: "#2563eb",
         marginBottom: "1.25rem",
         transition: "background 0.3s, border-color 0.3s",
@@ -977,13 +977,13 @@ function ProcessCard({ step, index, isLast }) {
       </div>
 
       <h3 style={{
-        fontFamily: "'Playfair Display', serif",
+        fontFamily: "'Plus Jakarta Sans', serif",
         fontSize: "1rem", fontWeight: 700,
         color: "#1A120A", margin: "0 0 0.5rem", lineHeight: 1.3,
       }}>{step.title}</h3>
       <p style={{
-        fontFamily: "'Jost', sans-serif",
-        fontSize: "0.8rem", color: "#8B7048",
+        fontFamily: "'Plus Jakarta Sans', sans-serif",
+        fontSize: "0.8rem", color: "#475569",
         lineHeight: 1.7, margin: 0, fontWeight: 300,
       }}>{step.description}</p>
 
@@ -991,7 +991,7 @@ function ProcessCard({ step, index, isLast }) {
       {!isLast && (
         <div style={{
           position: "absolute", top: "50%", right: "-0.75rem",
-          transform: "translateY(-50%)", color: "rgba(201,168,76,0.4)",
+          transform: "translateY(-50%)", color: "rgba(37, 99, 235,0.4)",
           zIndex: 1,
         }}>
           <ChevronRight size={20} />
@@ -1013,15 +1013,15 @@ function BenefitRow({ text, dark }) {
         gap: "0.85rem",
         padding: "1.25rem 1.5rem",
         background: hovered
-          ? dark ? "rgba(201,168,76,0.08)" : "rgba(201,168,76,0.04)"
-          : dark ? "rgba(255,255,255,0.02)" : "#FBF6EC",
+          ? dark ? "rgba(37, 99, 235,0.08)" : "rgba(37, 99, 235,0.04)"
+          : dark ? "rgba(255,255,255,0.02)" : "#f8fafc",
         transition: "background 0.3s ease",
         cursor: "default",
       }}
     >
       <CheckCircle2 size={16} style={{ color: "#2563eb", flexShrink: 0 }} />
       <span style={{
-        fontFamily: "'Jost', sans-serif",
+        fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "0.85rem",
         color: dark ? "rgba(232,217,192,0.75)" : "#5C4A32",
         fontWeight: 400,
@@ -1038,8 +1038,8 @@ function AudienceCard({ audience }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? "rgba(201,168,76,0.04)" : "#FBF6EC",
-        border: `1px solid ${hovered ? "rgba(201,168,76,0.35)" : "rgba(139,112,72,0.15)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.35)" : "rgba(100, 116, 139,0.15)"}`,
         borderRadius: "2px",
         padding: "2.25rem 2rem",
         position: "relative",
@@ -1059,8 +1059,8 @@ function AudienceCard({ audience }) {
       <div style={{
         width: "60px", height: "60px",
         display: "flex", alignItems: "center", justifyContent: "center",
-        background: hovered ? "rgba(201,168,76,0.12)" : "rgba(201,168,76,0.06)",
-        border: `1px solid ${hovered ? "rgba(201,168,76,0.4)" : "rgba(201,168,76,0.18)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.12)" : "rgba(37, 99, 235,0.06)",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(37, 99, 235,0.18)"}`,
         borderRadius: "2px", color: "#2563eb",
         margin: "0 auto 1.25rem",
         transition: "background 0.3s, border-color 0.3s, transform 0.35s",
@@ -1070,18 +1070,18 @@ function AudienceCard({ audience }) {
       </div>
 
       <h3 style={{
-        fontFamily: "'Playfair Display', serif",
+        fontFamily: "'Plus Jakarta Sans', serif",
         fontSize: "1.15rem", fontWeight: 700,
         color: "#1A120A", margin: "0 0 1rem",
       }}>{audience.title}</h3>
 
-      <div style={{ height: "1px", background: "rgba(201,168,76,0.18)", marginBottom: "1rem", width: hovered ? "60%" : "36%", margin: "0 auto 1rem", transition: "width 0.4s ease" }} />
+      <div style={{ height: "1px", background: "rgba(37, 99, 235,0.18)", marginBottom: "1rem", width: hovered ? "60%" : "36%", margin: "0 auto 1rem", transition: "width 0.4s ease" }} />
 
       <ul style={{ listStyle: "none", margin: 0, padding: 0, textAlign: "left", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
         {audience.points.map((point, i) => (
           <li key={i} style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
             <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#2563eb", flexShrink: 0 }} />
-            <span style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.8rem", color: "#7A6040", fontWeight: 300 }}>{point}</span>
+            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.8rem", color: "#7A6040", fontWeight: 300 }}>{point}</span>
           </li>
         ))}
       </ul>
@@ -1096,8 +1096,8 @@ function ProjectCard({ project }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? "rgba(201,168,76,0.06)" : "#FBF6EC",
-        border: `1px solid ${hovered ? "rgba(201,168,76,0.4)" : "rgba(139,112,72,0.15)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.06)" : "#f8fafc",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(100, 116, 139,0.15)"}`,
         borderRadius: "2px",
         padding: "1.75rem",
         position: "relative",
@@ -1105,7 +1105,7 @@ function ProjectCard({ project }) {
         cursor: "pointer",
         transition: "background 0.3s, border-color 0.3s, transform 0.35s, box-shadow 0.35s",
         transform: hovered ? "translateY(-4px)" : "translateY(0)",
-        boxShadow: hovered ? "0 14px 36px rgba(139,112,72,0.1)" : "none",
+        boxShadow: hovered ? "0 14px 36px rgba(100, 116, 139,0.1)" : "none",
       }}
     >
       <div style={{
@@ -1116,11 +1116,11 @@ function ProjectCard({ project }) {
       }} />
 
       <div style={{ position: "absolute", top: "1rem", right: "1rem" }}>
-        <TrendingUp size={18} style={{ color: hovered ? "#2563eb" : "rgba(139,112,72,0.25)", transition: "color 0.3s" }} />
+        <TrendingUp size={18} style={{ color: hovered ? "#2563eb" : "rgba(100, 116, 139,0.25)", transition: "color 0.3s" }} />
       </div>
 
       <div style={{
-        fontFamily: "'Jost', sans-serif",
+        fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "0.58rem",
         color: "#2563eb",
         letterSpacing: "0.2em",
@@ -1130,7 +1130,7 @@ function ProjectCard({ project }) {
       }}>{project.category}</div>
 
       <h3 style={{
-        fontFamily: "'Playfair Display', serif",
+        fontFamily: "'Plus Jakarta Sans', serif",
         fontSize: "1rem", fontWeight: 700,
         color: "#1A120A", margin: 0,
         lineHeight: 1.35, letterSpacing: "-0.01em",

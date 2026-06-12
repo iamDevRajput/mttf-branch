@@ -124,35 +124,35 @@ function ComputationalMathematics() {
           100% { stroke-dasharray: 1000; stroke-dashoffset: 0;    }
         }
 
-        .cm-page { background: #F7F3EA; color: #1C1208; font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+        .cm-page { background: #f8fafc; color: #0f172a; font-family: 'Plus Jakarta Sans', sans-serif; min-height: 100vh; }
         .gold-rule { height: 1px; background: linear-gradient(90deg,transparent,#2563eb70,transparent); }
 
         .eyebrow {
-          font-family: 'DM Sans',sans-serif; font-size: 0.65rem; letter-spacing: 0.22em;
+          font-family: 'Plus Jakarta Sans',sans-serif; font-size: 0.65rem; letter-spacing: 0.22em;
           color: #2563eb; text-transform: uppercase; font-weight: 500;
           display: flex; align-items: center; gap: 0.5rem; justify-content: center; margin-bottom: 1rem;
         }
         .eyebrow-line { display: inline-block; width: 28px; height: 1px; background: #2563eb; }
 
         .focus-card {
-          background: #FAF8F2; border: 1px solid #E8E0CC; border-radius: 4px;
+          background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px;
           padding: 2.25rem; position: relative; overflow: hidden;
           transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
         }
         .focus-card::before {
           content:''; position:absolute; top:0; left:0;
           width:0; height:2px;
-          background: linear-gradient(90deg,#2563eb,#E8C96A,transparent);
+          background: linear-gradient(90deg,#2563eb,#60a5fa,transparent);
           transition: width 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .focus-card:hover::before { width:100%; }
         .focus-card:hover {
           border-color:#2563eb; transform:translateY(-5px);
-          box-shadow:0 20px 44px rgba(139,109,56,0.12); background:#FEFCF7;
+          box-shadow:0 20px 44px rgba(37, 99, 235,0.12); background:#FEFCF7;
         }
 
         .app-card {
-          background: #FAF8F2; border: 1px solid #E8E0CC; border-radius: 4px;
+          background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px;
           padding: 2rem; position: relative; overflow: hidden;
           transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
         }
@@ -163,27 +163,27 @@ function ComputationalMathematics() {
           transition: transform 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .app-card:hover::after { transform:scaleX(1); }
-        .app-card:hover { border-color:#2563eb; transform:translateY(-4px); box-shadow:0 16px 36px rgba(139,109,56,0.1); }
+        .app-card:hover { border-color:#2563eb; transform:translateY(-4px); box-shadow:0 16px 36px rgba(37, 99, 235,0.1); }
 
         .stat-pill {
-          background:#FAF8F2; border:1px solid #E8E0CC; border-radius:4px;
+          background:#ffffff; border:1px solid #e2e8f0; border-radius:4px;
           padding:1.25rem 1.5rem; text-align:center; flex:1 1 120px;
           transition:all 0.35s ease; cursor:default;
         }
-        .stat-pill:hover { border-color:#2563eb; transform:translateY(-3px); box-shadow:0 12px 28px rgba(139,109,56,0.1); }
+        .stat-pill:hover { border-color:#2563eb; transform:translateY(-3px); box-shadow:0 12px 28px rgba(37, 99, 235,0.1); }
 
         .btn-gold {
           display:inline-flex; align-items:center; gap:0.5rem;
           padding:0.85rem 2.25rem; background:#2563eb; color:#fff;
-          font-family:'DM Sans',sans-serif; font-size:0.75rem; font-weight:500;
+          font-family:'Plus Jakarta Sans',sans-serif; font-size:0.75rem; font-weight:500;
           letter-spacing:0.14em; text-transform:uppercase;
           border:1px solid #2563eb; border-radius:2px;
           cursor:pointer; transition:all 0.35s ease; text-decoration:none;
         }
-        .btn-gold:hover { background:#B8965A; border-color:#B8965A; transform:translateY(-2px); box-shadow:0 10px 24px rgba(201,168,76,0.28); }
+        .btn-gold:hover { background:#B8965A; border-color:#B8965A; transform:translateY(-2px); box-shadow:0 10px 24px rgba(37, 99, 235,0.28); }
 
         ::-webkit-scrollbar { width:3px; }
-        ::-webkit-scrollbar-track { background:#F7F3EA; }
+        ::-webkit-scrollbar-track { background:#f8fafc; }
         ::-webkit-scrollbar-thumb { background:#2563eb; border-radius:2px; }
       `}</style>
 
@@ -194,7 +194,7 @@ function ComputationalMathematics() {
         <div style={{ maxWidth:'1200px', margin:'0 auto', padding:'7rem 2rem 1.5rem' }}>
           <Link
             to="/programs/capability"
-            style={{ display:'inline-flex', alignItems:'center', gap:'0.5rem', fontFamily:"'DM Sans',sans-serif", fontSize:'0.78rem', color:'#2563eb', textDecoration:'none', letterSpacing:'0.06em', transition:'color 0.2s' }}
+            style={{ display:'inline-flex', alignItems:'center', gap:'0.5rem', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.78rem', color:'#2563eb', textDecoration:'none', letterSpacing:'0.06em', transition:'color 0.2s' }}
             onMouseEnter={e => e.currentTarget.style.color='#8B6D38'}
             onMouseLeave={e => e.currentTarget.style.color='#2563eb'}
           >
@@ -208,25 +208,25 @@ function ComputationalMathematics() {
           ref={el => (observerRefs.current[0] = el)}
           style={{
             position:'relative', overflow:'hidden',
-            background:'linear-gradient(158deg,#F7F3EA 0%,#EDE5CC 55%,#E4D5A8 100%)',
+            background:'linear-gradient(158deg,#f8fafc 0%,#f1f5f9 55%,#e2e8f0 100%)',
             padding:'3.5rem 2rem 5.5rem', textAlign:'center',
             borderBottom:'1px solid #D8CBA8',
           }}
         >
           {/* Gold grid */}
-          <div style={{ position:'absolute', inset:0, backgroundImage:`linear-gradient(rgba(201,168,76,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.05) 1px,transparent 1px)`, backgroundSize:'72px 72px', pointerEvents:'none' }} />
+          <div style={{ position:'absolute', inset:0, backgroundImage:`linear-gradient(rgba(37, 99, 235,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(37, 99, 235,0.05) 1px,transparent 1px)`, backgroundSize:'72px 72px', pointerEvents:'none' }} />
           {/* Warm glow */}
-          <div style={{ position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)', width:'700px', height:'420px', background:'radial-gradient(ellipse,rgba(201,168,76,0.1) 0%,transparent 70%)', pointerEvents:'none' }} />
+          <div style={{ position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)', width:'700px', height:'420px', background:'radial-gradient(ellipse,rgba(37, 99, 235,0.1) 0%,transparent 70%)', pointerEvents:'none' }} />
           {/* Rotating rings */}
-          <div style={{ position:'absolute', top:'50%', left:'50%', width:'460px', height:'460px', border:'1px solid rgba(201,168,76,0.08)', borderRadius:'50%', animation:'rotateSlow 40s linear infinite', pointerEvents:'none' }} />
-          <div style={{ position:'absolute', top:'50%', left:'50%', width:'640px', height:'640px', border:'1px dashed rgba(201,168,76,0.05)', borderRadius:'50%', animation:'rotateReverse 65s linear infinite', pointerEvents:'none' }} />
+          <div style={{ position:'absolute', top:'50%', left:'50%', width:'460px', height:'460px', border:'1px solid rgba(37, 99, 235,0.08)', borderRadius:'50%', animation:'rotateSlow 40s linear infinite', pointerEvents:'none' }} />
+          <div style={{ position:'absolute', top:'50%', left:'50%', width:'640px', height:'640px', border:'1px dashed rgba(37, 99, 235,0.05)', borderRadius:'50%', animation:'rotateReverse 65s linear infinite', pointerEvents:'none' }} />
 
           {/* Floating math symbols */}
           {formulaPositions.map((pos, i) => (
             <div key={i} style={{
               position:'absolute', top:`${pos.top}%`, left:`${pos.left}%`,
-              fontFamily:"'Cormorant Garamond',serif", fontSize:'2.2rem', fontWeight:700,
-              color:'rgba(201,168,76,0.08)', pointerEvents:'none',
+              fontFamily:"'Plus Jakarta Sans',serif", fontSize:'2.2rem', fontWeight:700,
+              color:'rgba(37, 99, 235,0.08)', pointerEvents:'none',
               animation:`floatFormula ${pos.duration}s ease-in-out infinite`,
               animationDelay:`${pos.delay}s`, userSelect:'none',
             }}>
@@ -255,26 +255,26 @@ function ComputationalMathematics() {
               </div>
               <div style={{ position:'absolute', inset:'-12px', animation:'spinReverse 25s linear infinite', pointerEvents:'none' }}>
                 <Binary size={14} color="#2563eb" style={{ position:'absolute', top:'50%', left:0, transform:'translateY(-50%)', opacity:0.6 }} />
-                <span style={{ position:'absolute', top:'50%', right:0, transform:'translateY(-50%)', fontFamily:"'Cormorant Garamond',serif", fontSize:'0.9rem', fontWeight:700, color:'#2563eb', opacity:0.6 }}>π</span>
+                <span style={{ position:'absolute', top:'50%', right:0, transform:'translateY(-50%)', fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.9rem', fontWeight:700, color:'#2563eb', opacity:0.6 }}>π</span>
               </div>
             </div>
 
             {/* Badge */}
-            <div style={{ display:'inline-flex', alignItems:'center', gap:'0.65rem', background:'rgba(201,168,76,0.1)', border:'1px solid rgba(201,168,76,0.3)', borderRadius:'2px', padding:'0.4rem 1.2rem', marginBottom:'1.75rem' }}>
+            <div style={{ display:'inline-flex', alignItems:'center', gap:'0.65rem', background:'rgba(37, 99, 235,0.1)', border:'1px solid rgba(37, 99, 235,0.3)', borderRadius:'2px', padding:'0.4rem 1.2rem', marginBottom:'1.75rem' }}>
               <span style={{ width:5, height:5, borderRadius:'50%', background:'#2563eb', display:'inline-block', animation:'pulseGold 2s ease infinite' }} />
-              <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.65rem', color:'#8B6D38', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500 }}>
+              <span style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.65rem', color:'#8B6D38', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500 }}>
                 Computational Mathematics
               </span>
             </div>
 
-            <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(2.4rem,6vw,4.8rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#1C1208', marginBottom:'0.4rem' }}>
+            <h1 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(2.4rem,6vw,4.8rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#0f172a', marginBottom:'0.4rem' }}>
               Mathematical
             </h1>
-            <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(2.4rem,6vw,4.8rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#2563eb 0%,#8B6D38 40%,#E8C96A 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
+            <h1 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(2.4rem,6vw,4.8rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#2563eb 0%,#8B6D38 40%,#60a5fa 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
               Computation
             </h1>
 
-            <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.95rem', color:'#6B5C3E', maxWidth:'560px', margin:'0 auto 3rem', lineHeight:1.8, fontWeight:300 }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.95rem', color:'#6B5C3E', maxWidth:'560px', margin:'0 auto 3rem', lineHeight:1.8, fontWeight:300 }}>
               Advanced mathematical methods powered by computation to solve complex real-world problems.
             </p>
 
@@ -285,8 +285,8 @@ function ComputationalMathematics() {
                 return (
                   <div className="stat-pill" key={i}>
                     <Icon size={16} color="#2563eb" style={{ margin:'0 auto 0.4rem', display:'block' }} />
-                    <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.6rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{s.value}</div>
-                    <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.6rem', color:'#9C8B6E', letterSpacing:'0.14em', textTransform:'uppercase', marginTop:'0.25rem', fontWeight:500 }}>{s.label}</div>
+                    <div style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.6rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{s.value}</div>
+                    <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.6rem', color:'#9C8B6E', letterSpacing:'0.14em', textTransform:'uppercase', marginTop:'0.25rem', fontWeight:500 }}>{s.label}</div>
                   </div>
                 );
               })}
@@ -304,20 +304,20 @@ function ComputationalMathematics() {
                 <span className="eyebrow-line" />
                 Overview
               </div>
-              <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3vw,2.6rem)', fontWeight:700, color:'#1C1208', letterSpacing:'-0.02em', margin:'0 0 1.5rem', lineHeight:1.15 }}>
+              <h2 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.8rem,3vw,2.6rem)', fontWeight:700, color:'#0f172a', letterSpacing:'-0.02em', margin:'0 0 1.5rem', lineHeight:1.15 }}>
                 The Power of{' '}
                 <span style={{ fontStyle:'italic', color:'#8B6D38' }}>Mathematical Computation</span>
               </h2>
-              <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, marginBottom:'0.85rem', fontWeight:300 }}>
+              <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, marginBottom:'0.85rem', fontWeight:300 }}>
                 Computational mathematics bridges the gap between theoretical mathematics and practical problem-solving through algorithmic approaches.
               </p>
-              <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, fontWeight:300 }}>
+              <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, fontWeight:300 }}>
                 From numerical analysis to optimization, we employ cutting-edge computational techniques to tackle challenges across science and engineering.
               </p>
             </div>
 
             {/* Wave visualization */}
-            <div style={{ background:'#FAF8F2', border:'1px solid #E8E0CC', borderRadius:'4px', padding:'2rem', position:'relative', overflow:'hidden', minHeight:'220px', display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column' }}>
+            <div style={{ background:'#ffffff', border:'1px solid #e2e8f0', borderRadius:'4px', padding:'2rem', position:'relative', overflow:'hidden', minHeight:'220px', display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column' }}>
               <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#2563eb,transparent)' }} />
 
               {/* Gold grid pattern */}
@@ -325,7 +325,7 @@ function ComputationalMathematics() {
                 <svg width="100%" height="100%">
                   <defs>
                     <pattern id="goldGrid" width="36" height="36" patternUnits="userSpaceOnUse">
-                      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="rgba(201,168,76,0.4)" strokeWidth="0.8"/>
+                      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="rgba(37, 99, 235,0.4)" strokeWidth="0.8"/>
                     </pattern>
                   </defs>
                   <rect width="100%" height="100%" fill="url(#goldGrid)" />
@@ -336,7 +336,7 @@ function ComputationalMathematics() {
                 <defs>
                   <linearGradient id="waveGold" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%"   stopColor="#2563eb" />
-                    <stop offset="50%"  stopColor="#E8C96A" />
+                    <stop offset="50%"  stopColor="#60a5fa" />
                     <stop offset="100%" stopColor="#8B6D38" />
                   </linearGradient>
                 </defs>
@@ -352,7 +352,7 @@ function ComputationalMathematics() {
                 ))}
               </svg>
 
-              <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.1rem', fontWeight:600, color:'#2563eb', letterSpacing:'0.08em', marginTop:'0.5rem', position:'relative', zIndex:1 }}>
+              <div style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.1rem', fontWeight:600, color:'#2563eb', letterSpacing:'0.08em', marginTop:'0.5rem', position:'relative', zIndex:1 }}>
                 Σ(n=1→∞)
               </div>
             </div>
@@ -368,7 +368,7 @@ function ComputationalMathematics() {
         >
           <div style={{ maxWidth:'1200px', margin:'0 auto' }}>
             <div className="eyebrow"><span className="eyebrow-line" />Focus Areas<span className="eyebrow-line" /></div>
-            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#1C1208', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em' }}>
+            <h2 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#0f172a', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em' }}>
               Core{' '}
               <span style={{ fontStyle:'italic', color:'#8B6D38' }}>Focus Areas</span>
             </h2>
@@ -387,7 +387,7 @@ function ComputationalMathematics() {
         <section style={{ background:'#FEFCF5', padding:'5rem 2rem' }}>
           <div style={{ maxWidth:'1100px', margin:'0 auto' }}>
             <div className="eyebrow"><span className="eyebrow-line" />Applications<span className="eyebrow-line" /></div>
-            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#1C1208', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em' }}>
+            <h2 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#0f172a', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em' }}>
               Real-World{' '}
               <span style={{ fontStyle:'italic', color:'#8B6D38' }}>Applications</span>
             </h2>
@@ -401,9 +401,9 @@ function ComputationalMathematics() {
                     <div style={{ width:'44px', height:'44px', background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', marginBottom:'1rem', color:'#2563eb' }}>
                       <Icon size={20} />
                     </div>
-                    <h4 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.25rem', fontWeight:700, color:'#1C1208', margin:'0 0 0.4rem' }}>{app.title}</h4>
+                    <h4 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.25rem', fontWeight:700, color:'#0f172a', margin:'0 0 0.4rem' }}>{app.title}</h4>
                     <div style={{ height:'1px', background:'#EDE4CC', marginBottom:'0.75rem' }} />
-                    <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.75, margin:0, fontWeight:300 }}>{app.desc}</p>
+                    <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.75, margin:0, fontWeight:300 }}>{app.desc}</p>
                   </div>
                 );
               })}
@@ -414,9 +414,9 @@ function ComputationalMathematics() {
         <div className="gold-rule" />
 
         {/* ── CTA ── */}
-        <section style={{ padding:'5rem 2rem', background:'#F7F3EA' }}>
+        <section style={{ padding:'5rem 2rem', background:'#f8fafc' }}>
           <div style={{ maxWidth:'780px', margin:'0 auto' }}>
-            <div style={{ background:'linear-gradient(158deg,#1C1208 0%,#2E1F08 100%)', border:'1px solid #3D2A0A', borderRadius:'4px', padding:'4rem 3rem', textAlign:'center', position:'relative', overflow:'hidden' }}>
+            <div style={{ background:'linear-gradient(158deg,#0f172a 0%,#2E1F08 100%)', border:'1px solid #3D2A0A', borderRadius:'4px', padding:'4rem 3rem', textAlign:'center', position:'relative', overflow:'hidden' }}>
               <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#2563eb,transparent)' }} />
               {[
                 { top:'1.2rem', left:'1.2rem', borderTop:'1px solid #2563eb40', borderLeft:'1px solid #2563eb40' },
@@ -428,8 +428,8 @@ function ComputationalMathematics() {
               {/* Floating math symbols */}
               {['∑','∫','π'].map((sym,i) => (
                 <div key={i} style={{
-                  position:'absolute', fontFamily:"'Cormorant Garamond',serif",
-                  fontSize:'2.5rem', fontWeight:700, color:'rgba(201,168,76,0.07)',
+                  position:'absolute', fontFamily:"'Plus Jakarta Sans',serif",
+                  fontSize:'2.5rem', fontWeight:700, color:'rgba(37, 99, 235,0.07)',
                   animation:`floatFormula ${4+i}s ease-in-out infinite`, animationDelay:`${i*0.6}s`,
                   top: i===2?'1.5rem':'auto', bottom: i<2?'1.5rem':'auto',
                   left: i===0?'2rem':'auto', right: i===1?'2rem': i===2?'3rem':'auto',
@@ -439,20 +439,20 @@ function ComputationalMathematics() {
                 </div>
               ))}
 
-              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
+              <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
                 <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
                 Start Learning
                 <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
               </div>
 
-              <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3.5vw,2.8rem)', fontWeight:700, color:'#F7F3EA', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
+              <h2 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.8rem,3.5vw,2.8rem)', fontWeight:700, color:'#f8fafc', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
                 Master{' '}
-                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#2563eb,#E8C96A)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
+                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#2563eb,#60a5fa)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
                   Mathematical Computing
                 </span>
               </h2>
 
-              <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.92rem', color:'rgba(247,243,234,0.55)', maxWidth:'480px', margin:'0 auto 2.5rem', lineHeight:1.78, fontWeight:300 }}>
+              <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.92rem', color:'rgba(247,243,234,0.55)', maxWidth:'480px', margin:'0 auto 2.5rem', lineHeight:1.78, fontWeight:300 }}>
                 Join us to explore the intersection of mathematics and computation.
               </p>
 
@@ -491,8 +491,8 @@ function FocusCard({ area, index, visible }) {
       {/* Ghost formula watermark */}
       <div style={{
         position:'absolute', top:'1rem', right:'1.25rem',
-        fontFamily:"'Cormorant Garamond',serif", fontSize:'2.8rem', fontWeight:700,
-        color: hovered?'rgba(201,168,76,0.1)':'rgba(201,168,76,0.05)',
+        fontFamily:"'Plus Jakarta Sans',serif", fontSize:'2.8rem', fontWeight:700,
+        color: hovered?'rgba(37, 99, 235,0.1)':'rgba(37, 99, 235,0.05)',
         pointerEvents:'none', lineHeight:1, transition:'color 0.3s', userSelect:'none',
       }}>
         {area.formula}
@@ -501,31 +501,31 @@ function FocusCard({ area, index, visible }) {
       {/* Header row */}
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:'1.25rem' }}>
         <div style={{ display:'flex', alignItems:'center', gap:'0.75rem' }}>
-          <span style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'0.7rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600 }}>{area.num}</span>
+          <span style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.7rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600 }}>{area.num}</span>
           <div style={{ width:'44px', height:'44px', background:hovered?'#FDF5E0':'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', color:'#2563eb', transition:'all 0.3s', transform:hovered?'scale(1.08) rotate(-4deg)':'scale(1)' }}>
             <Icon size={20} />
           </div>
         </div>
         {/* Stat badge */}
         <div style={{ textAlign:'right' }}>
-          <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.15rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{area.stat}</div>
-          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.6rem', color:'#9C8B6E', letterSpacing:'0.12em', textTransform:'uppercase', fontWeight:500 }}>{area.statLabel}</div>
+          <div style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.15rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{area.stat}</div>
+          <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.6rem', color:'#9C8B6E', letterSpacing:'0.12em', textTransform:'uppercase', fontWeight:500 }}>{area.statLabel}</div>
         </div>
       </div>
 
-      <h3 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.3rem', fontWeight:700, color:'#1C1208', margin:'0 0 0.5rem', letterSpacing:'-0.01em', lineHeight:1.2 }}>
+      <h3 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.3rem', fontWeight:700, color:'#0f172a', margin:'0 0 0.5rem', letterSpacing:'-0.01em', lineHeight:1.2 }}>
         {area.title}
       </h3>
 
       <div style={{ height:'1px', background:hovered?'linear-gradient(90deg,#2563eb40,transparent)':'#EDE4CC', marginBottom:'0.85rem', transition:'background 0.3s' }} />
 
-      <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.8, margin:'0 0 1.25rem', fontWeight:300 }}>
+      <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.8, margin:'0 0 1.25rem', fontWeight:300 }}>
         {area.description}
       </p>
 
       {/* Formula code badge */}
-      <div style={{ display:'inline-block', padding:'0.3rem 0.85rem', border:'1px solid rgba(201,168,76,0.35)', borderRadius:'1px', background:hovered?'rgba(201,168,76,0.06)':'transparent', transition:'background 0.3s' }}>
-        <code style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'0.95rem', color:'#2563eb', fontWeight:600, letterSpacing:'0.04em' }}>
+      <div style={{ display:'inline-block', padding:'0.3rem 0.85rem', border:'1px solid rgba(37, 99, 235,0.35)', borderRadius:'1px', background:hovered?'rgba(37, 99, 235,0.06)':'transparent', transition:'background 0.3s' }}>
+        <code style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.95rem', color:'#2563eb', fontWeight:600, letterSpacing:'0.04em' }}>
           {area.formula}
         </code>
       </div>

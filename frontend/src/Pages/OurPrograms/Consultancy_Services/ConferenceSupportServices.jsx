@@ -154,7 +154,7 @@ export default function ConferenceSupportServices() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;0,900;1,600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
         @keyframes shimmer {
           0%   { background-position: -200% center; }
@@ -169,12 +169,12 @@ export default function ConferenceSupportServices() {
           50%       { opacity: 0.25; }
         }
 
-        .conf-page { background: #F7F3EA; color: #1C1208; font-family: 'DM Sans', sans-serif; }
+        .conf-page { background: #f8fafc; color: #0f172a; font-family: 'Plus Jakarta Sans', sans-serif; }
 
         /* Cards */
         .svc-card {
-          background: #FAF8F2;
-          border: 1px solid #E8E0CC;
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
           border-radius: 4px;
           padding: 2.25rem;
           position: relative;
@@ -186,20 +186,20 @@ export default function ConferenceSupportServices() {
           position: absolute;
           top: 0; left: 0;
           width: 0; height: 2px;
-          background: linear-gradient(90deg, #2563eb, #E8C96A, transparent);
+          background: linear-gradient(90deg, #2563eb, #60a5fa, transparent);
           transition: width 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .svc-card:hover::before { width: 100%; }
         .svc-card:hover {
           border-color: #2563eb;
           transform: translateY(-5px);
-          box-shadow: 0 20px 44px rgba(139,109,56,0.12);
+          box-shadow: 0 20px 44px rgba(37, 99, 235,0.12);
           background: #FEFCF7;
         }
 
         .type-card {
-          background: #FAF8F2;
-          border: 1px solid #E8E0CC;
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
           border-radius: 4px;
           padding: 2rem;
           position: relative;
@@ -209,13 +209,13 @@ export default function ConferenceSupportServices() {
         .type-card:hover {
           border-color: #2563eb;
           transform: translateY(-4px);
-          box-shadow: 0 16px 36px rgba(139,109,56,0.1);
+          box-shadow: 0 16px 36px rgba(37, 99, 235,0.1);
           background: #FEFCF7;
         }
 
         .stat-box {
-          background: #FAF8F2;
-          border: 1px solid #E8E0CC;
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
           border-radius: 4px;
           padding: 2rem;
           text-align: center;
@@ -233,35 +233,35 @@ export default function ConferenceSupportServices() {
           transition: opacity 0.3s;
         }
         .stat-box:hover::before { opacity: 1; }
-        .stat-box:hover { border-color: #2563eb; transform: translateY(-3px); box-shadow: 0 12px 28px rgba(139,109,56,0.1); }
+        .stat-box:hover { border-color: #2563eb; transform: translateY(-3px); box-shadow: 0 12px 28px rgba(37, 99, 235,0.1); }
 
         /* Luxury buttons */
         .btn-gold {
           display: inline-flex; align-items: center; gap: 0.5rem;
           padding: 0.85rem 2.25rem;
           background: #2563eb; color: #fff;
-          font-family: 'DM Sans', sans-serif; font-size: 0.75rem;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem;
           font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
           border: 1px solid #2563eb; border-radius: 2px;
           cursor: pointer; transition: all 0.35s ease; text-decoration: none;
         }
-        .btn-gold:hover { background: #B8965A; border-color: #B8965A; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(201,168,76,0.28); }
+        .btn-gold:hover { background: #B8965A; border-color: #B8965A; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(37, 99, 235,0.28); }
 
         .btn-dark {
           display: inline-flex; align-items: center; gap: 0.5rem;
           padding: 0.85rem 2.25rem;
-          background: #1C1208; color: #F7F3EA;
-          font-family: 'DM Sans', sans-serif; font-size: 0.75rem;
+          background: #0f172a; color: #f8fafc;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem;
           font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
-          border: 1px solid #1C1208; border-radius: 2px;
+          border: 1px solid #0f172a; border-radius: 2px;
           cursor: pointer; transition: all 0.35s ease; text-decoration: none;
         }
-        .btn-dark:hover { background: #2563eb; border-color: #2563eb; color: #fff; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(201,168,76,0.28); }
+        .btn-dark:hover { background: #2563eb; border-color: #2563eb; color: #fff; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(37, 99, 235,0.28); }
 
         .gold-rule { height: 1px; background: linear-gradient(90deg, transparent, #2563eb70, transparent); }
 
         .eyebrow {
-          font-family: 'DM Sans', sans-serif; font-size: 0.65rem;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.65rem;
           letter-spacing: 0.22em; color: #2563eb; text-transform: uppercase;
           font-weight: 500; display: flex; align-items: center;
           gap: 0.5rem; justify-content: center; margin-bottom: 1rem;
@@ -269,7 +269,7 @@ export default function ConferenceSupportServices() {
         .eyebrow-line { display: inline-block; width: 28px; height: 1px; background: #2563eb; }
 
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #F7F3EA; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
       `}</style>
 
@@ -283,7 +283,7 @@ export default function ConferenceSupportServices() {
               to="/programs/consultancy-services"
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-                fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem',
+                fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '0.78rem',
                 color: '#2563eb', textDecoration: 'none', letterSpacing: '0.06em',
                 transition: 'color 0.2s',
               }}
@@ -299,14 +299,14 @@ export default function ConferenceSupportServices() {
         {/* ── Hero ── */}
         <section style={{
           position: 'relative', overflow: 'hidden',
-          background: 'linear-gradient(158deg, #F7F3EA 0%, #EDE5CC 55%, #E4D5A8 100%)',
+          background: 'linear-gradient(158deg, #f8fafc 0%, #f1f5f9 55%, #e2e8f0 100%)',
           padding: '4rem 2rem 5.5rem', textAlign: 'center',
           borderBottom: '1px solid #D8CBA8',
         }}>
           {/* Grid */}
           <div style={{
             position: 'absolute', inset: 0,
-            backgroundImage: `linear-gradient(rgba(201,168,76,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.05) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(37, 99, 235,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(37, 99, 235,0.05) 1px, transparent 1px)`,
             backgroundSize: '72px 72px', pointerEvents: 'none',
           }} />
           {/* Glow */}
@@ -314,7 +314,7 @@ export default function ConferenceSupportServices() {
             position: 'absolute', top: '50%', left: '50%',
             transform: 'translate(-50%,-50%)',
             width: '700px', height: '400px',
-            background: 'radial-gradient(ellipse, rgba(201,168,76,0.1) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse, rgba(37, 99, 235,0.1) 0%, transparent 70%)',
             pointerEvents: 'none',
           }} />
           {/* Corner brackets */}
@@ -329,29 +329,29 @@ export default function ConferenceSupportServices() {
             {/* Badge */}
             <div style={{
               display:'inline-flex', alignItems:'center', gap:'0.65rem',
-              background:'rgba(201,168,76,0.1)', border:'1px solid rgba(201,168,76,0.3)',
+              background:'rgba(37, 99, 235,0.1)', border:'1px solid rgba(37, 99, 235,0.3)',
               borderRadius:'2px', padding:'0.4rem 1.2rem', marginBottom:'1.75rem',
             }}>
               <span style={{ width:5, height:5, borderRadius:'50%', background:'#2563eb', display:'inline-block', animation:'pulseGold 2s ease infinite' }} />
-              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem', color:'#8B6D38', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500 }}>
+              <span style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.65rem', color:'#8B6D38', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500 }}>
                 Section 3 · Conference Services
               </span>
             </div>
 
             <h1 style={{
-              fontFamily:"'Playfair Display', serif",
+              fontFamily:"'Plus Jakarta Sans', serif",
               fontSize:'clamp(2.2rem, 5.5vw, 4.5rem)',
               fontWeight:900, lineHeight:1.05, letterSpacing:'-0.02em',
-              color:'#1C1208', marginBottom:'0.6rem',
+              color:'#0f172a', marginBottom:'0.6rem',
             }}>
               National & International
             </h1>
             <h1 style={{
-              fontFamily:"'Playfair Display', serif",
+              fontFamily:"'Plus Jakarta Sans', serif",
               fontSize:'clamp(2.2rem, 5.5vw, 4.5rem)',
               fontWeight:900, lineHeight:1.05, letterSpacing:'-0.02em',
               marginBottom:'1.25rem', fontStyle:'italic',
-              background:'linear-gradient(135deg, #2563eb 0%, #8B6D38 40%, #E8C96A 100%)',
+              background:'linear-gradient(135deg, #2563eb 0%, #8B6D38 40%, #60a5fa 100%)',
               backgroundSize:'200% auto',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
               animation:'shimmer 4s linear infinite',
@@ -359,16 +359,16 @@ export default function ConferenceSupportServices() {
               Conference Support
             </h1>
 
-            <p style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'1.25rem', fontStyle:'italic', color:'#6B5C3E', maxWidth:'600px', margin:'0 auto 0.75rem', lineHeight:1.7, fontWeight:500 }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans', serif", fontSize:'1.25rem', fontStyle:'italic', color:'#6B5C3E', maxWidth:'600px', margin:'0 auto 0.75rem', lineHeight:1.7, fontWeight:500 }}>
               Empowering Conferences Across Borders
             </p>
 
-            <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.92rem', color:'#6B5C3E', maxWidth:'680px', margin:'0 auto 0.75rem', lineHeight:1.8, fontWeight:300 }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.92rem', color:'#6B5C3E', maxWidth:'680px', margin:'0 auto 0.75rem', lineHeight:1.8, fontWeight:300 }}>
               Elevate your academic conferences with our comprehensive support services.
               From initial planning to post-conference publications, we provide everything
               you need to host successful national and international conferences.
             </p>
-            <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.88rem', color:'#8B7048', maxWidth:'720px', margin:'0 auto 3rem', lineHeight:1.8, fontWeight:300 }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.88rem', color:'#8B7048', maxWidth:'720px', margin:'0 auto 3rem', lineHeight:1.8, fontWeight:300 }}>
               Connect with leading experts in Science, Technology, Engineering, and Mathematics.
               Our distinguished team brings decades of combined experience to help you achieve
               your research, academic, and industry objectives.
@@ -377,16 +377,16 @@ export default function ConferenceSupportServices() {
             {/* Stats row */}
             <div style={{
               display:'flex', justifyContent:'center', flexWrap:'wrap',
-              border:'1px solid rgba(201,168,76,0.2)', background:'rgba(201,168,76,0.04)',
+              border:'1px solid rgba(37, 99, 235,0.2)', background:'rgba(37, 99, 235,0.04)',
               borderRadius:'2px', maxWidth:'560px', margin:'0 auto',
             }}>
               {[['50+','Conferences'],['20+','Countries'],['15K+','Participants'],['95%','Success Rate']].map(([v,l],i) => (
                 <div key={l} style={{
                   flex:'1 1 120px', padding:'1.1rem 0.75rem', textAlign:'center',
-                  borderRight: i < 3 ? '1px solid rgba(201,168,76,0.15)' : 'none',
+                  borderRight: i < 3 ? '1px solid rgba(37, 99, 235,0.15)' : 'none',
                 }}>
-                  <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'1.8rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{v}</div>
-                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.58rem', color:'rgba(90,65,40,0.45)', letterSpacing:'0.14em', textTransform:'uppercase', marginTop:'0.25rem', fontWeight:500 }}>{l}</div>
+                  <div style={{ fontFamily:"'Plus Jakarta Sans', serif", fontSize:'1.8rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{v}</div>
+                  <div style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.58rem', color:'rgba(90,65,40,0.45)', letterSpacing:'0.14em', textTransform:'uppercase', marginTop:'0.25rem', fontWeight:500 }}>{l}</div>
                 </div>
               ))}
             </div>
@@ -400,8 +400,8 @@ export default function ConferenceSupportServices() {
           <div style={{ maxWidth:'1200px', margin:'0 auto' }}>
             <div className="eyebrow"><span className="eyebrow-line" />Our Services<span className="eyebrow-line" /></div>
             <h2 style={{
-              fontFamily:"'Playfair Display', serif", fontSize:'clamp(1.8rem,3vw,2.8rem)',
-              fontWeight:700, color:'#1C1208', textAlign:'center', marginBottom:'3rem',
+              fontFamily:"'Plus Jakarta Sans', serif", fontSize:'clamp(1.8rem,3vw,2.8rem)',
+              fontWeight:700, color:'#0f172a', textAlign:'center', marginBottom:'3rem',
               letterSpacing:'-0.02em',
             }}>
               Conference Support{' '}
@@ -423,8 +423,8 @@ export default function ConferenceSupportServices() {
           <div style={{ maxWidth:'1200px', margin:'0 auto' }}>
             <div className="eyebrow"><span className="eyebrow-line" />What We Support<span className="eyebrow-line" /></div>
             <h2 style={{
-              fontFamily:"'Playfair Display', serif", fontSize:'clamp(1.8rem,3vw,2.8rem)',
-              fontWeight:700, color:'#1C1208', textAlign:'center', marginBottom:'3rem',
+              fontFamily:"'Plus Jakarta Sans', serif", fontSize:'clamp(1.8rem,3vw,2.8rem)',
+              fontWeight:700, color:'#0f172a', textAlign:'center', marginBottom:'3rem',
               letterSpacing:'-0.02em',
             }}>
               Types of Conferences{' '}
@@ -443,12 +443,12 @@ export default function ConferenceSupportServices() {
                   }}>
                     {type.icon}
                   </div>
-                  <h3 style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'1.2rem', fontWeight:700, color:'#1C1208', margin:'0 0 0.5rem' }}>{type.title}</h3>
-                  <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.82rem', color:'#6B5C3E', lineHeight:1.75, margin:'0 0 1rem', fontWeight:300 }}>{type.description}</p>
+                  <h3 style={{ fontFamily:"'Plus Jakarta Sans', serif", fontSize:'1.2rem', fontWeight:700, color:'#0f172a', margin:'0 0 0.5rem' }}>{type.title}</h3>
+                  <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.82rem', color:'#6B5C3E', lineHeight:1.75, margin:'0 0 1rem', fontWeight:300 }}>{type.description}</p>
                   <span style={{
                     display:'inline-block', padding:'0.25rem 0.75rem',
-                    border:'1px solid rgba(201,168,76,0.35)', borderRadius:'1px',
-                    fontFamily:"'DM Sans', sans-serif", fontSize:'0.62rem',
+                    border:'1px solid rgba(37, 99, 235,0.35)', borderRadius:'1px',
+                    fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.62rem',
                     color:'#2563eb', letterSpacing:'0.1em', textTransform:'uppercase', fontWeight:500,
                   }}>{type.capacity}</span>
                 </div>
@@ -460,21 +460,21 @@ export default function ConferenceSupportServices() {
         <div className="gold-rule" />
 
         {/* ── Timeline ── */}
-        <section style={{ background:'#1C1208', padding:'5.5rem 2rem', borderTop:'1px solid rgba(201,168,76,0.15)' }}>
+        <section style={{ background:'#0f172a', padding:'5.5rem 2rem', borderTop:'1px solid rgba(37, 99, 235,0.15)' }}>
           <div style={{ maxWidth:'1000px', margin:'0 auto' }}>
             <div style={{ textAlign:'center', marginBottom:'3.5rem' }}>
-              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
+              <div style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
                 <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
                 Planning Guide
                 <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
               </div>
-              <h2 style={{ fontFamily:"'Playfair Display', serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#E8D9C0', letterSpacing:'-0.02em', margin:0 }}>
+              <h2 style={{ fontFamily:"'Plus Jakarta Sans', serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#E8D9C0', letterSpacing:'-0.02em', margin:0 }}>
                 Conference Organizing{' '}
                 <span style={{ fontStyle:'italic', color:'#2563eb' }}>Timeline</span>
               </h2>
             </div>
 
-            <div style={{ display:'flex', flexDirection:'column', gap:'1px', background:'rgba(201,168,76,0.1)', border:'1px solid rgba(201,168,76,0.1)', borderRadius:'4px', overflow:'hidden' }}>
+            <div style={{ display:'flex', flexDirection:'column', gap:'1px', background:'rgba(37, 99, 235,0.1)', border:'1px solid rgba(37, 99, 235,0.1)', borderRadius:'4px', overflow:'hidden' }}>
               {timeline.map((stage, i) => (
                 <TimelineRow key={i} stage={stage} index={i} total={timeline.length} />
               ))}
@@ -483,17 +483,17 @@ export default function ConferenceSupportServices() {
         </section>
 
         {/* ── Track Record ── */}
-        <section style={{ padding:'5rem 2rem', background:'#F7F3EA' }}>
+        <section style={{ padding:'5rem 2rem', background:'#f8fafc' }}>
           <div style={{ maxWidth:'1000px', margin:'0 auto' }}>
             <div className="eyebrow"><span className="eyebrow-line" />Track Record<span className="eyebrow-line" /></div>
-            <h2 style={{ fontFamily:"'Playfair Display', serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#1C1208', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em' }}>
+            <h2 style={{ fontFamily:"'Plus Jakarta Sans', serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#0f172a', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em' }}>
               Our{' '}<span style={{ fontStyle:'italic', color:'#8B6D38' }}>Proven Impact</span>
             </h2>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(200px, 1fr))', gap:'1.25rem' }}>
               {[['50+','Conferences Organized'],['20+','Countries Represented'],['15K+','Total Participants'],['95%','Success Rate']].map(([val, label], i) => (
                 <div className="stat-box" key={label} style={{ animationDelay:`${i*0.08}s`, animation:'fadeUp 0.6s ease both' }}>
-                  <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'2.8rem', fontWeight:700, color:'#2563eb', letterSpacing:'-0.03em', lineHeight:1, marginBottom:'0.4rem' }}>{val}</div>
-                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.72rem', color:'#6B5C3E', letterSpacing:'0.1em', textTransform:'uppercase', fontWeight:500 }}>{label}</div>
+                  <div style={{ fontFamily:"'Plus Jakarta Sans', serif", fontSize:'2.8rem', fontWeight:700, color:'#2563eb', letterSpacing:'-0.03em', lineHeight:1, marginBottom:'0.4rem' }}>{val}</div>
+                  <div style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.72rem', color:'#6B5C3E', letterSpacing:'0.1em', textTransform:'uppercase', fontWeight:500 }}>{label}</div>
                 </div>
               ))}
             </div>
@@ -506,7 +506,7 @@ export default function ConferenceSupportServices() {
         <section style={{ padding:'5rem 2rem', background:'#FEFCF5' }}>
           <div style={{ maxWidth:'780px', margin:'0 auto' }}>
             <div style={{
-              background:'linear-gradient(158deg, #1C1208 0%, #2E1F08 100%)',
+              background:'linear-gradient(158deg, #0f172a 0%, #2E1F08 100%)',
               border:'1px solid #3D2A0A', borderRadius:'4px',
               padding:'4rem 3rem', textAlign:'center', position:'relative', overflow:'hidden',
             }}>
@@ -520,20 +520,20 @@ export default function ConferenceSupportServices() {
                 { bottom:'1.2rem', right:'1.2rem', borderBottom:'1px solid #2563eb40', borderRight:'1px solid #2563eb40' },
               ].map((s,i) => <div key={i} style={{ position:'absolute', width:36, height:36, ...s }} />)}
 
-              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
+              <div style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
                 <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
                 Get Started
                 <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
               </div>
 
-              <h2 style={{ fontFamily:"'Playfair Display', serif", fontSize:'clamp(1.8rem,3.5vw,2.8rem)', fontWeight:700, color:'#F7F3EA', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
+              <h2 style={{ fontFamily:"'Plus Jakarta Sans', serif", fontSize:'clamp(1.8rem,3.5vw,2.8rem)', fontWeight:700, color:'#f8fafc', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
                 Ready to Organize Your{' '}
-                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg, #2563eb, #E8C96A)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
+                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg, #2563eb, #60a5fa)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
                   Conference?
                 </span>
               </h2>
 
-              <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.92rem', color:'rgba(247,243,234,0.55)', maxWidth:'480px', margin:'0 auto 2.5rem', lineHeight:1.78, fontWeight:300 }}>
+              <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.92rem', color:'rgba(247,243,234,0.55)', maxWidth:'480px', margin:'0 auto 2.5rem', lineHeight:1.78, fontWeight:300 }}>
                 Let our experienced team help you create a memorable and successful conference.
               </p>
 
@@ -571,7 +571,7 @@ function ServiceCard({ svc, index }) {
 
       {/* Number + icon row */}
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:'1.25rem' }}>
-        <span style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'0.7rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600 }}>{svc.num}</span>
+        <span style={{ fontFamily:"'Plus Jakarta Sans', serif", fontSize:'0.7rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600 }}>{svc.num}</span>
         <div style={{
           width:'44px', height:'44px', background: hovered ? '#FDF5E0' : '#F5EFD8',
           border:'1px solid #E8D89A', borderRadius:'4px',
@@ -582,10 +582,10 @@ function ServiceCard({ svc, index }) {
         </div>
       </div>
 
-      <h3 style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'1.3rem', fontWeight:700, color:'#1C1208', margin:'0 0 0.5rem', letterSpacing:'-0.01em', lineHeight:1.25 }}>
+      <h3 style={{ fontFamily:"'Plus Jakarta Sans', serif", fontSize:'1.3rem', fontWeight:700, color:'#0f172a', margin:'0 0 0.5rem', letterSpacing:'-0.01em', lineHeight:1.25 }}>
         {svc.title}
       </h3>
-      <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.82rem', color:'#8B7048', lineHeight:1.7, margin:'0 0 1rem', fontWeight:300 }}>
+      <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.82rem', color:'#8B7048', lineHeight:1.7, margin:'0 0 1rem', fontWeight:300 }}>
         {svc.description}
       </p>
 
@@ -596,7 +596,7 @@ function ServiceCard({ svc, index }) {
         {svc.features.map((feat, idx) => (
           <li key={idx} style={{ display:'flex', alignItems:'center', gap:'0.6rem' }}>
             <CheckCircle2 size={14} color="#2563eb" style={{ flexShrink:0 }} />
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.8rem', color:'#6B5C3E', fontWeight:300 }}>{feat}</span>
+            <span style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.8rem', color:'#6B5C3E', fontWeight:300 }}>{feat}</span>
           </li>
         ))}
       </ul>
@@ -614,27 +614,27 @@ function TimelineRow({ stage, index, total }) {
       style={{
         display:'flex', gap:'1.5rem', alignItems:'flex-start',
         padding:'1.75rem 2rem',
-        background: hovered ? 'rgba(201,168,76,0.04)' : '#1C1208',
-        borderBottom: index < total-1 ? '1px solid rgba(201,168,76,0.08)' : 'none',
+        background: hovered ? 'rgba(37, 99, 235,0.04)' : '#0f172a',
+        borderBottom: index < total-1 ? '1px solid rgba(37, 99, 235,0.08)' : 'none',
         transition:'background 0.3s',
       }}
     >
       {/* Phase label */}
       <div style={{ flexShrink:0, width:'160px', paddingTop:'0.1rem' }}>
-        <span style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'0.72rem', color: hovered ? '#E8C96A' : '#2563eb', letterSpacing:'0.1em', fontWeight:600, textTransform:'uppercase', transition:'color 0.3s' }}>
+        <span style={{ fontFamily:"'Plus Jakarta Sans', serif", fontSize:'0.72rem', color: hovered ? '#60a5fa' : '#2563eb', letterSpacing:'0.1em', fontWeight:600, textTransform:'uppercase', transition:'color 0.3s' }}>
           {stage.phase}
         </span>
       </div>
 
       <div style={{ flex:1 }}>
-        <h3 style={{ fontFamily:"'Playfair Display', serif", fontSize:'1.1rem', fontWeight:700, color:'#E8D9C0', margin:'0 0 0.85rem', letterSpacing:'-0.01em' }}>
+        <h3 style={{ fontFamily:"'Plus Jakarta Sans', serif", fontSize:'1.1rem', fontWeight:700, color:'#E8D9C0', margin:'0 0 0.85rem', letterSpacing:'-0.01em' }}>
           {stage.title}
         </h3>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(200px, 1fr))', gap:'0.5rem' }}>
           {stage.tasks.map((task, idx) => (
             <div key={idx} style={{ display:'flex', alignItems:'center', gap:'0.55rem' }}>
               <CheckCircle2 size={13} color="#2563eb" style={{ flexShrink:0 }} />
-              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'0.8rem', color:'rgba(232,217,192,0.55)', fontWeight:300 }}>{task}</span>
+              <span style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.8rem', color:'rgba(232,217,192,0.55)', fontWeight:300 }}>{task}</span>
             </div>
           ))}
         </div>

@@ -168,7 +168,7 @@ const Mentors = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;0,900;1,600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
         @keyframes shimmer {
           0%   { background-position: -200% center; }
@@ -179,41 +179,41 @@ const Mentors = () => {
 
         .mentors-main {
           flex: 1;
-          background: linear-gradient(158deg, #F7F3EA 0%, #EDE5CC 55%, #E4D5A8 100%);
+          background: linear-gradient(158deg, #f8fafc 0%, #f1f5f9 55%, #e2e8f0 100%);
           padding: 6rem 1.5rem 5rem;
           position: relative; overflow: hidden;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         .eyebrow {
-          font-family: 'DM Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.22em;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.22em;
           color: #2563eb; text-transform: uppercase; font-weight: 500;
           display: flex; align-items: center; gap: 0.5rem; justify-content: center; margin-bottom: 1rem;
         }
         .eyebrow-line { display: inline-block; width: 28px; height: 1px; background: #2563eb; }
 
         .mentor-card {
-          background: #FAF8F2; border: 1px solid #E8E0CC; border-radius: 4px;
+          background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px;
           overflow: hidden; position: relative;
           transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
         }
         .mentor-card::before {
           content: ''; position: absolute; top: 0; left: 0;
           width: 0; height: 2px;
-          background: linear-gradient(90deg, #2563eb, #E8C96A, transparent);
+          background: linear-gradient(90deg, #2563eb, #60a5fa, transparent);
           transition: width 0.45s cubic-bezier(0.23,1,0.32,1); z-index: 2;
         }
         .mentor-card:hover::before { width: 100%; }
-        .mentor-card:hover { border-color: #2563eb; box-shadow: 0 24px 52px rgba(139,109,56,0.14); background: #FEFCF7; }
+        .mentor-card:hover { border-color: #2563eb; box-shadow: 0 24px 52px rgba(37, 99, 235,0.14); background: #FEFCF7; }
 
         .tag {
           display: inline-block; padding: 0.25rem 0.7rem;
-          border: 1px solid rgba(201,168,76,0.35); border-radius: 1px;
-          font-family: 'DM Sans', sans-serif; font-size: 0.62rem;
+          border: 1px solid rgba(37, 99, 235,0.35); border-radius: 1px;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.62rem;
           color: #8B6D38; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
           background: transparent; transition: all 0.3s ease;
         }
-        .mentor-card:hover .tag { background: rgba(201,168,76,0.08); border-color: rgba(201,168,76,0.6); }
+        .mentor-card:hover .tag { background: rgba(37, 99, 235,0.08); border-color: rgba(37, 99, 235,0.6); }
 
         .social-btn {
           width: 34px; height: 34px; border-radius: 50%;
@@ -225,7 +225,7 @@ const Mentors = () => {
         .social-btn:hover { background: #2563eb; border-color: #2563eb; transform: translateY(-2px) rotate(5deg); }
 
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #F7F3EA; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
       `}</style>
 
@@ -233,10 +233,10 @@ const Mentors = () => {
 
       <main className="mentors-main">
         {/* Rotating rings */}
-        <div style={{ position:'absolute', top:'50%', left:'50%', width:'600px', height:'600px', border:'1px solid rgba(201,168,76,0.07)', borderRadius:'50%', animation:'rotateSlow 50s linear infinite', pointerEvents:'none' }} />
-        <div style={{ position:'absolute', top:'50%', left:'50%', width:'900px', height:'900px', border:'1px dashed rgba(201,168,76,0.04)', borderRadius:'50%', animation:'rotateReverse 75s linear infinite', pointerEvents:'none' }} />
-        <div style={{ position:'absolute', top:'25%', left:'50%', transform:'translateX(-50%)', width:'800px', height:'500px', background:'radial-gradient(ellipse,rgba(201,168,76,0.08) 0%,transparent 70%)', pointerEvents:'none' }} />
-        <div style={{ position:'absolute', inset:0, backgroundImage:`linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px)`, backgroundSize:'72px 72px', pointerEvents:'none' }} />
+        <div style={{ position:'absolute', top:'50%', left:'50%', width:'600px', height:'600px', border:'1px solid rgba(37, 99, 235,0.07)', borderRadius:'50%', animation:'rotateSlow 50s linear infinite', pointerEvents:'none' }} />
+        <div style={{ position:'absolute', top:'50%', left:'50%', width:'900px', height:'900px', border:'1px dashed rgba(37, 99, 235,0.04)', borderRadius:'50%', animation:'rotateReverse 75s linear infinite', pointerEvents:'none' }} />
+        <div style={{ position:'absolute', top:'25%', left:'50%', transform:'translateX(-50%)', width:'800px', height:'500px', background:'radial-gradient(ellipse,rgba(37, 99, 235,0.08) 0%,transparent 70%)', pointerEvents:'none' }} />
+        <div style={{ position:'absolute', inset:0, backgroundImage:`linear-gradient(rgba(37, 99, 235,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(37, 99, 235,0.04) 1px,transparent 1px)`, backgroundSize:'72px 72px', pointerEvents:'none' }} />
         {[
           { top:'1.5rem', left:'1.5rem', borderTop:'1px solid #2563eb', borderLeft:'1px solid #2563eb' },
           { top:'1.5rem', right:'1.5rem', borderTop:'1px solid #2563eb', borderRight:'1px solid #2563eb' },
@@ -268,14 +268,14 @@ const Mentors = () => {
               <span className="eyebrow-line" />
             </div>
 
-            <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(2.6rem,6vw,5.5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#1C1208', marginBottom:'0.4rem' }}>
+            <h1 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(2.6rem,6vw,5.5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#0f172a', marginBottom:'0.4rem' }}>
               Our
             </h1>
-            <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(2.6rem,6vw,5.5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#2563eb 0%,#8B6D38 40%,#E8C96A 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
+            <h1 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(2.6rem,6vw,5.5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#2563eb 0%,#8B6D38 40%,#60a5fa 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
               Mentors
             </h1>
 
-            <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'1rem', color:'#6B5C3E', maxWidth:'520px', margin:'0 auto 2rem', lineHeight:1.78, fontWeight:300 }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'1rem', color:'#6B5C3E', maxWidth:'520px', margin:'0 auto 2rem', lineHeight:1.78, fontWeight:300 }}>
               Passionate educators dedicated to nurturing talent and inspiring the next generation of innovators
             </p>
 
@@ -323,9 +323,9 @@ const Mentors = () => {
                   exit={{ scale:0.92, y:40 }}
                   transition={{ type:'spring', damping:20, stiffness:200 }}
                   onClick={e => e.stopPropagation()}
-                  style={{ maxWidth:'820px', width:'100%', background:'#FAF8F2', border:'1px solid #2563eb', borderRadius:'4px', overflow:'hidden', boxShadow:'0 40px 80px rgba(139,109,56,0.2)', maxHeight:'90vh', overflowY:'auto', position:'relative' }}
+                  style={{ maxWidth:'820px', width:'100%', background:'#ffffff', border:'1px solid #2563eb', borderRadius:'4px', overflow:'hidden', boxShadow:'0 40px 80px rgba(37, 99, 235,0.2)', maxHeight:'90vh', overflowY:'auto', position:'relative' }}
                 >
-                  <div style={{ height:'2px', background:'linear-gradient(90deg,transparent,#2563eb,#E8C96A,#2563eb,transparent)' }} />
+                  <div style={{ height:'2px', background:'linear-gradient(90deg,transparent,#2563eb,#60a5fa,#2563eb,transparent)' }} />
                   <div style={{ position:'absolute', top:2, right:0, width:22, height:22, background:'#2563eb', clipPath:'polygon(100% 0,0 0,100% 100%)' }} />
 
                   <div style={{ padding:'2.5rem' }}>
@@ -341,37 +341,37 @@ const Mentors = () => {
                             style={{ width:'140px', height:'140px', borderRadius:'4px', objectFit:'cover', display:'block', position:'relative', zIndex:1 }}
                             onError={e => { e.target.style.background = '#F5EFD8'; }}
                           />
-                          <div style={{ position:'absolute', bottom:'-8px', right:'-8px', width:'28px', height:'28px', background:'#2563eb', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', border:'2px solid #FAF8F2', zIndex:2 }}>
+                          <div style={{ position:'absolute', bottom:'-8px', right:'-8px', width:'28px', height:'28px', background:'#2563eb', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', border:'2px solid #ffffff', zIndex:2 }}>
                             <Star size={12} color="#fff" />
                           </div>
                         </motion.div>
 
                         <div style={{ flex:1, minWidth:'200px' }}>
-                          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.62rem', letterSpacing:'0.2em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'0.4rem' }}>MTTF Mentor</div>
-                          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.5rem,3vw,2.2rem)', fontWeight:700, color:'#1C1208', margin:'0 0 0.3rem', letterSpacing:'-0.02em' }}>
+                          <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.62rem', letterSpacing:'0.2em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'0.4rem' }}>MTTF Mentor</div>
+                          <h2 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.5rem,3vw,2.2rem)', fontWeight:700, color:'#0f172a', margin:'0 0 0.3rem', letterSpacing:'-0.02em' }}>
                             {selectedMentor.name}
                           </h2>
-                          <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1rem', fontWeight:600, color:'#2563eb', margin:'0 0 0.25rem', letterSpacing:'0.02em' }}>
+                          <p style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1rem', fontWeight:600, color:'#2563eb', margin:'0 0 0.25rem', letterSpacing:'0.02em' }}>
                             {selectedMentor.specialization}
                           </p>
                           <div style={{ height:'1px', background:'linear-gradient(90deg,#2563eb40,transparent)', margin:'0.75rem 0' }} />
-                          <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.875rem', color:'#6B5C3E', lineHeight:1.8, fontWeight:300, margin:0 }}>
+                          <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.875rem', color:'#6B5C3E', lineHeight:1.8, fontWeight:300, margin:0 }}>
                             {selectedMentor.bio}
                           </p>
                         </div>
                       </div>
 
                       {/* Quote */}
-                      <div style={{ background:'rgba(201,168,76,0.06)', border:'1px solid rgba(201,168,76,0.2)', borderRadius:'2px', padding:'1.25rem 1.5rem' }}>
+                      <div style={{ background:'rgba(37, 99, 235,0.06)', border:'1px solid rgba(37, 99, 235,0.2)', borderRadius:'2px', padding:'1.25rem 1.5rem' }}>
                         <MessageCircle size={14} color="#2563eb" style={{ marginBottom:'0.5rem' }} />
-                        <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.05rem', fontStyle:'italic', color:'#5C4A32', lineHeight:1.7, margin:0, fontWeight:500 }}>
+                        <p style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.05rem', fontStyle:'italic', color:'#5C4A32', lineHeight:1.7, margin:0, fontWeight:500 }}>
                           "{selectedMentor.quote}"
                         </p>
                       </div>
 
                       {/* Expertise tags */}
                       <div>
-                        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.62rem', letterSpacing:'0.18em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'0.75rem', display:'flex', alignItems:'center', gap:'0.4rem' }}>
+                        <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.62rem', letterSpacing:'0.18em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'0.75rem', display:'flex', alignItems:'center', gap:'0.4rem' }}>
                           <span style={{ display:'inline-block', width:16, height:1, background:'#2563eb' }} />
                           Areas of Expertise
                         </div>
@@ -422,7 +422,7 @@ const Mentors = () => {
                       {/* Close */}
                       <button
                         onClick={() => setSelectedMentor(null)}
-                        style={{ width:'100%', padding:'0.8rem', background:'transparent', color:'#8B6D38', fontFamily:"'DM Sans',sans-serif", fontSize:'0.72rem', fontWeight:500, letterSpacing:'0.14em', textTransform:'uppercase', border:'1px solid #D8CBA8', borderRadius:'2px', cursor:'pointer', transition:'all 0.3s ease' }}
+                        style={{ width:'100%', padding:'0.8rem', background:'transparent', color:'#8B6D38', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.72rem', fontWeight:500, letterSpacing:'0.14em', textTransform:'uppercase', border:'1px solid #D8CBA8', borderRadius:'2px', cursor:'pointer', transition:'all 0.3s ease' }}
                         onMouseEnter={e => { e.currentTarget.style.borderColor='#2563eb'; e.currentTarget.style.color='#2563eb'; }}
                         onMouseLeave={e => { e.currentTarget.style.borderColor='#D8CBA8'; e.currentTarget.style.color='#8B6D38'; }}
                       >
@@ -441,7 +441,7 @@ const Mentors = () => {
             animate={{ opacity:1, y:0 }}
             transition={{ delay:0.9 }}
           >
-            <div style={{ maxWidth:'680px', margin:'0 auto', background:'linear-gradient(158deg,#1C1208 0%,#2E1F08 100%)', border:'1px solid #3D2A0A', borderRadius:'4px', padding:'4rem 3rem', textAlign:'center', position:'relative', overflow:'hidden' }}>
+            <div style={{ maxWidth:'680px', margin:'0 auto', background:'linear-gradient(158deg,#0f172a 0%,#2E1F08 100%)', border:'1px solid #3D2A0A', borderRadius:'4px', padding:'4rem 3rem', textAlign:'center', position:'relative', overflow:'hidden' }}>
               <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#2563eb,transparent)' }} />
               {[
                 { top:'1.2rem', left:'1.2rem', borderTop:'1px solid #2563eb40', borderLeft:'1px solid #2563eb40' },
@@ -454,28 +454,28 @@ const Mentors = () => {
                 <Heart size={22} color="#fff" />
               </div>
 
-              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
+              <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
                 <span style={{ display:'inline-block', width:20, height:1, background:'#2563eb' }} />
                 Join the Team
                 <span style={{ display:'inline-block', width:20, height:1, background:'#2563eb' }} />
               </div>
 
-              <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.6rem,3vw,2.4rem)', fontWeight:700, color:'#F7F3EA', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
+              <h3 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.6rem,3vw,2.4rem)', fontWeight:700, color:'#f8fafc', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
                 Become a{' '}
-                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#2563eb,#E8C96A)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
+                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#2563eb,#60a5fa)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
                   Mentor
                 </span>
               </h3>
 
-              <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.9rem', color:'rgba(247,243,234,0.55)', maxWidth:'460px', margin:'0 auto 2.5rem', lineHeight:1.78, fontWeight:300 }}>
+              <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.9rem', color:'rgba(247,243,234,0.55)', maxWidth:'460px', margin:'0 auto 2.5rem', lineHeight:1.78, fontWeight:300 }}>
                 Share your expertise and inspire the next generation. Join our community of passionate educators making a real difference.
               </p>
 
               <motion.button
                 whileHover={{ scale:1.03 }}
                 whileTap={{ scale:0.97 }}
-                style={{ display:'inline-flex', alignItems:'center', gap:'0.5rem', padding:'0.85rem 2.4rem', background:'#2563eb', color:'#fff', fontFamily:"'DM Sans',sans-serif", fontSize:'0.75rem', fontWeight:500, letterSpacing:'0.14em', textTransform:'uppercase', border:'1px solid #2563eb', borderRadius:'2px', cursor:'pointer' }}
-                onMouseEnter={e => { e.currentTarget.style.background='#B8965A'; }}
+                style={{ display:'inline-flex', alignItems:'center', gap:'0.5rem', padding:'0.85rem 2.4rem', background:'#2563eb', color:'#fff', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.75rem', fontWeight:500, letterSpacing:'0.14em', textTransform:'uppercase', border:'1px solid #2563eb', borderRadius:'2px', cursor:'pointer' }}
+                onMouseEnter={e => { e.currentTarget.style.background='#1d4ed8'; }}
                 onMouseLeave={e => { e.currentTarget.style.background='#2563eb'; }}
               >
                 Apply to Mentor
@@ -504,7 +504,7 @@ function MentorCard({ mentor }) {
       {/* Clipped corner */}
       <div style={{ position:'absolute', top:0, right:0, width:20, height:20, background:hovered?'#2563eb':'#E8DFC4', clipPath:'polygon(100% 0,0 0,100% 100%)', transition:'background 0.3s', zIndex:2 }} />
       {/* Number */}
-      <div style={{ position:'absolute', top:'1.1rem', left:'1.4rem', fontFamily:"'Cormorant Garamond',serif", fontSize:'0.68rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600, zIndex:2 }}>
+      <div style={{ position:'absolute', top:'1.1rem', left:'1.4rem', fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.68rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600, zIndex:2 }}>
         {mentor.num}
       </div>
 
@@ -520,20 +520,20 @@ function MentorCard({ mentor }) {
               style={{ width:'110px', height:'110px', borderRadius:'4px', objectFit:'cover', display:'block', position:'relative', zIndex:1 }}
               onError={e => { e.target.style.background='#F5EFD8'; e.target.style.display='block'; }}
             />
-            <div style={{ position:'absolute', top:'-8px', right:'-8px', width:'28px', height:'28px', background:'#2563eb', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', border:'2px solid #FAF8F2', zIndex:2 }}>
+            <div style={{ position:'absolute', top:'-8px', right:'-8px', width:'28px', height:'28px', background:'#2563eb', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', border:'2px solid #ffffff', zIndex:2 }}>
               <Sparkles size={12} color="#fff" />
             </div>
           </motion.div>
 
           {/* Name block */}
           <div style={{ flex:1, minWidth:'160px', paddingTop:'0.5rem' }}>
-            <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:'1.35rem', fontWeight:700, color:'#1C1208', margin:'0 0 0.25rem', letterSpacing:'-0.01em', lineHeight:1.2 }}>
+            <h3 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.35rem', fontWeight:700, color:'#0f172a', margin:'0 0 0.25rem', letterSpacing:'-0.01em', lineHeight:1.2 }}>
               {mentor.name}
             </h3>
-            <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'0.95rem', fontWeight:600, color:'#2563eb', margin:'0 0 0.35rem', letterSpacing:'0.02em' }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.95rem', fontWeight:600, color:'#2563eb', margin:'0 0 0.35rem', letterSpacing:'0.02em' }}>
               {mentor.specialization}
             </p>
-            <div style={{ display:'flex', alignItems:'center', gap:'0.4rem', fontFamily:"'DM Sans',sans-serif", fontSize:'0.75rem', color:'#9C8B6E', fontStyle:'italic', fontWeight:300 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:'0.4rem', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.75rem', color:'#9C8B6E', fontStyle:'italic', fontWeight:300 }}>
               <Zap size={11} color="#2563eb" />
               MTTF Mentor
             </div>
@@ -544,13 +544,13 @@ function MentorCard({ mentor }) {
         <div style={{ height:'1px', background:hovered?'linear-gradient(90deg,transparent,#2563eb50,transparent)':'#EDE4CC', transition:'background 0.3s' }} />
 
         {/* Bio */}
-        <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.875rem', color:'#6B5C3E', lineHeight:1.8, margin:0, fontWeight:300 }}>
+        <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.875rem', color:'#6B5C3E', lineHeight:1.8, margin:0, fontWeight:300 }}>
           {mentor.bio}
         </p>
 
         {/* Expertise tags */}
         <div>
-          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.62rem', letterSpacing:'0.18em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'0.65rem', display:'flex', alignItems:'center', gap:'0.4rem' }}>
+          <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.62rem', letterSpacing:'0.18em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'0.65rem', display:'flex', alignItems:'center', gap:'0.4rem' }}>
             <span style={{ display:'inline-block', width:16, height:1, background:'#2563eb' }} />
             Expertise
           </div>

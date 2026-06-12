@@ -121,7 +121,7 @@ function ResponsibilityCard({ item, index }) {
         <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.56rem", color: item.accent, letterSpacing: "0.15em", flexShrink: 0, paddingTop: "0.15rem", opacity: 0.6 }}>
           {item.id}
         </span>
-        <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.85rem", color: "rgba(240,237,232,0.5)", lineHeight: 1.8, margin: 0 }}>
+        <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.85rem", color: "rgba(240,237,232,0.5)", lineHeight: 1.8, margin: 0 }}>
           {item.text}
         </p>
       </div>
@@ -189,7 +189,7 @@ export default function AboutStudentChapter() {
               <span style={{ fontStyle: "italic", background: "linear-gradient(120deg, #C8A96E 0%, #E8C98E 40%, #C8A96E 80%)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", animation: "shimmer 4s linear infinite" }}>Chapter</span>
             </h1>
 
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "1.05rem", color: "rgba(240,237,232,0.45)", maxWidth: "580px", margin: "1.5rem auto 3rem", lineHeight: 1.8 }}>
+            <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1.05rem", color: "rgba(240,237,232,0.45)", maxWidth: "580px", margin: "1.5rem auto 3rem", lineHeight: 1.8 }}>
               A scientific association of students with a minimum of 150 members from a particular institute or university—providing unique opportunities for learning and leadership.
             </p>
 
@@ -217,7 +217,7 @@ export default function AboutStudentChapter() {
             <div style={{ background: "linear-gradient(160deg, #1C2240 0%, #1A2038 100%)", border: "1px solid rgba(200,169,110,0.2)", borderRadius: "2px", padding: "2.5rem", position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, #C8A96E, #E8C98E, #C8A96E)" }} />
               <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.58rem", color: "#C8A96E", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: "1rem", opacity: 0.7 }}>Context</div>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.88rem", color: "rgba(240,237,232,0.5)", lineHeight: 1.85, margin: 0 }}>
+              <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.88rem", color: "rgba(240,237,232,0.5)", lineHeight: 1.85, margin: 0 }}>
                 The MTTF Student Chapter is a scientific association of students providing unique opportunities for developing leadership skills, management, research development, and mentoring.
               </p>
             </div>
@@ -235,7 +235,7 @@ export default function AboutStudentChapter() {
             <div style={{ background: "#171A27", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "2px", padding: "2.5rem", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "1.5rem" }}>
               <div>
                 <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.58rem", color: "#7EC9A8", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: "1rem", opacity: 0.7 }}>Support</div>
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.88rem", color: "rgba(240,237,232,0.45)", lineHeight: 1.85, margin: 0 }}>Our team is ready to assist your institution in establishing an MTTF Student Chapter.</p>
+                <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.88rem", color: "rgba(240,237,232,0.45)", lineHeight: 1.85, margin: 0 }}>Our team is ready to assist your institution in establishing an MTTF Student Chapter.</p>
               </div>
               <a href="mailto:contactus@mttf.in" style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.72rem", color: "#7EC9A8", textDecoration: "none", letterSpacing: "0.05em", borderBottom: "1px solid rgba(126,201,168,0.3)", paddingBottom: "2px", display: "inline-block" }}>contactus@mttf.in</a>
             </div>

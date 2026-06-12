@@ -105,8 +105,8 @@ function ServiceCard({ service, index }) {
           ? hovered ? "translateY(-6px)" : "translateY(0)"
           : "translateY(28px)",
         transition: `opacity 0.65s ease ${index * 0.1}s, transform 0.65s ease ${index * 0.1}s, box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease`,
-        background: hovered ? "rgba(201,168,76,0.04)" : "#FBF6EC",
-        border: `1px solid ${hovered ? "rgba(201,168,76,0.4)" : "rgba(139,112,72,0.15)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(100, 116, 139,0.15)"}`,
         borderRadius: "2px",
         padding: "2.25rem 2rem 2rem 2.25rem",
         position: "relative",
@@ -114,14 +114,14 @@ function ServiceCard({ service, index }) {
         cursor: "default",
         display: "flex",
         flexDirection: "column",
-        boxShadow: hovered ? "0 20px 48px rgba(139,112,72,0.12)" : "none",
+        boxShadow: hovered ? "0 20px 48px rgba(100, 116, 139,0.12)" : "none",
       }}
     >
       {/* Top gold bar */}
       <div style={{
         position: "absolute", top: 0, left: 0, right: 0,
         height: hovered ? "2px" : "1px",
-        background: "linear-gradient(90deg, transparent, #2563eb, #E8C97A, #2563eb, transparent)",
+        background: "linear-gradient(90deg, transparent, #2563eb, #60a5fa, #2563eb, transparent)",
         transition: "height 0.3s ease",
       }} />
 
@@ -129,16 +129,16 @@ function ServiceCard({ service, index }) {
       <div style={{
         position: "absolute", left: 0, top: 0, bottom: 0,
         width: hovered ? "3px" : "2px",
-        background: "linear-gradient(180deg, #2563eb 0%, #E8C97A 100%)",
+        background: "linear-gradient(180deg, #2563eb 0%, #60a5fa 100%)",
         transition: "width 0.3s ease",
       }} />
 
       {/* Ghost number */}
       <div style={{
         position: "absolute", right: "1.25rem", bottom: "1.25rem",
-        fontFamily: "'Playfair Display', serif",
+        fontFamily: "'Plus Jakarta Sans', serif",
         fontSize: "5rem", fontWeight: 700,
-        color: "rgba(201,168,76,0.06)", lineHeight: 1,
+        color: "rgba(37, 99, 235,0.06)", lineHeight: 1,
         userSelect: "none", pointerEvents: "none",
       }}>
         {String(index + 1).padStart(2, "0")}
@@ -148,8 +148,8 @@ function ServiceCard({ service, index }) {
       <div style={{
         width: "52px", height: "52px",
         display: "flex", alignItems: "center", justifyContent: "center",
-        background: hovered ? "rgba(201,168,76,0.12)" : "rgba(201,168,76,0.06)",
-        border: `1px solid ${hovered ? "rgba(201,168,76,0.4)" : "rgba(201,168,76,0.18)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.12)" : "rgba(37, 99, 235,0.06)",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(37, 99, 235,0.18)"}`,
         borderRadius: "2px", color: "#2563eb",
         marginBottom: "1.5rem",
         transition: "background 0.3s, border-color 0.3s, transform 0.35s",
@@ -160,7 +160,7 @@ function ServiceCard({ service, index }) {
 
       {/* Title */}
       <h3 style={{
-        fontFamily: "'Playfair Display', serif",
+        fontFamily: "'Plus Jakarta Sans', serif",
         fontSize: "1.2rem", fontWeight: 700,
         color: "#1A120A", margin: "0 0 0.5rem",
         letterSpacing: "-0.01em", lineHeight: 1.25,
@@ -168,14 +168,14 @@ function ServiceCard({ service, index }) {
 
       {/* Divider */}
       <div style={{
-        height: "1px", background: "rgba(201,168,76,0.18)",
+        height: "1px", background: "rgba(37, 99, 235,0.18)",
         width: hovered ? "100%" : "38%",
         transition: "width 0.4s ease", marginBottom: "1rem",
       }} />
 
       {/* Description */}
       <p style={{
-        fontFamily: "'Jost', sans-serif",
+        fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "0.85rem", color: "#7A6040",
         lineHeight: 1.8, margin: "0 0 1.25rem",
         fontWeight: 300,
@@ -191,8 +191,8 @@ function ServiceCard({ service, index }) {
           <li key={i} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
             <CheckCircle size={13} style={{ color: "#6B9E5E", flexShrink: 0, marginTop: "0.2rem" }} />
             <span style={{
-              fontFamily: "'Jost', sans-serif",
-              fontSize: "0.8rem", color: "#8B7048",
+              fontFamily: "'Plus Jakarta Sans', sans-serif",
+              fontSize: "0.8rem", color: "#475569",
               lineHeight: 1.6, fontWeight: 300,
             }}>{f}</span>
           </li>
@@ -206,7 +206,7 @@ function ServiceCard({ service, index }) {
           display: "inline-flex",
           alignItems: "center",
           gap: hovered ? "0.65rem" : "0.4rem",
-          fontFamily: "'Jost', sans-serif",
+          fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "0.7rem",
           letterSpacing: "0.15em",
           textTransform: "uppercase",
@@ -235,13 +235,13 @@ function StatCard({ value, label, index }) {
       style={{
         padding: "2.5rem 2rem",
         textAlign: "center",
-        background: hovered ? "rgba(201,168,76,0.08)" : "rgba(255,255,255,0.02)",
+        background: hovered ? "rgba(37, 99, 235,0.08)" : "rgba(255,255,255,0.02)",
         transition: "background 0.3s ease",
         cursor: "default",
       }}
     >
       <div style={{
-        fontFamily: "'Playfair Display', serif",
+        fontFamily: "'Plus Jakarta Sans', serif",
         fontSize: "clamp(2rem, 4vw, 3rem)",
         fontWeight: 700, color: "#2563eb", lineHeight: 1,
         marginBottom: "0.5rem",
@@ -249,7 +249,7 @@ function StatCard({ value, label, index }) {
         transition: "transform 0.3s ease",
       }}>{value}</div>
       <div style={{
-        fontFamily: "'Jost', sans-serif",
+        fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "0.72rem", color: "rgba(232,217,192,0.5)",
         letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 400,
       }}>{label}</div>
@@ -270,7 +270,7 @@ export default function ConsultancyServices() {
   }, []);
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#FBF6EC", color: "#1A120A" }}>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#f8fafc", color: "#1A120A" }}>
       <style>{`
         @keyframes goldShimmer {
           0%   { background-position: -200% center; }
@@ -285,7 +285,7 @@ export default function ConsultancyServices() {
           to   { transform: translate(-50%, -50%) rotate(360deg); }
         }
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #FBF6EC; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 1px; }
       `}</style>
 
@@ -306,15 +306,15 @@ export default function ConsultancyServices() {
             padding: "7rem 2rem 5rem",
             textAlign: "center",
             overflow: "hidden",
-            borderBottom: "1px solid rgba(139,112,72,0.1)",
+            borderBottom: "1px solid rgba(100, 116, 139,0.1)",
           }}
         >
           {/* Grid */}
           <div style={{
             position: "absolute", inset: 0, pointerEvents: "none",
             backgroundImage: `
-              linear-gradient(rgba(201,168,76,0.05) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(201,168,76,0.05) 1px, transparent 1px)
+              linear-gradient(rgba(37, 99, 235,0.05) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(37, 99, 235,0.05) 1px, transparent 1px)
             `,
             backgroundSize: "72px 72px",
           }} />
@@ -323,7 +323,7 @@ export default function ConsultancyServices() {
             position: "absolute", pointerEvents: "none",
             top: "50%", left: "50%",
             width: "700px", height: "480px",
-            background: "radial-gradient(ellipse, rgba(201,168,76,0.1) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse, rgba(37, 99, 235,0.1) 0%, transparent 70%)",
             transform: "translate(-50%,-50%)",
           }} />
           {/* Rings */}
@@ -331,14 +331,14 @@ export default function ConsultancyServices() {
             position: "absolute", pointerEvents: "none",
             top: "50%", left: "50%",
             width: "440px", height: "440px",
-            border: "1px solid rgba(201,168,76,0.08)", borderRadius: "50%",
+            border: "1px solid rgba(37, 99, 235,0.08)", borderRadius: "50%",
             animation: "rotateSlow 42s linear infinite",
           }} />
           <div style={{
             position: "absolute", pointerEvents: "none",
             top: "50%", left: "50%",
             width: "620px", height: "620px",
-            border: "1px dashed rgba(201,168,76,0.05)", borderRadius: "50%",
+            border: "1px dashed rgba(37, 99, 235,0.05)", borderRadius: "50%",
             animation: "rotateSlow 68s linear infinite reverse",
           }} />
           {/* Floating dots */}
@@ -367,13 +367,13 @@ export default function ConsultancyServices() {
             {/* Eyebrow */}
             <div style={{
               display: "inline-flex", alignItems: "center", gap: "0.65rem",
-              border: "1px solid rgba(201,168,76,0.28)",
+              border: "1px solid rgba(37, 99, 235,0.28)",
               padding: "0.45rem 1.3rem", marginBottom: "2.25rem",
-              background: "rgba(201,168,76,0.05)", borderRadius: "1px",
+              background: "rgba(37, 99, 235,0.05)", borderRadius: "1px",
             }}>
               <Briefcase size={12} style={{ color: "#2563eb" }} />
               <span style={{
-                fontFamily: "'Jost', sans-serif",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.62rem", letterSpacing: "0.25em",
                 textTransform: "uppercase", color: "#2563eb", fontWeight: 500,
               }}>Our Programs</span>
@@ -381,7 +381,7 @@ export default function ConsultancyServices() {
 
             {/* Headline */}
             <h1 style={{
-              fontFamily: "'Playfair Display', serif",
+              fontFamily: "'Plus Jakarta Sans', serif",
               fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
               fontWeight: 700, lineHeight: 1.02,
               letterSpacing: "-0.025em", color: "#1A120A",
@@ -390,7 +390,7 @@ export default function ConsultancyServices() {
               Consultancy{" "}
               <span style={{
                 fontStyle: "italic",
-                background: "linear-gradient(120deg, #2563eb 0%, #E8C97A 38%, #B8965A 72%, #2563eb 100%)",
+                background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 38%, #1d4ed8 72%, #2563eb 100%)",
                 backgroundSize: "200% auto",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -400,7 +400,7 @@ export default function ConsultancyServices() {
             </h1>
 
             <p style={{
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Plus Jakarta Sans', serif",
               fontSize: "clamp(1rem, 2.2vw, 1.35rem)",
               fontStyle: "italic", color: "rgba(90,65,40,0.52)",
               maxWidth: "580px", margin: "1.25rem auto 2.5rem",
@@ -413,21 +413,21 @@ export default function ConsultancyServices() {
             {/* Stat bar */}
             <div style={{
               display: "inline-flex", flexWrap: "wrap",
-              border: "1px solid rgba(201,168,76,0.2)",
-              background: "rgba(201,168,76,0.03)", borderRadius: "2px",
+              border: "1px solid rgba(37, 99, 235,0.2)",
+              background: "rgba(37, 99, 235,0.03)", borderRadius: "2px",
             }}>
               {stats.map(({ value, label }, i, arr) => (
                 <div key={label} style={{
                   padding: "1rem 1.5rem", textAlign: "center",
-                  borderRight: i < arr.length - 1 ? "1px solid rgba(201,168,76,0.15)" : "none",
+                  borderRight: i < arr.length - 1 ? "1px solid rgba(37, 99, 235,0.15)" : "none",
                 }}>
                   <div style={{
-                    fontFamily: "'Playfair Display', serif",
+                    fontFamily: "'Plus Jakarta Sans', serif",
                     fontSize: "1.55rem", fontWeight: 700,
                     color: "#2563eb", lineHeight: 1,
                   }}>{value}</div>
                   <div style={{
-                    fontFamily: "'Jost', sans-serif",
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
                     fontSize: "0.52rem", color: "rgba(90,65,40,0.38)",
                     letterSpacing: "0.15em", textTransform: "uppercase",
                     marginTop: "0.3rem", fontWeight: 400,
@@ -440,12 +440,12 @@ export default function ConsultancyServices() {
 
         {/* ── INTRO STRIP ── */}
         <div style={{
-          background: "rgba(201,168,76,0.03)",
-          borderBottom: "1px solid rgba(139,112,72,0.1)",
+          background: "rgba(37, 99, 235,0.03)",
+          borderBottom: "1px solid rgba(100, 116, 139,0.1)",
           padding: "3rem 2rem", textAlign: "center",
         }}>
           <p style={{
-            fontFamily: "'Cormorant Garamond', serif",
+            fontFamily: "'Plus Jakarta Sans', serif",
             fontSize: "clamp(1rem, 2.3vw, 1.4rem)",
             fontStyle: "italic", color: "rgba(90,65,40,0.58)",
             maxWidth: "780px", margin: "0 auto", lineHeight: 1.75,
@@ -463,15 +463,15 @@ export default function ConsultancyServices() {
               gap: "1.25rem", marginBottom: "3rem", flexWrap: "wrap",
             }}>
               <h2 style={{
-                fontFamily: "'Playfair Display', serif",
+                fontFamily: "'Plus Jakarta Sans', serif",
                 fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
                 fontWeight: 700, color: "#1A120A",
                 letterSpacing: "-0.02em", margin: 0, flexShrink: 0,
               }}>Our Services</h2>
-              <div style={{ flex: 1, height: "1px", background: "rgba(139,112,72,0.15)", minWidth: "24px" }} />
+              <div style={{ flex: 1, height: "1px", background: "rgba(100, 116, 139,0.15)", minWidth: "24px" }} />
               <div style={{
-                fontFamily: "'Jost', sans-serif",
-                fontSize: "0.6rem", color: "rgba(201,168,76,0.65)",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
+                fontSize: "0.6rem", color: "rgba(37, 99, 235,0.65)",
                 letterSpacing: "0.2em", textTransform: "uppercase",
                 fontWeight: 500, flexShrink: 0,
               }}>{services.length} Tracks</div>
@@ -492,26 +492,26 @@ export default function ConsultancyServices() {
         {/* ── WHY CHOOSE US ── */}
         <section style={{
           background: "#1A120A",
-          borderTop: "1px solid rgba(201,168,76,0.15)",
+          borderTop: "1px solid rgba(37, 99, 235,0.15)",
           padding: "5rem 2rem",
         }}>
           <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
             <FadeIn>
               <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
                 <div style={{
-                  fontFamily: "'Jost', sans-serif",
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.6rem", color: "#2563eb",
                   letterSpacing: "0.25em", textTransform: "uppercase",
                   marginBottom: "0.75rem", fontWeight: 500,
                 }}>Why MTTF</div>
                 <h2 style={{
-                  fontFamily: "'Playfair Display', serif",
+                  fontFamily: "'Plus Jakarta Sans', serif",
                   fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)",
                   fontWeight: 700, color: "#E8D9C0",
                   letterSpacing: "-0.02em", margin: "0 0 0.85rem", lineHeight: 1.2,
                 }}>Why Choose MTTF Consultancy Services?</h2>
                 <p style={{
-                  fontFamily: "'Jost', sans-serif",
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.92rem", color: "rgba(232,217,192,0.4)",
                   fontWeight: 300, maxWidth: "520px", margin: "0 auto", lineHeight: 1.8,
                 }}>
@@ -526,8 +526,8 @@ export default function ConsultancyServices() {
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
                 gap: "1px",
-                background: "rgba(201,168,76,0.15)",
-                border: "1px solid rgba(201,168,76,0.15)",
+                background: "rgba(37, 99, 235,0.15)",
+                border: "1px solid rgba(37, 99, 235,0.15)",
                 borderRadius: "2px", overflow: "hidden",
               }}>
                 {stats.map(({ value, label }, i) => (
@@ -542,26 +542,26 @@ export default function ConsultancyServices() {
         <section style={{ maxWidth: "760px", margin: "0 auto", padding: "5rem 2rem" }}>
           <FadeIn>
             <div style={{
-              border: "1px solid rgba(201,168,76,0.25)",
-              background: "rgba(201,168,76,0.03)",
+              border: "1px solid rgba(37, 99, 235,0.25)",
+              background: "rgba(37, 99, 235,0.03)",
               borderRadius: "2px", padding: "4rem 3rem",
               textAlign: "center", position: "relative", overflow: "hidden",
             }}>
               {/* Top gold bar */}
               <div style={{
                 position: "absolute", top: 0, left: 0, right: 0, height: "2px",
-                background: "linear-gradient(90deg, transparent, #2563eb, #E8C97A, #2563eb, transparent)",
+                background: "linear-gradient(90deg, transparent, #2563eb, #60a5fa, #2563eb, transparent)",
               }} />
 
               <div style={{
-                fontFamily: "'Jost', sans-serif",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.6rem", color: "#2563eb",
                 letterSpacing: "0.25em", textTransform: "uppercase",
                 marginBottom: "1rem", fontWeight: 500,
               }}>Get Started</div>
 
               <h2 style={{
-                fontFamily: "'Playfair Display', serif",
+                fontFamily: "'Plus Jakarta Sans', serif",
                 fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)",
                 fontWeight: 700, color: "#1A120A",
                 letterSpacing: "-0.02em", margin: "0 0 0.85rem", lineHeight: 1.2,
@@ -569,7 +569,7 @@ export default function ConsultancyServices() {
                 Ready to Get Started?
               </h2>
               <p style={{
-                fontFamily: "'Jost', sans-serif",
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.92rem", color: "rgba(90,65,40,0.55)",
                 marginBottom: "2.25rem", lineHeight: 1.75, fontWeight: 300,
               }}>
@@ -582,7 +582,7 @@ export default function ConsultancyServices() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "0.6rem",
-                  fontFamily: "'Jost', sans-serif",
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.72rem", letterSpacing: "0.2em",
                   textTransform: "uppercase", color: "#fff",
                   background: "#2563eb", border: "none",
@@ -591,7 +591,7 @@ export default function ConsultancyServices() {
                   textDecoration: "none",
                   transition: "background 0.3s ease, transform 0.3s ease",
                 }}
-                onMouseEnter={e => { e.currentTarget.style.background = "#B8965A"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                onMouseEnter={e => { e.currentTarget.style.background = "#1d4ed8"; e.currentTarget.style.transform = "translateY(-2px)"; }}
                 onMouseLeave={e => { e.currentTarget.style.background = "#2563eb"; e.currentTarget.style.transform = "translateY(0)"; }}
               >
                 Contact Us

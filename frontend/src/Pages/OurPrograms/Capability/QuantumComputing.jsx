@@ -136,35 +136,35 @@ function QuantumComputing() {
           to   { stroke-dashoffset: 0;   }
         }
 
-        .qc-page { background: #F7F3EA; color: #1C1208; font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+        .qc-page { background: #f8fafc; color: #0f172a; font-family: 'Plus Jakarta Sans', sans-serif; min-height: 100vh; }
         .gold-rule { height: 1px; background: linear-gradient(90deg,transparent,#2563eb70,transparent); }
 
         .eyebrow {
-          font-family: 'DM Sans',sans-serif; font-size: 0.65rem; letter-spacing: 0.22em;
+          font-family: 'Plus Jakarta Sans',sans-serif; font-size: 0.65rem; letter-spacing: 0.22em;
           color: #2563eb; text-transform: uppercase; font-weight: 500;
           display: flex; align-items: center; gap: 0.5rem; justify-content: center; margin-bottom: 1rem;
         }
         .eyebrow-line { display: inline-block; width: 28px; height: 1px; background: #2563eb; }
 
         .research-card {
-          background: #FAF8F2; border: 1px solid #E8E0CC; border-radius: 4px;
+          background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px;
           padding: 2.25rem; position: relative; overflow: hidden;
           transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
         }
         .research-card::before {
           content:''; position: absolute; top:0; left:0;
           width:0; height:2px;
-          background: linear-gradient(90deg,#2563eb,#E8C96A,transparent);
+          background: linear-gradient(90deg,#2563eb,#60a5fa,transparent);
           transition: width 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .research-card:hover::before { width: 100%; }
         .research-card:hover {
           border-color: #2563eb; transform: translateY(-5px);
-          box-shadow: 0 20px 44px rgba(139,109,56,0.12); background: #FEFCF7;
+          box-shadow: 0 20px 44px rgba(37, 99, 235,0.12); background: #FEFCF7;
         }
 
         .impact-card {
-          background: #FAF8F2; border: 1px solid #E8E0CC; border-radius: 4px;
+          background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px;
           padding: 2rem; position: relative; overflow: hidden;
           transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
         }
@@ -175,27 +175,27 @@ function QuantumComputing() {
           transition: transform 0.45s cubic-bezier(0.23,1,0.32,1);
         }
         .impact-card:hover::after { transform: scaleX(1); }
-        .impact-card:hover { border-color:#2563eb; transform:translateY(-4px); box-shadow:0 16px 36px rgba(139,109,56,0.1); }
+        .impact-card:hover { border-color:#2563eb; transform:translateY(-4px); box-shadow:0 16px 36px rgba(37, 99, 235,0.1); }
 
         .stat-pill {
-          background: #FAF8F2; border: 1px solid #E8E0CC; border-radius: 4px;
+          background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px;
           padding: 1.25rem 1.5rem; text-align: center; flex: 1 1 120px;
           transition: all 0.35s ease; cursor: default;
         }
-        .stat-pill:hover { border-color:#2563eb; transform:translateY(-3px); box-shadow:0 12px 28px rgba(139,109,56,0.1); }
+        .stat-pill:hover { border-color:#2563eb; transform:translateY(-3px); box-shadow:0 12px 28px rgba(37, 99, 235,0.1); }
 
         .btn-gold {
           display:inline-flex; align-items:center; gap:0.5rem;
           padding:0.85rem 2.25rem; background:#2563eb; color:#fff;
-          font-family:'DM Sans',sans-serif; font-size:0.75rem; font-weight:500;
+          font-family:'Plus Jakarta Sans',sans-serif; font-size:0.75rem; font-weight:500;
           letter-spacing:0.14em; text-transform:uppercase;
           border:1px solid #2563eb; border-radius:2px;
           cursor:pointer; transition:all 0.35s ease; text-decoration:none;
         }
-        .btn-gold:hover { background:#B8965A; border-color:#B8965A; transform:translateY(-2px); box-shadow:0 10px 24px rgba(201,168,76,0.28); }
+        .btn-gold:hover { background:#B8965A; border-color:#B8965A; transform:translateY(-2px); box-shadow:0 10px 24px rgba(37, 99, 235,0.28); }
 
         ::-webkit-scrollbar { width:3px; }
-        ::-webkit-scrollbar-track { background:#F7F3EA; }
+        ::-webkit-scrollbar-track { background:#f8fafc; }
         ::-webkit-scrollbar-thumb { background:#2563eb; border-radius:2px; }
       `}</style>
 
@@ -206,7 +206,7 @@ function QuantumComputing() {
         <div style={{ maxWidth:'1200px', margin:'0 auto', padding:'7rem 2rem 1.5rem' }}>
           <Link
             to="/programs/capability"
-            style={{ display:'inline-flex', alignItems:'center', gap:'0.5rem', fontFamily:"'DM Sans',sans-serif", fontSize:'0.78rem', color:'#2563eb', textDecoration:'none', letterSpacing:'0.06em', transition:'color 0.2s' }}
+            style={{ display:'inline-flex', alignItems:'center', gap:'0.5rem', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.78rem', color:'#2563eb', textDecoration:'none', letterSpacing:'0.06em', transition:'color 0.2s' }}
             onMouseEnter={e => e.currentTarget.style.color='#8B6D38'}
             onMouseLeave={e => e.currentTarget.style.color='#2563eb'}
           >
@@ -220,18 +220,18 @@ function QuantumComputing() {
           ref={el => (observerRefs.current[0] = el)}
           style={{
             position:'relative', overflow:'hidden',
-            background:'linear-gradient(158deg,#F7F3EA 0%,#EDE5CC 55%,#E4D5A8 100%)',
+            background:'linear-gradient(158deg,#f8fafc 0%,#f1f5f9 55%,#e2e8f0 100%)',
             padding:'3.5rem 2rem 5.5rem', textAlign:'center',
             borderBottom:'1px solid #D8CBA8',
           }}
         >
           {/* Grid */}
-          <div style={{ position:'absolute', inset:0, backgroundImage:`linear-gradient(rgba(201,168,76,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.05) 1px,transparent 1px)`, backgroundSize:'72px 72px', pointerEvents:'none' }} />
+          <div style={{ position:'absolute', inset:0, backgroundImage:`linear-gradient(rgba(37, 99, 235,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(37, 99, 235,0.05) 1px,transparent 1px)`, backgroundSize:'72px 72px', pointerEvents:'none' }} />
           {/* Glow */}
-          <div style={{ position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)', width:'700px', height:'420px', background:'radial-gradient(ellipse,rgba(201,168,76,0.1) 0%,transparent 70%)', pointerEvents:'none' }} />
+          <div style={{ position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)', width:'700px', height:'420px', background:'radial-gradient(ellipse,rgba(37, 99, 235,0.1) 0%,transparent 70%)', pointerEvents:'none' }} />
           {/* Rotating rings */}
-          <div style={{ position:'absolute', top:'50%', left:'50%', width:'460px', height:'460px', border:'1px solid rgba(201,168,76,0.08)', borderRadius:'50%', animation:'orbitSlow 40s linear infinite', pointerEvents:'none' }} />
-          <div style={{ position:'absolute', top:'50%', left:'50%', width:'640px', height:'640px', border:'1px dashed rgba(201,168,76,0.05)', borderRadius:'50%', animation:'orbitReverse 65s linear infinite', pointerEvents:'none' }} />
+          <div style={{ position:'absolute', top:'50%', left:'50%', width:'460px', height:'460px', border:'1px solid rgba(37, 99, 235,0.08)', borderRadius:'50%', animation:'orbitSlow 40s linear infinite', pointerEvents:'none' }} />
+          <div style={{ position:'absolute', top:'50%', left:'50%', width:'640px', height:'640px', border:'1px dashed rgba(37, 99, 235,0.05)', borderRadius:'50%', animation:'orbitReverse 65s linear infinite', pointerEvents:'none' }} />
           {/* Quantum floating particles */}
           {particlePositions.slice(0,12).map((p,i) => (
             <div key={i} style={{ position:'absolute', width:3, height:3, borderRadius:'50%', background:'#2563eb', left:`${p.x}%`, top:`${p.y}%`, animation:`quantumFloat ${p.duration}s ease-in-out infinite`, animationDelay:`${p.delay}s`, pointerEvents:'none', opacity:0.35 }} />
@@ -252,21 +252,21 @@ function QuantumComputing() {
             </div>
 
             {/* Badge */}
-            <div style={{ display:'inline-flex', alignItems:'center', gap:'0.65rem', background:'rgba(201,168,76,0.1)', border:'1px solid rgba(201,168,76,0.3)', borderRadius:'2px', padding:'0.4rem 1.2rem', marginBottom:'1.75rem' }}>
+            <div style={{ display:'inline-flex', alignItems:'center', gap:'0.65rem', background:'rgba(37, 99, 235,0.1)', border:'1px solid rgba(37, 99, 235,0.3)', borderRadius:'2px', padding:'0.4rem 1.2rem', marginBottom:'1.75rem' }}>
               <span style={{ width:5, height:5, borderRadius:'50%', background:'#2563eb', display:'inline-block', animation:'pulseGold 2s ease infinite' }} />
-              <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.65rem', color:'#8B6D38', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500 }}>
+              <span style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.65rem', color:'#8B6D38', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500 }}>
                 Quantum Computing
               </span>
             </div>
 
-            <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(2.4rem,6vw,5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#1C1208', marginBottom:'0.4rem' }}>
+            <h1 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(2.4rem,6vw,5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#0f172a', marginBottom:'0.4rem' }}>
               Frontier of
             </h1>
-            <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(2.4rem,6vw,5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#2563eb 0%,#8B6D38 40%,#E8C96A 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
+            <h1 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(2.4rem,6vw,5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#2563eb 0%,#8B6D38 40%,#60a5fa 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
               Quantum Computing
             </h1>
 
-            <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.95rem', color:'#6B5C3E', maxWidth:'560px', margin:'0 auto 3rem', lineHeight:1.8, fontWeight:300 }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.95rem', color:'#6B5C3E', maxWidth:'560px', margin:'0 auto 3rem', lineHeight:1.8, fontWeight:300 }}>
               Exploring the frontiers of quantum computing technology and its revolutionary
               applications in solving previously intractable computational problems.
             </p>
@@ -278,8 +278,8 @@ function QuantumComputing() {
                 return (
                   <div className="stat-pill" key={i}>
                     <Icon size={16} color="#2563eb" style={{ margin:'0 auto 0.4rem', display:'block' }} />
-                    <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.6rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{s.value}</div>
-                    <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.6rem', color:'#9C8B6E', letterSpacing:'0.14em', textTransform:'uppercase', marginTop:'0.25rem', fontWeight:500 }}>{s.label}</div>
+                    <div style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.6rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{s.value}</div>
+                    <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.6rem', color:'#9C8B6E', letterSpacing:'0.14em', textTransform:'uppercase', marginTop:'0.25rem', fontWeight:500 }}>{s.label}</div>
                   </div>
                 );
               })}
@@ -300,53 +300,53 @@ function QuantumComputing() {
                 <span className="eyebrow-line" />
                 Overview
               </div>
-              <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3vw,2.6rem)', fontWeight:700, color:'#1C1208', letterSpacing:'-0.02em', margin:'0 0 1.5rem', lineHeight:1.15 }}>
+              <h2 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.8rem,3vw,2.6rem)', fontWeight:700, color:'#0f172a', letterSpacing:'-0.02em', margin:'0 0 1.5rem', lineHeight:1.15 }}>
                 The Quantum{' '}
                 <span style={{ fontStyle:'italic', color:'#8B6D38' }}>Revolution</span>
               </h2>
-              <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, marginBottom:'0.85rem', fontWeight:300 }}>
+              <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, marginBottom:'0.85rem', fontWeight:300 }}>
                 Our Quantum Computing program is at the forefront of one of the most exciting technological
                 revolutions of our time. We explore quantum mechanics, quantum information theory, and their
                 applications to develop algorithms and systems that harness the power of quantum phenomena.
               </p>
-              <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, fontWeight:300 }}>
+              <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, fontWeight:300 }}>
                 Students and researchers work with quantum programming languages, simulators, and real quantum
                 hardware to develop solutions for cryptography, optimization, drug discovery, and artificial intelligence.
               </p>
             </div>
 
             {/* Bloch sphere visualization — recolored */}
-            <div style={{ background:'#FAF8F2', border:'1px solid #E8E0CC', borderRadius:'4px', padding:'2rem', position:'relative', overflow:'hidden', minHeight:'260px', display:'flex', alignItems:'center', justifyContent:'center' }}>
+            <div style={{ background:'#ffffff', border:'1px solid #e2e8f0', borderRadius:'4px', padding:'2rem', position:'relative', overflow:'hidden', minHeight:'260px', display:'flex', alignItems:'center', justifyContent:'center' }}>
               <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#2563eb,transparent)' }} />
 
               <div style={{ position:'relative', width:'180px', height:'180px' }}>
                 {/* Sphere rings */}
-                <div style={{ position:'absolute', inset:0, border:'1.5px solid rgba(201,168,76,0.3)', borderRadius:'50%' }} />
-                <div style={{ position:'absolute', inset:'10px', border:'1px solid rgba(201,168,76,0.15)', borderRadius:'50%' }} />
+                <div style={{ position:'absolute', inset:0, border:'1.5px solid rgba(37, 99, 235,0.3)', borderRadius:'50%' }} />
+                <div style={{ position:'absolute', inset:'10px', border:'1px solid rgba(37, 99, 235,0.15)', borderRadius:'50%' }} />
                 {/* Orbiting rings */}
-                <div style={{ position:'absolute', inset:0, border:'1px dashed rgba(201,168,76,0.15)', borderRadius:'50%', animation:'orbitSlow 20s linear infinite' }} />
-                <div style={{ position:'absolute', inset:'4px', border:'1px dashed rgba(201,168,76,0.1)', borderRadius:'50%', animation:'orbitReverse 15s linear infinite' }} />
+                <div style={{ position:'absolute', inset:0, border:'1px dashed rgba(37, 99, 235,0.15)', borderRadius:'50%', animation:'orbitSlow 20s linear infinite' }} />
+                <div style={{ position:'absolute', inset:'4px', border:'1px dashed rgba(37, 99, 235,0.1)', borderRadius:'50%', animation:'orbitReverse 15s linear infinite' }} />
 
                 {/* State vector */}
-                <div style={{ position:'absolute', top:'50%', left:'50%', width:'2px', height:'72px', background:'linear-gradient(180deg,#2563eb,rgba(201,168,76,0.2))', transformOrigin:'bottom center', animation:'quantumVector 4s ease-in-out infinite', transform:'translate(-50%,-100%) rotate(-14deg)' }} />
+                <div style={{ position:'absolute', top:'50%', left:'50%', width:'2px', height:'72px', background:'linear-gradient(180deg,#2563eb,rgba(37, 99, 235,0.2))', transformOrigin:'bottom center', animation:'quantumVector 4s ease-in-out infinite', transform:'translate(-50%,-100%) rotate(-14deg)' }} />
                 {/* Center dot */}
-                <div style={{ position:'absolute', top:'50%', left:'50%', width:'10px', height:'10px', borderRadius:'50%', background:'#2563eb', transform:'translate(-50%,-50%)', animation:'pulseGold 2s ease-in-out infinite', boxShadow:'0 0 14px rgba(201,168,76,0.5)' }} />
+                <div style={{ position:'absolute', top:'50%', left:'50%', width:'10px', height:'10px', borderRadius:'50%', background:'#2563eb', transform:'translate(-50%,-50%)', animation:'pulseGold 2s ease-in-out infinite', boxShadow:'0 0 14px rgba(37, 99, 235,0.5)' }} />
 
                 {/* Axis labels */}
-                <div style={{ position:'absolute', top:'-1.5rem', left:'50%', transform:'translateX(-50%)', fontFamily:"'Cormorant Garamond',serif", fontSize:'0.85rem', color:'#2563eb', fontWeight:600 }}>|0⟩</div>
-                <div style={{ position:'absolute', bottom:'-1.5rem', left:'50%', transform:'translateX(-50%)', fontFamily:"'Cormorant Garamond',serif", fontSize:'0.85rem', color:'#8B6D38', fontWeight:600 }}>|1⟩</div>
+                <div style={{ position:'absolute', top:'-1.5rem', left:'50%', transform:'translateX(-50%)', fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.85rem', color:'#2563eb', fontWeight:600 }}>|0⟩</div>
+                <div style={{ position:'absolute', bottom:'-1.5rem', left:'50%', transform:'translateX(-50%)', fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.85rem', color:'#8B6D38', fontWeight:600 }}>|1⟩</div>
 
                 {/* Orbiting dots */}
                 <div style={{ position:'absolute', inset:0, animation:'orbitSlow 8s linear infinite' }}>
-                  <div style={{ position:'absolute', top:0, left:'50%', width:'7px', height:'7px', borderRadius:'50%', background:'#2563eb', transform:'translateX(-50%)', boxShadow:'0 0 8px rgba(201,168,76,0.6)' }} />
+                  <div style={{ position:'absolute', top:0, left:'50%', width:'7px', height:'7px', borderRadius:'50%', background:'#2563eb', transform:'translateX(-50%)', boxShadow:'0 0 8px rgba(37, 99, 235,0.6)' }} />
                 </div>
                 <div style={{ position:'absolute', inset:0, animation:'orbitReverse 11s linear infinite' }}>
-                  <div style={{ position:'absolute', top:'50%', right:0, width:'6px', height:'6px', borderRadius:'50%', background:'rgba(201,168,76,0.6)', transform:'translateY(-50%)' }} />
+                  <div style={{ position:'absolute', top:'50%', right:0, width:'6px', height:'6px', borderRadius:'50%', background:'rgba(37, 99, 235,0.6)', transform:'translateY(-50%)' }} />
                 </div>
               </div>
 
               {/* Quantum notation */}
-              <div style={{ position:'absolute', top:'1rem', right:'1.25rem', fontFamily:"'Cormorant Garamond',serif", fontSize:'0.82rem', color:'#2563eb', fontWeight:600, letterSpacing:'0.05em' }}>
+              <div style={{ position:'absolute', top:'1rem', right:'1.25rem', fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.82rem', color:'#2563eb', fontWeight:600, letterSpacing:'0.05em' }}>
                 |ψ⟩ = α|0⟩ + β|1⟩
               </div>
             </div>
@@ -362,7 +362,7 @@ function QuantumComputing() {
         >
           <div style={{ maxWidth:'1200px', margin:'0 auto' }}>
             <div className="eyebrow"><span className="eyebrow-line" />Research<span className="eyebrow-line" /></div>
-            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#1C1208', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em' }}>
+            <h2 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#0f172a', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em' }}>
               Research{' '}
               <span style={{ fontStyle:'italic', color:'#8B6D38' }}>Areas</span>
             </h2>
@@ -381,11 +381,11 @@ function QuantumComputing() {
         <section style={{ background:'#FEFCF5', padding:'5rem 2rem' }}>
           <div style={{ maxWidth:'1100px', margin:'0 auto' }}>
             <div className="eyebrow"><span className="eyebrow-line" />Applications<span className="eyebrow-line" /></div>
-            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#1C1208', textAlign:'center', marginBottom:'1.5rem', letterSpacing:'-0.02em' }}>
+            <h2 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#0f172a', textAlign:'center', marginBottom:'1.5rem', letterSpacing:'-0.02em' }}>
               Future{' '}
               <span style={{ fontStyle:'italic', color:'#8B6D38' }}>Impact</span>
             </h2>
-            <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.15rem', fontStyle:'italic', color:'#6B5C3E', maxWidth:'700px', margin:'0 auto 3rem', textAlign:'center', lineHeight:1.75, fontWeight:500 }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.15rem', fontStyle:'italic', color:'#6B5C3E', maxWidth:'700px', margin:'0 auto 3rem', textAlign:'center', lineHeight:1.75, fontWeight:500 }}>
               Quantum computing promises to revolutionize industries from pharmaceuticals to finance,
               offering exponential speedups for specific computational problems and enabling entirely new types of calculations.
             </p>
@@ -407,9 +407,9 @@ function QuantumComputing() {
                     <div style={{ width:'44px', height:'44px', background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', marginBottom:'1rem', color:'#2563eb' }}>
                       <Icon size={20} />
                     </div>
-                    <h4 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.25rem', fontWeight:700, color:'#1C1208', margin:'0 0 0.4rem' }}>{impact.title}</h4>
+                    <h4 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.25rem', fontWeight:700, color:'#0f172a', margin:'0 0 0.4rem' }}>{impact.title}</h4>
                     <div style={{ height:'1px', background:'#EDE4CC', marginBottom:'0.75rem' }} />
-                    <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.75, margin:0, fontWeight:300 }}>{impact.desc}</p>
+                    <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.75, margin:0, fontWeight:300 }}>{impact.desc}</p>
                   </div>
                 );
               })}
@@ -420,9 +420,9 @@ function QuantumComputing() {
         <div className="gold-rule" />
 
         {/* ── CTA ── */}
-        <section style={{ padding:'5rem 2rem', background:'#F7F3EA' }}>
+        <section style={{ padding:'5rem 2rem', background:'#f8fafc' }}>
           <div style={{ maxWidth:'780px', margin:'0 auto' }}>
-            <div style={{ background:'linear-gradient(158deg,#1C1208 0%,#2E1F08 100%)', border:'1px solid #3D2A0A', borderRadius:'4px', padding:'4rem 3rem', textAlign:'center', position:'relative', overflow:'hidden' }}>
+            <div style={{ background:'linear-gradient(158deg,#0f172a 0%,#2E1F08 100%)', border:'1px solid #3D2A0A', borderRadius:'4px', padding:'4rem 3rem', textAlign:'center', position:'relative', overflow:'hidden' }}>
               <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#2563eb,transparent)' }} />
               {[
                 { top:'1.2rem', left:'1.2rem', borderTop:'1px solid #2563eb40', borderLeft:'1px solid #2563eb40' },
@@ -433,25 +433,25 @@ function QuantumComputing() {
 
               {/* Floating quantum symbols */}
               {['|ψ⟩','⟨φ|','∑'].map((sym,i) => (
-                <div key={i} style={{ position:'absolute', fontFamily:"'Cormorant Garamond',serif", fontSize:'2.5rem', color:'rgba(201,168,76,0.08)', fontWeight:700, animation:`floatDot ${3+i}s ease-in-out infinite`, animationDelay:`${i*0.5}s`, top: i===2?'1.5rem':'auto', bottom: i<2?'1.5rem':'auto', left: i===0?'2rem':'auto', right: i===1?'2rem': i===2?'3rem':'auto', pointerEvents:'none' }}>
+                <div key={i} style={{ position:'absolute', fontFamily:"'Plus Jakarta Sans',serif", fontSize:'2.5rem', color:'rgba(37, 99, 235,0.08)', fontWeight:700, animation:`floatDot ${3+i}s ease-in-out infinite`, animationDelay:`${i*0.5}s`, top: i===2?'1.5rem':'auto', bottom: i<2?'1.5rem':'auto', left: i===0?'2rem':'auto', right: i===1?'2rem': i===2?'3rem':'auto', pointerEvents:'none' }}>
                   {sym}
                 </div>
               ))}
 
-              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
+              <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1.25rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
                 <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
                 Pioneer the Future
                 <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
               </div>
 
-              <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:'clamp(1.8rem,3.5vw,2.8rem)', fontWeight:700, color:'#F7F3EA', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
+              <h2 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.8rem,3.5vw,2.8rem)', fontWeight:700, color:'#f8fafc', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
                 Pioneer{' '}
-                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#2563eb,#E8C96A)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
+                <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#2563eb,#60a5fa)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
                   Quantum Computing
                 </span>
               </h2>
 
-              <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.92rem', color:'rgba(247,243,234,0.55)', maxWidth:'480px', margin:'0 auto 2.5rem', lineHeight:1.78, fontWeight:300 }}>
+              <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.92rem', color:'rgba(247,243,234,0.55)', maxWidth:'480px', margin:'0 auto 2.5rem', lineHeight:1.78, fontWeight:300 }}>
                 Join the quantum revolution and shape the future of computation.
               </p>
 
@@ -485,41 +485,41 @@ function ResearchCard({ area, index, visible }) {
       <div style={{ position:'absolute', top:0, right:0, width:18, height:18, background: hovered?'#2563eb':'#E8DFC4', clipPath:'polygon(100% 0,0 0,100% 100%)', transition:'background 0.3s' }} />
 
       {/* Ghost notation */}
-      <div style={{ position:'absolute', top:'1rem', right:'1.5rem', fontFamily:"'Cormorant Garamond',serif", fontSize:'3.5rem', fontWeight:700, color: hovered?'rgba(201,168,76,0.1)':'rgba(201,168,76,0.05)', pointerEvents:'none', lineHeight:1, transition:'color 0.3s', userSelect:'none' }}>
+      <div style={{ position:'absolute', top:'1rem', right:'1.5rem', fontFamily:"'Plus Jakarta Sans',serif", fontSize:'3.5rem', fontWeight:700, color: hovered?'rgba(37, 99, 235,0.1)':'rgba(37, 99, 235,0.05)', pointerEvents:'none', lineHeight:1, transition:'color 0.3s', userSelect:'none' }}>
         {area.notation}
       </div>
 
       {/* Header row */}
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:'1.25rem' }}>
         <div style={{ display:'flex', alignItems:'center', gap:'0.75rem' }}>
-          <span style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'0.7rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600 }}>{area.num}</span>
+          <span style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.7rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600 }}>{area.num}</span>
           <div style={{ width:'44px', height:'44px', background: hovered?'#FDF5E0':'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', color:'#2563eb', transition:'all 0.3s', transform: hovered?'scale(1.08) rotate(-4deg)':'scale(1)' }}>
             <Icon size={20} />
           </div>
         </div>
         {/* Metric badge */}
-        <div style={{ padding:'0.3rem 0.75rem', border:'1px solid rgba(201,168,76,0.35)', borderRadius:'1px', fontFamily:"'Cormorant Garamond',serif", fontSize:'0.85rem', fontWeight:700, color:'#2563eb', letterSpacing:'0.05em' }}>
+        <div style={{ padding:'0.3rem 0.75rem', border:'1px solid rgba(37, 99, 235,0.35)', borderRadius:'1px', fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.85rem', fontWeight:700, color:'#2563eb', letterSpacing:'0.05em' }}>
           {area.metric}
         </div>
       </div>
 
-      <h3 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'1.3rem', fontWeight:700, color:'#1C1208', margin:'0 0 0.5rem', letterSpacing:'-0.01em', lineHeight:1.2 }}>
+      <h3 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.3rem', fontWeight:700, color:'#0f172a', margin:'0 0 0.5rem', letterSpacing:'-0.01em', lineHeight:1.2 }}>
         {area.title}
       </h3>
 
       {/* Divider */}
       <div style={{ height:'1px', background: hovered?'linear-gradient(90deg,#2563eb40,transparent)':'#EDE4CC', marginBottom:'0.85rem', transition:'background 0.3s' }} />
 
-      <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.8, margin:'0 0 1.25rem', fontWeight:300 }}>
+      <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.85rem', color:'#6B5C3E', lineHeight:1.8, margin:'0 0 1.25rem', fontWeight:300 }}>
         {area.description}
       </p>
 
       {/* Progress bar */}
       <div style={{ display:'flex', alignItems:'center', gap:'0.75rem' }}>
-        <div style={{ flex:1, height:'2px', background:'rgba(201,168,76,0.15)', borderRadius:'1px', overflow:'hidden' }}>
-          <div style={{ height:'100%', width: hovered?'100%':'35%', background:'linear-gradient(90deg,#2563eb,#E8C96A)', transition:'width 0.5s ease', borderRadius:'1px' }} />
+        <div style={{ flex:1, height:'2px', background:'rgba(37, 99, 235,0.15)', borderRadius:'1px', overflow:'hidden' }}>
+          <div style={{ height:'100%', width: hovered?'100%':'35%', background:'linear-gradient(90deg,#2563eb,#60a5fa)', transition:'width 0.5s ease', borderRadius:'1px' }} />
         </div>
-        <span style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'0.72rem', color:'#2563eb', letterSpacing:'0.08em', fontWeight:600, flexShrink:0 }}>
+        <span style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.72rem', color:'#2563eb', letterSpacing:'0.08em', fontWeight:600, flexShrink:0 }}>
           {area.notation}
         </span>
       </div>

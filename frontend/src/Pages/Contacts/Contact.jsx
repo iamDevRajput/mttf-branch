@@ -3,24 +3,24 @@ import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 
 const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
   :root {
-    --gold: #2563eb;
-    --gold-light: #E8C96A;
-    --gold-pale: rgba(201,168,76,0.10);
-    --cream: #FAF8F3;
-    --beige: #F2EDE4;
-    --charcoal: #1C1A17;
-    --mid: #6B6560;
-    --divider: rgba(201,168,76,0.2);
+    --mttf-primary: #2563eb;
+    --mttf-primary-light: #60a5fa;
+    --gold-pale: rgba(37, 99, 235,0.10);
+    --mttf-bg-alt: #f8fafc;
+    --mttf-border-light: #f1f5f9;
+    --charcoal: #0f172a;
+    --mid: #64748b;
+    --divider: rgba(37, 99, 235,0.2);
     --white: #ffffff;
   }
 
   /* ── Page shell ── */
   .lux-contact-page {
     background: var(--cream);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     padding-top: 100px;
     min-height: 100vh;
   }
@@ -38,7 +38,7 @@ const styles = `
     position: absolute;
     bottom: 0; left: 0; right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
+    background: linear-gradient(90deg, transparent, var(--mttf-primary) 30%, var(--mttf-primary) 70%, transparent);
     opacity: 0.3;
   }
 
@@ -48,10 +48,10 @@ const styles = `
     right: 48px;
     top: 50%;
     transform: translateY(-50%);
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Plus Jakarta Sans', serif;
     font-size: 280px;
     font-weight: 600;
-    color: rgba(201,168,76,0.04);
+    color: rgba(37, 99, 235,0.04);
     line-height: 1;
     pointer-events: none;
     user-select: none;
@@ -69,12 +69,12 @@ const styles = `
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 10px;
     font-weight: 500;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--mttf-primary);
     margin-bottom: 20px;
   }
 
@@ -82,12 +82,12 @@ const styles = `
     display: block;
     width: 32px;
     height: 1px;
-    background: var(--gold);
+    background: var(--mttf-primary);
     opacity: 0.5;
   }
 
   .lux-contact-headline {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Plus Jakarta Sans', serif;
     font-size: clamp(48px, 6vw, 76px);
     font-weight: 400;
     color: var(--cream);
@@ -145,7 +145,7 @@ const styles = `
     position: absolute;
     left: 0; top: 0; bottom: 0;
     width: 2px;
-    background: var(--gold);
+    background: var(--mttf-primary);
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
@@ -172,23 +172,23 @@ const styles = `
   }
 
   .lux-info-card:hover .lux-info-icon {
-    border-color: var(--gold);
+    border-color: var(--mttf-primary);
     background: var(--gold-pale);
   }
 
   .lux-info-label {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 9px;
     font-weight: 500;
     letter-spacing: 0.26em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--mttf-primary);
     margin-bottom: 8px;
     display: block;
   }
 
   .lux-info-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Plus Jakarta Sans', serif;
     font-size: 19px;
     font-weight: 500;
     color: var(--charcoal);
@@ -214,7 +214,7 @@ const styles = `
   }
 
   .lux-info-link:hover {
-    color: var(--gold);
+    color: var(--mttf-primary);
   }
 
   /* Map card */
@@ -226,12 +226,12 @@ const styles = `
   }
 
   .lux-map-label {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 9px;
     font-weight: 500;
     letter-spacing: 0.26em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--mttf-primary);
     margin-bottom: 20px;
     display: block;
   }
@@ -251,7 +251,7 @@ const styles = `
     position: absolute;
     width: 80px;
     height: 80px;
-    border: 1px solid rgba(201,168,76,0.3);
+    border: 1px solid rgba(37, 99, 235,0.3);
     border-radius: 50%;
     animation: pingRing 2.5s ease-out infinite;
   }
@@ -273,7 +273,7 @@ const styles = `
     width: 36px;
     height: 36px;
     background: var(--charcoal);
-    border: 2px solid var(--gold);
+    border: 2px solid var(--mttf-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -291,7 +291,7 @@ const styles = `
   }
 
   .lux-map-tag-city {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Plus Jakarta Sans', serif;
     font-size: 13px;
     font-weight: 500;
     color: var(--cream);
@@ -303,7 +303,7 @@ const styles = `
     font-weight: 400;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--mttf-primary);
   }
 
   /* ── Form panel ── */
@@ -319,12 +319,12 @@ const styles = `
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 2px;
-    background: var(--gold);
+    background: var(--mttf-primary);
     opacity: 0.6;
   }
 
   .lux-form-heading {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Plus Jakarta Sans', serif;
     font-size: 34px;
     font-weight: 400;
     color: var(--charcoal);
@@ -334,7 +334,7 @@ const styles = `
 
   .lux-form-heading em {
     font-style: italic;
-    color: var(--gold);
+    color: var(--mttf-primary);
   }
 
   /* Inquiry options */
@@ -343,7 +343,7 @@ const styles = `
     font-weight: 500;
     letter-spacing: 0.26em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--mttf-primary);
     margin-bottom: 14px;
     display: block;
   }
@@ -375,7 +375,7 @@ const styles = `
     bottom: 0; left: 0;
     width: 100%;
     height: 2px;
-    background: var(--gold);
+    background: var(--mttf-primary);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -383,7 +383,7 @@ const styles = `
 
   .lux-inquiry-btn:hover,
   .lux-inquiry-btn.active {
-    border-color: var(--gold);
+    border-color: var(--mttf-primary);
     background: var(--gold-pale);
   }
 
@@ -420,7 +420,7 @@ const styles = `
     padding: 14px 18px;
     border: 1px solid rgba(28,26,23,0.14);
     background: var(--cream);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 13px;
     font-weight: 300;
     color: var(--charcoal);
@@ -438,7 +438,7 @@ const styles = `
 
   .lux-input:focus,
   .lux-textarea:focus {
-    border-color: var(--gold);
+    border-color: var(--mttf-primary);
     background: #fff;
   }
 
@@ -457,7 +457,7 @@ const styles = `
     padding: 15px 32px;
     background: var(--charcoal);
     color: var(--gold-light);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.18em;
@@ -474,7 +474,7 @@ const styles = `
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--gold);
+    background: var(--mttf-primary);
     transform: translateX(-101%);
     transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
   }
@@ -558,7 +558,7 @@ const styles = `
   }
 
   .lux-mascot-bubble-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Plus Jakarta Sans', serif;
     font-size: 15px;
     font-weight: 500;
     color: var(--charcoal);
@@ -576,7 +576,7 @@ const styles = `
     width: 56px;
     height: 56px;
     background: var(--charcoal);
-    border: 2px solid var(--gold);
+    border: 2px solid var(--mttf-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -585,7 +585,7 @@ const styles = `
   }
 
   .lux-mascot-btn:hover {
-    background: var(--gold);
+    background: var(--mttf-primary);
     transform: scale(1.08);
   }
 

@@ -96,7 +96,7 @@ export default function Auth() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -109,7 +109,7 @@ export default function Auth() {
           align-items: center;
           justify-content: center;
           z-index: 999;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           padding: 20px;
         }
 
@@ -140,7 +140,7 @@ export default function Auth() {
           position: absolute; top: 18px; left: 20px;
           display: flex; align-items: center; gap: 6px;
           background: none; border: none; cursor: pointer;
-          color: #8a7a5a; font-family: 'DM Sans', sans-serif;
+          color: #8a7a5a; font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 10px; font-weight: 500; letter-spacing: 1.5px;
           text-transform: uppercase; transition: color 0.2s; padding: 0;
         }
@@ -152,18 +152,18 @@ export default function Auth() {
           position: absolute; top: 18px; right: 20px;
           background: none; border: none; cursor: pointer;
           color: #8a7a5a; font-size: 20px; line-height: 1;
-          transition: color 0.2s; font-family: 'DM Sans', sans-serif;
+          transition: color 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;
         }
         .auth-close:hover { color: #1a1610; }
 
         .auth-eyebrow {
-          font-family: 'DM Sans', sans-serif; font-size: 10px;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px;
           font-weight: 400; letter-spacing: 2.5px; text-transform: uppercase;
           color: #b9943c; margin-bottom: 8px; text-align: center;
         }
 
         .auth-title {
-          font-family: 'Cormorant Garamond', serif; font-size: 30px;
+          font-family: 'Plus Jakarta Sans', serif; font-size: 30px;
           font-weight: 500; color: #1a1610; text-align: center;
           line-height: 1.15; margin-bottom: 28px;
         }
@@ -175,7 +175,7 @@ export default function Auth() {
 
         .auth-toggle-btn {
           flex: 1; padding: 9px 0; border: none; background: none;
-          font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 500;
           letter-spacing: 1.6px; text-transform: uppercase; color: #8a7a5a;
           cursor: pointer; transition: all 0.25s ease;
         }
@@ -196,7 +196,7 @@ export default function Auth() {
         .auth-input {
           width: 100%; padding: 12px 16px; background: #fff;
           border: 1px solid rgba(185,148,60,0.25); border-radius: 0;
-          font-family: 'DM Sans', sans-serif; font-size: 13.5px;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13.5px;
           font-weight: 300; color: #1a1610; outline: none; transition: border-color 0.25s;
         }
         .auth-input::placeholder { color: #bfb49a; }
@@ -206,7 +206,7 @@ export default function Auth() {
         .auth-verify-btn {
           position: absolute; right: 0; top: 0; bottom: 0; padding: 0 18px;
           background: #b9943c; border: none; color: #fff;
-          font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 500;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 500;
           letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; transition: background 0.2s;
         }
         .auth-verify-btn:hover { background: #9a7a2e; }
@@ -220,7 +220,7 @@ export default function Auth() {
         .mem-type-card.selected { border-color: #b9943c; background: rgba(185,148,60,0.07); }
 
         .mem-type-name {
-          font-family: 'Cormorant Garamond', serif; font-size: 17px;
+          font-family: 'Plus Jakarta Sans', serif; font-size: 17px;
           font-weight: 600; color: #1a1610; display: block; margin-bottom: 3px;
         }
         .mem-type-desc { font-size: 11px; color: #8a7a5a; letter-spacing: 0.5px; }
@@ -228,7 +228,7 @@ export default function Auth() {
         .auth-select {
           width: 100%; padding: 12px 16px; background: #fff;
           border: 1px solid rgba(185,148,60,0.25); border-radius: 0;
-          font-family: 'DM Sans', sans-serif; font-size: 13.5px; font-weight: 300;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13.5px; font-weight: 300;
           color: #1a1610; outline: none; appearance: none; -webkit-appearance: none;
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1L6 7L11 1' stroke='%23b9943c' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
           background-repeat: no-repeat; background-position: right 16px center;
@@ -257,7 +257,7 @@ export default function Auth() {
         .auth-submit {
           width: 100%; padding: 14px; background: #1a1610;
           border: 1px solid #1a1610; color: #f0e4c4;
-          font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 500;
           letter-spacing: 2px; text-transform: uppercase; cursor: pointer;
           transition: all 0.3s ease; position: relative; overflow: hidden; margin-top: 4px;
         }
@@ -272,7 +272,7 @@ export default function Auth() {
         .auth-footer-link { text-align: center; margin-top: 20px; font-size: 12px; color: #8a7a5a; }
         .auth-footer-link button {
           background: none; border: none; color: #b9943c;
-          font-family: 'DM Sans', sans-serif; font-size: 12px;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px;
           cursor: pointer; text-decoration: underline; text-underline-offset: 3px;
         }
 
@@ -284,7 +284,7 @@ export default function Auth() {
 
         .mem-pay-btn {
           width: 100%; padding: 16px; background: #b9943c; border: none; color: #fff;
-          font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 500;
           letter-spacing: 1.8px; text-transform: uppercase; cursor: pointer;
           margin-top: 24px; transition: background 0.25s;
         }
@@ -292,7 +292,7 @@ export default function Auth() {
 
         .mem-logout {
           background: none; border: none; color: #8a7a5a;
-          font-family: 'DM Sans', sans-serif; font-size: 12px; cursor: pointer;
+          font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; cursor: pointer;
           text-decoration: underline; text-underline-offset: 3px;
           display: block; margin: 16px auto 0; letter-spacing: 0.5px; transition: color 0.2s;
         }
