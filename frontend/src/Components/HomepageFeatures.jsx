@@ -5,9 +5,9 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import brainLogo from '../assets/home/brain-logo.png';
 import mttfLogo from '../assets/home/mttf-logo.png';
 import communityImg from '../assets/home/community.jpg';
-import g1Img from '../assets/home/g1.webp';
-import g2Img from '../assets/home/g2.webp';
-import g3Img from '../assets/home/g3.webp';
+import g1Img from '../assets/home/g1.jpeg';
+import g2Img from '../assets/home/g2.jpeg';
+import g3Img from '../assets/home/g3.jpeg';
 
 import adityaCollege from '../assets/home/aditya-college.webp';
 import appwars from '../assets/home/appwars.webp';
