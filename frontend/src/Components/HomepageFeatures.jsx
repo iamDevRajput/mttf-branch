@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // ── Asset imports — filenames matched exactly to your file tree ──
 import brainLogo from '../assets/home/brain-logo.png';
-import mttfLogo from '../assets/home/mttf-logo.webp';
+import mttfLogo from '../assets/home/mttf-logo.png';
 import communityImg from '../assets/home/community.jpg';
 import g1Img from '../assets/home/g1.webp';
 import g2Img from '../assets/home/g2.webp';
