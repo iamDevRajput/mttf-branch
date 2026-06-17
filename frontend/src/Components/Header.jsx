@@ -4,6 +4,11 @@ import ResearchIdeasMegaMenu from "./ResearchIdeasMegaMenu";
 import AboutFoundationMegaMenu from "./AboutFoundationMegaMenu";
 import { Link, useLocation } from "react-router-dom";
 
+
+import MTTF_REC from "../assets/MTTF_REC.jfif";
+
+
+
 const navItems = [
   { name: "Home", href: "/" },
   { name: "Our Programs", href: "/programs" },
@@ -58,32 +63,14 @@ export default function Header() {
           <div className="max-w-[1320px] mx-auto px-10 flex items-center justify-between h-[72px]">
 
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 no-underline">
+            <Link to="/" className="flex items-center no-underline">
+  <img
+    src={MTTF_REC}
+    alt="MTTF Logo"
+    className="h-[56px] w-auto object-contain"
+  />
+</Link>
 
-              {/* Logo mark box */}
-              <div className="w-[38px] h-[38px] border border-[#2563eb] flex items-center justify-center relative rounded-md transition-all duration-300 hover:scale-105">
-                <span className="absolute inset-[3px] border border-[#2563eb]/20 rounded-sm" />
-                <span
-                  className="text-[18px] font-bold text-[#2563eb] tracking-[0.5px] relative z-10"
-                  style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                >
-                  M
-                </span>
-              </div>
-
-              {/* Logo text */}
-              <div className="flex flex-col">
-                <span
-                  className="text-[16px] font-extrabold text-[#0b1329] tracking-[2.5px] uppercase leading-[1.1]"
-                  style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                >
-                  MTTF
-                </span>
-                <span className="text-[9.5px] font-medium text-[#475569] tracking-[1.8px] uppercase">
-                  MathTech Thinking Foundation
-                </span>
-              </div>
-            </Link>
 
             {/* Navigation */}
             <nav>
