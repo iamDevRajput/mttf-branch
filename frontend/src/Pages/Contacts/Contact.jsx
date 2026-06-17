@@ -9,10 +9,10 @@ const styles = `
     --mttf-primary: #2563eb;
     --mttf-primary-light: #60a5fa;
     --mttf-primary-pale: rgba(37, 99, 235,0.10);
-    --mttf-bg-alt: #f8fafc;
-    --mttf-border-light: #f1f5f9;
-    --charcoal: #0f172a;
-    --mid: #64748b;
+    --mttf-bg-alt: #ffffff;
+    --mttf-border-light: #ffffff;
+    --charcoal: #0b1329;
+    --mid: #475569;
     --divider: rgba(37, 99, 235,0.2);
     --white: #ffffff;
   }
@@ -105,7 +105,7 @@ const styles = `
   .lux-contact-subhead {
     font-size: 15px;
     font-weight: 300;
-    color: rgba(250,248,243,0.55);
+    color: rgba(255,255,255,0.55);
     max-width: 560px;
     line-height: 1.8;
   }
@@ -357,7 +357,7 @@ const styles = `
 
   .lux-inquiry-btn {
     padding: 12px 14px;
-    border: 1px solid rgba(28,26,23,0.12);
+    border: 1px solid rgba(11, 19, 41,0.12);
     background: transparent;
     cursor: pointer;
     text-align: left;
@@ -418,7 +418,7 @@ const styles = `
   .lux-textarea {
     width: 100%;
     padding: 14px 18px;
-    border: 1px solid rgba(28,26,23,0.14);
+    border: 1px solid rgba(11, 19, 41,0.14);
     background: var(--mttf-bg-alt);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 13px;
@@ -432,7 +432,7 @@ const styles = `
 
   .lux-input::placeholder,
   .lux-textarea::placeholder {
-    color: rgba(107,101,96,0.5);
+    color: rgba(71, 85, 105,0.5);
     font-weight: 300;
   }
 
@@ -541,7 +541,7 @@ const styles = `
     background: #fff;
     border: 1px solid var(--divider);
     padding: 16px 18px;
-    box-shadow: 0 8px 32px rgba(28,26,23,0.12);
+    box-shadow: 0 8px 32px rgba(11, 19, 41,0.12);
   }
 
   .lux-mascot-bubble::after {

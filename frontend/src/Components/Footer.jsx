@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Instagram, Linkedin, Twitter, Facebook } from "lucide-react";
 
 const styles = `
@@ -8,9 +8,9 @@ const styles = `
     --gold: #2563eb;
     --gold-light: #60a5fa;
     --gold-pale: rgba(37, 99, 235, 0.08);
-    --cream: #f8fafc;
+    --cream: #ffffff;
     --charcoal: #0b1329;
-    --mid: #94a3b8;
+    --mid: #475569;
     --divider: rgba(37, 99, 235, 0.1);
     --divider-dark: rgba(255, 255, 255, 0.06);
   }
@@ -172,7 +172,7 @@ const styles = `
   .lux-footer-brand-desc {
     font-size: 13px;
     font-weight: 400;
-    color: rgba(250,248,243,0.5);
+    color: rgba(255,255,255,0.5);
     line-height: 1.8;
     max-width: 280px;
   }
@@ -211,7 +211,7 @@ const styles = `
   .lux-footer-links a {
     font-size: 13px;
     font-weight: 400;
-    color: rgba(250,248,243,0.5);
+    color: rgba(255,255,255,0.5);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -250,7 +250,7 @@ const styles = `
   .lux-footer-contact-item {
     font-size: 13px;
     font-weight: 400;
-    color: rgba(250,248,243,0.5);
+    color: rgba(255,255,255,0.5);
     line-height: 1.7;
     cursor: pointer;
     transition: color 0.25s ease;
@@ -274,9 +274,9 @@ const styles = `
     align-items: center;
     gap: 8px;
     padding: 10px 14px;
-    border: 1px solid rgba(250,248,243,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
     background: transparent;
-    color: rgba(250,248,243,0.45);
+    color: rgba(255,255,255,0.45);
     font-size: 11px;
     font-weight: 400;
     letter-spacing: 0.1em;
@@ -304,7 +304,7 @@ const styles = `
   .lux-footer-copy {
     font-size: 11px;
     font-weight: 400;
-    color: rgba(250,248,243,0.3);
+    color: rgba(255,255,255,0.3);
     letter-spacing: 0.04em;
   }
 
@@ -317,11 +317,11 @@ const styles = `
   .lux-footer-legal a {
     font-size: 11px;
     font-weight: 400;
-    color: rgba(250,248,243,0.3);
+    color: rgba(255,255,255,0.3);
     text-decoration: none;
     letter-spacing: 0.06em;
     padding: 0 16px;
-    border-right: 1px solid rgba(250,248,243,0.1);
+    border-right: 1px solid rgba(255,255,255,0.1);
     transition: color 0.25s ease;
   }
 

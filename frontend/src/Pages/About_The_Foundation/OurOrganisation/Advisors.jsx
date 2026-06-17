@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Award, Briefcase, BookOpen, TrendingUp } from 'lucide-react';
 import Header from "../../../Components/Header";
@@ -57,7 +57,7 @@ const Advisors = () => {
 
         .advisors-main {
           flex: 1;
-          background: linear-gradient(158deg, #f8fafc 0%, #EDE5CC 55%, #E4D5A8 100%);
+          background: linear-gradient(158deg, #ffffff 0%, #ffffff 55%, #ffffff 100%);
           padding: 6rem 1.5rem 5rem;
           position: relative;
           overflow: hidden;
@@ -74,8 +74,8 @@ const Advisors = () => {
         .eyebrow-line { display:inline-block; width:28px; height:1px; background:#2563eb; }
 
         .advisor-card {
-          background: #FAF8F2;
-          border: 1px solid #e2e8f0;
+          background: #ffffff;
+          border: 1px solid rgba(37, 99, 235, 0.15);
           border-radius: 4px;
           overflow: hidden;
           position: relative;
@@ -95,7 +95,7 @@ const Advisors = () => {
         .advisor-card:hover {
           border-color: #2563eb;
           box-shadow: 0 24px 52px rgba(37, 99, 235,0.14);
-          background: #FEFCF7;
+          background: #ffffff;
         }
 
         .btn-gold {
@@ -106,10 +106,10 @@ const Advisors = () => {
           border:1px solid #2563eb; border-radius:2px;
           cursor:pointer; transition:all 0.35s ease;
         }
-        .btn-gold:hover { background:#1d4ed8; border-color:#1d4ed8; transform:translateY(-2px); box-shadow:0 10px 24px rgba(37, 99, 235,0.28); }
+        .btn-gold:hover { background:#3b82f6; border-color:#3b82f6; transform:translateY(-2px); box-shadow:0 10px 24px rgba(37, 99, 235,0.28); }
 
         ::-webkit-scrollbar { width:3px; }
-        ::-webkit-scrollbar-track { background:#f8fafc; }
+        ::-webkit-scrollbar-track { background:#ffffff; }
         ::-webkit-scrollbar-thumb { background:#2563eb; border-radius:2px; }
       `}</style>
 
@@ -146,7 +146,7 @@ const Advisors = () => {
               initial={{ scale:0, opacity:0 }}
               animate={{ scale:1, opacity:1 }}
               transition={{ delay:0.2, type:'spring', stiffness:200 }}
-              style={{ display:'inline-flex', alignItems:'center', justifyContent:'center', width:'64px', height:'64px', background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', marginBottom:'1.75rem', color:'#2563eb' }}
+              style={{ display:'inline-flex', alignItems:'center', justifyContent:'center', width:'64px', height:'64px', background:'rgba(37, 99, 235, 0.06)', border:'1px solid rgba(37, 99, 235, 0.15)', borderRadius:'4px', marginBottom:'1.75rem', color:'#2563eb' }}
             >
               <Award size={28} />
             </motion.div>
@@ -158,14 +158,14 @@ const Advisors = () => {
               <span className="eyebrow-line" />
             </div>
 
-            <h1 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(2.6rem,6vw,5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#1C1208', marginBottom:'0.4rem' }}>
+            <h1 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(2.6rem,6vw,5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#0b1329', marginBottom:'0.4rem' }}>
               Our
             </h1>
-            <h1 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(2.6rem,6vw,5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#2563eb 0%,#8B6D38 40%,#60a5fa 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
+            <h1 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(2.6rem,6vw,5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#2563eb 0%,#3b82f6 40%,#60a5fa 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
               Advisors
             </h1>
 
-            <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'1rem', color:'#6B5C3E', maxWidth:'540px', margin:'0 auto 2rem', lineHeight:1.78, fontWeight:300 }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'1rem', color:'#475569', maxWidth:'540px', margin:'0 auto 2rem', lineHeight:1.78, fontWeight:300 }}>
               Distinguished experts providing strategic guidance, wisdom, and vision to drive our mission forward
             </p>
 
@@ -204,7 +204,7 @@ const Advisors = () => {
             transition={{ delay:0.8 }}
             style={{ marginTop:'5rem' }}
           >
-            <div style={{ maxWidth:'640px', margin:'0 auto', background:'linear-gradient(158deg,#1C1208 0%,#2E1F08 100%)', border:'1px solid #3D2A0A', borderRadius:'4px', padding:'3.5rem 3rem', textAlign:'center', position:'relative', overflow:'hidden' }}>
+            <div style={{ maxWidth:'640px', margin:'0 auto', background:'linear-gradient(158deg,#0b1329 0%,#0b1329 100%)', border:'1px solid #0b1329', borderRadius:'4px', padding:'3.5rem 3rem', textAlign:'center', position:'relative', overflow:'hidden' }}>
               <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,#2563eb,transparent)' }} />
               {[
                 { top:'1rem', left:'1rem', borderTop:'1px solid #2563eb40', borderLeft:'1px solid #2563eb40' },
@@ -219,7 +219,7 @@ const Advisors = () => {
                 <span style={{ display:'inline-block', width:20, height:1, background:'#2563eb' }} />
               </div>
 
-              <h3 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.5rem,2.5vw,2.2rem)', fontWeight:700, color:'#f8fafc', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
+              <h3 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'clamp(1.5rem,2.5vw,2.2rem)', fontWeight:700, color:'#ffffff', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
                 Join Our{' '}
                 <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#2563eb,#60a5fa)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
                   Advisory Board
@@ -260,7 +260,7 @@ function AdvisorCard({ advisor, index }) {
       style={{ width:'100%' }}
     >
       {/* Clipped top-right corner */}
-      <div style={{ position:'absolute', top:0, right:0, width:20, height:20, background:hovered?'#2563eb':'#E8DFC4', clipPath:'polygon(100% 0,0 0,100% 100%)', transition:'background 0.3s', zIndex:2 }} />
+      <div style={{ position:'absolute', top:0, right:0, width:20, height:20, background:hovered?'#2563eb':'rgba(37, 99, 235, 0.15)', clipPath:'polygon(100% 0,0 0,100% 100%)', transition:'background 0.3s', zIndex:2 }} />
 
       {/* Card number */}
       <div style={{ position:'absolute', top:'1.1rem', left:'1.4rem', fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.68rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600, zIndex:2 }}>
@@ -271,37 +271,37 @@ function AdvisorCard({ advisor, index }) {
         {/* Profile image */}
         <div style={{ position:'relative', width:'80px', height:'80px', margin:'1rem auto 1.5rem' }}>
           {/* Gold ring on hover */}
-          <div style={{ position:'absolute', inset:'-3px', borderRadius:'50%', border:`2px solid ${hovered?'#2563eb':'#E8D89A'}`, transition:'border-color 0.35s' }} />
+          <div style={{ position:'absolute', inset:'-3px', borderRadius:'50%', border:`2px solid ${hovered?'#2563eb':'rgba(37, 99, 235, 0.15)'}`, transition:'border-color 0.35s' }} />
           <img
             src={advisor.image}
             alt={advisor.name}
             style={{ width:'100%', height:'100%', borderRadius:'50%', objectFit:'cover', display:'block', position:'relative', zIndex:1 }}
           />
           {/* Briefcase badge */}
-          <div style={{ position:'absolute', bottom:'-4px', right:'-4px', width:'26px', height:'26px', background:'#2563eb', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', border:'2px solid #FAF8F2', zIndex:2 }}>
+          <div style={{ position:'absolute', bottom:'-4px', right:'-4px', width:'26px', height:'26px', background:'#2563eb', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', border:'2px solid #ffffff', zIndex:2 }}>
             <Briefcase size={11} color="#fff" />
           </div>
         </div>
 
         {/* Name & role */}
         <div style={{ textAlign:'center', marginBottom:'1rem' }}>
-          <h3 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.2rem', fontWeight:700, color:'#1C1208', margin:'0 0 0.3rem', letterSpacing:'-0.01em' }}>
+          <h3 style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'1.2rem', fontWeight:700, color:'#0b1329', margin:'0 0 0.3rem', letterSpacing:'-0.01em' }}>
             {advisor.name}
           </h3>
           <p style={{ fontFamily:"'Plus Jakarta Sans',serif", fontSize:'0.88rem', fontWeight:600, color:'#2563eb', margin:'0 0 0.4rem', letterSpacing:'0.03em' }}>
             {advisor.role}
           </p>
-          <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:'0.4rem', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.75rem', color:'#9C8B6E', fontStyle:'italic', fontWeight:300 }}>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:'0.4rem', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.75rem', color:'#475569', fontStyle:'italic', fontWeight:300 }}>
             <BookOpen size={12} color="#2563eb" />
             {advisor.expertise}
           </div>
         </div>
 
         {/* Divider */}
-        <div style={{ height:'1px', background:hovered?'linear-gradient(90deg,transparent,#2563eb50,transparent)':'#EDE4CC', marginBottom:'1rem', transition:'background 0.3s' }} />
+        <div style={{ height:'1px', background:hovered?'linear-gradient(90deg,transparent,#2563eb50,transparent)':'rgba(37, 99, 235, 0.15)', marginBottom:'1rem', transition:'background 0.3s' }} />
 
         {/* Bio */}
-        <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.82rem', color:'#6B5C3E', lineHeight:1.8, marginBottom:'1.25rem', fontWeight:300 }}>
+        <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.82rem', color:'#475569', lineHeight:1.8, marginBottom:'1.25rem', fontWeight:300 }}>
           {advisor.bio}
         </p>
 
@@ -320,7 +320,7 @@ function AdvisorCard({ advisor, index }) {
               style={{ display:'flex', alignItems:'flex-start', gap:'0.6rem', marginBottom:'0.45rem' }}
             >
               <span style={{ marginTop:'0.45rem', width:5, height:5, borderRadius:'50%', background:'#2563eb', flexShrink:0, display:'inline-block' }} />
-              <span style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.8rem', color:'#7A6040', fontWeight:300, lineHeight:1.6 }}>
+              <span style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.8rem', color:'#475569', fontWeight:300, lineHeight:1.6 }}>
                 {ach}
               </span>
             </motion.div>

@@ -213,7 +213,7 @@ function SectionHeader({ eyebrow, title, subtitle, center = true }) {
         fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)",
         fontWeight: 700,
-        color: "#0f172a",
+        color: "#0b1329",
         letterSpacing: "-0.02em",
         margin: "0 0 0.85rem",
         lineHeight: 1.2,
@@ -222,7 +222,7 @@ function SectionHeader({ eyebrow, title, subtitle, center = true }) {
         <p style={{
           fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "0.92rem",
-          color: "rgba(90,65,40,0.55)",
+          color: "rgba(71, 85, 105,0.55)",
           maxWidth: center ? "520px" : "none",
           margin: center ? "0 auto" : 0,
           lineHeight: 1.8,
@@ -257,7 +257,7 @@ export default function ExpertConsultancyServices() {
   }, []);
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#f8fafc", color: "#0f172a" }}>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#ffffff", color: "#0b1329" }}>
       <style>{`
         @keyframes accentShimmer {
           0%   { background-position: -200% center; }
@@ -272,7 +272,7 @@ export default function ExpertConsultancyServices() {
           to   { transform: translate(-50%, -50%) rotate(360deg); }
         }
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-track { background: #ffffff; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 1px; }
       `}</style>
 
@@ -293,7 +293,7 @@ export default function ExpertConsultancyServices() {
             padding: "7rem 2rem 5rem",
             textAlign: "center",
             overflow: "hidden",
-            borderBottom: "1px solid rgba(100, 116, 139,0.1)",
+            borderBottom: "1px solid rgba(71, 85, 105,0.1)",
           }}
         >
           {/* Grid */}
@@ -414,14 +414,14 @@ export default function ExpertConsultancyServices() {
               fontWeight: 700,
               lineHeight: 1.04,
               letterSpacing: "-0.025em",
-              color: "#0f172a",
+              color: "#0b1329",
               margin: "0 0 0.5rem",
             }}>
               Expert Consultancy
               <br />
               <span style={{
                 fontStyle: "italic",
-                background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 38%, #1d4ed8 72%, #2563eb 100%)",
+                background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 38%, #3b82f6 72%, #2563eb 100%)",
                 backgroundSize: "200% auto",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -436,7 +436,7 @@ export default function ExpertConsultancyServices() {
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "clamp(1.1rem, 2.2vw, 1.5rem)",
               fontStyle: "italic",
-              color: "rgba(90,65,40,0.5)",
+              color: "rgba(71, 85, 105,0.5)",
               margin: "0.5rem 0 0.25rem",
             }}>
               From Ideas to Impact
@@ -445,7 +445,7 @@ export default function ExpertConsultancyServices() {
             <p style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "0.92rem",
-              color: "rgba(90,65,40,0.5)",
+              color: "rgba(71, 85, 105,0.5)",
               maxWidth: "620px",
               margin: "1.25rem auto 2.5rem",
               lineHeight: 1.85,
@@ -480,7 +480,7 @@ export default function ExpertConsultancyServices() {
                   <div style={{
                     fontFamily: "'Plus Jakarta Sans', sans-serif",
                     fontSize: "0.55rem",
-                    color: "rgba(90,65,40,0.38)",
+                    color: "rgba(71, 85, 105,0.38)",
                     letterSpacing: "0.16em",
                     textTransform: "uppercase",
                     marginTop: "0.3rem",
@@ -498,13 +498,13 @@ export default function ExpertConsultancyServices() {
           background: "rgba(37, 99, 235,0.03)",
           padding: "3rem 2rem",
           textAlign: "center",
-          borderBottom: "1px solid rgba(100, 116, 139,0.1)",
+          borderBottom: "1px solid rgba(71, 85, 105,0.1)",
         }}>
           <p style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "clamp(1rem, 2.3vw, 1.4rem)",
             fontStyle: "italic",
-            color: "rgba(90,65,40,0.58)",
+            color: "rgba(71, 85, 105,0.58)",
             maxWidth: "780px",
             margin: "0 auto",
             lineHeight: 1.75,
@@ -528,8 +528,8 @@ export default function ExpertConsultancyServices() {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
             gap: "1px",
-            background: "rgba(100, 116, 139,0.1)",
-            border: "1px solid rgba(100, 116, 139,0.1)",
+            background: "rgba(71, 85, 105,0.1)",
+            border: "1px solid rgba(71, 85, 105,0.1)",
             borderRadius: "2px",
             overflow: "hidden",
           }}>
@@ -542,8 +542,8 @@ export default function ExpertConsultancyServices() {
         {/* ── CONSULTANCY SERVICES ── */}
         <section style={{
           background: "rgba(37, 99, 235,0.03)",
-          borderTop: "1px solid rgba(100, 116, 139,0.1)",
-          borderBottom: "1px solid rgba(100, 116, 139,0.1)",
+          borderTop: "1px solid rgba(71, 85, 105,0.1)",
+          borderBottom: "1px solid rgba(71, 85, 105,0.1)",
           padding: "5rem 2rem",
         }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
@@ -593,7 +593,7 @@ export default function ExpertConsultancyServices() {
 
         {/* ── WHAT YOU GAIN ── */}
         <section style={{
-          background: "#0f172a",
+          background: "#0b1329",
           borderTop: "1px solid rgba(37, 99, 235,0.15)",
           padding: "5rem 2rem",
         }}>
@@ -613,14 +613,14 @@ export default function ExpertConsultancyServices() {
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)",
                   fontWeight: 700,
-                  color: "#E8D9C0",
+                  color: "rgba(255, 255, 255, 0.85)",
                   letterSpacing: "-0.02em",
                   margin: "0 0 0.75rem",
                 }}>What You Gain</h2>
                 <p style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.88rem",
-                  color: "rgba(232,217,192,0.4)",
+                  color: "rgba(255, 255, 255,0.4)",
                   fontWeight: 300,
                 }}>Transform your ideas into impactful solutions with expert guidance.</p>
               </div>
@@ -670,8 +670,8 @@ export default function ExpertConsultancyServices() {
         {/* ── HIGHLIGHT PROJECTS ── */}
         <section style={{
           background: "rgba(37, 99, 235,0.03)",
-          borderTop: "1px solid rgba(100, 116, 139,0.1)",
-          borderBottom: "1px solid rgba(100, 116, 139,0.1)",
+          borderTop: "1px solid rgba(71, 85, 105,0.1)",
+          borderBottom: "1px solid rgba(71, 85, 105,0.1)",
           padding: "5rem 2rem",
         }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
@@ -731,7 +731,7 @@ export default function ExpertConsultancyServices() {
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)",
                 fontWeight: 700,
-                color: "#0f172a",
+                color: "#0b1329",
                 letterSpacing: "-0.02em",
                 margin: "0 0 0.85rem",
                 lineHeight: 1.2,
@@ -741,7 +741,7 @@ export default function ExpertConsultancyServices() {
               <p style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.92rem",
-                color: "rgba(90,65,40,0.55)",
+                color: "rgba(71, 85, 105,0.55)",
                 marginBottom: "2.25rem",
                 lineHeight: 1.75,
                 fontWeight: 300,
@@ -768,7 +768,7 @@ export default function ExpertConsultancyServices() {
                     display: "inline-block",
                     transition: "background 0.3s ease",
                   }}
-                  onMouseEnter={e => e.currentTarget.style.background = "#1d4ed8"}
+                  onMouseEnter={e => e.currentTarget.style.background = "#3b82f6"}
                   onMouseLeave={e => e.currentTarget.style.background = "#2563eb"}
                 >
                   Request Consultation
@@ -817,7 +817,7 @@ function ExpertiseCard({ area, index }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#ffffff",
         padding: "2rem 2rem 2rem 2.25rem",
         position: "relative",
         overflow: "hidden",
@@ -863,7 +863,7 @@ function ExpertiseCard({ area, index }) {
       <h3 style={{
         fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "1.08rem", fontWeight: 700,
-        color: "#0f172a", margin: "0 0 0.6rem",
+        color: "#0b1329", margin: "0 0 0.6rem",
         letterSpacing: "-0.01em", lineHeight: 1.3,
       }}>{area.title}</h3>
 
@@ -896,8 +896,8 @@ function ServiceCard({ service }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
-        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.35)" : "rgba(100, 116, 139,0.15)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#ffffff",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.35)" : "rgba(71, 85, 105,0.15)"}`,
         borderRadius: "2px",
         padding: "1.75rem",
         position: "relative",
@@ -918,14 +918,14 @@ function ServiceCard({ service }) {
         <h3 style={{
           fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "1rem", fontWeight: 700,
-          color: "#0f172a", margin: 0, letterSpacing: "-0.01em",
+          color: "#0b1329", margin: 0, letterSpacing: "-0.01em",
         }}>{service.title}</h3>
       </div>
 
       <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "0.45rem" }}>
         {service.points.map((point, i) => (
           <li key={i} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
-            <CheckCircle2 size={12} style={{ color: "#6B9E5E", flexShrink: 0, marginTop: "0.2rem" }} />
+            <CheckCircle2 size={12} style={{ color: "#3b82f6", flexShrink: 0, marginTop: "0.2rem" }} />
             <span style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "0.78rem", color: "#475569",
@@ -945,8 +945,8 @@ function ProcessCard({ step, index, isLast }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
-        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.35)" : "rgba(100, 116, 139,0.15)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#ffffff",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.35)" : "rgba(71, 85, 105,0.15)"}`,
         borderRadius: "2px",
         padding: "2rem 1.75rem",
         position: "relative",
@@ -979,7 +979,7 @@ function ProcessCard({ step, index, isLast }) {
       <h3 style={{
         fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "1rem", fontWeight: 700,
-        color: "#0f172a", margin: "0 0 0.5rem", lineHeight: 1.3,
+        color: "#0b1329", margin: "0 0 0.5rem", lineHeight: 1.3,
       }}>{step.title}</h3>
       <p style={{
         fontFamily: "'Plus Jakarta Sans', sans-serif",
@@ -1014,7 +1014,7 @@ function BenefitRow({ text, dark }) {
         padding: "1.25rem 1.5rem",
         background: hovered
           ? dark ? "rgba(37, 99, 235,0.08)" : "rgba(37, 99, 235,0.04)"
-          : dark ? "rgba(255,255,255,0.02)" : "#f8fafc",
+          : dark ? "rgba(255,255,255,0.02)" : "#ffffff",
         transition: "background 0.3s ease",
         cursor: "default",
       }}
@@ -1023,7 +1023,7 @@ function BenefitRow({ text, dark }) {
       <span style={{
         fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "0.85rem",
-        color: dark ? "rgba(232,217,192,0.75)" : "#5C4A32",
+        color: dark ? "rgba(255, 255, 255,0.75)" : "#475569",
         fontWeight: 400,
         letterSpacing: "0.02em",
       }}>{text}</span>
@@ -1038,8 +1038,8 @@ function AudienceCard({ audience }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
-        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.35)" : "rgba(100, 116, 139,0.15)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#ffffff",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.35)" : "rgba(71, 85, 105,0.15)"}`,
         borderRadius: "2px",
         padding: "2.25rem 2rem",
         position: "relative",
@@ -1072,7 +1072,7 @@ function AudienceCard({ audience }) {
       <h3 style={{
         fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "1.15rem", fontWeight: 700,
-        color: "#0f172a", margin: "0 0 1rem",
+        color: "#0b1329", margin: "0 0 1rem",
       }}>{audience.title}</h3>
 
       <div style={{ height: "1px", background: "rgba(37, 99, 235,0.18)", marginBottom: "1rem", width: hovered ? "60%" : "36%", margin: "0 auto 1rem", transition: "width 0.4s ease" }} />
@@ -1096,8 +1096,8 @@ function ProjectCard({ project }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? "rgba(37, 99, 235,0.06)" : "#f8fafc",
-        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(100, 116, 139,0.15)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.06)" : "#ffffff",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(71, 85, 105,0.15)"}`,
         borderRadius: "2px",
         padding: "1.75rem",
         position: "relative",
@@ -1105,7 +1105,7 @@ function ProjectCard({ project }) {
         cursor: "pointer",
         transition: "background 0.3s, border-color 0.3s, transform 0.35s, box-shadow 0.35s",
         transform: hovered ? "translateY(-4px)" : "translateY(0)",
-        boxShadow: hovered ? "0 14px 36px rgba(100, 116, 139,0.1)" : "none",
+        boxShadow: hovered ? "0 14px 36px rgba(71, 85, 105,0.1)" : "none",
       }}
     >
       <div style={{
@@ -1116,7 +1116,7 @@ function ProjectCard({ project }) {
       }} />
 
       <div style={{ position: "absolute", top: "1rem", right: "1rem" }}>
-        <TrendingUp size={18} style={{ color: hovered ? "#2563eb" : "rgba(100, 116, 139,0.25)", transition: "color 0.3s" }} />
+        <TrendingUp size={18} style={{ color: hovered ? "#2563eb" : "rgba(71, 85, 105,0.25)", transition: "color 0.3s" }} />
       </div>
 
       <div style={{
@@ -1132,7 +1132,7 @@ function ProjectCard({ project }) {
       <h3 style={{
         fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "1rem", fontWeight: 700,
-        color: "#0f172a", margin: 0,
+        color: "#0b1329", margin: 0,
         lineHeight: 1.35, letterSpacing: "-0.01em",
       }}>{project.title}</h3>
 

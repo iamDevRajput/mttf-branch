@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Auth() {
@@ -103,7 +103,7 @@ export default function Auth() {
         .auth-overlay {
           position: fixed;
           inset: 0;
-          background: rgba(20, 16, 8, 0.72);
+          background: rgba(11, 19, 41, 0.72);
           backdrop-filter: blur(6px);
           display: flex;
           align-items: center;
@@ -114,13 +114,13 @@ export default function Auth() {
         }
 
         .auth-modal {
-          background: #fef9ef;
+          background: #ffffff;
           width: 100%;
           max-width: 480px;
           max-height: 90vh;
           overflow-y: auto;
           position: relative;
-          box-shadow: 0 32px 80px rgba(0,0,0,0.28), 0 0 0 1px rgba(185,148,60,0.15);
+          box-shadow: 0 32px 80px rgba(0,0,0,0.28), 0 0 0 1px rgba(37, 99, 235,0.15);
           animation: modalIn 0.4s cubic-bezier(0.16,1,0.3,1) both;
         }
 
@@ -131,7 +131,7 @@ export default function Auth() {
 
         .auth-modal-topbar {
           height: 3px;
-          background: linear-gradient(90deg, #b9943c, #e8c96a, #b9943c);
+          background: linear-gradient(90deg, #2563eb, #60a5fa, #2563eb);
         }
 
         .auth-modal-body { padding: 40px 44px 44px; }
@@ -140,53 +140,53 @@ export default function Auth() {
           position: absolute; top: 18px; left: 20px;
           display: flex; align-items: center; gap: 6px;
           background: none; border: none; cursor: pointer;
-          color: #8a7a5a; font-family: 'Plus Jakarta Sans', sans-serif;
+          color: #475569; font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 10px; font-weight: 500; letter-spacing: 1.5px;
           text-transform: uppercase; transition: color 0.2s; padding: 0;
         }
-        .auth-back:hover { color: #b9943c; }
+        .auth-back:hover { color: #2563eb; }
         .auth-back svg { transition: transform 0.2s; }
         .auth-back:hover svg { transform: translateX(-3px); }
 
         .auth-close {
           position: absolute; top: 18px; right: 20px;
           background: none; border: none; cursor: pointer;
-          color: #8a7a5a; font-size: 20px; line-height: 1;
+          color: #475569; font-size: 20px; line-height: 1;
           transition: color 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;
         }
-        .auth-close:hover { color: #1a1610; }
+        .auth-close:hover { color: #0b1329; }
 
         .auth-eyebrow {
           font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px;
           font-weight: 400; letter-spacing: 2.5px; text-transform: uppercase;
-          color: #b9943c; margin-bottom: 8px; text-align: center;
+          color: #2563eb; margin-bottom: 8px; text-align: center;
         }
 
         .auth-title {
           font-family: 'Plus Jakarta Sans', sans-serif; font-size: 30px;
-          font-weight: 500; color: #1a1610; text-align: center;
+          font-weight: 500; color: #0b1329; text-align: center;
           line-height: 1.15; margin-bottom: 28px;
         }
 
         .auth-toggle-wrap {
-          display: flex; background: #f0e8d4; padding: 4px;
-          margin-bottom: 32px; border: 1px solid rgba(185,148,60,0.2);
+          display: flex; background: rgba(37, 99, 235, 0.06); padding: 4px;
+          margin-bottom: 32px; border: 1px solid rgba(37, 99, 235,0.2);
         }
 
         .auth-toggle-btn {
           flex: 1; padding: 9px 0; border: none; background: none;
           font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 500;
-          letter-spacing: 1.6px; text-transform: uppercase; color: #8a7a5a;
+          letter-spacing: 1.6px; text-transform: uppercase; color: #475569;
           cursor: pointer; transition: all 0.25s ease;
         }
-        .auth-toggle-btn.active { background: #1a1610; color: #f0e4c4; }
+        .auth-toggle-btn.active { background: #0b1329; color: #ffffff; }
 
         .auth-field { margin-bottom: 18px; }
 
         .auth-label {
           display: block; font-size: 10px; font-weight: 500;
           letter-spacing: 1.8px; text-transform: uppercase;
-          color: #8a7a5a; margin-bottom: 8px;
+          color: #475569; margin-bottom: 8px;
         }
 
         .auth-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
@@ -195,46 +195,46 @@ export default function Auth() {
 
         .auth-input {
           width: 100%; padding: 12px 16px; background: #fff;
-          border: 1px solid rgba(185,148,60,0.25); border-radius: 0;
+          border: 1px solid rgba(37, 99, 235,0.25); border-radius: 0;
           font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13.5px;
-          font-weight: 300; color: #1a1610; outline: none; transition: border-color 0.25s;
+          font-weight: 300; color: #0b1329; outline: none; transition: border-color 0.25s;
         }
-        .auth-input::placeholder { color: #bfb49a; }
-        .auth-input:focus { border-color: #b9943c; }
+        .auth-input::placeholder { color: #475569; }
+        .auth-input:focus { border-color: #2563eb; }
         .auth-input.with-btn { padding-right: 90px; }
 
         .auth-verify-btn {
           position: absolute; right: 0; top: 0; bottom: 0; padding: 0 18px;
-          background: #b9943c; border: none; color: #fff;
+          background: #2563eb; border: none; color: #fff;
           font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 500;
           letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; transition: background 0.2s;
         }
-        .auth-verify-btn:hover { background: #9a7a2e; }
+        .auth-verify-btn:hover { background: #3b82f6; }
 
         .mem-type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
 
         .mem-type-card {
-          padding: 16px; border: 1.5px solid rgba(185,148,60,0.25);
+          padding: 16px; border: 1.5px solid rgba(37, 99, 235,0.25);
           background: #fff; cursor: pointer; text-align: center; transition: all 0.22s ease;
         }
-        .mem-type-card.selected { border-color: #b9943c; background: rgba(185,148,60,0.07); }
+        .mem-type-card.selected { border-color: #2563eb; background: rgba(37, 99, 235,0.07); }
 
         .mem-type-name {
           font-family: 'Plus Jakarta Sans', sans-serif; font-size: 17px;
-          font-weight: 600; color: #1a1610; display: block; margin-bottom: 3px;
+          font-weight: 600; color: #0b1329; display: block; margin-bottom: 3px;
         }
-        .mem-type-desc { font-size: 11px; color: #8a7a5a; letter-spacing: 0.5px; }
+        .mem-type-desc { font-size: 11px; color: #475569; letter-spacing: 0.5px; }
 
         .auth-select {
           width: 100%; padding: 12px 16px; background: #fff;
-          border: 1px solid rgba(185,148,60,0.25); border-radius: 0;
+          border: 1px solid rgba(37, 99, 235,0.25); border-radius: 0;
           font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13.5px; font-weight: 300;
-          color: #1a1610; outline: none; appearance: none; -webkit-appearance: none;
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1L6 7L11 1' stroke='%23b9943c' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+          color: #0b1329; outline: none; appearance: none; -webkit-appearance: none;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1L6 7L11 1' stroke='%232563eb' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
           background-repeat: no-repeat; background-position: right 16px center;
           cursor: pointer; transition: border-color 0.25s;
         }
-        .auth-select:focus { border-color: #b9943c; }
+        .auth-select:focus { border-color: #2563eb; }
 
         .inst-reveal { animation: revealDown 0.3s cubic-bezier(0.16,1,0.3,1) both; }
         @keyframes revealDown {
@@ -244,34 +244,34 @@ export default function Auth() {
 
         .auth-divider {
           height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(185,148,60,0.3), transparent);
+          background: linear-gradient(90deg, transparent, rgba(37, 99, 235,0.3), transparent);
           margin: 24px 0;
         }
 
         .auth-error {
-          background: #fff0f0; border: 1px solid #f5c0c0;
-          color: #c0392b; font-size: 12px; padding: 10px 14px;
+          background: rgba(37, 99, 235, 0.08); border: 1px solid rgba(37, 99, 235, 0.25);
+          color: #2563eb; font-size: 12px; padding: 10px 14px;
           margin-bottom: 16px; text-align: center; letter-spacing: 0.3px;
         }
 
         .auth-submit {
-          width: 100%; padding: 14px; background: #1a1610;
-          border: 1px solid #1a1610; color: #f0e4c4;
+          width: 100%; padding: 14px; background: #0b1329;
+          border: 1px solid #0b1329; color: #ffffff;
           font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 500;
           letter-spacing: 2px; text-transform: uppercase; cursor: pointer;
           transition: all 0.3s ease; position: relative; overflow: hidden; margin-top: 4px;
         }
         .auth-submit::before {
           content: ''; position: absolute; inset: 0;
-          background: #b9943c; transform: translateX(-100%); transition: transform 0.35s ease;
+          background: #2563eb; transform: translateX(-100%); transition: transform 0.35s ease;
         }
         .auth-submit:hover::before { transform: translateX(0); }
         .auth-submit span { position: relative; z-index: 1; }
         .auth-submit:disabled { opacity: 0.6; cursor: not-allowed; }
 
-        .auth-footer-link { text-align: center; margin-top: 20px; font-size: 12px; color: #8a7a5a; }
+        .auth-footer-link { text-align: center; margin-top: 20px; font-size: 12px; color: #475569; }
         .auth-footer-link button {
-          background: none; border: none; color: #b9943c;
+          background: none; border: none; color: #2563eb;
           font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px;
           cursor: pointer; text-decoration: underline; text-underline-offset: 3px;
         }
@@ -279,28 +279,28 @@ export default function Auth() {
         .mem-welcome { text-align: center; padding: 16px 0 8px; }
         .mem-icon {
           width: 56px; height: 56px; margin: 0 auto 16px;
-          border: 1.5px solid #b9943c; display: flex; align-items: center; justify-content: center;
+          border: 1.5px solid #2563eb; display: flex; align-items: center; justify-content: center;
         }
 
         .mem-pay-btn {
-          width: 100%; padding: 16px; background: #b9943c; border: none; color: #fff;
+          width: 100%; padding: 16px; background: #2563eb; border: none; color: #fff;
           font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 500;
           letter-spacing: 1.8px; text-transform: uppercase; cursor: pointer;
           margin-top: 24px; transition: background 0.25s;
         }
-        .mem-pay-btn:hover { background: #9a7a2e; }
+        .mem-pay-btn:hover { background: #3b82f6; }
 
         .mem-logout {
-          background: none; border: none; color: #8a7a5a;
+          background: none; border: none; color: #475569;
           font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; cursor: pointer;
           text-decoration: underline; text-underline-offset: 3px;
           display: block; margin: 16px auto 0; letter-spacing: 0.5px; transition: color 0.2s;
         }
-        .mem-logout:hover { color: #1a1610; }
+        .mem-logout:hover { color: #0b1329; }
 
         .auth-modal::-webkit-scrollbar { width: 4px; }
         .auth-modal::-webkit-scrollbar-track { background: transparent; }
-        .auth-modal::-webkit-scrollbar-thumb { background: rgba(185,148,60,0.3); }
+        .auth-modal::-webkit-scrollbar-thumb { background: rgba(37, 99, 235,0.3); }
       `}</style>
 
       <div className="auth-overlay">
@@ -323,10 +323,10 @@ export default function Auth() {
                 <div className="mem-welcome">
                   <div className="mem-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#b9943c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <p style={{ color: "#4a3f2a", fontSize: "13.5px", lineHeight: 1.7, fontWeight: 300 }}>
+                  <p style={{ color: "#475569", fontSize: "13.5px", lineHeight: 1.7, fontWeight: 300 }}>
                     Your membership is active. Complete your onboarding by paying the membership fee to unlock all programs and resources.
                   </p>
                   <button className="mem-pay-btn">Pay ₹2,000 Membership Fee</button>

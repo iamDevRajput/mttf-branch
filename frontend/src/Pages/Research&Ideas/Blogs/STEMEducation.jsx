@@ -18,7 +18,7 @@ const paragraphs = [
     tag: "Methodology",
     title: "How Researchers Work",
     body: "In computational science, researchers use computational tools and techniques to simulate and analyze systems that are too complex or impractical to study through traditional analytical approaches. By leveraging computational power, scientists can explore a wide range of scenarios, analyze large datasets, and make predictions or gain insights into complex phenomena.",
-    accent: "#1d4ed8",
+    accent: "#3b82f6",
     highlight: "leveraging computational power",
   },
   {
@@ -45,7 +45,7 @@ const paragraphs = [
     tag: "Impact",
     title: "Driving Innovation Forward",
     body: "Through computational science, researchers can tackle complex problems, gain a deeper understanding of natural phenomena, make predictions, optimize designs, and contribute to scientific advancements. It offers a powerful and versatile set of tools that enhance research capabilities, promote interdisciplinary collaboration, and drive innovation in diverse domains.",
-    accent: "#1d4ed8",
+    accent: "#3b82f6",
     highlight: "interdisciplinary collaboration",
   },
 ];
@@ -73,9 +73,9 @@ function OrbitCanvas() {
     const cy = () => canvas.height / 2;
 
     const rings = [
-      { radius: 90, speed: 0.004, nodes: 6, color: "#1d4ed8" },
+      { radius: 90, speed: 0.004, nodes: 6, color: "#3b82f6" },
       { radius: 145, speed: -0.003, nodes: 9, color: "#60a5fa" },
-      { radius: 195, speed: 0.002, nodes: 12, color: "#9B6B2A" },
+      { radius: 195, speed: 0.002, nodes: 12, color: "#2563eb" },
     ];
 
     const draw = () => {
@@ -120,7 +120,7 @@ function OrbitCanvas() {
 
       ctx.beginPath();
       ctx.arc(cx(), cy(), 8, 0, Math.PI * 2);
-      ctx.fillStyle = "#1d4ed8";
+      ctx.fillStyle = "#3b82f6";
       ctx.globalAlpha = 0.75;
       ctx.fill();
       ctx.globalAlpha = 1;
@@ -150,9 +150,9 @@ function ParagraphCard({ item, index }) {
         alignItems: "flex-start",
         padding: "2.5rem",
         background: hovered ? `${item.accent}10` : "transparent",
-        borderLeft: isEven ? `3px solid ${hovered ? item.accent : "rgba(100,75,20,0.15)"}` : "3px solid transparent",
-        borderRight: !isEven ? `3px solid ${hovered ? item.accent : "rgba(100,75,20,0.15)"}` : "3px solid transparent",
-        borderTop: "1px solid rgba(100,75,20,0.1)",
+        borderLeft: isEven ? `3px solid ${hovered ? item.accent : "rgba(37, 99, 235,0.15)"}` : "3px solid transparent",
+        borderRight: !isEven ? `3px solid ${hovered ? item.accent : "rgba(37, 99, 235,0.15)"}` : "3px solid transparent",
+        borderTop: "1px solid rgba(37, 99, 235,0.1)",
         transition: "all 0.4s cubic-bezier(0.23,1,0.32,1)",
         cursor: "default",
         animationDelay: `${index * 0.12}s`,
@@ -223,7 +223,7 @@ function ParagraphCard({ item, index }) {
           fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "1.3rem",
           fontWeight: 700,
-          color: "#0f172a",
+          color: "#0b1329",
           margin: "0 0 0.85rem",
           letterSpacing: "-0.02em",
           textAlign: isEven ? "left" : "right",
@@ -283,7 +283,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: "#f8fafc", color: "#0f172a" }}>
+    <div className="min-h-screen flex flex-col" style={{ background: "#ffffff", color: "#0b1329" }}>
       <style>{`
         @keyframes slideIn {
           from { opacity: 0; transform: translateX(-20px); }
@@ -298,8 +298,8 @@ export default function App() {
           50% { transform: translateY(-4px); }
         }
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #f8fafc; }
-        ::-webkit-scrollbar-thumb { background: #1d4ed8; }
+        ::-webkit-scrollbar-track { background: #ffffff; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; }
       `}</style>
 
       <Header />
@@ -317,7 +317,7 @@ export default function App() {
           textAlign: "center",
           overflow: "hidden",
           borderBottom: "1px solid rgba(184,150,12,0.18)",
-          background: "linear-gradient(160deg, #f8fafc 0%, #EDE0B8 50%, #F0E8CC 100%)",
+          background: "linear-gradient(160deg, #ffffff 0%, #ffffff 50%, rgba(37, 99, 235, 0.06) 100%)",
         }}>
           <OrbitCanvas />
 
@@ -348,7 +348,7 @@ export default function App() {
               }}>
                 Note · Mar 25, 2026
               </span>
-              <span style={{ width: 4, height: 4, background: "#1d4ed8", borderRadius: "50%", display: "inline-block" }} />
+              <span style={{ width: 4, height: 4, background: "#3b82f6", borderRadius: "50%", display: "inline-block" }} />
               <span style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.62rem",
@@ -367,17 +367,17 @@ export default function App() {
               letterSpacing: "-0.03em",
               marginBottom: "0.5rem",
             }}>
-              <span style={{ color: "#0f172a" }}>Note on</span>
+              <span style={{ color: "#0b1329" }}>Note on</span>
               <br />
               <span style={{
-                background: "linear-gradient(110deg, #2563eb 0%, #1d4ed8 50%, #2563eb 100%)",
+                background: "linear-gradient(110deg, #2563eb 0%, #3b82f6 50%, #2563eb 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}>
                 Computational
               </span>
               <br />
-              <span style={{ color: "#0f172a" }}>Science</span>
+              <span style={{ color: "#0b1329" }}>Science</span>
             </h1>
 
             <div style={{
@@ -396,7 +396,7 @@ export default function App() {
         {/* Discipline Tags */}
         <div style={{
           padding: "2rem",
-          borderBottom: "1px solid rgba(100,75,20,0.1)",
+          borderBottom: "1px solid rgba(37, 99, 235,0.1)",
           background: "rgba(184,150,12,0.03)",
         }}>
           <div style={{
@@ -413,7 +413,7 @@ export default function App() {
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", justifyContent: "center" }}>
             {disciplines.map((d, i) => {
-              const colors = ["#2563eb", "#1d4ed8", "#2563eb", "#3b82f6", "#1d4ed8"];
+              const colors = ["#2563eb", "#3b82f6", "#2563eb", "#3b82f6", "#3b82f6"];
               const color = colors[i % colors.length];
               const isActive = activeTag === d;
               return (
@@ -423,7 +423,7 @@ export default function App() {
                   style={{
                     fontFamily: "'Plus Jakarta Sans', sans-serif",
                     fontSize: "0.7rem",
-                    color: isActive ? "#f8fafc" : color,
+                    color: isActive ? "#ffffff" : color,
                     background: isActive ? color : `${color}10`,
                     border: `1px solid ${color}50`,
                     padding: "0.3rem 0.85rem",
@@ -445,7 +445,7 @@ export default function App() {
         {/* Main Content */}
         <div style={{ maxWidth: "900px", margin: "0 auto", padding: "2rem 1rem 6rem" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "2rem 1.5rem 1rem" }}>
-            <div style={{ flex: 1, height: "1px", background: "rgba(100,75,20,0.12)" }} />
+            <div style={{ flex: 1, height: "1px", background: "rgba(37, 99, 235,0.12)" }} />
             <span style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "0.65rem",
@@ -457,7 +457,7 @@ export default function App() {
             }}>
               05 Key Sections
             </span>
-            <div style={{ flex: 1, height: "1px", background: "rgba(100,75,20,0.12)" }} />
+            <div style={{ flex: 1, height: "1px", background: "rgba(37, 99, 235,0.12)" }} />
           </div>
 
           {paragraphs.map((item, i) => (
@@ -478,7 +478,7 @@ export default function App() {
             fontStyle: "italic",
             fontSize: "clamp(1.1rem, 3vw, 1.7rem)",
             fontWeight: 700,
-            color: "rgba(28,21,10,0.82)",
+            color: "rgba(11, 19, 41,0.82)",
             maxWidth: "700px",
             margin: "0 auto",
             lineHeight: 1.5,
@@ -487,7 +487,7 @@ export default function App() {
             "A powerful and versatile set of tools that{" "}
             <span style={{ color: "#2563eb" }}>enhance research capabilities</span>,{" "}
             promote{" "}
-            <span style={{ color: "#1d4ed8" }}>interdisciplinary collaboration</span>, and drive{" "}
+            <span style={{ color: "#3b82f6" }}>interdisciplinary collaboration</span>, and drive{" "}
             <span style={{ color: "#2563eb" }}>innovation in diverse domains</span>."
           </div>
         </div>

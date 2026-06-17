@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 
 function MTTFContact() {
@@ -47,8 +47,8 @@ function MTTFContact() {
           text-decoration: none;
         }
         .contact-btn:hover {
-          background: #1d4ed8;
-          border-color: #1d4ed8;
+          background: #3b82f6;
+          border-color: #3b82f6;
           transform: translateY(-2px);
           box-shadow: 0 12px 28px rgba(37, 99, 235,0.3);
         }
@@ -56,7 +56,7 @@ function MTTFContact() {
 
       <div style={{
         minHeight: '100vh',
-        background: 'linear-gradient(158deg, #f8fafc 0%, #f1f5f9 55%, #e2e8f0 100%)',
+        background: 'linear-gradient(158deg, #ffffff 0%, #ffffff 55%, rgba(37, 99, 235, 0.15) 100%)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -136,7 +136,7 @@ function MTTFContact() {
         <div style={{
           position: 'relative', zIndex: 1,
           background: '#ffffff',
-          border: '1px solid #e2e8f0',
+          border: '1px solid rgba(37, 99, 235, 0.15)',
           borderRadius: '4px',
           padding: '3.5rem 3rem',
           maxWidth: '560px',
@@ -162,7 +162,7 @@ function MTTFContact() {
           {/* Icon */}
           <div style={{
             width: '64px', height: '64px',
-            background: '#F5EFD8', border: '1px solid #E8D89A',
+            background: 'rgba(37, 99, 235, 0.06)', border: '1px solid rgba(37, 99, 235, 0.15)',
             borderRadius: '4px',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             margin: '0 auto 1.75rem',
@@ -192,7 +192,7 @@ function MTTFContact() {
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: 'clamp(1.8rem, 4vw, 2.6rem)',
             fontWeight: 700, letterSpacing: '-0.02em',
-            color: '#0f172a', margin: '0 0 0.25rem', lineHeight: 1.1,
+            color: '#0b1329', margin: '0 0 0.25rem', lineHeight: 1.1,
           }}>
             Contact
           </h2>
@@ -202,7 +202,7 @@ function MTTFContact() {
             fontWeight: 700, letterSpacing: '-0.02em',
             margin: '0 0 1.25rem', lineHeight: 1.1,
             fontStyle: 'italic',
-            background: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 40%, #60a5fa 100%)',
+            background: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 40%, #60a5fa 100%)',
             backgroundSize: '200% auto',
             WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
             animation: 'shimmer 4s linear infinite',
@@ -220,7 +220,7 @@ function MTTFContact() {
           {/* Body */}
           <p style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '0.9rem',
-            color: '#6B5C3E', lineHeight: 1.8, margin: '0 0 2.5rem', fontWeight: 300,
+            color: '#475569', lineHeight: 1.8, margin: '0 0 2.5rem', fontWeight: 300,
           }}>
             This page is linked from the MTTF About section. For the full contact
             experience, please visit our main contact page.

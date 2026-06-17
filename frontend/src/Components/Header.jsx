@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+﻿import React, { useState, useEffect, useRef } from "react";
 import OurProgramsMegaMenu from "./OurProgramsMegaMenu";
 import ResearchIdeasMegaMenu from "./ResearchIdeasMegaMenu";
 import AboutFoundationMegaMenu from "./AboutFoundationMegaMenu";
@@ -50,7 +50,7 @@ export default function Header() {
         <div
           className={`fixed top-0 left-0 right-0 z-50 transition-all duration-[400ms] ${
             scrolled
-              ? "bg-white/95 backdrop-blur-xl shadow-sm border-b border-slate-100/80"
+              ? "bg-white/95 backdrop-blur-xl shadow-sm border-b border-[rgba(37,99,235,0.08)]/80"
               : "bg-white/90 backdrop-blur-[8px]"
           }`}
         >
@@ -61,10 +61,10 @@ export default function Header() {
             <Link to="/" className="flex items-center gap-3 no-underline">
 
               {/* Logo mark box */}
-              <div className="w-[38px] h-[38px] border border-blue-600 flex items-center justify-center relative rounded-md transition-all duration-300 hover:scale-105">
-                <span className="absolute inset-[3px] border border-blue-600/20 rounded-sm" />
+              <div className="w-[38px] h-[38px] border border-[#2563eb] flex items-center justify-center relative rounded-md transition-all duration-300 hover:scale-105">
+                <span className="absolute inset-[3px] border border-[#2563eb]/20 rounded-sm" />
                 <span
-                  className="text-[18px] font-bold text-blue-600 tracking-[0.5px] relative z-10"
+                  className="text-[18px] font-bold text-[#2563eb] tracking-[0.5px] relative z-10"
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                 >
                   M
@@ -74,12 +74,12 @@ export default function Header() {
               {/* Logo text */}
               <div className="flex flex-col">
                 <span
-                  className="text-[16px] font-extrabold text-slate-900 tracking-[2.5px] uppercase leading-[1.1]"
+                  className="text-[16px] font-extrabold text-[#0b1329] tracking-[2.5px] uppercase leading-[1.1]"
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                 >
                   MTTF
                 </span>
-                <span className="text-[9.5px] font-medium text-slate-500 tracking-[1.8px] uppercase">
+                <span className="text-[9.5px] font-medium text-[#475569] tracking-[1.8px] uppercase">
                   MathTech Thinking Foundation
                 </span>
               </div>
@@ -109,14 +109,14 @@ export default function Header() {
                         to={item.href}
                         className={`block px-4 py-2 text-[12.5px] font-semibold tracking-[1.4px] uppercase no-underline transition-colors duration-[250ms] relative group ${
                           isActive(item.href)
-                            ? "text-blue-600"
-                            : "text-slate-600 hover:text-blue-600"
+                            ? "text-[#2563eb]"
+                            : "text-[#475569] hover:text-[#2563eb]"
                         }`}
                       >
                         {item.name}
                         {/* Animated underline */}
                         <span
-                          className={`absolute bottom-1 left-4 right-4 h-[2px] bg-blue-600 transition-transform duration-300 origin-left rounded-full ${
+                          className={`absolute bottom-1 left-4 right-4 h-[2px] bg-[#2563eb] transition-transform duration-300 origin-left rounded-full ${
                             isActive(item.href)
                               ? "scale-x-100"
                               : "scale-x-0 group-hover:scale-x-100"
@@ -163,10 +163,10 @@ export default function Header() {
             {/* CTA Button */}
             <Link
               to="/auth"
-              className="hidden md:flex items-center gap-[10px] px-6 py-[11px] bg-blue-600 text-white text-[11px] font-semibold tracking-[1.8px] uppercase no-underline border border-transparent rounded-full shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group hover:bg-blue-700"
+              className="hidden md:flex items-center gap-[10px] px-6 py-[11px] bg-[#2563eb] text-white text-[11px] font-semibold tracking-[1.8px] uppercase no-underline border border-transparent rounded-full shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group hover:bg-[#3b82f6]"
             >
               {/* Slide-in blue background */}
-              <span className="absolute inset-0 bg-blue-800 -translate-x-full group-hover:translate-x-0 transition-transform duration-[350ms] z-0" />
+              <span className="absolute inset-0 bg-[#2563eb] -translate-x-full group-hover:translate-x-0 transition-transform duration-[350ms] z-0" />
               <span className="relative z-10">Join Membership</span>
               <svg className="relative z-10 w-[11px] h-[11px]" viewBox="0 0 12 12" fill="none">
                 <path
@@ -182,7 +182,7 @@ export default function Header() {
           </div>
 
           {/* Thin blue/slate divider */}
-          <div className="h-px bg-gradient-to-r from-transparent via-blue-500/10 to-transparent" />
+          <div className="h-px bg-gradient-to-r from-transparent via-[#2563eb]/10 to-transparent" />
         </div>
       </header>
     </>

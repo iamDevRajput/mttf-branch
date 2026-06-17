@@ -142,7 +142,7 @@ function Card({ section, index }) {
       onMouseLeave={() => setHovered(false)}
       style={{
         background: hovered ? "#ffffff" : "#ffffff",
-        border: `1px solid ${hovered ? "#2563eb" : "#e2e8f0"}`,
+        border: `1px solid ${hovered ? "#2563eb" : "rgba(37, 99, 235, 0.15)"}`,
         borderRadius: "4px",
         padding: "2.25rem",
         position: "relative",
@@ -231,8 +231,8 @@ function Card({ section, index }) {
         <span
           style={{
             fontSize: "1.5rem",
-            background: hovered ? "#FDF5E0" : "#F5EFD8",
-            border: "1px solid #E8D89A",
+            background: hovered ? "#ffffff" : "rgba(37, 99, 235, 0.06)",
+            border: "1px solid rgba(37, 99, 235, 0.15)",
             borderRadius: "4px",
             width: "48px",
             height: "48px",
@@ -251,7 +251,7 @@ function Card({ section, index }) {
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "1.45rem",
             fontWeight: 700,
-            color: "#0f172a",
+            color: "#0b1329",
             margin: 0,
             letterSpacing: "-0.01em",
             lineHeight: 1.2,
@@ -268,7 +268,7 @@ function Card({ section, index }) {
           height: "1px",
           background: hovered
             ? "linear-gradient(90deg, #2563eb40, transparent)"
-            : "#e2e8f0",
+            : "rgba(37, 99, 235, 0.15)",
           marginBottom: "1rem",
           transition: "background 0.3s ease",
         }}
@@ -278,7 +278,7 @@ function Card({ section, index }) {
         style={{
           fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "0.875rem",
-          color: "#6B5C3E",
+          color: "#475569",
           lineHeight: 1.8,
           margin: 0,
           fontWeight: 400,
@@ -302,7 +302,7 @@ export default function App() {
   return (
     <div
       className="min-h-screen flex flex-col"
-      style={{ background: "#f8fafc", color: "#0f172a" }}
+      style={{ background: "#ffffff", color: "#0b1329" }}
     >
       <style>{`
         @keyframes fadeSlideIn {
@@ -323,7 +323,7 @@ export default function App() {
         }
 
         ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-track { background: #ffffff; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
 
         .luxury-btn {
@@ -331,14 +331,14 @@ export default function App() {
           align-items: center;
           gap: 0.5rem;
           padding: 0.75rem 2rem;
-          background: #0f172a;
-          color: #f8fafc;
+          background: #0b1329;
+          color: #ffffff;
           font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.8rem;
           font-weight: 500;
           letter-spacing: 0.12em;
           text-transform: uppercase;
-          border: 1px solid #0f172a;
+          border: 1px solid #0b1329;
           border-radius: 2px;
           cursor: pointer;
           transition: all 0.3s ease;
@@ -365,7 +365,7 @@ export default function App() {
           transform: translateY(-50%);
           height: 32px;
           width: 1px;
-          background: #D8CBA8;
+          background: rgba(37, 99, 235, 0.15);
         }
       `}</style>
 
@@ -384,7 +384,7 @@ export default function App() {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            background: "linear-gradient(160deg, #f8fafc 0%, #f1f5f9 60%, #E5D8AD 100%)",
+            background: "linear-gradient(160deg, #ffffff 0%, #ffffff 60%, rgba(37, 99, 235, 0.06) 100%)",
           }}
         >
           <ParticleCanvas />
@@ -485,7 +485,7 @@ export default function App() {
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.68rem",
                   letterSpacing: "0.22em",
-                  color: "#1d4ed8",
+                  color: "#3b82f6",
                   textTransform: "uppercase",
                   fontWeight: 500,
                 }}
@@ -512,14 +512,14 @@ export default function App() {
                 lineHeight: 1.05,
                 letterSpacing: "-0.02em",
                 marginBottom: "1.5rem",
-                color: "#0f172a",
+                color: "#0b1329",
               }}
             >
               Computing at the
               <br />
               <span
                 style={{
-                  background: "linear-gradient(135deg, #2563eb 0%, #1d4ed8 40%, #60a5fa 100%)",
+                  background: "linear-gradient(135deg, #2563eb 0%, #3b82f6 40%, #60a5fa 100%)",
                   backgroundSize: "200% auto",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -535,7 +535,7 @@ export default function App() {
               style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "1rem",
-                color: "#6B5C3E",
+                color: "#475569",
                 maxWidth: "520px",
                 lineHeight: 1.75,
                 margin: "0 auto 2.5rem",
@@ -561,8 +561,8 @@ export default function App() {
         {/* ── Stats Bar ── */}
         <div
           style={{
-            background: "#FEFCF5",
-            borderBottom: "1px solid #E8DFC4",
+            background: "#ffffff",
+            borderBottom: "1px solid rgba(37, 99, 235, 0.15)",
             padding: "1.75rem 2rem",
             display: "flex",
             justifyContent: "center",
@@ -594,7 +594,7 @@ export default function App() {
                 style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.62rem",
-                  color: "#9C8B6E",
+                  color: "#475569",
                   letterSpacing: "0.14em",
                   textTransform: "uppercase",
                   fontWeight: 500,
@@ -643,21 +643,21 @@ export default function App() {
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "clamp(1.8rem, 3vw, 2.8rem)",
                 fontWeight: 700,
-                color: "#0f172a",
+                color: "#0b1329",
                 margin: 0,
                 letterSpacing: "-0.02em",
                 lineHeight: 1.15,
               }}
             >
               Seven Pillars of AI<br />
-              <span style={{ fontStyle: "italic", color: "#1d4ed8" }}>Computing Excellence</span>
+              <span style={{ fontStyle: "italic", color: "#3b82f6" }}>Computing Excellence</span>
             </h2>
           </div>
           <p
             style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "0.9rem",
-              color: "#6B5C3E",
+              color: "#475569",
               maxWidth: "340px",
               lineHeight: 1.75,
               margin: 0,

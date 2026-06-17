@@ -157,8 +157,8 @@ function BenefitCard({ benefit, index }) {
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(32px)",
         transition: `opacity 0.7s ease ${index * 0.08}s, transform 0.7s ease ${index * 0.08}s, background 0.35s ease, border-color 0.35s ease`,
-        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
-        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.35)" : "rgba(100, 116, 139,0.12)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#ffffff",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.35)" : "rgba(71, 85, 105,0.12)"}`,
         borderRadius: "2px",
         padding: "2rem 2rem 2rem 2.25rem",
         position: "relative",
@@ -205,7 +205,7 @@ function BenefitCard({ benefit, index }) {
         fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "1.15rem",
         fontWeight: 700,
-        color: "#0f172a",
+        color: "#0b1329",
         margin: "0 0 0.75rem",
         letterSpacing: "-0.01em",
         lineHeight: 1.2,
@@ -283,16 +283,16 @@ function PricingCard({ plan, index }) {
           : "translateY(32px)",
         transition: `opacity 0.7s ease ${index * 0.12}s, transform 0.7s ease ${index * 0.12}s, border-color 0.3s ease, box-shadow 0.3s ease`,
         position: "relative",
-        background: plan.featured ? "#0f172a" : "#f8fafc",
+        background: plan.featured ? "#0b1329" : "#ffffff",
         border: plan.featured
           ? "1px solid rgba(37, 99, 235,0.4)"
-          : `1px solid ${hovered ? "rgba(37, 99, 235,0.3)" : "rgba(100, 116, 139,0.15)"}`,
+          : `1px solid ${hovered ? "rgba(37, 99, 235,0.3)" : "rgba(71, 85, 105,0.15)"}`,
         borderRadius: "2px",
         padding: "2.5rem 2rem",
         overflow: "hidden",
         boxShadow: plan.featured
-          ? "0 20px 50px rgba(26,18,10,0.18)"
-          : hovered ? "0 12px 32px rgba(100, 116, 139,0.1)" : "none",
+          ? "0 20px 50px rgba(11, 19, 41,0.18)"
+          : hovered ? "0 12px 32px rgba(71, 85, 105,0.1)" : "none",
         cursor: "default",
         flexShrink: 0,
         flex: plan.featured ? "0 0 calc(34% - 1rem)" : "0 0 calc(28% - 1rem)",
@@ -305,7 +305,7 @@ function PricingCard({ plan, index }) {
         height: plan.featured ? "2px" : "1px",
         background: plan.featured
           ? "linear-gradient(90deg, transparent, #2563eb, #60a5fa, #2563eb, transparent)"
-          : "rgba(100, 116, 139,0.15)",
+          : "rgba(71, 85, 105,0.15)",
       }} />
 
       {/* Tag */}
@@ -317,7 +317,7 @@ function PricingCard({ plan, index }) {
         color: plan.featured ? "#2563eb" : "#475569",
         marginBottom: "1.5rem",
         padding: "0.25rem 0.65rem",
-        border: `1px solid ${plan.featured ? "rgba(37, 99, 235,0.35)" : "rgba(100, 116, 139,0.2)"}`,
+        border: `1px solid ${plan.featured ? "rgba(37, 99, 235,0.35)" : "rgba(71, 85, 105,0.2)"}`,
         display: "inline-block",
         borderRadius: "1px",
         fontWeight: 500,
@@ -329,7 +329,7 @@ function PricingCard({ plan, index }) {
         fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "2rem",
         fontWeight: 700,
-        color: plan.featured ? "#E8D9C0" : "#0f172a",
+        color: plan.featured ? "rgba(255, 255, 255, 0.85)" : "#0b1329",
         marginBottom: "0.25rem",
         letterSpacing: "-0.02em",
       }}>
@@ -339,7 +339,7 @@ function PricingCard({ plan, index }) {
       <div style={{
         fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "0.78rem",
-        color: plan.featured ? "rgba(232,217,192,0.4)" : "rgba(90,65,40,0.45)",
+        color: plan.featured ? "rgba(255, 255, 255,0.4)" : "rgba(71, 85, 105,0.45)",
         marginBottom: "1.75rem",
         letterSpacing: "0.02em",
         fontWeight: 300,
@@ -349,14 +349,14 @@ function PricingCard({ plan, index }) {
 
       <div style={{
         height: "1px",
-        background: plan.featured ? "rgba(37, 99, 235,0.2)" : "rgba(100, 116, 139,0.12)",
+        background: plan.featured ? "rgba(37, 99, 235,0.2)" : "rgba(71, 85, 105,0.12)",
         marginBottom: "1.5rem",
       }} />
 
       <div style={{
         fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "0.6rem",
-        color: plan.featured ? "rgba(232,217,192,0.35)" : "rgba(90,65,40,0.4)",
+        color: plan.featured ? "rgba(255, 255, 255,0.35)" : "rgba(71, 85, 105,0.4)",
         letterSpacing: "0.18em",
         textTransform: "uppercase",
         marginBottom: "0.4rem",
@@ -391,7 +391,7 @@ export default function Institutional() {
   }, []);
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#f8fafc", color: "#0f172a" }}>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#ffffff", color: "#0b1329" }}>
       <style>{`
         @keyframes accentShimmer {
           0% { background-position: -200% center; }
@@ -406,7 +406,7 @@ export default function Institutional() {
           to { transform: translate(-50%, -50%) rotate(360deg); }
         }
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-track { background: #ffffff; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 1px; }
       `}</style>
 
@@ -427,8 +427,8 @@ export default function Institutional() {
             padding: "6rem 2rem",
             textAlign: "center",
             overflow: "hidden",
-            background: "#f8fafc",
-            borderBottom: "1px solid rgba(100, 116, 139,0.1)",
+            background: "#ffffff",
+            borderBottom: "1px solid rgba(71, 85, 105,0.1)",
           }}
         >
           {/* Subtle grid */}
@@ -531,13 +531,13 @@ export default function Institutional() {
               lineHeight: 1,
               letterSpacing: "-0.025em",
               marginBottom: "0.5rem",
-              color: "#0f172a",
+              color: "#0b1329",
             }}>
               Institutional
               <br />
               <span style={{
                 fontStyle: "italic",
-                background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 40%, #1d4ed8 75%, #2563eb 100%)",
+                background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 40%, #3b82f6 75%, #2563eb 100%)",
                 backgroundSize: "200% auto",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -551,7 +551,7 @@ export default function Institutional() {
             <p style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "1rem",
-              color: "rgba(90,65,40,0.55)",
+              color: "rgba(71, 85, 105,0.55)",
               maxWidth: "540px",
               margin: "1.5rem auto 3rem",
               lineHeight: 1.85,
@@ -590,7 +590,7 @@ export default function Institutional() {
                   <div style={{
                     fontFamily: "'Plus Jakarta Sans', sans-serif",
                     fontSize: "0.58rem",
-                    color: "rgba(90,65,40,0.35)",
+                    color: "rgba(71, 85, 105,0.35)",
                     letterSpacing: "0.15em",
                     textTransform: "uppercase",
                     marginTop: "0.3rem",
@@ -616,7 +616,7 @@ export default function Institutional() {
               transition: "all 0.3s ease",
               fontWeight: 500,
             }}
-              onMouseEnter={e => { e.target.style.background = "#1d4ed8"; e.target.style.transform = "translateY(-2px)"; }}
+              onMouseEnter={e => { e.target.style.background = "#3b82f6"; e.target.style.transform = "translateY(-2px)"; }}
               onMouseLeave={e => { e.target.style.background = "#2563eb"; e.target.style.transform = "translateY(0)"; }}
             >
               Contact Now
@@ -626,8 +626,8 @@ export default function Institutional() {
 
         {/* ── INTRO STRIP ── */}
         <section style={{
-          borderTop: "1px solid rgba(100, 116, 139,0.1)",
-          borderBottom: "1px solid rgba(100, 116, 139,0.1)",
+          borderTop: "1px solid rgba(71, 85, 105,0.1)",
+          borderBottom: "1px solid rgba(71, 85, 105,0.1)",
           background: "rgba(37, 99, 235,0.03)",
           padding: "3.5rem 2rem",
           textAlign: "center",
@@ -636,7 +636,7 @@ export default function Institutional() {
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
             fontStyle: "italic",
-            color: "rgba(90,65,40,0.6)",
+            color: "rgba(71, 85, 105,0.6)",
             maxWidth: "820px",
             margin: "0 auto",
             lineHeight: 1.75,
@@ -661,14 +661,14 @@ export default function Institutional() {
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "clamp(1.8rem, 4.5vw, 3rem)",
               fontWeight: 700,
-              color: "#0f172a",
+              color: "#0b1329",
               letterSpacing: "-0.025em",
               margin: 0,
               flexShrink: 0,
             }}>
               Member Benefits
             </h2>
-            <div style={{ flex: 1, height: "1px", background: "rgba(100, 116, 139,0.15)", minWidth: "30px" }} />
+            <div style={{ flex: 1, height: "1px", background: "rgba(71, 85, 105,0.15)", minWidth: "30px" }} />
             <div style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "0.62rem",
@@ -687,13 +687,13 @@ export default function Institutional() {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
             gap: "1px",
-            background: "rgba(100, 116, 139,0.1)",
-            border: "1px solid rgba(100, 116, 139,0.1)",
+            background: "rgba(71, 85, 105,0.1)",
+            border: "1px solid rgba(71, 85, 105,0.1)",
             borderRadius: "2px",
             overflow: "hidden",
           }}>
             {benefits.map((benefit, i) => (
-              <div key={benefit.id} style={{ background: "#f8fafc" }}>
+              <div key={benefit.id} style={{ background: "#ffffff" }}>
                 <BenefitCard benefit={benefit} index={i} />
               </div>
             ))}
@@ -702,7 +702,7 @@ export default function Institutional() {
 
         {/* ── PRICING ── */}
         <section style={{
-          background: "#0f172a",
+          background: "#0b1329",
           borderTop: "1px solid rgba(37, 99, 235,0.15)",
           padding: "5rem 2rem",
         }}>
@@ -724,7 +724,7 @@ export default function Institutional() {
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "clamp(1.8rem, 4.5vw, 3rem)",
                 fontWeight: 700,
-                color: "#E8D9C0",
+                color: "rgba(255, 255, 255, 0.85)",
                 letterSpacing: "-0.025em",
                 marginBottom: "1rem",
               }}>
@@ -733,7 +733,7 @@ export default function Institutional() {
               <p style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.9rem",
-                color: "rgba(232,217,192,0.4)",
+                color: "rgba(255, 255, 255,0.4)",
                 maxWidth: "520px",
                 margin: "0 auto",
                 lineHeight: 1.85,
@@ -769,7 +769,7 @@ export default function Institutional() {
               <p style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.85rem",
-                color: "rgba(232,217,192,0.4)",
+                color: "rgba(255, 255, 255,0.4)",
                 lineHeight: 1.85,
                 margin: "0 auto",
                 maxWidth: "720px",

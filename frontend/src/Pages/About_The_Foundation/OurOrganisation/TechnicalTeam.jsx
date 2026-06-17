@@ -89,14 +89,14 @@ function MemberCard({ member, index }) {
           ? hovered ? "translateY(-6px)" : "translateY(0)"
           : "translateY(32px)",
         transition: `opacity 0.65s ease ${index * 0.12}s, transform 0.5s ease, box-shadow 0.35s ease`,
-        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
-        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(100, 116, 139,0.15)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#ffffff",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(71, 85, 105,0.15)"}`,
         borderRadius: "2px",
         overflow: "hidden",
         cursor: "default",
         display: "flex",
         flexDirection: "column",
-        boxShadow: hovered ? "0 20px 48px rgba(100, 116, 139,0.12)" : "none",
+        boxShadow: hovered ? "0 20px 48px rgba(71, 85, 105,0.12)" : "none",
         position: "relative",
       }}
     >
@@ -152,7 +152,7 @@ function MemberCard({ member, index }) {
           <div style={{
             position: "absolute", inset: "-3px",
             borderRadius: "4px",
-            border: `2px solid ${hovered ? "#2563eb" : "#E8D89A"}`,
+            border: `2px solid ${hovered ? "#2563eb" : "rgba(37, 99, 235, 0.15)"}`,
             transition: "border-color 0.35s ease",
           }} />
           <img
@@ -166,14 +166,14 @@ function MemberCard({ member, index }) {
               transition: "transform 0.35s ease",
               transform: hovered ? "scale(1.03)" : "scale(1)",
             }}
-            onError={e => { e.target.style.background = "#F5EFD8"; }}
+            onError={e => { e.target.style.background = "rgba(37, 99, 235, 0.06)"; }}
           />
           <div style={{
             position: "absolute", top: "-8px", right: "-8px",
             width: "26px", height: "26px",
             background: "#2563eb", borderRadius: "50%",
             display: "flex", alignItems: "center", justifyContent: "center",
-            border: "2px solid #f8fafc", zIndex: 2,
+            border: "2px solid #ffffff", zIndex: 2,
           }}>
             <Zap size={11} color="#fff" />
           </div>
@@ -184,7 +184,7 @@ function MemberCard({ member, index }) {
           <h3 style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "1.25rem", fontWeight: 700,
-            color: "#0f172a", margin: "0 0 0.25rem",
+            color: "#0b1329", margin: "0 0 0.25rem",
             letterSpacing: "-0.01em",
           }}>{member.name}</h3>
           <p style={{
@@ -255,14 +255,14 @@ function MemberCard({ member, index }) {
             href="mailto:contactus@mttf.in"
             style={{
               width: "34px", height: "34px", borderRadius: "50%",
-              background: "#F5EFD8", border: "1px solid #E8D89A",
+              background: "rgba(37, 99, 235, 0.06)", border: "1px solid rgba(37, 99, 235, 0.15)",
               display: "flex", alignItems: "center", justifyContent: "center",
               fontSize: "0.85rem", cursor: "pointer",
               transition: "all 0.3s ease", textDecoration: "none",
             }}
             title="contactus@mttf.in"
             onMouseEnter={e => { e.currentTarget.style.background = "#2563eb"; e.currentTarget.style.borderColor = "#2563eb"; e.currentTarget.style.transform = "translateY(-2px) rotate(5deg)"; }}
-            onMouseLeave={e => { e.currentTarget.style.background = "#F5EFD8"; e.currentTarget.style.borderColor = "#E8D89A"; e.currentTarget.style.transform = "none"; }}
+            onMouseLeave={e => { e.currentTarget.style.background = "rgba(37, 99, 235, 0.06)"; e.currentTarget.style.borderColor = "rgba(37, 99, 235, 0.15)"; e.currentTarget.style.transform = "none"; }}
           >📧</a>
 
           {member.github && member.github !== "#" && (
@@ -272,14 +272,14 @@ function MemberCard({ member, index }) {
               rel="noopener noreferrer"
               style={{
                 width: "34px", height: "34px", borderRadius: "50%",
-                background: "#F5EFD8", border: "1px solid #E8D89A",
+                background: "rgba(37, 99, 235, 0.06)", border: "1px solid rgba(37, 99, 235, 0.15)",
                 display: "flex", alignItems: "center", justifyContent: "center",
                 fontSize: "0.85rem", cursor: "pointer",
                 transition: "all 0.3s ease", textDecoration: "none",
               }}
               title="GitHub Profile"
               onMouseEnter={e => { e.currentTarget.style.background = "#2563eb"; e.currentTarget.style.borderColor = "#2563eb"; e.currentTarget.style.transform = "translateY(-2px) rotate(5deg)"; }}
-              onMouseLeave={e => { e.currentTarget.style.background = "#F5EFD8"; e.currentTarget.style.borderColor = "#E8D89A"; e.currentTarget.style.transform = "none"; }}
+              onMouseLeave={e => { e.currentTarget.style.background = "rgba(37, 99, 235, 0.06)"; e.currentTarget.style.borderColor = "rgba(37, 99, 235, 0.15)"; e.currentTarget.style.transform = "none"; }}
             >🐙</a>
           )}
 
@@ -290,14 +290,14 @@ function MemberCard({ member, index }) {
               rel="noopener noreferrer"
               style={{
                 width: "34px", height: "34px", borderRadius: "50%",
-                background: "#F5EFD8", border: "1px solid #E8D89A",
+                background: "rgba(37, 99, 235, 0.06)", border: "1px solid rgba(37, 99, 235, 0.15)",
                 display: "flex", alignItems: "center", justifyContent: "center",
                 fontSize: "0.85rem", cursor: "pointer",
                 transition: "all 0.3s ease", textDecoration: "none",
               }}
               title="LinkedIn Profile"
               onMouseEnter={e => { e.currentTarget.style.background = "#2563eb"; e.currentTarget.style.borderColor = "#2563eb"; e.currentTarget.style.transform = "translateY(-2px) rotate(5deg)"; }}
-              onMouseLeave={e => { e.currentTarget.style.background = "#F5EFD8"; e.currentTarget.style.borderColor = "#E8D89A"; e.currentTarget.style.transform = "none"; }}
+              onMouseLeave={e => { e.currentTarget.style.background = "rgba(37, 99, 235, 0.06)"; e.currentTarget.style.borderColor = "rgba(37, 99, 235, 0.15)"; e.currentTarget.style.transform = "none"; }}
             >💼</a>
           )}
         </div>
@@ -326,7 +326,7 @@ const TechnicalTeam = () => {
   }, []);
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#f8fafc", color: "#0f172a" }}>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#ffffff", color: "#0b1329" }}>
       <style>{`
         @keyframes accentShimmer {
           0%   { background-position: -200% center; }
@@ -341,7 +341,7 @@ const TechnicalTeam = () => {
           to   { transform: translate(-50%, -50%) rotate(360deg); }
         }
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-track { background: #ffffff; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 1px; }
       `}</style>
 
@@ -359,7 +359,7 @@ const TechnicalTeam = () => {
             alignItems: "center", justifyContent: "center",
             padding: "7rem 2rem 5rem",
             textAlign: "center", overflow: "hidden",
-            borderBottom: "1px solid rgba(100, 116, 139,0.1)",
+            borderBottom: "1px solid rgba(71, 85, 105,0.1)",
           }}
         >
           {/* Grid */}
@@ -450,13 +450,13 @@ const TechnicalTeam = () => {
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
               fontWeight: 700, lineHeight: 1.02,
-              letterSpacing: "-0.025em", color: "#0f172a",
+              letterSpacing: "-0.025em", color: "#0b1329",
               margin: "0 0 0.5rem",
             }}>
               Technical{" "}
               <span style={{
                 fontStyle: "italic",
-                background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 38%, #1d4ed8 72%, #2563eb 100%)",
+                background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 38%, #3b82f6 72%, #2563eb 100%)",
                 backgroundSize: "200% auto",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -468,7 +468,7 @@ const TechnicalTeam = () => {
             <p style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "clamp(1rem, 2.2vw, 1.3rem)",
-              fontStyle: "italic", color: "rgba(90,65,40,0.52)",
+              fontStyle: "italic", color: "rgba(71, 85, 105,0.52)",
               maxWidth: "560px", margin: "1.25rem auto 2.5rem",
               lineHeight: 1.75,
             }}>
@@ -494,7 +494,7 @@ const TechnicalTeam = () => {
                   }}>{value}</div>
                   <div style={{
                     fontFamily: "'Plus Jakarta Sans', sans-serif",
-                    fontSize: "0.52rem", color: "rgba(90,65,40,0.38)",
+                    fontSize: "0.52rem", color: "rgba(71, 85, 105,0.38)",
                     letterSpacing: "0.15em", textTransform: "uppercase",
                     marginTop: "0.3rem", fontWeight: 400,
                   }}>{label}</div>
@@ -507,13 +507,13 @@ const TechnicalTeam = () => {
         {/* ── INTRO STRIP ── */}
         <div style={{
           background: "rgba(37, 99, 235,0.03)",
-          borderBottom: "1px solid rgba(100, 116, 139,0.1)",
+          borderBottom: "1px solid rgba(71, 85, 105,0.1)",
           padding: "3rem 2rem", textAlign: "center",
         }}>
           <p style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "clamp(1rem, 2.3vw, 1.4rem)",
-            fontStyle: "italic", color: "rgba(90,65,40,0.58)",
+            fontStyle: "italic", color: "rgba(71, 85, 105,0.58)",
             maxWidth: "780px", margin: "0 auto", lineHeight: 1.75,
           }}>
             "A team defined not just by technical excellence, but by a shared
@@ -531,10 +531,10 @@ const TechnicalTeam = () => {
               <h2 style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
-                fontWeight: 700, color: "#0f172a",
+                fontWeight: 700, color: "#0b1329",
                 letterSpacing: "-0.02em", margin: 0, flexShrink: 0,
               }}>Meet the Team</h2>
-              <div style={{ flex: 1, height: "1px", background: "rgba(100, 116, 139,0.15)", minWidth: "24px" }} />
+              <div style={{ flex: 1, height: "1px", background: "rgba(71, 85, 105,0.15)", minWidth: "24px" }} />
               <div style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.6rem", color: "rgba(37, 99, 235,0.65)",
@@ -560,7 +560,7 @@ const TechnicalTeam = () => {
 
         {/* ── CTA ── */}
         <section style={{
-          background: "#0f172a",
+          background: "#0b1329",
           borderTop: "1px solid rgba(37, 99, 235,0.15)",
           padding: "5rem 2rem",
         }}>
@@ -588,7 +588,7 @@ const TechnicalTeam = () => {
                 <h2 style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)",
-                  fontWeight: 700, color: "#E8D9C0",
+                  fontWeight: 700, color: "rgba(255, 255, 255, 0.85)",
                   letterSpacing: "-0.02em", margin: "0 0 1rem", lineHeight: 1.2,
                 }}>
                   Build the Future With Us
@@ -596,7 +596,7 @@ const TechnicalTeam = () => {
 
                 <p style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
-                  fontSize: "0.9rem", color: "rgba(232,217,192,0.45)",
+                  fontSize: "0.9rem", color: "rgba(255, 255, 255,0.45)",
                   lineHeight: 1.8, maxWidth: "520px",
                   margin: "0 auto 2.5rem", fontWeight: 300,
                 }}>
@@ -615,7 +615,7 @@ const TechnicalTeam = () => {
                       borderRadius: "1px", fontWeight: 500,
                       transition: "background 0.3s ease, transform 0.3s ease",
                     }}
-                    onMouseEnter={e => { e.target.style.background = "#1d4ed8"; e.target.style.transform = "translateY(-2px)"; }}
+                    onMouseEnter={e => { e.target.style.background = "#3b82f6"; e.target.style.transform = "translateY(-2px)"; }}
                     onMouseLeave={e => { e.target.style.background = "#2563eb"; e.target.style.transform = "translateY(0)"; }}
                   >
                     View Open Positions

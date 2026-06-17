@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import {
   Cpu,
@@ -59,7 +59,7 @@ export default function OurProgramsMegaMenu() {
 
         .prog-panel {
           background: #ffffff;
-          border: 1px solid #e2e8f0;
+          border: 1px solid rgba(37, 99, 235, 0.15);
           border-top: 3px solid #2563eb;
           box-shadow:
             0 10px 25px -5px rgba(0, 0, 0, 0.08),
@@ -83,7 +83,7 @@ export default function OurProgramsMegaMenu() {
 
         .prog-divider-v {
           width: 1px;
-          background: linear-gradient(to bottom, transparent, #e2e8f0, transparent);
+          background: linear-gradient(to bottom, transparent, rgba(37, 99, 235, 0.15), transparent);
         }
 
         .prog-link {
@@ -134,8 +134,8 @@ export default function OurProgramsMegaMenu() {
         }
 
         .prog-footer {
-          background: #f8fafc;
-          border-top: 1px solid #e2e8f0;
+          background: #ffffff;
+          border-top: 1px solid rgba(37, 99, 235, 0.15);
         }
 
         .prog-cta {
@@ -156,7 +156,7 @@ export default function OurProgramsMegaMenu() {
         }
 
         .prog-cta:hover {
-          background: #1d4ed8;
+          background: #3b82f6;
           gap: 12px;
           box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
         }
@@ -189,7 +189,7 @@ export default function OurProgramsMegaMenu() {
                 fontSize: '10px',
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
-                color: '#64748b',
+                color: '#475569',
                 fontWeight: 600,
               }}>
                 Programs & Initiatives
@@ -236,7 +236,7 @@ export default function OurProgramsMegaMenu() {
             <p style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: '11px',
-              color: '#64748b',
+              color: '#475569',
               display: 'flex',
               alignItems: 'center',
               gap: '8px',

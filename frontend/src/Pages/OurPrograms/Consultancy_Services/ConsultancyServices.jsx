@@ -105,8 +105,8 @@ function ServiceCard({ service, index }) {
           ? hovered ? "translateY(-6px)" : "translateY(0)"
           : "translateY(28px)",
         transition: `opacity 0.65s ease ${index * 0.1}s, transform 0.65s ease ${index * 0.1}s, box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease`,
-        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
-        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(100, 116, 139,0.15)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#ffffff",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(71, 85, 105,0.15)"}`,
         borderRadius: "2px",
         padding: "2.25rem 2rem 2rem 2.25rem",
         position: "relative",
@@ -114,7 +114,7 @@ function ServiceCard({ service, index }) {
         cursor: "default",
         display: "flex",
         flexDirection: "column",
-        boxShadow: hovered ? "0 20px 48px rgba(100, 116, 139,0.12)" : "none",
+        boxShadow: hovered ? "0 20px 48px rgba(71, 85, 105,0.12)" : "none",
       }}
     >
       {/* Top gold bar */}
@@ -162,7 +162,7 @@ function ServiceCard({ service, index }) {
       <h3 style={{
         fontFamily: "'Plus Jakarta Sans', sans-serif",
         fontSize: "1.2rem", fontWeight: 700,
-        color: "#0f172a", margin: "0 0 0.5rem",
+        color: "#0b1329", margin: "0 0 0.5rem",
         letterSpacing: "-0.01em", lineHeight: 1.25,
       }}>{service.title}</h3>
 
@@ -189,7 +189,7 @@ function ServiceCard({ service, index }) {
       }}>
         {service.features.map((f, i) => (
           <li key={i} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
-            <CheckCircle size={13} style={{ color: "#6B9E5E", flexShrink: 0, marginTop: "0.2rem" }} />
+            <CheckCircle size={13} style={{ color: "#3b82f6", flexShrink: 0, marginTop: "0.2rem" }} />
             <span style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "0.8rem", color: "#475569",
@@ -250,7 +250,7 @@ function StatCard({ value, label, index }) {
       }}>{value}</div>
       <div style={{
         fontFamily: "'Plus Jakarta Sans', sans-serif",
-        fontSize: "0.72rem", color: "rgba(232,217,192,0.5)",
+        fontSize: "0.72rem", color: "rgba(255, 255, 255,0.5)",
         letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 400,
       }}>{label}</div>
     </div>
@@ -270,7 +270,7 @@ export default function ConsultancyServices() {
   }, []);
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#f8fafc", color: "#0f172a" }}>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#ffffff", color: "#0b1329" }}>
       <style>{`
         @keyframes accentShimmer {
           0%   { background-position: -200% center; }
@@ -285,7 +285,7 @@ export default function ConsultancyServices() {
           to   { transform: translate(-50%, -50%) rotate(360deg); }
         }
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-track { background: #ffffff; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 1px; }
       `}</style>
 
@@ -306,7 +306,7 @@ export default function ConsultancyServices() {
             padding: "7rem 2rem 5rem",
             textAlign: "center",
             overflow: "hidden",
-            borderBottom: "1px solid rgba(100, 116, 139,0.1)",
+            borderBottom: "1px solid rgba(71, 85, 105,0.1)",
           }}
         >
           {/* Grid */}
@@ -384,13 +384,13 @@ export default function ConsultancyServices() {
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
               fontWeight: 700, lineHeight: 1.02,
-              letterSpacing: "-0.025em", color: "#0f172a",
+              letterSpacing: "-0.025em", color: "#0b1329",
               margin: "0 0 0.5rem",
             }}>
               Consultancy{" "}
               <span style={{
                 fontStyle: "italic",
-                background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 38%, #1d4ed8 72%, #2563eb 100%)",
+                background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 38%, #3b82f6 72%, #2563eb 100%)",
                 backgroundSize: "200% auto",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -402,7 +402,7 @@ export default function ConsultancyServices() {
             <p style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "clamp(1rem, 2.2vw, 1.35rem)",
-              fontStyle: "italic", color: "rgba(90,65,40,0.52)",
+              fontStyle: "italic", color: "rgba(71, 85, 105,0.52)",
               maxWidth: "580px", margin: "1.25rem auto 2.5rem",
               lineHeight: 1.75,
             }}>
@@ -428,7 +428,7 @@ export default function ConsultancyServices() {
                   }}>{value}</div>
                   <div style={{
                     fontFamily: "'Plus Jakarta Sans', sans-serif",
-                    fontSize: "0.52rem", color: "rgba(90,65,40,0.38)",
+                    fontSize: "0.52rem", color: "rgba(71, 85, 105,0.38)",
                     letterSpacing: "0.15em", textTransform: "uppercase",
                     marginTop: "0.3rem", fontWeight: 400,
                   }}>{label}</div>
@@ -441,13 +441,13 @@ export default function ConsultancyServices() {
         {/* ── INTRO STRIP ── */}
         <div style={{
           background: "rgba(37, 99, 235,0.03)",
-          borderBottom: "1px solid rgba(100, 116, 139,0.1)",
+          borderBottom: "1px solid rgba(71, 85, 105,0.1)",
           padding: "3rem 2rem", textAlign: "center",
         }}>
           <p style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "clamp(1rem, 2.3vw, 1.4rem)",
-            fontStyle: "italic", color: "rgba(90,65,40,0.58)",
+            fontStyle: "italic", color: "rgba(71, 85, 105,0.58)",
             maxWidth: "780px", margin: "0 auto", lineHeight: 1.75,
           }}>
             "With years of experience in STEM education and research,
@@ -465,10 +465,10 @@ export default function ConsultancyServices() {
               <h2 style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
-                fontWeight: 700, color: "#0f172a",
+                fontWeight: 700, color: "#0b1329",
                 letterSpacing: "-0.02em", margin: 0, flexShrink: 0,
               }}>Our Services</h2>
-              <div style={{ flex: 1, height: "1px", background: "rgba(100, 116, 139,0.15)", minWidth: "24px" }} />
+              <div style={{ flex: 1, height: "1px", background: "rgba(71, 85, 105,0.15)", minWidth: "24px" }} />
               <div style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "0.6rem", color: "rgba(37, 99, 235,0.65)",
@@ -491,7 +491,7 @@ export default function ConsultancyServices() {
 
         {/* ── WHY CHOOSE US ── */}
         <section style={{
-          background: "#0f172a",
+          background: "#0b1329",
           borderTop: "1px solid rgba(37, 99, 235,0.15)",
           padding: "5rem 2rem",
         }}>
@@ -507,12 +507,12 @@ export default function ConsultancyServices() {
                 <h2 style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)",
-                  fontWeight: 700, color: "#E8D9C0",
+                  fontWeight: 700, color: "rgba(255, 255, 255, 0.85)",
                   letterSpacing: "-0.02em", margin: "0 0 0.85rem", lineHeight: 1.2,
                 }}>Why Choose MTTF Consultancy Services?</h2>
                 <p style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
-                  fontSize: "0.92rem", color: "rgba(232,217,192,0.4)",
+                  fontSize: "0.92rem", color: "rgba(255, 255, 255,0.4)",
                   fontWeight: 300, maxWidth: "520px", margin: "0 auto", lineHeight: 1.8,
                 }}>
                   Years of experience in STEM education and research — delivering
@@ -563,14 +563,14 @@ export default function ConsultancyServices() {
               <h2 style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)",
-                fontWeight: 700, color: "#0f172a",
+                fontWeight: 700, color: "#0b1329",
                 letterSpacing: "-0.02em", margin: "0 0 0.85rem", lineHeight: 1.2,
               }}>
                 Ready to Get Started?
               </h2>
               <p style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
-                fontSize: "0.92rem", color: "rgba(90,65,40,0.55)",
+                fontSize: "0.92rem", color: "rgba(71, 85, 105,0.55)",
                 marginBottom: "2.25rem", lineHeight: 1.75, fontWeight: 300,
               }}>
                 Contact us today to discuss how our consultancy services can support your goals.
@@ -591,7 +591,7 @@ export default function ConsultancyServices() {
                   textDecoration: "none",
                   transition: "background 0.3s ease, transform 0.3s ease",
                 }}
-                onMouseEnter={e => { e.currentTarget.style.background = "#1d4ed8"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                onMouseEnter={e => { e.currentTarget.style.background = "#3b82f6"; e.currentTarget.style.transform = "translateY(-2px)"; }}
                 onMouseLeave={e => { e.currentTarget.style.background = "#2563eb"; e.currentTarget.style.transform = "translateY(0)"; }}
               >
                 Contact Us

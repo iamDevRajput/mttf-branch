@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // ── Asset imports — filenames matched exactly to your file tree ──
@@ -27,17 +27,17 @@ const styles = `
     --mttf-primary: #2563eb;
     --mttf-primary-light: #60a5fa;
     --mttf-accent: #3b82f6;
-    --mttf-accent-light: #93c5fd;
-    --slate-50: #f8fafc;
-    --slate-100: #f1f5f9;
-    --slate-200: #e2e8f0;
-    --slate-300: #cbd5e1;
-    --slate-500: #64748b;
-    --slate-700: #334155;
-    --slate-800: #1e293b;
-    --slate-900: #0f172a;
-    --slate-950: #0b0f19;
-    --divider: #f1f5f9;
+    --mttf-accent-light: #60a5fa;
+    --slate-50: #ffffff;
+    --slate-100: #ffffff;
+    --slate-200: rgba(37, 99, 235, 0.15);
+    --slate-300: rgba(37, 99, 235, 0.15);
+    --slate-500: #475569;
+    --slate-700: #0b1329;
+    --slate-800: #0b1329;
+    --slate-900: #0b1329;
+    --slate-950: #0b1329;
+    --divider: #ffffff;
   }
 
   .lux-section-eyebrow {
@@ -76,7 +76,7 @@ const styles = `
 
   .lux-serif-heading em {
     font-style: normal;
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
@@ -159,14 +159,14 @@ const styles = `
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+    box-shadow: 0 4px 12px rgba(11, 19, 41, 0.15);
   }
 
   .lux-btn-primary::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -410,7 +410,7 @@ const styles = `
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 15px;
     font-weight: 400;
-    color: #94a3b8;
+    color: #475569;
     line-height: 1.625;
     margin-bottom: 24px;
   }
@@ -624,7 +624,7 @@ const styles = `
   .lux-glimpse-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0) 60%);
+    background: linear-gradient(to top, rgba(11, 19, 41, 0.8) 0%, rgba(11, 19, 41, 0) 60%);
     z-index: 1;
   }
 
@@ -686,7 +686,7 @@ const styles = `
 
   .lux-glimpse-dot {
     height: 4px;
-    background: rgba(15, 23, 42, 0.1);
+    background: rgba(11, 19, 41, 0.1);
     transition: all 0.4s ease;
     cursor: pointer;
     width: 12px;
@@ -722,66 +722,66 @@ const styles = `
 /* ── Inline SVG icons ── */
 const AiIcon = () => (
   <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M20 8C13.373 8 8 13.373 8 20s5.373 12 12 12 12-5.373 12-12S26.627 8 20 8z" stroke="#5067AA" strokeWidth="1.5"/>
-    <path d="M14 20c0-3.314 2.686-6 6-6s6 2.686 6 6-2.686 6-6 6" stroke="#5067AA" strokeWidth="1.5" strokeLinecap="round"/>
-    <path d="M17 17l-3-3M17 23l-3 3M23 17l3-3M23 23l3 3" stroke="#5067AA" strokeWidth="1.5" strokeLinecap="round"/>
-    <circle cx="20" cy="20" r="2.5" fill="#5067AA"/>
+    <path d="M20 8C13.373 8 8 13.373 8 20s5.373 12 12 12 12-5.373 12-12S26.627 8 20 8z" stroke="#2563eb" strokeWidth="1.5"/>
+    <path d="M14 20c0-3.314 2.686-6 6-6s6 2.686 6 6-2.686 6-6 6" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round"/>
+    <path d="M17 17l-3-3M17 23l-3 3M23 17l3-3M23 23l3 3" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round"/>
+    <circle cx="20" cy="20" r="2.5" fill="#2563eb"/>
   </svg>
 );
 
 const DataAnalyticsIcon = () => (
   <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="7" y="27" width="6" height="6" rx="1" fill="#27AE60"/>
-    <rect x="17" y="20" width="6" height="13" rx="1" fill="#27AE60"/>
-    <rect x="27" y="13" width="6" height="20" rx="1" fill="#27AE60"/>
-    <path d="M8 24l9-8 10 4 8-10" stroke="#27AE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    <circle cx="8" cy="24" r="2" fill="#27AE60"/>
-    <circle cx="17" cy="16" r="2" fill="#27AE60"/>
-    <circle cx="27" cy="20" r="2" fill="#27AE60"/>
-    <circle cx="35" cy="10" r="2" fill="#27AE60"/>
+    <rect x="7" y="27" width="6" height="6" rx="1" fill="#3b82f6"/>
+    <rect x="17" y="20" width="6" height="13" rx="1" fill="#3b82f6"/>
+    <rect x="27" y="13" width="6" height="20" rx="1" fill="#3b82f6"/>
+    <path d="M8 24l9-8 10 4 8-10" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="8" cy="24" r="2" fill="#3b82f6"/>
+    <circle cx="17" cy="16" r="2" fill="#3b82f6"/>
+    <circle cx="27" cy="20" r="2" fill="#3b82f6"/>
+    <circle cx="35" cy="10" r="2" fill="#3b82f6"/>
   </svg>
 );
 
 const BioinformaticsIcon = () => (
   <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M14 8c0 6 12 6 12 12S14 26 14 32" stroke="#8E44AD" strokeWidth="2" strokeLinecap="round"/>
-    <path d="M26 8c0 6-12 6-12 12s12 6 12 12" stroke="#8E44AD" strokeWidth="2" strokeLinecap="round"/>
-    <line x1="12" y1="14" x2="28" y2="14" stroke="#8E44AD" strokeWidth="1.5" strokeLinecap="round"/>
-    <line x1="10" y1="20" x2="30" y2="20" stroke="#8E44AD" strokeWidth="1.5" strokeLinecap="round"/>
-    <line x1="12" y1="26" x2="28" y2="26" stroke="#8E44AD" strokeWidth="1.5" strokeLinecap="round"/>
+    <path d="M14 8c0 6 12 6 12 12S14 26 14 32" stroke="#60a5fa" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M26 8c0 6-12 6-12 12s12 6 12 12" stroke="#60a5fa" strokeWidth="2" strokeLinecap="round"/>
+    <line x1="12" y1="14" x2="28" y2="14" stroke="#60a5fa" strokeWidth="1.5" strokeLinecap="round"/>
+    <line x1="10" y1="20" x2="30" y2="20" stroke="#60a5fa" strokeWidth="1.5" strokeLinecap="round"/>
+    <line x1="12" y1="26" x2="28" y2="26" stroke="#60a5fa" strokeWidth="1.5" strokeLinecap="round"/>
   </svg>
 );
 
 const BusinessIntelligenceIcon = () => (
   <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="12" width="14" height="18" rx="2" stroke="#F39C12" strokeWidth="1.5"/>
-    <path d="M14 12V9a2 2 0 012-2h8a2 2 0 012 2v3" stroke="#F39C12" strokeWidth="1.5"/>
-    <path d="M22 22h8M22 26h6" stroke="#F39C12" strokeWidth="1.5" strokeLinecap="round"/>
-    <circle cx="27" cy="28" r="5" stroke="#F39C12" strokeWidth="1.5"/>
-    <path d="M30.5 31.5l3 3" stroke="#F39C12" strokeWidth="1.5" strokeLinecap="round"/>
-    <line x1="12" y1="18" x2="18" y2="18" stroke="#F39C12" strokeWidth="1.5" strokeLinecap="round"/>
-    <line x1="12" y1="22" x2="18" y2="22" stroke="#F39C12" strokeWidth="1.5" strokeLinecap="round"/>
+    <rect x="8" y="12" width="14" height="18" rx="2" stroke="#2563eb" strokeWidth="1.5"/>
+    <path d="M14 12V9a2 2 0 012-2h8a2 2 0 012 2v3" stroke="#2563eb" strokeWidth="1.5"/>
+    <path d="M22 22h8M22 26h6" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round"/>
+    <circle cx="27" cy="28" r="5" stroke="#2563eb" strokeWidth="1.5"/>
+    <path d="M30.5 31.5l3 3" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round"/>
+    <line x1="12" y1="18" x2="18" y2="18" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round"/>
+    <line x1="12" y1="22" x2="18" y2="22" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round"/>
   </svg>
 );
 
 const QuantumIcon = () => (
   <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="20" cy="20" r="3" fill="#8E44AD"/>
-    <ellipse cx="20" cy="20" rx="13" ry="5" stroke="#8E44AD" strokeWidth="1.5"/>
-    <ellipse cx="20" cy="20" rx="13" ry="5" stroke="#8E44AD" strokeWidth="1.5" transform="rotate(60 20 20)"/>
-    <ellipse cx="20" cy="20" rx="13" ry="5" stroke="#8E44AD" strokeWidth="1.5" transform="rotate(120 20 20)"/>
-    <circle cx="33" cy="20" r="2" fill="#8E44AD"/>
-    <circle cx="26.5" cy="8.9" r="2" fill="#8E44AD"/>
-    <circle cx="13.5" cy="8.9" r="2" fill="#8E44AD"/>
+    <circle cx="20" cy="20" r="3" fill="#60a5fa"/>
+    <ellipse cx="20" cy="20" rx="13" ry="5" stroke="#60a5fa" strokeWidth="1.5"/>
+    <ellipse cx="20" cy="20" rx="13" ry="5" stroke="#60a5fa" strokeWidth="1.5" transform="rotate(60 20 20)"/>
+    <ellipse cx="20" cy="20" rx="13" ry="5" stroke="#60a5fa" strokeWidth="1.5" transform="rotate(120 20 20)"/>
+    <circle cx="33" cy="20" r="2" fill="#60a5fa"/>
+    <circle cx="26.5" cy="8.9" r="2" fill="#60a5fa"/>
+    <circle cx="13.5" cy="8.9" r="2" fill="#60a5fa"/>
   </svg>
 );
 
 const ComputingIcon = () => (
   <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="7" y="9" width="26" height="18" rx="2" stroke="#27AE60" strokeWidth="1.5"/>
-    <line x1="7" y1="31" x2="33" y2="31" stroke="#27AE60" strokeWidth="1.5" strokeLinecap="round"/>
-    <line x1="20" y1="27" x2="20" y2="31" stroke="#27AE60" strokeWidth="1.5"/>
-    <path d="M12 16l3 3-3 3M18 22h5" stroke="#27AE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <rect x="7" y="9" width="26" height="18" rx="2" stroke="#3b82f6" strokeWidth="1.5"/>
+    <line x1="7" y1="31" x2="33" y2="31" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round"/>
+    <line x1="20" y1="27" x2="20" y2="31" stroke="#3b82f6" strokeWidth="1.5"/>
+    <path d="M12 16l3 3-3 3M18 22h5" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 

@@ -72,15 +72,15 @@ function ArtificialIntelligence() {
         .ai-page * { box-sizing: border-box; }
 
         .ai-page {
-          --mttf-bg-alt: #f8fafc;
-          --mttf-border-light: #F0EBE1;
+          --mttf-bg-alt: #ffffff;
+          --mttf-border-light: rgba(37, 99, 235, 0.15);
           --mttf-bg: #ffffff;
-          --mttf-primary: #D4A843;
-          --mttf-primary-light: #F5E6C0;
-          --mttf-text: #0f172a;
-          --text-mid: #4A3F35;
-          --text-light: #8A7A6E;
-          --border: #E8E0D4;
+          --mttf-primary: #2563eb;
+          --mttf-primary-light: #60a5fa;
+          --mttf-text: #0b1329;
+          --text-mid: #475569;
+          --text-light: #475569;
+          --border: rgba(37, 99, 235, 0.15);
           font-family: 'Plus Jakarta Sans', sans-serif;
           background: var(--mttf-bg-alt);
           min-height: 100vh;
@@ -156,7 +156,7 @@ function ArtificialIntelligence() {
         .ai-hero h1 {
           font-size: clamp(52px, 8vw, 96px);
           font-weight: 300;
-          color: #f8fafc;
+          color: #ffffff;
           line-height: 1.0;
           margin: 0 0 24px;
           letter-spacing: -1px;
@@ -194,7 +194,7 @@ function ArtificialIntelligence() {
         }
 
         .ai-btn-primary:hover {
-          background: #c49a38;
+          background: #3b82f6;
           transform: translateY(-1px);
           box-shadow: 0 8px 30px rgba(212,168,67,0.3);
         }

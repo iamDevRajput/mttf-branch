@@ -169,12 +169,12 @@ export default function ConferenceSupportServices() {
           50%       { opacity: 0.25; }
         }
 
-        .conf-page { background: #f8fafc; color: #0f172a; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .conf-page { background: #ffffff; color: #0b1329; font-family: 'Plus Jakarta Sans', sans-serif; }
 
         /* Cards */
         .svc-card {
           background: #ffffff;
-          border: 1px solid #e2e8f0;
+          border: 1px solid rgba(37, 99, 235, 0.15);
           border-radius: 4px;
           padding: 2.25rem;
           position: relative;
@@ -199,7 +199,7 @@ export default function ConferenceSupportServices() {
 
         .type-card {
           background: #ffffff;
-          border: 1px solid #e2e8f0;
+          border: 1px solid rgba(37, 99, 235, 0.15);
           border-radius: 4px;
           padding: 2rem;
           position: relative;
@@ -215,7 +215,7 @@ export default function ConferenceSupportServices() {
 
         .stat-box {
           background: #ffffff;
-          border: 1px solid #e2e8f0;
+          border: 1px solid rgba(37, 99, 235, 0.15);
           border-radius: 4px;
           padding: 2rem;
           text-align: center;
@@ -245,15 +245,15 @@ export default function ConferenceSupportServices() {
           border: 1px solid #2563eb; border-radius: 2px;
           cursor: pointer; transition: all 0.35s ease; text-decoration: none;
         }
-        .btn-gold:hover { background: #1d4ed8; border-color: #1d4ed8; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(37, 99, 235,0.28); }
+        .btn-gold:hover { background: #3b82f6; border-color: #3b82f6; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(37, 99, 235,0.28); }
 
         .btn-dark {
           display: inline-flex; align-items: center; gap: 0.5rem;
           padding: 0.85rem 2.25rem;
-          background: #0f172a; color: #f8fafc;
+          background: #0b1329; color: #ffffff;
           font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem;
           font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
-          border: 1px solid #0f172a; border-radius: 2px;
+          border: 1px solid #0b1329; border-radius: 2px;
           cursor: pointer; transition: all 0.35s ease; text-decoration: none;
         }
         .btn-dark:hover { background: #2563eb; border-color: #2563eb; color: #fff; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(37, 99, 235,0.28); }
@@ -269,7 +269,7 @@ export default function ConferenceSupportServices() {
         .eyebrow-line { display: inline-block; width: 28px; height: 1px; background: #2563eb; }
 
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-track { background: #ffffff; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
       `}</style>
 
@@ -287,7 +287,7 @@ export default function ConferenceSupportServices() {
                 color: '#2563eb', textDecoration: 'none', letterSpacing: '0.06em',
                 transition: 'color 0.2s',
               }}
-              onMouseEnter={e => e.currentTarget.style.color = '#1d4ed8'}
+              onMouseEnter={e => e.currentTarget.style.color = '#3b82f6'}
               onMouseLeave={e => e.currentTarget.style.color = '#2563eb'}
             >
               <ArrowLeft size={15} />
@@ -299,9 +299,9 @@ export default function ConferenceSupportServices() {
         {/* ── Hero ── */}
         <section style={{
           position: 'relative', overflow: 'hidden',
-          background: 'linear-gradient(158deg, #f8fafc 0%, #f1f5f9 55%, #e2e8f0 100%)',
+          background: 'linear-gradient(158deg, #ffffff 0%, #ffffff 55%, rgba(37, 99, 235, 0.15) 100%)',
           padding: '4rem 2rem 5.5rem', textAlign: 'center',
-          borderBottom: '1px solid #D8CBA8',
+          borderBottom: '1px solid rgba(37, 99, 235, 0.15)',
         }}>
           {/* Grid */}
           <div style={{
@@ -333,7 +333,7 @@ export default function ConferenceSupportServices() {
               borderRadius:'2px', padding:'0.4rem 1.2rem', marginBottom:'1.75rem',
             }}>
               <span style={{ width:5, height:5, borderRadius:'50%', background:'#2563eb', display:'inline-block', animation:'pulseGold 2s ease infinite' }} />
-              <span style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.65rem', color:'#1d4ed8', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500 }}>
+              <span style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.65rem', color:'#3b82f6', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500 }}>
                 Section 3 · Conference Services
               </span>
             </div>
@@ -342,7 +342,7 @@ export default function ConferenceSupportServices() {
               fontFamily:"'Plus Jakarta Sans', sans-serif",
               fontSize:'clamp(2.2rem, 5.5vw, 4.5rem)',
               fontWeight:900, lineHeight:1.05, letterSpacing:'-0.02em',
-              color:'#0f172a', marginBottom:'0.6rem',
+              color:'#0b1329', marginBottom:'0.6rem',
             }}>
               National & International
             </h1>
@@ -351,7 +351,7 @@ export default function ConferenceSupportServices() {
               fontSize:'clamp(2.2rem, 5.5vw, 4.5rem)',
               fontWeight:900, lineHeight:1.05, letterSpacing:'-0.02em',
               marginBottom:'1.25rem', fontStyle:'italic',
-              background:'linear-gradient(135deg, #2563eb 0%, #1d4ed8 40%, #60a5fa 100%)',
+              background:'linear-gradient(135deg, #2563eb 0%, #3b82f6 40%, #60a5fa 100%)',
               backgroundSize:'200% auto',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
               animation:'shimmer 4s linear infinite',
@@ -359,11 +359,11 @@ export default function ConferenceSupportServices() {
               Conference Support
             </h1>
 
-            <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.25rem', fontStyle:'italic', color:'#6B5C3E', maxWidth:'600px', margin:'0 auto 0.75rem', lineHeight:1.7, fontWeight:500 }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.25rem', fontStyle:'italic', color:'#475569', maxWidth:'600px', margin:'0 auto 0.75rem', lineHeight:1.7, fontWeight:500 }}>
               Empowering Conferences Across Borders
             </p>
 
-            <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.92rem', color:'#6B5C3E', maxWidth:'680px', margin:'0 auto 0.75rem', lineHeight:1.8, fontWeight:300 }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.92rem', color:'#475569', maxWidth:'680px', margin:'0 auto 0.75rem', lineHeight:1.8, fontWeight:300 }}>
               Elevate your academic conferences with our comprehensive support services.
               From initial planning to post-conference publications, we provide everything
               you need to host successful national and international conferences.
@@ -386,7 +386,7 @@ export default function ConferenceSupportServices() {
                   borderRight: i < 3 ? '1px solid rgba(37, 99, 235,0.15)' : 'none',
                 }}>
                   <div style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.8rem', fontWeight:700, color:'#2563eb', lineHeight:1 }}>{v}</div>
-                  <div style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.58rem', color:'rgba(90,65,40,0.45)', letterSpacing:'0.14em', textTransform:'uppercase', marginTop:'0.25rem', fontWeight:500 }}>{l}</div>
+                  <div style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.58rem', color:'rgba(71, 85, 105,0.45)', letterSpacing:'0.14em', textTransform:'uppercase', marginTop:'0.25rem', fontWeight:500 }}>{l}</div>
                 </div>
               ))}
             </div>
@@ -396,16 +396,16 @@ export default function ConferenceSupportServices() {
         <div className="gold-rule" />
 
         {/* ── Services Grid ── */}
-        <section style={{ background:'#FEFCF5', padding:'5rem 2rem' }}>
+        <section style={{ background:'#ffffff', padding:'5rem 2rem' }}>
           <div style={{ maxWidth:'1200px', margin:'0 auto' }}>
             <div className="eyebrow"><span className="eyebrow-line" />Our Services<span className="eyebrow-line" /></div>
             <h2 style={{
               fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(1.8rem,3vw,2.8rem)',
-              fontWeight:700, color:'#0f172a', textAlign:'center', marginBottom:'3rem',
+              fontWeight:700, color:'#0b1329', textAlign:'center', marginBottom:'3rem',
               letterSpacing:'-0.02em',
             }}>
               Conference Support{' '}
-              <span style={{ fontStyle:'italic', color:'#1d4ed8' }}>Services</span>
+              <span style={{ fontStyle:'italic', color:'#3b82f6' }}>Services</span>
             </h2>
 
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(320px, 1fr))', gap:'1.5rem' }}>
@@ -424,27 +424,27 @@ export default function ConferenceSupportServices() {
             <div className="eyebrow"><span className="eyebrow-line" />What We Support<span className="eyebrow-line" /></div>
             <h2 style={{
               fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(1.8rem,3vw,2.8rem)',
-              fontWeight:700, color:'#0f172a', textAlign:'center', marginBottom:'3rem',
+              fontWeight:700, color:'#0b1329', textAlign:'center', marginBottom:'3rem',
               letterSpacing:'-0.02em',
             }}>
               Types of Conferences{' '}
-              <span style={{ fontStyle:'italic', color:'#1d4ed8' }}>We Support</span>
+              <span style={{ fontStyle:'italic', color:'#3b82f6' }}>We Support</span>
             </h2>
 
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(240px, 1fr))', gap:'1.25rem' }}>
               {conferenceTypes.map((type, i) => (
                 <div className="type-card" key={i} style={{ animationDelay:`${i*0.08}s`, animation:'fadeUp 0.6s ease both' }}>
                   {/* Clipped corner */}
-                  <div style={{ position:'absolute', top:0, right:0, width:16, height:16, background:'#E8DFC4', clipPath:'polygon(100% 0, 0 0, 100% 100)', transition:'background 0.3s' }} />
+                  <div style={{ position:'absolute', top:0, right:0, width:16, height:16, background:'rgba(37, 99, 235, 0.15)', clipPath:'polygon(100% 0, 0 0, 100% 100)', transition:'background 0.3s' }} />
                   <div style={{
-                    width:'44px', height:'44px', background:'#F5EFD8', border:'1px solid #E8D89A',
+                    width:'44px', height:'44px', background:'rgba(37, 99, 235, 0.06)', border:'1px solid rgba(37, 99, 235, 0.15)',
                     borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center',
                     marginBottom:'1.1rem', color:'#2563eb',
                   }}>
                     {type.icon}
                   </div>
-                  <h3 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.2rem', fontWeight:700, color:'#0f172a', margin:'0 0 0.5rem' }}>{type.title}</h3>
-                  <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.82rem', color:'#6B5C3E', lineHeight:1.75, margin:'0 0 1rem', fontWeight:300 }}>{type.description}</p>
+                  <h3 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.2rem', fontWeight:700, color:'#0b1329', margin:'0 0 0.5rem' }}>{type.title}</h3>
+                  <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.82rem', color:'#475569', lineHeight:1.75, margin:'0 0 1rem', fontWeight:300 }}>{type.description}</p>
                   <span style={{
                     display:'inline-block', padding:'0.25rem 0.75rem',
                     border:'1px solid rgba(37, 99, 235,0.35)', borderRadius:'1px',
@@ -460,7 +460,7 @@ export default function ConferenceSupportServices() {
         <div className="gold-rule" />
 
         {/* ── Timeline ── */}
-        <section style={{ background:'#0f172a', padding:'5.5rem 2rem', borderTop:'1px solid rgba(37, 99, 235,0.15)' }}>
+        <section style={{ background:'#0b1329', padding:'5.5rem 2rem', borderTop:'1px solid rgba(37, 99, 235,0.15)' }}>
           <div style={{ maxWidth:'1000px', margin:'0 auto' }}>
             <div style={{ textAlign:'center', marginBottom:'3.5rem' }}>
               <div style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.65rem', letterSpacing:'0.22em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1rem', display:'flex', alignItems:'center', justifyContent:'center', gap:'0.5rem' }}>
@@ -468,7 +468,7 @@ export default function ConferenceSupportServices() {
                 Planning Guide
                 <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
               </div>
-              <h2 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#E8D9C0', letterSpacing:'-0.02em', margin:0 }}>
+              <h2 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'rgba(255, 255, 255, 0.85)', letterSpacing:'-0.02em', margin:0 }}>
                 Conference Organizing{' '}
                 <span style={{ fontStyle:'italic', color:'#2563eb' }}>Timeline</span>
               </h2>
@@ -483,17 +483,17 @@ export default function ConferenceSupportServices() {
         </section>
 
         {/* ── Track Record ── */}
-        <section style={{ padding:'5rem 2rem', background:'#f8fafc' }}>
+        <section style={{ padding:'5rem 2rem', background:'#ffffff' }}>
           <div style={{ maxWidth:'1000px', margin:'0 auto' }}>
             <div className="eyebrow"><span className="eyebrow-line" />Track Record<span className="eyebrow-line" /></div>
-            <h2 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#0f172a', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em' }}>
-              Our{' '}<span style={{ fontStyle:'italic', color:'#1d4ed8' }}>Proven Impact</span>
+            <h2 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700, color:'#0b1329', textAlign:'center', marginBottom:'3rem', letterSpacing:'-0.02em' }}>
+              Our{' '}<span style={{ fontStyle:'italic', color:'#3b82f6' }}>Proven Impact</span>
             </h2>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(200px, 1fr))', gap:'1.25rem' }}>
               {[['50+','Conferences Organized'],['20+','Countries Represented'],['15K+','Total Participants'],['95%','Success Rate']].map(([val, label], i) => (
                 <div className="stat-box" key={label} style={{ animationDelay:`${i*0.08}s`, animation:'fadeUp 0.6s ease both' }}>
                   <div style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'2.8rem', fontWeight:700, color:'#2563eb', letterSpacing:'-0.03em', lineHeight:1, marginBottom:'0.4rem' }}>{val}</div>
-                  <div style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.72rem', color:'#6B5C3E', letterSpacing:'0.1em', textTransform:'uppercase', fontWeight:500 }}>{label}</div>
+                  <div style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.72rem', color:'#475569', letterSpacing:'0.1em', textTransform:'uppercase', fontWeight:500 }}>{label}</div>
                 </div>
               ))}
             </div>
@@ -503,11 +503,11 @@ export default function ConferenceSupportServices() {
         <div className="gold-rule" />
 
         {/* ── CTA ── */}
-        <section style={{ padding:'5rem 2rem', background:'#FEFCF5' }}>
+        <section style={{ padding:'5rem 2rem', background:'#ffffff' }}>
           <div style={{ maxWidth:'780px', margin:'0 auto' }}>
             <div style={{
-              background:'linear-gradient(158deg, #0f172a 0%, #2E1F08 100%)',
-              border:'1px solid #3D2A0A', borderRadius:'4px',
+              background:'linear-gradient(158deg, #0b1329 0%, #0b1329 100%)',
+              border:'1px solid #0b1329', borderRadius:'4px',
               padding:'4rem 3rem', textAlign:'center', position:'relative', overflow:'hidden',
             }}>
               {/* Gold top */}
@@ -526,7 +526,7 @@ export default function ConferenceSupportServices() {
                 <span style={{ display:'inline-block', width:22, height:1, background:'#2563eb' }} />
               </div>
 
-              <h2 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(1.8rem,3.5vw,2.8rem)', fontWeight:700, color:'#f8fafc', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
+              <h2 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(1.8rem,3.5vw,2.8rem)', fontWeight:700, color:'#ffffff', letterSpacing:'-0.02em', margin:'0 0 1rem' }}>
                 Ready to Organize Your{' '}
                 <span style={{ fontStyle:'italic', background:'linear-gradient(135deg, #2563eb, #60a5fa)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
                   Conference?
@@ -567,14 +567,14 @@ function ServiceCard({ svc, index }) {
       style={{ animationDelay:`${index*0.07}s`, animation:'fadeUp 0.6s ease both' }}
     >
       {/* Clipped corner */}
-      <div style={{ position:'absolute', top:0, right:0, width:18, height:18, background: hovered ? '#2563eb' : '#E8DFC4', clipPath:'polygon(100% 0, 0 0, 100% 100%)', transition:'background 0.3s' }} />
+      <div style={{ position:'absolute', top:0, right:0, width:18, height:18, background: hovered ? '#2563eb' : 'rgba(37, 99, 235, 0.15)', clipPath:'polygon(100% 0, 0 0, 100% 100%)', transition:'background 0.3s' }} />
 
       {/* Number + icon row */}
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:'1.25rem' }}>
         <span style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.7rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600 }}>{svc.num}</span>
         <div style={{
-          width:'44px', height:'44px', background: hovered ? '#FDF5E0' : '#F5EFD8',
-          border:'1px solid #E8D89A', borderRadius:'4px',
+          width:'44px', height:'44px', background: hovered ? '#ffffff' : 'rgba(37, 99, 235, 0.06)',
+          border:'1px solid rgba(37, 99, 235, 0.15)', borderRadius:'4px',
           display:'flex', alignItems:'center', justifyContent:'center', color:'#2563eb',
           transition:'all 0.3s', transform: hovered ? 'scale(1.08) rotate(-4deg)' : 'scale(1)',
         }}>
@@ -582,7 +582,7 @@ function ServiceCard({ svc, index }) {
         </div>
       </div>
 
-      <h3 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.3rem', fontWeight:700, color:'#0f172a', margin:'0 0 0.5rem', letterSpacing:'-0.01em', lineHeight:1.25 }}>
+      <h3 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.3rem', fontWeight:700, color:'#0b1329', margin:'0 0 0.5rem', letterSpacing:'-0.01em', lineHeight:1.25 }}>
         {svc.title}
       </h3>
       <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.82rem', color:'#475569', lineHeight:1.7, margin:'0 0 1rem', fontWeight:300 }}>
@@ -590,13 +590,13 @@ function ServiceCard({ svc, index }) {
       </p>
 
       {/* Divider */}
-      <div style={{ height:'1px', background: hovered ? 'linear-gradient(90deg,#2563eb40,transparent)' : '#EDE4CC', marginBottom:'1rem', transition:'background 0.3s' }} />
+      <div style={{ height:'1px', background: hovered ? 'linear-gradient(90deg,#2563eb40,transparent)' : 'rgba(37, 99, 235, 0.15)', marginBottom:'1rem', transition:'background 0.3s' }} />
 
       <ul style={{ margin:0, padding:0, listStyle:'none', display:'flex', flexDirection:'column', gap:'0.5rem' }}>
         {svc.features.map((feat, idx) => (
           <li key={idx} style={{ display:'flex', alignItems:'center', gap:'0.6rem' }}>
             <CheckCircle2 size={14} color="#2563eb" style={{ flexShrink:0 }} />
-            <span style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.8rem', color:'#6B5C3E', fontWeight:300 }}>{feat}</span>
+            <span style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.8rem', color:'#475569', fontWeight:300 }}>{feat}</span>
           </li>
         ))}
       </ul>
@@ -614,7 +614,7 @@ function TimelineRow({ stage, index, total }) {
       style={{
         display:'flex', gap:'1.5rem', alignItems:'flex-start',
         padding:'1.75rem 2rem',
-        background: hovered ? 'rgba(37, 99, 235,0.04)' : '#0f172a',
+        background: hovered ? 'rgba(37, 99, 235,0.04)' : '#0b1329',
         borderBottom: index < total-1 ? '1px solid rgba(37, 99, 235,0.08)' : 'none',
         transition:'background 0.3s',
       }}
@@ -627,14 +627,14 @@ function TimelineRow({ stage, index, total }) {
       </div>
 
       <div style={{ flex:1 }}>
-        <h3 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.1rem', fontWeight:700, color:'#E8D9C0', margin:'0 0 0.85rem', letterSpacing:'-0.01em' }}>
+        <h3 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.1rem', fontWeight:700, color:'rgba(255, 255, 255, 0.85)', margin:'0 0 0.85rem', letterSpacing:'-0.01em' }}>
           {stage.title}
         </h3>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(200px, 1fr))', gap:'0.5rem' }}>
           {stage.tasks.map((task, idx) => (
             <div key={idx} style={{ display:'flex', alignItems:'center', gap:'0.55rem' }}>
               <CheckCircle2 size={13} color="#2563eb" style={{ flexShrink:0 }} />
-              <span style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.8rem', color:'rgba(232,217,192,0.55)', fontWeight:300 }}>{task}</span>
+              <span style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.8rem', color:'rgba(255, 255, 255,0.55)', fontWeight:300 }}>{task}</span>
             </div>
           ))}
         </div>

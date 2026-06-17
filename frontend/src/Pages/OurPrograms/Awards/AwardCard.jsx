@@ -30,13 +30,13 @@ function AwardCard({ award }) {
         position: "relative",
         overflow: "hidden",
         borderRadius: "2px",
-        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(100, 116, 139,0.15)"}`,
-        background: hovered ? "rgba(37, 99, 235,0.03)" : "#f8fafc",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.4)" : "rgba(71, 85, 105,0.15)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.03)" : "#ffffff",
         padding: "0",                          // ← removed top padding; image handles it
         cursor: "default",
         transition: "border-color 0.35s ease, background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease",
         transform: hovered ? "translateY(-4px)" : "translateY(0)",
-        boxShadow: hovered ? "0 16px 40px rgba(100, 116, 139,0.1)" : "none",
+        boxShadow: hovered ? "0 16px 40px rgba(71, 85, 105,0.1)" : "none",
         display: "flex",
         flexDirection: "column",
         gap: "0",
@@ -123,10 +123,10 @@ function AwardCard({ award }) {
                 textTransform: "uppercase",
                 color: "#475569",
                 padding: "0.2rem 0.6rem",
-                border: "1px solid rgba(100, 116, 139,0.2)",
+                border: "1px solid rgba(71, 85, 105,0.2)",
                 borderRadius: "1px",
                 fontWeight: 400,
-                background: "rgba(100, 116, 139,0.04)",
+                background: "rgba(71, 85, 105,0.04)",
               }}>
                 {award.year}
               </span>
@@ -142,11 +142,11 @@ function AwardCard({ award }) {
                 fontWeight: 500,
                 border: award.status === "Open"
                   ? "1px solid rgba(134,183,120,0.5)"
-                  : "1px solid rgba(100, 116, 139,0.2)",
+                  : "1px solid rgba(71, 85, 105,0.2)",
                 background: award.status === "Open"
                   ? "rgba(134,183,120,0.08)"
-                  : "rgba(100, 116, 139,0.04)",
-                color: award.status === "Open" ? "#6B9E5E" : "#475569",
+                  : "rgba(71, 85, 105,0.04)",
+                color: award.status === "Open" ? "#3b82f6" : "#475569",
               }}>
                 {award.status}
               </span>
@@ -159,7 +159,7 @@ function AwardCard({ award }) {
           fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "1.08rem",
           fontWeight: 700,
-          color: "#0f172a",
+          color: "#0b1329",
           lineHeight: 1.3,
           letterSpacing: "-0.01em",
           margin: "0 0 0.6rem",
@@ -226,7 +226,7 @@ function AwardCard({ award }) {
           alignItems: "center",
           gap: "0.5rem",
           paddingTop: "0.9rem",
-          borderTop: "1px solid rgba(100, 116, 139,0.1)",
+          borderTop: "1px solid rgba(71, 85, 105,0.1)",
           marginTop: "auto",
         }}>
           <span style={{

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import { BookOpen } from "lucide-react";
 
@@ -14,7 +14,7 @@ export default function ResearchIdeasMegaMenu() {
 
         .research-panel {
           background: #ffffff;
-          border: 1px solid #e2e8f0;
+          border: 1px solid rgba(37, 99, 235, 0.15);
           border-top: 3px solid #2563eb;
           box-shadow:
             0 10px 25px -5px rgba(0, 0, 0, 0.08),
@@ -137,7 +137,7 @@ export default function ResearchIdeasMegaMenu() {
               fontSize: '10px',
               letterSpacing: '0.15em',
               textTransform: 'uppercase',
-              color: '#64748b',
+              color: '#475569',
               fontWeight: 600,
               marginBottom: '18px',
             }}>

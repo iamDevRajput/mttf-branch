@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Advisors from './Advisors';
 import Leaders from './Leaders';
@@ -15,7 +15,7 @@ const OurOrganisation = ({ onBack }) => {
       title: 'Advisors',
       description: 'Strategic guidance from industry experts',
       icon: '🎯',
-      color: 'from-blue-600 to-blue-500',
+      color: 'from-[#2563eb] to-[#3b82f6]',
       component: Advisors
     },
     {
@@ -23,7 +23,7 @@ const OurOrganisation = ({ onBack }) => {
       title: 'Leaders',
       description: 'Visionary leadership steering our mission',
       icon: '👑',
-      color: 'from-blue-600 to-blue-400',
+      color: 'from-[#2563eb] to-[#60a5fa]',
       component: Leaders
     },
     {
@@ -31,7 +31,7 @@ const OurOrganisation = ({ onBack }) => {
       title: 'Executives',
       description: 'Executive team driving operational excellence',
       icon: '💼',
-      color: 'from-blue-700 to-blue-500',
+      color: 'from-[#2563eb] to-[#3b82f6]',
       component: Executives
     },
     {
@@ -39,7 +39,7 @@ const OurOrganisation = ({ onBack }) => {
       title: 'Mentors',
       description: 'Dedicated mentors nurturing future talent',
       icon: '🌟',
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-[#3b82f6] to-[#2563eb]',
       component: Mentors
     },
     {
@@ -47,7 +47,7 @@ const OurOrganisation = ({ onBack }) => {
       title: 'Technical Team',
       description: 'Tech innovators building digital solutions',
       icon: '⚙️',
-      color: 'from-blue-400 to-blue-600',
+      color: 'from-[#60a5fa] to-[#2563eb]',
       component: TechnicalTeam
     }
   ];
@@ -65,14 +65,14 @@ const OurOrganisation = ({ onBack }) => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen py-12 px-6 bg-slate-50 font-['Plus_Jakarta_Sans',sans-serif]"
+      className="min-h-screen py-12 px-6 bg-[#ffffff] font-['Plus_Jakarta_Sans',sans-serif]"
     >
       {/* Back Button */}
       <motion.button
         onClick={onBack}
         whileHover={{ scale: 1.05, x: -5 }}
         whileTap={{ scale: 0.95 }}
-        className="mb-8 flex items-center space-x-2 text-slate-600 hover:text-blue-600 bg-white px-6 py-3 rounded-full border border-slate-200 shadow-sm transition-all"
+        className="mb-8 flex items-center space-x-2 text-[#475569] hover:text-[#2563eb] bg-white px-6 py-3 rounded-full border border-[rgba(37,99,235,0.15)] shadow-sm transition-all"
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -87,10 +87,10 @@ const OurOrganisation = ({ onBack }) => {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="text-center mb-16"
       >
-        <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-4">
-          Our <span className="text-blue-600">Organisation</span>
+        <h2 className="text-5xl md:text-6xl font-bold text-[#0b1329] mb-4">
+          Our <span className="text-[#2563eb]">Organisation</span>
         </h2>
-        <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+        <p className="text-xl text-[#475569] max-w-3xl mx-auto">
           Meet the exceptional individuals who make our mission possible
         </p>
       </motion.div>
@@ -108,7 +108,7 @@ const OurOrganisation = ({ onBack }) => {
             className="cursor-pointer group relative"
           >
             {/* Card */}
-            <div className="relative bg-white border border-slate-200 rounded-xl p-8 h-full overflow-hidden shadow-[0_10px_25px_-5px_rgba(0,0,0,0.08)] group-hover:border-blue-200 transition-colors">
+            <div className="relative bg-white border border-[rgba(37,99,235,0.15)] rounded-xl p-8 h-full overflow-hidden shadow-[0_10px_25px_-5px_rgba(0,0,0,0.08)] group-hover:border-[rgba(37,99,235,0.25)] transition-colors">
               <motion.div
                 className={`absolute inset-0 bg-gradient-to-br ${page.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                 whileHover={{ scale: 1.1 }}
@@ -124,18 +124,18 @@ const OurOrganisation = ({ onBack }) => {
               </motion.div>
 
               {/* Title */}
-              <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-2xl font-bold text-[#0b1329] mb-3 group-hover:text-[#2563eb] transition-colors">
                 {page.title}
               </h3>
 
               {/* Description */}
-              <p className="text-slate-600 leading-relaxed mb-4">
+              <p className="text-[#475569] leading-relaxed mb-4">
                 {page.description}
               </p>
 
               {/* View Button */}
               <motion.div
-                className="flex items-center text-blue-600 font-semibold mt-auto"
+                className="flex items-center text-[#2563eb] font-semibold mt-auto"
                 whileHover={{ x: 5 }}
               >
                 View Team

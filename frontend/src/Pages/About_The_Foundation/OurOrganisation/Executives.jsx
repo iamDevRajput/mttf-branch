@@ -152,7 +152,7 @@ const Executives = () => {
 
         .exec-main {
           flex:1;
-          background:linear-gradient(158deg,#f8fafc 0%,#f1f5f9 55%,#e2e8f0 100%);
+          background:linear-gradient(158deg,#ffffff 0%,#ffffff 55%,rgba(37, 99, 235, 0.15) 100%);
           padding:6rem 1.5rem 5rem;
           position:relative; overflow:hidden;
           font-family:'Plus Jakarta Sans',sans-serif;
@@ -168,7 +168,7 @@ const Executives = () => {
         .eyebrow-line { display:inline-block; width:28px; height:1px; background:#2563eb; }
 
         .exec-card {
-          background:#ffffff; border:1px solid #e2e8f0; border-radius:4px;
+          background:#ffffff; border:1px solid rgba(37, 99, 235, 0.15); border-radius:4px;
           overflow:hidden; position:relative;
           transition:all 0.4s cubic-bezier(0.23,1,0.32,1);
         }
@@ -183,7 +183,7 @@ const Executives = () => {
 
         .social-btn {
           width:34px; height:34px; border-radius:50%;
-          background:#F5EFD8; border:1px solid #E8D89A;
+          background:rgba(37, 99, 235, 0.06); border:1px solid rgba(37, 99, 235, 0.15);
           display:flex; align-items:center; justify-content:center;
           font-size:0.9rem; cursor:pointer;
           transition:all 0.3s ease; text-decoration:none;
@@ -191,7 +191,7 @@ const Executives = () => {
         .social-btn:hover { background:#2563eb; border-color:#2563eb; transform:translateY(-2px) rotate(5deg); }
 
         ::-webkit-scrollbar { width:3px; }
-        ::-webkit-scrollbar-track { background:#f8fafc; }
+        ::-webkit-scrollbar-track { background:#ffffff; }
         ::-webkit-scrollbar-thumb { background:#2563eb; border-radius:2px; }
       `}</style>
 
@@ -226,7 +226,7 @@ const Executives = () => {
               initial={{ rotate:-180, scale:0 }}
               animate={{ rotate:0, scale:1 }}
               transition={{ delay:0.3, type:'spring', stiffness:150 }}
-              style={{ display:'inline-flex', alignItems:'center', justifyContent:'center', width:'64px', height:'64px', background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', marginBottom:'1.75rem', color:'#2563eb' }}
+              style={{ display:'inline-flex', alignItems:'center', justifyContent:'center', width:'64px', height:'64px', background:'rgba(37, 99, 235, 0.06)', border:'1px solid rgba(37, 99, 235, 0.15)', borderRadius:'4px', marginBottom:'1.75rem', color:'#2563eb' }}
             >
               <Briefcase size={26} />
             </motion.div>
@@ -237,14 +237,14 @@ const Executives = () => {
               <span className="eyebrow-line" />
             </div>
 
-            <h1 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(2.6rem,6vw,5.5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#0f172a', marginBottom:'0.4rem' }}>
+            <h1 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(2.6rem,6vw,5.5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#0b1329', marginBottom:'0.4rem' }}>
               Executive
             </h1>
-            <h1 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(2.6rem,6vw,5.5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#2563eb 0%,#1d4ed8 40%,#60a5fa 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
+            <h1 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(2.6rem,6vw,5.5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#2563eb 0%,#3b82f6 40%,#60a5fa 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
               Members
             </h1>
 
-            <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'1rem', color:'#6B5C3E', maxWidth:'520px', margin:'0 auto 2rem', lineHeight:1.78, fontWeight:300 }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'1rem', color:'#475569', maxWidth:'520px', margin:'0 auto 2rem', lineHeight:1.78, fontWeight:300 }}>
               Meet the dedicated executive members driving MTTF's vision forward with leadership and innovation across India
             </p>
 
@@ -283,7 +283,7 @@ const Executives = () => {
                 initial={{ opacity:0 }}
                 animate={{ opacity:1 }}
                 exit={{ opacity:0 }}
-                style={{ position:'fixed', inset:0, background:'rgba(28,18,8,0.75)', backdropFilter:'blur(6px)', zIndex:50, display:'flex', alignItems:'center', justifyContent:'center', padding:'1.5rem' }}
+                style={{ position:'fixed', inset:0, background:'rgba(11, 19, 41,0.75)', backdropFilter:'blur(6px)', zIndex:50, display:'flex', alignItems:'center', justifyContent:'center', padding:'1.5rem' }}
                 onClick={() => setSelectedExecutive(null)}
               >
                 <motion.div
@@ -325,18 +325,18 @@ const Executives = () => {
                           <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.62rem', letterSpacing:'0.2em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'0.4rem' }}>
                             {selectedExecutive.department}
                           </div>
-                          <h2 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(1.5rem,3vw,2.2rem)', fontWeight:700, color:'#0f172a', margin:'0 0 0.3rem', letterSpacing:'-0.02em' }}>
+                          <h2 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(1.5rem,3vw,2.2rem)', fontWeight:700, color:'#0b1329', margin:'0 0 0.3rem', letterSpacing:'-0.02em' }}>
                             {selectedExecutive.name}
                           </h2>
                           <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1rem', fontWeight:600, color:'#2563eb', margin:'0 0 0.25rem', letterSpacing:'0.02em' }}>
                             {selectedExecutive.role}
                           </p>
-                          <div style={{ display:'flex', alignItems:'center', gap:'0.4rem', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.75rem', color:'#9C8B6E', fontStyle:'italic', fontWeight:300, marginBottom:'1rem' }}>
+                          <div style={{ display:'flex', alignItems:'center', gap:'0.4rem', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.75rem', color:'#475569', fontStyle:'italic', fontWeight:300, marginBottom:'1rem' }}>
                             <Zap size={11} color="#2563eb" />
                             {selectedExecutive.expertise}
                           </div>
                           <div style={{ height:'1px', background:'linear-gradient(90deg,#2563eb40,transparent)', marginBottom:'1rem' }} />
-                          <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.875rem', color:'#6B5C3E', lineHeight:1.8, fontWeight:300, margin:0 }}>
+                          <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.875rem', color:'#475569', lineHeight:1.8, fontWeight:300, margin:0 }}>
                             {selectedExecutive.bio}
                           </p>
                         </div>
@@ -345,7 +345,7 @@ const Executives = () => {
                       {/* Responsibilities + Achievements */}
                       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:'1.5rem' }}>
                         {/* Responsibilities */}
-                        <div style={{ background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', padding:'1.5rem' }}>
+                        <div style={{ background:'rgba(37, 99, 235, 0.06)', border:'1px solid rgba(37, 99, 235, 0.15)', borderRadius:'4px', padding:'1.5rem' }}>
                           <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.62rem', letterSpacing:'0.18em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1rem', display:'flex', alignItems:'center', gap:'0.4rem' }}>
                             <span style={{ display:'inline-block', width:16, height:1, background:'#2563eb' }} />
                             Key Responsibilities
@@ -359,13 +359,13 @@ const Executives = () => {
                               style={{ display:'flex', alignItems:'flex-start', gap:'0.6rem', marginBottom:'0.5rem' }}
                             >
                               <span style={{ marginTop:'0.45rem', width:5, height:5, borderRadius:'50%', background:'#2563eb', flexShrink:0, display:'inline-block' }} />
-                              <span style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.82rem', color:'#6B5C3E', fontWeight:300, lineHeight:1.6 }}>{resp}</span>
+                              <span style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.82rem', color:'#475569', fontWeight:300, lineHeight:1.6 }}>{resp}</span>
                             </motion.div>
                           ))}
                         </div>
 
                         {/* Achievements */}
-                        <div style={{ background:'#ffffff', border:'1px solid #e2e8f0', borderRadius:'4px', padding:'1.5rem' }}>
+                        <div style={{ background:'#ffffff', border:'1px solid rgba(37, 99, 235, 0.15)', borderRadius:'4px', padding:'1.5rem' }}>
                           <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.62rem', letterSpacing:'0.18em', color:'#2563eb', textTransform:'uppercase', fontWeight:500, marginBottom:'1rem', display:'flex', alignItems:'center', gap:'0.4rem' }}>
                             <Star size={11} color="#2563eb" />
                             Notable Achievements
@@ -379,14 +379,14 @@ const Executives = () => {
                               style={{ display:'flex', alignItems:'flex-start', gap:'0.6rem', marginBottom:'0.5rem' }}
                             >
                               <span style={{ marginTop:'0.45rem', width:5, height:5, background:'#2563eb', flexShrink:0, display:'inline-block', borderRadius:'1px', transform:'rotate(45deg)' }} />
-                              <span style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.82rem', color:'#6B5C3E', fontWeight:300, lineHeight:1.6 }}>{ach}</span>
+                              <span style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.82rem', color:'#475569', fontWeight:300, lineHeight:1.6 }}>{ach}</span>
                             </motion.div>
                           ))}
                         </div>
                       </div>
 
                       {/* Contact */}
-                      <div style={{ display:'flex', flexWrap:'wrap', gap:'1.25rem', paddingTop:'0.5rem', borderTop:'1px solid #EDE4CC' }}>
+                      <div style={{ display:'flex', flexWrap:'wrap', gap:'1.25rem', paddingTop:'0.5rem', borderTop:'1px solid rgba(37, 99, 235, 0.15)' }}>
                         <motion.a
                           href={`mailto:${selectedExecutive.contact.email}`}
                           whileHover={{ scale:1.18, rotate:5 }}
@@ -423,9 +423,9 @@ const Executives = () => {
                       {/* Close */}
                       <button
                         onClick={() => setSelectedExecutive(null)}
-                        style={{ width:'100%', padding:'0.8rem', background:'transparent', color:'#1d4ed8', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.72rem', fontWeight:500, letterSpacing:'0.14em', textTransform:'uppercase', border:'1px solid #D8CBA8', borderRadius:'2px', cursor:'pointer', transition:'all 0.3s ease' }}
+                        style={{ width:'100%', padding:'0.8rem', background:'transparent', color:'#3b82f6', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.72rem', fontWeight:500, letterSpacing:'0.14em', textTransform:'uppercase', border:'1px solid rgba(37, 99, 235, 0.15)', borderRadius:'2px', cursor:'pointer', transition:'all 0.3s ease' }}
                         onMouseEnter={e => { e.currentTarget.style.borderColor = '#2563eb'; e.currentTarget.style.color = '#2563eb'; }}
-                        onMouseLeave={e => { e.currentTarget.style.borderColor = '#D8CBA8'; e.currentTarget.style.color = '#1d4ed8'; }}
+                        onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(37, 99, 235, 0.15)'; e.currentTarget.style.color = '#3b82f6'; }}
                       >
                         Close
                       </button>
@@ -456,7 +456,7 @@ function ExecCard({ exec }) {
       onMouseLeave={() => setHovered(false)}
     >
       {/* Clipped corner */}
-      <div style={{ position:'absolute', top:0, right:0, width:20, height:20, background:hovered ? '#2563eb' : '#E8DFC4', clipPath:'polygon(100% 0,0 0,100% 100%)', transition:'background 0.3s', zIndex:2 }} />
+      <div style={{ position:'absolute', top:0, right:0, width:20, height:20, background:hovered ? '#2563eb' : 'rgba(37, 99, 235, 0.15)', clipPath:'polygon(100% 0,0 0,100% 100%)', transition:'background 0.3s', zIndex:2 }} />
       {/* Card number */}
       <div style={{ position:'absolute', top:'1.1rem', left:'1.4rem', fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.68rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600, zIndex:2 }}>
         {exec.num}
@@ -470,7 +470,7 @@ function ExecCard({ exec }) {
             whileHover={{ scale:1.05, rotate:3 }}
             style={{ position:'relative', flexShrink:0 }}
           >
-            <div style={{ position:'absolute', inset:'-3px', borderRadius:'4px', border:`2px solid ${hovered ? '#2563eb' : '#E8D89A'}`, transition:'border-color 0.35s' }} />
+            <div style={{ position:'absolute', inset:'-3px', borderRadius:'4px', border:`2px solid ${hovered ? '#2563eb' : 'rgba(37, 99, 235, 0.15)'}`, transition:'border-color 0.35s' }} />
             <img
               src={exec.image}
               alt={exec.name}
@@ -484,13 +484,13 @@ function ExecCard({ exec }) {
 
           {/* Name block */}
           <div style={{ flex:1, minWidth:'160px', paddingTop:'0.5rem' }}>
-            <h3 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.35rem', fontWeight:700, color:'#0f172a', margin:'0 0 0.25rem', letterSpacing:'-0.01em', lineHeight:1.2 }}>
+            <h3 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.35rem', fontWeight:700, color:'#0b1329', margin:'0 0 0.25rem', letterSpacing:'-0.01em', lineHeight:1.2 }}>
               {exec.name}
             </h3>
             <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.95rem', fontWeight:600, color:'#2563eb', margin:'0 0 0.35rem', letterSpacing:'0.02em' }}>
               {exec.role}
             </p>
-            <div style={{ display:'flex', alignItems:'center', gap:'0.4rem', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.75rem', color:'#9C8B6E', fontStyle:'italic', fontWeight:300 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:'0.4rem', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.75rem', color:'#475569', fontStyle:'italic', fontWeight:300 }}>
               <Zap size={11} color="#2563eb" />
               {exec.expertise}
             </div>
@@ -498,10 +498,10 @@ function ExecCard({ exec }) {
         </div>
 
         {/* Divider */}
-        <div style={{ height:'1px', background:hovered ? 'linear-gradient(90deg,transparent,#2563eb50,transparent)' : '#EDE4CC', transition:'background 0.3s' }} />
+        <div style={{ height:'1px', background:hovered ? 'linear-gradient(90deg,transparent,#2563eb50,transparent)' : 'rgba(37, 99, 235, 0.15)', transition:'background 0.3s' }} />
 
         {/* Bio */}
-        <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.875rem', color:'#6B5C3E', lineHeight:1.8, margin:0, fontWeight:300 }}>
+        <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.875rem', color:'#475569', lineHeight:1.8, margin:0, fontWeight:300 }}>
           {exec.bio}
         </p>
 

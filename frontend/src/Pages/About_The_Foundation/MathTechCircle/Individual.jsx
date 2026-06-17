@@ -50,8 +50,8 @@ function BenefitCard({ benefit, index }) {
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(32px)",
-        background: hovered ? "rgba(37, 99, 235,0.04)" : "#f8fafc",
-        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.35)" : "rgba(100, 116, 139,0.12)"}`,
+        background: hovered ? "rgba(37, 99, 235,0.04)" : "#ffffff",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.35)" : "rgba(71, 85, 105,0.12)"}`,
         borderRadius: "2px",
         padding: "2rem 2rem 2rem 2.25rem",
         position: "relative",
@@ -63,7 +63,7 @@ function BenefitCard({ benefit, index }) {
       <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: hovered ? "3px" : "2px", background: "linear-gradient(180deg, #2563eb 0%, #60a5fa 100%)", transition: "width 0.3s ease" }} />
       <div style={{ position: "absolute", right: "1rem", top: "50%", transform: "translateY(-50%)", fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "5rem", fontWeight: 700, color: "rgba(37, 99, 235,0.06)", lineHeight: 1, userSelect: "none", pointerEvents: "none" }}>{benefit.id}</div>
       <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.65rem", color: "#2563eb", letterSpacing: "0.2em", marginBottom: "0.6rem", fontWeight: 600 }}>{benefit.id} / {String(benefits.length).padStart(2, "0")}</div>
-      <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1.15rem", fontWeight: 700, color: "#0f172a", letterSpacing: "-0.01em", margin: "0 0 0.75rem", lineHeight: 1.2 }}>{benefit.title}</h3>
+      <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1.15rem", fontWeight: 700, color: "#0b1329", letterSpacing: "-0.01em", margin: "0 0 0.75rem", lineHeight: 1.2 }}>{benefit.title}</h3>
       <div style={{ height: "1px", background: "rgba(37, 99, 235,0.2)", width: hovered ? "100%" : "36%", transition: "width 0.4s ease", marginBottom: "0.85rem" }} />
       <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.82rem", color: "#475569", lineHeight: 1.85, margin: 0, fontWeight: 300 }}>{benefit.desc}</p>
     </div>
@@ -81,8 +81,8 @@ function FaqItem({ faq, index, number }) {
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(20px)",
-        border: `1px solid ${open ? "rgba(37, 99, 235,0.3)" : "rgba(100, 116, 139,0.12)"}`,
-        background: open ? "rgba(37, 99, 235,0.03)" : "#f8fafc",
+        border: `1px solid ${open ? "rgba(37, 99, 235,0.3)" : "rgba(71, 85, 105,0.12)"}`,
+        background: open ? "rgba(37, 99, 235,0.03)" : "#ffffff",
         padding: "1.75rem 2rem",
         cursor: "pointer",
         borderRadius: "2px",
@@ -92,7 +92,7 @@ function FaqItem({ faq, index, number }) {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "1rem" }}>
         <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
           <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.7rem", color: "#2563eb", letterSpacing: "0.15em", flexShrink: 0, paddingTop: "0.1rem", fontWeight: 600 }}>{String(number).padStart(2, "0")}</span>
-          <h4 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1.05rem", fontWeight: open ? 700 : 600, color: open ? "#0f172a" : "#5C4A32", margin: 0, lineHeight: 1.4, transition: "color 0.25s ease" }}>{faq.q}</h4>
+          <h4 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1.05rem", fontWeight: open ? 700 : 600, color: open ? "#0b1329" : "#475569", margin: 0, lineHeight: 1.4, transition: "color 0.25s ease" }}>{faq.q}</h4>
         </div>
         <div style={{ width: 22, height: 22, border: "1px solid rgba(37, 99, 235,0.35)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "#2563eb", fontSize: "0.9rem", transform: open ? "rotate(45deg)" : "rotate(0deg)", transition: "transform 0.3s ease", background: open ? "rgba(37, 99, 235,0.08)" : "transparent" }}>+</div>
       </div>
@@ -116,23 +116,23 @@ function PricingCard({ plan, index }) {
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(32px)",
         position: "relative",
-        background: plan.featured ? "#0f172a" : "#f8fafc",
-        border: plan.featured ? "1px solid rgba(37, 99, 235,0.4)" : `1px solid ${hovered ? "rgba(37, 99, 235,0.3)" : "rgba(100, 116, 139,0.15)"}`,
+        background: plan.featured ? "#0b1329" : "#ffffff",
+        border: plan.featured ? "1px solid rgba(37, 99, 235,0.4)" : `1px solid ${hovered ? "rgba(37, 99, 235,0.3)" : "rgba(71, 85, 105,0.15)"}`,
         borderRadius: "2px",
         padding: "2.5rem 2rem",
         overflow: "hidden",
         cursor: "default",
         transition: `opacity 0.7s ease ${index * 0.12}s, transform 0.7s ease ${index * 0.12}s, border-color 0.3s ease, box-shadow 0.3s ease`,
-        boxShadow: plan.featured ? "0 20px 50px rgba(26,18,10,0.15)" : hovered ? "0 12px 32px rgba(100, 116, 139,0.1)" : "none",
+        boxShadow: plan.featured ? "0 20px 50px rgba(11, 19, 41,0.15)" : hovered ? "0 12px 32px rgba(71, 85, 105,0.1)" : "none",
       }}
     >
-      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: plan.featured ? "2px" : "1px", background: plan.featured ? "linear-gradient(90deg, transparent, #2563eb, #60a5fa, #2563eb, transparent)" : "rgba(100, 116, 139,0.15)" }} />
-      <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: plan.featured ? "#2563eb" : "#475569", marginBottom: "1.5rem", padding: "0.25rem 0.65rem", border: `1px solid ${plan.featured ? "rgba(37, 99, 235,0.35)" : "rgba(100, 116, 139,0.2)"}`, display: "inline-block", borderRadius: "1px", fontWeight: 500 }}>{plan.tag}</div>
-      <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1.45rem", fontWeight: 700, color: plan.featured ? "#E8D9C0" : "#0f172a", marginBottom: "0.3rem", letterSpacing: "-0.01em" }}>{plan.label}</div>
-      <div style={{ height: "1px", background: plan.featured ? "rgba(37, 99, 235,0.2)" : "rgba(100, 116, 139,0.12)", margin: "1.25rem 0" }} />
-      <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.6rem", color: plan.featured ? "rgba(232,217,192,0.4)" : "rgba(90,65,40,0.4)", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "0.4rem", fontWeight: 400 }}>Lifetime Fee</div>
+      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: plan.featured ? "2px" : "1px", background: plan.featured ? "linear-gradient(90deg, transparent, #2563eb, #60a5fa, #2563eb, transparent)" : "rgba(71, 85, 105,0.15)" }} />
+      <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: plan.featured ? "#2563eb" : "#475569", marginBottom: "1.5rem", padding: "0.25rem 0.65rem", border: `1px solid ${plan.featured ? "rgba(37, 99, 235,0.35)" : "rgba(71, 85, 105,0.2)"}`, display: "inline-block", borderRadius: "1px", fontWeight: 500 }}>{plan.tag}</div>
+      <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1.45rem", fontWeight: 700, color: plan.featured ? "rgba(255, 255, 255, 0.85)" : "#0b1329", marginBottom: "0.3rem", letterSpacing: "-0.01em" }}>{plan.label}</div>
+      <div style={{ height: "1px", background: plan.featured ? "rgba(37, 99, 235,0.2)" : "rgba(71, 85, 105,0.12)", margin: "1.25rem 0" }} />
+      <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.6rem", color: plan.featured ? "rgba(255, 255, 255,0.4)" : "rgba(71, 85, 105,0.4)", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "0.4rem", fontWeight: 400 }}>Lifetime Fee</div>
       <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "2.4rem", fontWeight: 700, color: "#2563eb", letterSpacing: "-0.02em", marginBottom: "1rem", lineHeight: 1 }}>{plan.amount}</div>
-      <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.78rem", color: plan.featured ? "rgba(232,217,192,0.4)" : "rgba(90,65,40,0.45)", lineHeight: 1.75, margin: 0, fontWeight: 300 }}>{plan.note}</p>
+      <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.78rem", color: plan.featured ? "rgba(255, 255, 255,0.4)" : "rgba(71, 85, 105,0.45)", lineHeight: 1.75, margin: 0, fontWeight: 300 }}>{plan.note}</p>
     </div>
   );
 }
@@ -149,14 +149,14 @@ export default function Individual() {
   }, []);
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#f8fafc", color: "#0f172a" }}>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#ffffff", color: "#0b1329" }}>
       <style>{`
         @keyframes faqOpen { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes accentShimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
         @keyframes floatDot { 0%, 100% { transform: translateY(0); opacity: 0.3; } 50% { transform: translateY(-7px); opacity: 0.6; } }
         @keyframes rotateSlow { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-track { background: #ffffff; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 1px; }
       `}</style>
 
@@ -165,7 +165,7 @@ export default function Individual() {
       <main style={{ flex: 1 }}>
 
         {/* ── HERO ── */}
-        <section ref={heroRef} style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "6rem 2rem", textAlign: "center", overflow: "hidden", background: "#f8fafc", borderBottom: "1px solid rgba(100, 116, 139,0.1)" }}>
+        <section ref={heroRef} style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "6rem 2rem", textAlign: "center", overflow: "hidden", background: "#ffffff", borderBottom: "1px solid rgba(71, 85, 105,0.1)" }}>
           <div style={{ position: "absolute", inset: 0, backgroundImage: `linear-gradient(rgba(37, 99, 235,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(37, 99, 235,0.05) 1px, transparent 1px)`, backgroundSize: "72px 72px", pointerEvents: "none" }} />
           <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: "700px", height: "500px", background: "radial-gradient(ellipse, rgba(37, 99, 235,0.09) 0%, transparent 70%)", pointerEvents: "none" }} />
           <div style={{ position: "absolute", top: "50%", left: "50%", width: "420px", height: "420px", border: "1px solid rgba(37, 99, 235,0.08)", borderRadius: "50%", animation: "rotateSlow 40s linear infinite", pointerEvents: "none" }} />
@@ -181,13 +181,13 @@ export default function Individual() {
               <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#2563eb", flexShrink: 0 }} />
             </div>
 
-            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(3rem, 8vw, 6.5rem)", fontWeight: 700, lineHeight: 1, letterSpacing: "-0.025em", marginBottom: "0.5rem", color: "#0f172a" }}>
+            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(3rem, 8vw, 6.5rem)", fontWeight: 700, lineHeight: 1, letterSpacing: "-0.025em", marginBottom: "0.5rem", color: "#0b1329" }}>
               Individual
               <br />
-              <span style={{ fontStyle: "italic", background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 40%, #1d4ed8 75%, #2563eb 100%)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", animation: "goldShimmer 5s linear infinite" }}>Membership</span>
+              <span style={{ fontStyle: "italic", background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 40%, #3b82f6 75%, #2563eb 100%)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", animation: "goldShimmer 5s linear infinite" }}>Membership</span>
             </h1>
 
-            <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1rem", color: "rgba(90,65,40,0.55)", maxWidth: "560px", margin: "1.5rem auto 3rem", lineHeight: 1.85, fontWeight: 300 }}>
+            <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1rem", color: "rgba(71, 85, 105,0.55)", maxWidth: "560px", margin: "1.5rem auto 3rem", lineHeight: 1.85, fontWeight: 300 }}>
               MTTF invites all professionals in Science, Technology, Engineering, and Mathematics to join our community — organizing conferences, workshops, training, internships, and faculty development programs.
             </p>
 
@@ -195,21 +195,21 @@ export default function Individual() {
               {[["10", "Member Benefits"], ["₹2K", "India Fee"], ["$200", "Int'l Fee"]].map(([val, label], i) => (
                 <div key={label} style={{ flex: "1 1 140px", padding: "1.25rem 1rem", textAlign: "center", borderRight: i < 2 ? "1px solid rgba(37, 99, 235,0.15)" : "none" }}>
                   <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "2rem", fontWeight: 700, color: "#2563eb", lineHeight: 1 }}>{val}</div>
-                  <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.58rem", color: "rgba(90,65,40,0.35)", letterSpacing: "0.15em", textTransform: "uppercase", marginTop: "0.3rem", fontWeight: 400 }}>{label}</div>
+                  <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.58rem", color: "rgba(71, 85, 105,0.35)", letterSpacing: "0.15em", textTransform: "uppercase", marginTop: "0.3rem", fontWeight: 400 }}>{label}</div>
                 </div>
               ))}
             </div>
 
             <button style={{ marginTop: "2.5rem", fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#fff", background: "#2563eb", border: "none", padding: "0.9rem 2.4rem", cursor: "pointer", borderRadius: "1px", transition: "all 0.3s ease", fontWeight: 500 }}
-              onMouseEnter={e => { e.target.style.background = "#1d4ed8"; e.target.style.transform = "translateY(-2px)"; }}
+              onMouseEnter={e => { e.target.style.background = "#3b82f6"; e.target.style.transform = "translateY(-2px)"; }}
               onMouseLeave={e => { e.target.style.background = "#2563eb"; e.target.style.transform = "translateY(0)"; }}
             >Contact Now</button>
           </div>
         </section>
 
         {/* ── INTRO STRIP ── */}
-        <section style={{ borderTop: "1px solid rgba(100, 116, 139,0.1)", borderBottom: "1px solid rgba(100, 116, 139,0.1)", background: "rgba(37, 99, 235,0.03)", padding: "3.5rem 2rem", textAlign: "center" }}>
-          <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", fontStyle: "italic", color: "rgba(90,65,40,0.6)", maxWidth: "820px", margin: "0 auto", lineHeight: 1.75, fontWeight: 400 }}>
+        <section style={{ borderTop: "1px solid rgba(71, 85, 105,0.1)", borderBottom: "1px solid rgba(71, 85, 105,0.1)", background: "rgba(37, 99, 235,0.03)", padding: "3.5rem 2rem", textAlign: "center" }}>
+          <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", fontStyle: "italic", color: "rgba(71, 85, 105,0.6)", maxWidth: "820px", margin: "0 auto", lineHeight: 1.75, fontWeight: 400 }}>
             "MTTF Societies encompass fields like engineering, mathematics, science, and computer science — creating valuable opportunities for networking, knowledge-sharing, and collaborative problem-solving."
           </p>
         </section>
@@ -217,18 +217,18 @@ export default function Individual() {
         {/* ── BENEFITS ── */}
         <section style={{ maxWidth: "1300px", margin: "0 auto", padding: "5rem 2rem" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginBottom: "1.5rem", flexWrap: "wrap" }}>
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(1.8rem, 4.5vw, 3rem)", fontWeight: 700, color: "#0f172a", letterSpacing: "-0.025em", margin: 0, flexShrink: 0 }}>Benefits of Joining MTTF</h2>
-            <div style={{ flex: 1, height: "1px", background: "rgba(100, 116, 139,0.15)", minWidth: "30px" }} />
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(1.8rem, 4.5vw, 3rem)", fontWeight: 700, color: "#0b1329", letterSpacing: "-0.025em", margin: 0, flexShrink: 0 }}>Benefits of Joining MTTF</h2>
+            <div style={{ flex: 1, height: "1px", background: "rgba(71, 85, 105,0.15)", minWidth: "30px" }} />
             <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.62rem", color: "rgba(37, 99, 235,0.6)", letterSpacing: "0.18em", textTransform: "uppercase", flexShrink: 0, fontWeight: 500 }}>10 Benefits</div>
           </div>
 
-          <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.9rem", color: "rgba(90,65,40,0.5)", maxWidth: "640px", lineHeight: 1.85, marginBottom: "3rem", fontWeight: 300 }}>
+          <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.9rem", color: "rgba(71, 85, 105,0.5)", maxWidth: "640px", lineHeight: 1.85, marginBottom: "3rem", fontWeight: 300 }}>
             As a member of MTTF, you gain access to a wide array of benefits designed to enhance your professional growth and networking opportunities. Some of the key member benefits include:
           </p>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1px", background: "rgba(100, 116, 139,0.1)", border: "1px solid rgba(100, 116, 139,0.1)", borderRadius: "2px", overflow: "hidden" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1px", background: "rgba(71, 85, 105,0.1)", border: "1px solid rgba(71, 85, 105,0.1)", borderRadius: "2px", overflow: "hidden" }}>
             {benefits.map((benefit, i) => (
-              <div key={benefit.id} style={{ background: "#f8fafc" }}>
+              <div key={benefit.id} style={{ background: "#ffffff" }}>
                 <BenefitCard benefit={benefit} index={i} />
               </div>
             ))}
@@ -262,12 +262,12 @@ export default function Individual() {
         </section>
 
         {/* ── PRICING ── */}
-        <section style={{ background: "#0f172a", borderTop: "1px solid rgba(37, 99, 235,0.15)", padding: "5rem 2rem" }}>
+        <section style={{ background: "#0b1329", borderTop: "1px solid rgba(37, 99, 235,0.15)", padding: "5rem 2rem" }}>
           <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "4rem" }}>
               <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.62rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "#2563eb", marginBottom: "1rem", fontWeight: 500 }}>Lifetime Membership Fee</div>
-              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(1.8rem, 4.5vw, 3rem)", fontWeight: 700, color: "#E8D9C0", letterSpacing: "-0.025em", marginBottom: "1.25rem" }}>Simple, One-Time Investment</h2>
-              <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.88rem", color: "rgba(232,217,192,0.4)", maxWidth: "540px", margin: "0 auto", lineHeight: 1.85, fontWeight: 300 }}>
+              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(1.8rem, 4.5vw, 3rem)", fontWeight: 700, color: "rgba(255, 255, 255, 0.85)", letterSpacing: "-0.025em", marginBottom: "1.25rem" }}>Simple, One-Time Investment</h2>
+              <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.88rem", color: "rgba(255, 255, 255,0.4)", maxWidth: "540px", margin: "0 auto", lineHeight: 1.85, fontWeight: 300 }}>
                 New members registered on 1/1/2022 onwards are required to pay their membership fee within the current month after registration. A membership certificate will be sent after fee confirmation.
               </p>
             </div>
@@ -286,8 +286,8 @@ export default function Individual() {
         {/* ── FAQ ── */}
         <section style={{ maxWidth: "800px", margin: "0 auto", padding: "5rem 2rem" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginBottom: "3rem" }}>
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(1.6rem, 4vw, 2.8rem)", fontWeight: 700, color: "#0f172a", letterSpacing: "-0.025em", margin: 0, flexShrink: 0 }}>Frequently Asked</h2>
-            <div style={{ flex: 1, height: "1px", background: "rgba(100, 116, 139,0.15)" }} />
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(1.6rem, 4vw, 2.8rem)", fontWeight: 700, color: "#0b1329", letterSpacing: "-0.025em", margin: 0, flexShrink: 0 }}>Frequently Asked</h2>
+            <div style={{ flex: 1, height: "1px", background: "rgba(71, 85, 105,0.15)" }} />
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
             {faqs.map((faq, i) => (

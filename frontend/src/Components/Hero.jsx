@@ -1,4 +1,4 @@
-
+﻿
 import React from "react";
  
 const styles = `
@@ -119,7 +119,7 @@ const styles = `
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: clamp(15px, 1.8vw, 18px);
     font-weight: 400;
-    color: #94a3b8;
+    color: #475569;
     max-width: 640px;
     margin: 0 auto 36px;
     line-height: 1.625;
@@ -140,7 +140,7 @@ const styles = `
     align-items: center;
     gap: 8px;
     padding: 14px 32px;
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
     color: #ffffff;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
@@ -241,7 +241,7 @@ export default function MTTFHero() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/20" />
  
           {/* Ambient neon radial glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/15 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#2563eb]/15 rounded-full blur-[120px] pointer-events-none" />
         </div>
  
         {/* Vertical label */}

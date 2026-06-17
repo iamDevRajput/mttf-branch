@@ -24,8 +24,8 @@ function About() {
         }
 
         .about-page {
-          background: #f8fafc;
-          color: #0f172a;
+          background: #ffffff;
+          color: #0b1329;
           font-family: 'Plus Jakarta Sans', sans-serif;
           min-height: 100vh;
           padding-top: 5rem;
@@ -63,14 +63,14 @@ function About() {
           align-items: center;
           gap: 0.5rem;
           padding: 0.85rem 2.25rem;
-          background: #0f172a;
-          color: #f8fafc;
+          background: #0b1329;
+          color: #ffffff;
           font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.75rem;
           font-weight: 500;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          border: 1px solid #0f172a;
+          border: 1px solid #0b1329;
           border-radius: 2px;
           cursor: pointer;
           transition: all 0.35s ease;
@@ -89,7 +89,7 @@ function About() {
           gap: 0.5rem;
           padding: 0.85rem 2.25rem;
           background: transparent;
-          color: #0f172a;
+          color: #0b1329;
           font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.75rem;
           font-weight: 500;
@@ -110,7 +110,7 @@ function About() {
         /* ── Cards ── */
         .mv-card {
           background: #ffffff;
-          border: 1px solid #e2e8f0;
+          border: 1px solid rgba(37, 99, 235, 0.15);
           border-radius: 4px;
           padding: 2.5rem;
           position: relative;
@@ -135,7 +135,7 @@ function About() {
 
         .value-card {
           background: #ffffff;
-          border: 1px solid #e2e8f0;
+          border: 1px solid rgba(37, 99, 235, 0.15);
           border-radius: 4px;
           padding: 2rem;
           text-align: center;
@@ -161,7 +161,7 @@ function About() {
 
         .what-card {
           background: #ffffff;
-          border: 1px solid #e2e8f0;
+          border: 1px solid rgba(37, 99, 235, 0.15);
           border-radius: 4px;
           padding: 2.5rem;
           position: relative;
@@ -183,11 +183,11 @@ function About() {
           right: 0; top: 50%;
           transform: translateY(-50%);
           height: 40px; width: 1px;
-          background: #D8CBA8;
+          background: rgba(37, 99, 235, 0.15);
         }
 
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-track { background: #ffffff; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
       `}</style>
 
@@ -199,10 +199,10 @@ function About() {
         <section style={{
           position: 'relative',
           overflow: 'hidden',
-          background: 'linear-gradient(158deg, #f8fafc 0%, #f1f5f9 55%, #e2e8f0 100%)',
+          background: 'linear-gradient(158deg, #ffffff 0%, #ffffff 55%, rgba(37, 99, 235, 0.15) 100%)',
           padding: '6rem 1.5rem 5rem',
           textAlign: 'center',
-          borderBottom: '1px solid #D8CBA8',
+          borderBottom: '1px solid rgba(37, 99, 235, 0.15)',
         }}>
           {/* Corner brackets */}
           {[
@@ -236,7 +236,7 @@ function About() {
               }} />
               <span style={{
                 fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.65rem',
-                color:'#1d4ed8', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500,
+                color:'#3b82f6', letterSpacing:'0.22em', textTransform:'uppercase', fontWeight:500,
               }}>
                 🏛️ About MTTF
               </span>
@@ -246,7 +246,7 @@ function About() {
               fontFamily:"'Plus Jakarta Sans', sans-serif",
               fontSize:'clamp(2.6rem, 6.5vw, 5.2rem)',
               fontWeight:900, lineHeight:1.05, letterSpacing:'-0.02em',
-              color:'#0f172a', marginBottom:'0.5rem',
+              color:'#0b1329', marginBottom:'0.5rem',
             }}>
               MathTech Thinking
             </h1>
@@ -255,7 +255,7 @@ function About() {
               fontSize:'clamp(2.6rem, 6.5vw, 5.2rem)',
               fontWeight:900, lineHeight:1.05, letterSpacing:'-0.02em',
               marginBottom:'1.5rem',
-              background:'linear-gradient(135deg, #2563eb 0%, #1d4ed8 40%, #60a5fa 100%)',
+              background:'linear-gradient(135deg, #2563eb 0%, #3b82f6 40%, #60a5fa 100%)',
               backgroundSize:'200% auto',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
               animation:'shimmer 4s linear infinite',
@@ -266,7 +266,7 @@ function About() {
 
             <p style={{
               fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.1rem',
-              color:'#6B5C3E', maxWidth:'560px', margin:'0 auto',
+              color:'#475569', maxWidth:'560px', margin:'0 auto',
               lineHeight:1.75, fontWeight:300,
             }}>
               Empowering the next generation of mathematical thinkers and technology innovators
@@ -288,11 +288,11 @@ function About() {
           <h2 style={{
             fontFamily:"'Plus Jakarta Sans', sans-serif",
             fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700,
-            color:'#0f172a', textAlign:'center', marginBottom:'3rem',
+            color:'#0b1329', textAlign:'center', marginBottom:'3rem',
             letterSpacing:'-0.02em',
           }}>
             Mission &{' '}
-            <span style={{ fontStyle:'italic', color:'#1d4ed8' }}>Vision</span>
+            <span style={{ fontStyle:'italic', color:'#3b82f6' }}>Vision</span>
           </h2>
 
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))', gap:'1.5rem' }}>
@@ -300,7 +300,7 @@ function About() {
             <div className="mv-card">
               <div style={{
                 width:'52px', height:'52px',
-                background:'#F5EFD8', border:'1px solid #E8D89A',
+                background:'rgba(37, 99, 235, 0.06)', border:'1px solid rgba(37, 99, 235, 0.15)',
                 borderRadius:'4px', display:'flex', alignItems:'center',
                 justifyContent:'center', marginBottom:'1.25rem',
               }}>
@@ -317,12 +317,12 @@ function About() {
               </div>
               <h3 style={{
                 fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.6rem',
-                fontWeight:700, color:'#0f172a', margin:'0 0 1rem',
+                fontWeight:700, color:'#0b1329', margin:'0 0 1rem',
               }}>
                 Transform Ideas Into Reality
               </h3>
-              <div style={{ height:'1px', background:'#E8DFC4', marginBottom:'1rem' }} />
-              <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, margin:0, fontWeight:300 }}>
+              <div style={{ height:'1px', background:'rgba(37, 99, 235, 0.15)', marginBottom:'1rem' }} />
+              <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.9rem', color:'#475569', lineHeight:1.8, margin:0, fontWeight:300 }}>
                 To foster mathematical thinking and technological innovation among students and professionals,
                 creating a platform where ideas transform into reality through collaborative learning and research.
               </p>
@@ -332,7 +332,7 @@ function About() {
             <div className="mv-card">
               <div style={{
                 width:'52px', height:'52px',
-                background:'#F5EFD8', border:'1px solid #E8D89A',
+                background:'rgba(37, 99, 235, 0.06)', border:'1px solid rgba(37, 99, 235, 0.15)',
                 borderRadius:'4px', display:'flex', alignItems:'center',
                 justifyContent:'center', marginBottom:'1.25rem',
               }}>
@@ -350,12 +350,12 @@ function About() {
               </div>
               <h3 style={{
                 fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.6rem',
-                fontWeight:700, color:'#0f172a', margin:'0 0 1rem',
+                fontWeight:700, color:'#0b1329', margin:'0 0 1rem',
               }}>
                 A Global Hub of Excellence
               </h3>
-              <div style={{ height:'1px', background:'#E8DFC4', marginBottom:'1rem' }} />
-              <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.9rem', color:'#6B5C3E', lineHeight:1.8, margin:0, fontWeight:300 }}>
+              <div style={{ height:'1px', background:'rgba(37, 99, 235, 0.15)', marginBottom:'1rem' }} />
+              <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.9rem', color:'#475569', lineHeight:1.8, margin:0, fontWeight:300 }}>
                 To become a global hub for mathematical excellence and technological advancement,
                 where innovation knows no boundaries and every mind has the opportunity to shine.
               </p>
@@ -368,7 +368,7 @@ function About() {
         {/* ══════════════════════════════════
             CORE VALUES
         ══════════════════════════════════ */}
-        <section style={{ background:'#FEFCF5', padding:'5rem 1.5rem' }}>
+        <section style={{ background:'#ffffff', padding:'5rem 1.5rem' }}>
           <div style={{ maxWidth:'1100px', margin:'0 auto' }}>
             <div className="eyebrow">
               <span className="eyebrow-line" />
@@ -378,11 +378,11 @@ function About() {
             <h2 style={{
               fontFamily:"'Plus Jakarta Sans', sans-serif",
               fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700,
-              color:'#0f172a', textAlign:'center', marginBottom:'3rem',
+              color:'#0b1329', textAlign:'center', marginBottom:'3rem',
               letterSpacing:'-0.02em',
             }}>
               Core{' '}
-              <span style={{ fontStyle:'italic', color:'#1d4ed8' }}>Values</span>
+              <span style={{ fontStyle:'italic', color:'#3b82f6' }}>Values</span>
             </h2>
 
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:'1.25rem' }}>
@@ -432,13 +432,13 @@ function About() {
                   {/* Clipped corner */}
                   <div style={{
                     position:'absolute', top:0, right:0, width:16, height:16,
-                    background:'#E8DFC4', clipPath:'polygon(100% 0, 0 0, 100% 100%)',
+                    background:'rgba(37, 99, 235, 0.15)', clipPath:'polygon(100% 0, 0 0, 100% 100%)',
                     transition:'background 0.3s',
                   }} />
 
                   <div style={{
                     width:'48px', height:'48px',
-                    background:'#F5EFD8', border:'1px solid #E8D89A',
+                    background:'rgba(37, 99, 235, 0.06)', border:'1px solid rgba(37, 99, 235, 0.15)',
                     borderRadius:'4px', display:'flex', alignItems:'center',
                     justifyContent:'center', margin:'0 auto 1.25rem',
                   }}>
@@ -446,13 +446,13 @@ function About() {
                   </div>
                   <h3 style={{
                     fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.25rem',
-                    fontWeight:700, color:'#0f172a', marginBottom:'0.5rem',
+                    fontWeight:700, color:'#0b1329', marginBottom:'0.5rem',
                   }}>
                     {v.label}
                   </h3>
                   <p style={{
                     fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.83rem',
-                    color:'#6B5C3E', lineHeight:1.7, margin:0, fontWeight:300,
+                    color:'#475569', lineHeight:1.7, margin:0, fontWeight:300,
                   }}>
                     {v.desc}
                   </p>
@@ -476,11 +476,11 @@ function About() {
           <h2 style={{
             fontFamily:"'Plus Jakarta Sans', sans-serif",
             fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700,
-            color:'#0f172a', textAlign:'center', marginBottom:'3rem',
+            color:'#0b1329', textAlign:'center', marginBottom:'3rem',
             letterSpacing:'-0.02em',
           }}>
             What We{' '}
-            <span style={{ fontStyle:'italic', color:'#1d4ed8' }}>Do</span>
+            <span style={{ fontStyle:'italic', color:'#3b82f6' }}>Do</span>
           </h2>
 
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))', gap:'1.5rem' }}>
@@ -530,10 +530,10 @@ function About() {
                   }}>
                     {item.num}
                   </span>
-                  <span style={{ flex:1, height:'1px', background:'#E8DFC4' }} />
+                  <span style={{ flex:1, height:'1px', background:'rgba(37, 99, 235, 0.15)' }} />
                   <div style={{
-                    width:'44px', height:'44px', background:'#F5EFD8',
-                    border:'1px solid #E8D89A', borderRadius:'4px',
+                    width:'44px', height:'44px', background:'rgba(37, 99, 235, 0.06)',
+                    border:'1px solid rgba(37, 99, 235, 0.15)', borderRadius:'4px',
                     display:'flex', alignItems:'center', justifyContent:'center',
                   }}>
                     {item.icon}
@@ -541,15 +541,15 @@ function About() {
                 </div>
                 <h3 style={{
                   fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.4rem',
-                  fontWeight:700, color:'#0f172a', margin:'0 0 0.75rem',
+                  fontWeight:700, color:'#0b1329', margin:'0 0 0.75rem',
                   letterSpacing:'-0.01em',
                 }}>
                   {item.title}
                 </h3>
-                <div style={{ height:'1px', background:'#E8DFC4', marginBottom:'0.85rem' }} />
+                <div style={{ height:'1px', background:'rgba(37, 99, 235, 0.15)', marginBottom:'0.85rem' }} />
                 <p style={{
                   fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.875rem',
-                  color:'#6B5C3E', lineHeight:1.8, margin:0, fontWeight:300,
+                  color:'#475569', lineHeight:1.8, margin:0, fontWeight:300,
                 }}>
                   {item.desc}
                 </p>
@@ -563,7 +563,7 @@ function About() {
         {/* ══════════════════════════════════
             IMPACT / STATS
         ══════════════════════════════════ */}
-        <section style={{ background:'#FEFCF5', padding:'5rem 1.5rem', borderBottom:'1px solid #E8DFC4' }}>
+        <section style={{ background:'#ffffff', padding:'5rem 1.5rem', borderBottom:'1px solid rgba(37, 99, 235, 0.15)' }}>
           <div style={{ maxWidth:'1100px', margin:'0 auto' }}>
             <div className="eyebrow">
               <span className="eyebrow-line" />
@@ -573,15 +573,15 @@ function About() {
             <h2 style={{
               fontFamily:"'Plus Jakarta Sans', sans-serif",
               fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:700,
-              color:'#0f172a', textAlign:'center', marginBottom:'3.5rem',
+              color:'#0b1329', textAlign:'center', marginBottom:'3.5rem',
               letterSpacing:'-0.02em',
             }}>
               Numbers That{' '}
-              <span style={{ fontStyle:'italic', color:'#1d4ed8' }}>Speak</span>
+              <span style={{ fontStyle:'italic', color:'#3b82f6' }}>Speak</span>
             </h2>
 
             <div style={{
-              background:'#ffffff', border:'1px solid #e2e8f0', borderRadius:'4px',
+              background:'#ffffff', border:'1px solid rgba(37, 99, 235, 0.15)', borderRadius:'4px',
               display:'flex', flexWrap:'wrap', justifyContent:'center',
               position:'relative', overflow:'hidden',
             }}>
@@ -607,7 +607,7 @@ function About() {
                   </div>
                   <div style={{
                     fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.75rem',
-                    color:'#6B5C3E', letterSpacing:'0.1em', textTransform:'uppercase',
+                    color:'#475569', letterSpacing:'0.1em', textTransform:'uppercase',
                     fontWeight:500,
                   }}>
                     {label}
@@ -621,11 +621,11 @@ function About() {
         {/* ══════════════════════════════════
             CTA
         ══════════════════════════════════ */}
-        <section style={{ padding:'5rem 1.5rem', background:'#f8fafc' }}>
+        <section style={{ padding:'5rem 1.5rem', background:'#ffffff' }}>
           <div style={{ maxWidth:'820px', margin:'0 auto' }}>
             <div style={{
-              background:'linear-gradient(158deg, #0f172a 0%, #2E1F08 100%)',
-              border:'1px solid #3D2A0A',
+              background:'linear-gradient(158deg, #0b1329 0%, #0b1329 100%)',
+              border:'1px solid #0b1329',
               borderRadius:'4px', padding:'4rem 3rem', textAlign:'center',
               position:'relative', overflow:'hidden',
             }}>
@@ -658,7 +658,7 @@ function About() {
               <h2 style={{
                 fontFamily:"'Plus Jakarta Sans', sans-serif",
                 fontSize:'clamp(1.8rem,3.5vw,3rem)', fontWeight:700,
-                color:'#f8fafc', letterSpacing:'-0.02em', margin:'0 0 1.25rem',
+                color:'#ffffff', letterSpacing:'-0.02em', margin:'0 0 1.25rem',
               }}>
                 Shape the Future of{' '}
                 <span style={{
@@ -681,12 +681,12 @@ function About() {
 
               <div style={{ display:'flex', gap:'1rem', justifyContent:'center', flexWrap:'wrap' }}>
                 <button className="btn-dark" style={{ background:'#2563eb', borderColor:'#2563eb', color:'#fff' }}
-                  onMouseEnter={e => { e.currentTarget.style.background='#B8973B'; e.currentTarget.style.transform='translateY(-2px)'; }}
+                  onMouseEnter={e => { e.currentTarget.style.background='#3b82f6'; e.currentTarget.style.transform='translateY(-2px)'; }}
                   onMouseLeave={e => { e.currentTarget.style.background='#2563eb'; e.currentTarget.style.transform='translateY(0)'; }}
                 >
                   Become a Member
                 </button>
-                <button className="btn-outline" style={{ borderColor:'rgba(247,243,234,0.35)', color:'#f8fafc' }}
+                <button className="btn-outline" style={{ borderColor:'rgba(247,243,234,0.35)', color:'#ffffff' }}
                   onMouseEnter={e => { e.currentTarget.style.background='rgba(247,243,234,0.1)'; e.currentTarget.style.transform='translateY(-2px)'; }}
                   onMouseLeave={e => { e.currentTarget.style.background='transparent'; e.currentTarget.style.transform='translateY(0)'; }}
                 >

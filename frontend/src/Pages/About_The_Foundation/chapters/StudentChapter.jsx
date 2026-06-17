@@ -6,61 +6,61 @@ const advantages = [
   {
     id: "01",
     title: "Networking Opportunities",
-    accent: "#C8A96E",
+    accent: "#2563eb",
     desc: "Student chapters provide a platform for STEM professionals to network with students, fellow professionals, and industry leaders, fostering valuable connections.",
   },
   {
     id: "02",
     title: "Knowledge Exchange",
-    accent: "#7EB8C9",
+    accent: "#60a5fa",
     desc: "Professionals can engage in knowledge-sharing sessions, workshops, and events organized by student chapters, enhancing their understanding of current trends and advancements in their field.",
   },
   {
     id: "03",
     title: "Mentorship Programs",
-    accent: "#A89BC8",
+    accent: "#60a5fa",
     desc: "Student chapters often offer mentorship opportunities, allowing STEM professionals to guide and support the next generation of professionals, while also gaining satisfaction from contributing to their development.",
   },
   {
     id: "04",
     title: "Skill Development",
-    accent: "#7EC9A8",
+    accent: "#3b82f6",
     desc: "Participation in student chapter activities can contribute to the continuous development of professional skills, providing access to hands-on experiences and practical learning opportunities.",
   },
   {
     id: "05",
     title: "Access to Talent Pool",
-    accent: "#C97E7E",
+    accent: "#2563eb",
     desc: "Professionals can identify and connect with talented students through student chapters, potentially discovering future collaborators, employees, or colleagues.",
   },
   {
     id: "06",
     title: "Professional Growth",
-    accent: "#C8A96E",
+    accent: "#2563eb",
     desc: "Involvement in student chapters can contribute to a professional's personal and career development, offering leadership opportunities, exposure to diverse perspectives, and a chance to enhance leadership and communication skills.",
   },
   {
     id: "07",
     title: "Community Engagement",
-    accent: "#7EB8C9",
+    accent: "#60a5fa",
     desc: "Being part of a student chapter allows professionals to engage with the local academic community, staying informed about educational initiatives, research, and potential collaborations.",
   },
   {
     id: "08",
     title: "Stay Updated on Industry Trends",
-    accent: "#A89BC8",
+    accent: "#60a5fa",
     desc: "Through events and activities organized by student chapters, professionals can stay abreast of the latest industry trends, research findings, and technological advancements relevant to their field.",
   },
   {
     id: "09",
     title: "Contribute to Education",
-    accent: "#7EC9A8",
+    accent: "#3b82f6",
     desc: "Professionals can actively contribute to educational initiatives and programs organized by student chapters, sharing their expertise and helping shape the future of STEM education.",
   },
   {
     id: "10",
     title: "Brand Visibility",
-    accent: "#C8A96E",
+    accent: "#2563eb",
     desc: "Involvement with student chapters provides professionals with opportunities to enhance their personal and organizational visibility within the academic and professional community, potentially leading to increased recognition and opportunities.",
   },
 ];
@@ -106,7 +106,7 @@ function AdvantageCard({ item, index }) {
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(40px)",
         transition: `opacity 0.7s ease ${index * 0.06}s, transform 0.7s ease ${index * 0.06}s`,
-        background: hovered ? "#1C1F2E" : "#171A27",
+        background: hovered ? "#0b1329" : "#0b1329",
         border: `1px solid ${hovered ? item.accent + "60" : "rgba(255,255,255,0.06)"}`,
         borderRadius: "2px",
         padding: "2rem",
@@ -151,7 +151,7 @@ function AdvantageCard({ item, index }) {
           fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "1.2rem",
           fontWeight: 600,
-          color: "#F0EDE8",
+          color: "rgba(255, 255, 255, 0.85)",
           letterSpacing: "0.01em",
           margin: 0,
         }}
@@ -172,7 +172,7 @@ function AdvantageCard({ item, index }) {
         style={{
           fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "0.82rem",
-          color: "rgba(240,237,232,0.45)",
+          color: "rgba(255, 255, 255,0.45)",
           lineHeight: 1.85,
           margin: 0,
         }}
@@ -197,13 +197,13 @@ function ChapterCard() {
         transform: visible ? "translateY(0)" : "translateY(40px)",
         transition: "opacity 0.8s ease, transform 0.8s ease",
         position: "relative",
-        background: "linear-gradient(160deg, #1C2240 0%, #1A2038 100%)",
-        border: `1px solid ${hovered ? "rgba(200,169,110,0.5)" : "rgba(200,169,110,0.25)"}`,
+        background: "linear-gradient(160deg, #0b1329 0%, #0b1329 100%)",
+        border: `1px solid ${hovered ? "rgba(37, 99, 235,0.5)" : "rgba(37, 99, 235,0.25)"}`,
         borderRadius: "2px",
         padding: "3rem",
         overflow: "hidden",
         boxShadow: hovered
-          ? "0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(200,169,110,0.15)"
+          ? "0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(37, 99, 235,0.15)"
           : "0 20px 40px rgba(0,0,0,0.3)",
         transition: "all 0.4s ease, opacity 0.8s ease, transform 0.8s ease",
         maxWidth: "780px",
@@ -217,7 +217,7 @@ function ChapterCard() {
           left: 0,
           right: 0,
           height: "2px",
-          background: "linear-gradient(90deg, #C8A96E, #E8C98E, #C8A96E)",
+          background: "linear-gradient(90deg, #2563eb, #60a5fa, #2563eb)",
         }}
       />
 
@@ -229,7 +229,7 @@ function ChapterCard() {
           fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: "9rem",
           fontWeight: 700,
-          color: "rgba(200,169,110,0.04)",
+          color: "rgba(37, 99, 235,0.04)",
           lineHeight: 1,
           userSelect: "none",
           pointerEvents: "none",
@@ -244,10 +244,10 @@ function ChapterCard() {
             display: "inline-flex",
             alignItems: "center",
             gap: "0.6rem",
-            border: "1px solid rgba(200,169,110,0.3)",
+            border: "1px solid rgba(37, 99, 235,0.3)",
             padding: "0.3rem 0.85rem",
             marginBottom: "2rem",
-            background: "rgba(200,169,110,0.06)",
+            background: "rgba(37, 99, 235,0.06)",
           }}
         >
           <span
@@ -255,7 +255,7 @@ function ChapterCard() {
               width: 5,
               height: 5,
               borderRadius: "50%",
-              background: "#C8A96E",
+              background: "#2563eb",
               display: "inline-block",
             }}
           />
@@ -265,7 +265,7 @@ function ChapterCard() {
               fontSize: "0.6rem",
               letterSpacing: "0.2em",
               textTransform: "uppercase",
-              color: "#C8A96E",
+              color: "#2563eb",
             }}
           >
             Chapter ID: {establishedChapter.chapterId}
@@ -277,7 +277,7 @@ function ChapterCard() {
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
             fontWeight: 600,
-            color: "#F0EDE8",
+            color: "rgba(255, 255, 255, 0.85)",
             letterSpacing: "-0.02em",
             marginBottom: "0.5rem",
             lineHeight: 1.2,
@@ -290,7 +290,7 @@ function ChapterCard() {
           style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "0.85rem",
-            color: "#C8A96E",
+            color: "#2563eb",
             marginBottom: "1.5rem",
             opacity: 0.8,
           }}
@@ -301,7 +301,7 @@ function ChapterCard() {
         <div
           style={{
             height: "1px",
-            background: "rgba(200,169,110,0.15)",
+            background: "rgba(37, 99, 235,0.15)",
             marginBottom: "1.5rem",
           }}
         />
@@ -310,7 +310,7 @@ function ChapterCard() {
           style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "0.875rem",
-            color: "rgba(240,237,232,0.5)",
+            color: "rgba(255, 255, 255,0.5)",
             lineHeight: 1.85,
             margin: "0 0 2rem",
           }}
@@ -337,7 +337,7 @@ function ChapterCard() {
                   fontSize: "0.55rem",
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
-                  color: "rgba(240,237,232,0.25)",
+                  color: "rgba(255, 255, 255,0.25)",
                   marginBottom: "0.25rem",
                 }}
               >
@@ -348,7 +348,7 @@ function ChapterCard() {
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "1rem",
                   fontWeight: 600,
-                  color: "rgba(240,237,232,0.75)",
+                  color: "rgba(255, 255, 255,0.75)",
                 }}
               >
                 {val}
@@ -373,7 +373,7 @@ export default function StudentChapter() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0F111C]">
+    <div className="min-h-screen flex flex-col bg-[#0b1329]">
       <style>{`
         @keyframes shimmer {
           0% { background-position: -200% center; }
@@ -392,8 +392,8 @@ export default function StudentChapter() {
           50% { opacity: 0.6; transform: scale(1.05); }
         }
         ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #0F111C; }
-        ::-webkit-scrollbar-thumb { background: #C8A96E; border-radius: 2px; }
+        ::-webkit-scrollbar-track { background: #0b1329; }
+        ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
       `}</style>
 
       <Header />
@@ -419,7 +419,7 @@ export default function StudentChapter() {
             style={{
               position: "absolute",
               inset: 0,
-              backgroundImage: `linear-gradient(rgba(200,169,110,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(200,169,110,0.04) 1px, transparent 1px)`,
+              backgroundImage: `linear-gradient(rgba(37, 99, 235,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(37, 99, 235,0.04) 1px, transparent 1px)`,
               backgroundSize: "72px 72px",
               pointerEvents: "none",
             }}
@@ -432,7 +432,7 @@ export default function StudentChapter() {
               transform: "translate(-50%,-50%)",
               width: "700px",
               height: "500px",
-              background: "radial-gradient(ellipse, rgba(200,169,110,0.07) 0%, transparent 70%)",
+              background: "radial-gradient(ellipse, rgba(37, 99, 235,0.07) 0%, transparent 70%)",
               pointerEvents: "none",
             }}
           />
@@ -443,7 +443,7 @@ export default function StudentChapter() {
               left: "50%",
               width: "440px",
               height: "440px",
-              border: "1px solid rgba(200,169,110,0.05)",
+              border: "1px solid rgba(37, 99, 235,0.05)",
               borderRadius: "50%",
               animation: "rotateSlow 50s linear infinite",
               pointerEvents: "none",
@@ -465,25 +465,25 @@ export default function StudentChapter() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.75rem",
-                border: "1px solid rgba(200,169,110,0.25)",
+                border: "1px solid rgba(37, 99, 235,0.25)",
                 padding: "0.4rem 1.25rem",
                 marginBottom: "2.5rem",
-                background: "rgba(200,169,110,0.04)",
+                background: "rgba(37, 99, 235,0.04)",
               }}
             >
-              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#C8A96E" }} />
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#2563eb" }} />
               <span
                 style={{
                   fontFamily: "'Plus Jakarta Sans', monospace",
                   fontSize: "0.6rem",
                   letterSpacing: "0.25em",
                   textTransform: "uppercase",
-                  color: "#C8A96E",
+                  color: "#2563eb",
                 }}
               >
                 MathTech Thinking Foundation
               </span>
-              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#C8A96E" }} />
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#2563eb" }} />
             </div>
 
             <h1
@@ -494,7 +494,7 @@ export default function StudentChapter() {
                 lineHeight: 1.1,
                 letterSpacing: "-0.02em",
                 marginBottom: "1rem",
-                color: "#F0EDE8",
+                color: "rgba(255, 255, 255, 0.85)",
               }}
             >
               Student
@@ -502,7 +502,7 @@ export default function StudentChapter() {
               <span
                 style={{
                   fontStyle: "italic",
-                  background: "linear-gradient(120deg, #C8A96E 0%, #E8C98E 40%, #C8A96E 80%)",
+                  background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 40%, #2563eb 80%)",
                   backgroundSize: "200% auto",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -517,7 +517,7 @@ export default function StudentChapter() {
               style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "1.05rem",
-                color: "rgba(240,237,232,0.45)",
+                color: "rgba(255, 255, 255,0.45)",
                 maxWidth: "560px",
                 margin: "1.5rem auto 3rem",
                 lineHeight: 1.8,
@@ -533,8 +533,8 @@ export default function StudentChapter() {
                 display: "flex",
                 justifyContent: "center",
                 flexWrap: "wrap",
-                border: "1px solid rgba(200,169,110,0.15)",
-                background: "rgba(200,169,110,0.03)",
+                border: "1px solid rgba(37, 99, 235,0.15)",
+                background: "rgba(37, 99, 235,0.03)",
                 maxWidth: "560px",
                 margin: "0 auto",
               }}
@@ -550,7 +550,7 @@ export default function StudentChapter() {
                     flex: "1 1 140px",
                     padding: "1.25rem 1rem",
                     textAlign: "center",
-                    borderRight: i < 2 ? "1px solid rgba(200,169,110,0.15)" : "none",
+                    borderRight: i < 2 ? "1px solid rgba(37, 99, 235,0.15)" : "none",
                   }}
                 >
                   <div
@@ -558,7 +558,7 @@ export default function StudentChapter() {
                       fontFamily: "'Plus Jakarta Sans', sans-serif",
                       fontSize: "2rem",
                       fontWeight: 600,
-                      color: "#C8A96E",
+                      color: "#2563eb",
                     }}
                   >
                     {val}
@@ -567,7 +567,7 @@ export default function StudentChapter() {
                     style={{
                       fontFamily: "'Plus Jakarta Sans', monospace",
                       fontSize: "0.55rem",
-                      color: "rgba(240,237,232,0.25)",
+                      color: "rgba(255, 255, 255,0.25)",
                       letterSpacing: "0.15em",
                       textTransform: "uppercase",
                       marginTop: "0.2rem",
@@ -584,9 +584,9 @@ export default function StudentChapter() {
         {/* ── INTRO STRIP ── */}
         <div
           style={{
-            borderTop: "1px solid rgba(200,169,110,0.12)",
-            borderBottom: "1px solid rgba(200,169,110,0.12)",
-            background: "rgba(200,169,110,0.03)",
+            borderTop: "1px solid rgba(37, 99, 235,0.12)",
+            borderBottom: "1px solid rgba(37, 99, 235,0.12)",
+            background: "rgba(37, 99, 235,0.03)",
             padding: "3rem 2rem",
             textAlign: "center",
           }}
@@ -596,7 +596,7 @@ export default function StudentChapter() {
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
               fontStyle: "italic",
-              color: "rgba(240,237,232,0.55)",
+              color: "rgba(255, 255, 255,0.55)",
               maxWidth: "860px",
               margin: "0 auto",
               lineHeight: 1.7,
@@ -624,19 +624,19 @@ export default function StudentChapter() {
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "clamp(2rem, 5vw, 3.5rem)",
                 fontWeight: 600,
-                color: "#F0EDE8",
+                color: "rgba(255, 255, 255, 0.85)",
                 letterSpacing: "-0.02em",
                 margin: 0,
               }}
             >
               Advantages for Professionals
             </h2>
-            <div style={{ flex: 1, height: "1px", background: "rgba(200,169,110,0.15)" }} />
+            <div style={{ flex: 1, height: "1px", background: "rgba(37, 99, 235,0.15)" }} />
             <div
               style={{
                 fontFamily: "'Plus Jakarta Sans', monospace",
                 fontSize: "0.6rem",
-                color: "rgba(200,169,110,0.5)",
+                color: "rgba(37, 99, 235,0.5)",
                 letterSpacing: "0.15em",
               }}
             >
@@ -654,7 +654,7 @@ export default function StudentChapter() {
             }}
           >
             {advantages.map((item, i) => (
-              <div key={item.id} style={{ background: "#0F111C", padding: "1px" }}>
+              <div key={item.id} style={{ background: "#0b1329", padding: "1px" }}>
                 <AdvantageCard item={item} index={i} />
               </div>
             ))}
@@ -664,8 +664,8 @@ export default function StudentChapter() {
         {/* ── ESTABLISHED CHAPTERS ── */}
         <section
           style={{
-            background: "#0B0D18",
-            borderTop: "1px solid rgba(200,169,110,0.1)",
+            background: "#0b1329",
+            borderTop: "1px solid rgba(37, 99, 235,0.1)",
             padding: "6rem 2rem",
           }}
         >
@@ -677,7 +677,7 @@ export default function StudentChapter() {
                   fontSize: "0.6rem",
                   letterSpacing: "0.25em",
                   textTransform: "uppercase",
-                  color: "#C8A96E",
+                  color: "#2563eb",
                   marginBottom: "1rem",
                   opacity: 0.7,
                 }}
@@ -689,7 +689,7 @@ export default function StudentChapter() {
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "clamp(2rem, 5vw, 3.5rem)",
                   fontWeight: 600,
-                  color: "#F0EDE8",
+                  color: "rgba(255, 255, 255, 0.85)",
                   letterSpacing: "-0.02em",
                   marginBottom: "1rem",
                 }}
@@ -700,7 +700,7 @@ export default function StudentChapter() {
                 style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.88rem",
-                  color: "rgba(240,237,232,0.35)",
+                  color: "rgba(255, 255, 255,0.35)",
                   maxWidth: "500px",
                   margin: "0 auto",
                   lineHeight: 1.85,

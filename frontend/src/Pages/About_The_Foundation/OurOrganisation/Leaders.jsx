@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Users, Target, Zap, Globe } from 'lucide-react';
 import Header from "../../../Components/Header";
@@ -91,7 +91,7 @@ const Leaders = () => {
 
         .leaders-main {
           flex:1;
-          background:linear-gradient(158deg,#f8fafc 0%,#f1f5f9 55%,#e2e8f0 100%);
+          background:linear-gradient(158deg,#ffffff 0%,#ffffff 55%,rgba(37, 99, 235, 0.15) 100%);
           padding:6rem 1.5rem 5rem;
           position:relative; overflow:hidden;
           font-family:'Plus Jakarta Sans',sans-serif;
@@ -107,7 +107,7 @@ const Leaders = () => {
         .eyebrow-line { display:inline-block; width:28px; height:1px; background:#2563eb; }
 
         .leader-card {
-          background:#ffffff; border:1px solid #e2e8f0; border-radius:4px;
+          background:#ffffff; border:1px solid rgba(37, 99, 235, 0.15); border-radius:4px;
           overflow:hidden; position:relative;
           transition:all 0.4s cubic-bezier(0.23,1,0.32,1);
         }
@@ -122,7 +122,7 @@ const Leaders = () => {
 
         .social-btn {
           width:34px; height:34px; border-radius:50%;
-          background:#F5EFD8; border:1px solid #E8D89A;
+          background:rgba(37, 99, 235, 0.06); border:1px solid rgba(37, 99, 235, 0.15);
           display:flex; align-items:center; justify-content:center;
           font-size:0.9rem; cursor:pointer;
           transition:all 0.3s ease; text-decoration:none;
@@ -130,7 +130,7 @@ const Leaders = () => {
         .social-btn:hover { background:#2563eb; border-color:#2563eb; transform:translateY(-2px) rotate(5deg); }
 
         .stat-card {
-          background:#ffffff; border:1px solid #e2e8f0; border-radius:4px;
+          background:#ffffff; border:1px solid rgba(37, 99, 235, 0.15); border-radius:4px;
           padding:1.75rem; text-align:center; position:relative; overflow:hidden;
           transition:all 0.35s ease;
         }
@@ -143,7 +143,7 @@ const Leaders = () => {
         .stat-card:hover { border-color:#2563eb; transform:translateY(-4px); box-shadow:0 16px 36px rgba(37, 99, 235,0.1); }
 
         ::-webkit-scrollbar { width:3px; }
-        ::-webkit-scrollbar-track { background:#f8fafc; }
+        ::-webkit-scrollbar-track { background:#ffffff; }
         ::-webkit-scrollbar-thumb { background:#2563eb; border-radius:2px; }
       `}</style>
 
@@ -178,7 +178,7 @@ const Leaders = () => {
               initial={{ rotate:-180, scale:0 }}
               animate={{ rotate:0, scale:1 }}
               transition={{ delay:0.3, type:'spring', stiffness:150 }}
-              style={{ display:'inline-flex', alignItems:'center', justifyContent:'center', width:'64px', height:'64px', background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', marginBottom:'1.75rem', color:'#2563eb' }}
+              style={{ display:'inline-flex', alignItems:'center', justifyContent:'center', width:'64px', height:'64px', background:'rgba(37, 99, 235, 0.06)', border:'1px solid rgba(37, 99, 235, 0.15)', borderRadius:'4px', marginBottom:'1.75rem', color:'#2563eb' }}
             >
               <Users size={26} />
             </motion.div>
@@ -189,14 +189,14 @@ const Leaders = () => {
               <span className="eyebrow-line" />
             </div>
 
-            <h1 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(2.6rem,6vw,5.5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#0f172a', marginBottom:'0.4rem' }}>
+            <h1 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(2.6rem,6vw,5.5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', color:'#0b1329', marginBottom:'0.4rem' }}>
               Our
             </h1>
-            <h1 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(2.6rem,6vw,5.5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#2563eb 0%,#1d4ed8 40%,#60a5fa 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
+            <h1 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'clamp(2.6rem,6vw,5.5rem)', fontWeight:900, lineHeight:1.05, letterSpacing:'-0.025em', marginBottom:'1.25rem', fontStyle:'italic', background:'linear-gradient(135deg,#2563eb 0%,#3b82f6 40%,#60a5fa 100%)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'shimmer 4s linear infinite' }}>
               Leaders
             </h1>
 
-            <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'1rem', color:'#6B5C3E', maxWidth:'520px', margin:'0 auto 2rem', lineHeight:1.78, fontWeight:300 }}>
+            <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'1rem', color:'#475569', maxWidth:'520px', margin:'0 auto 2rem', lineHeight:1.78, fontWeight:300 }}>
               Driving innovation and excellence through visionary leadership and unwavering commitment
             </p>
 
@@ -241,13 +241,13 @@ const Leaders = () => {
                   whileHover={{ y:-5 }}
                   className="stat-card"
                 >
-                  <div style={{ width:'40px', height:'40px', background:'#F5EFD8', border:'1px solid #E8D89A', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', margin:'0 auto 0.85rem', color:'#2563eb' }}>
+                  <div style={{ width:'40px', height:'40px', background:'rgba(37, 99, 235, 0.06)', border:'1px solid rgba(37, 99, 235, 0.15)', borderRadius:'4px', display:'flex', alignItems:'center', justifyContent:'center', margin:'0 auto 0.85rem', color:'#2563eb' }}>
                     <Icon size={18} />
                   </div>
                   <div style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'2.4rem', fontWeight:700, color:'#2563eb', letterSpacing:'-0.03em', lineHeight:1, marginBottom:'0.35rem' }}>
                     {stat.value}
                   </div>
-                  <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.68rem', color:'#9C8B6E', letterSpacing:'0.14em', textTransform:'uppercase', fontWeight:500 }}>
+                  <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.68rem', color:'#475569', letterSpacing:'0.14em', textTransform:'uppercase', fontWeight:500 }}>
                     {stat.label}
                   </div>
                 </motion.div>
@@ -274,7 +274,7 @@ function LeaderCard({ leader }) {
       onMouseLeave={() => setHovered(false)}
     >
       {/* Clipped corner */}
-      <div style={{ position:'absolute', top:0, right:0, width:20, height:20, background:hovered?'#2563eb':'#E8DFC4', clipPath:'polygon(100% 0,0 0,100% 100%)', transition:'background 0.3s', zIndex:2 }} />
+      <div style={{ position:'absolute', top:0, right:0, width:20, height:20, background:hovered?'#2563eb':'rgba(37, 99, 235, 0.15)', clipPath:'polygon(100% 0,0 0,100% 100%)', transition:'background 0.3s', zIndex:2 }} />
       {/* Card number */}
       <div style={{ position:'absolute', top:'1.1rem', left:'1.4rem', fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.68rem', color:'#2563eb', letterSpacing:'0.15em', fontWeight:600, zIndex:2 }}>
         {leader.num}
@@ -288,7 +288,7 @@ function LeaderCard({ leader }) {
             whileHover={{ scale:1.05, rotate:3 }}
             style={{ position:'relative', flexShrink:0 }}
           >
-            <div style={{ position:'absolute', inset:'-3px', borderRadius:'4px', border:`2px solid ${hovered?'#2563eb':'#E8D89A'}`, transition:'border-color 0.35s' }} />
+            <div style={{ position:'absolute', inset:'-3px', borderRadius:'4px', border:`2px solid ${hovered?'#2563eb':'rgba(37, 99, 235, 0.15)'}`, transition:'border-color 0.35s' }} />
             <img
               src={leader.image}
               alt={leader.name}
@@ -302,13 +302,13 @@ function LeaderCard({ leader }) {
 
           {/* Name block */}
           <div style={{ flex:1, minWidth:'160px', paddingTop:'0.5rem' }}>
-            <h3 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.35rem', fontWeight:700, color:'#0f172a', margin:'0 0 0.25rem', letterSpacing:'-0.01em', lineHeight:1.2 }}>
+            <h3 style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'1.35rem', fontWeight:700, color:'#0b1329', margin:'0 0 0.25rem', letterSpacing:'-0.01em', lineHeight:1.2 }}>
               {leader.name}
             </h3>
             <p style={{ fontFamily:"'Plus Jakarta Sans', sans-serif", fontSize:'0.95rem', fontWeight:600, color:'#2563eb', margin:'0 0 0.35rem', letterSpacing:'0.02em' }}>
               {leader.role}
             </p>
-            <div style={{ display:'flex', alignItems:'center', gap:'0.4rem', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.75rem', color:'#9C8B6E', fontStyle:'italic', fontWeight:300 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:'0.4rem', fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.75rem', color:'#475569', fontStyle:'italic', fontWeight:300 }}>
               <Zap size={11} color="#2563eb" />
               {leader.expertise}
             </div>
@@ -316,10 +316,10 @@ function LeaderCard({ leader }) {
         </div>
 
         {/* Divider */}
-        <div style={{ height:'1px', background:hovered?'linear-gradient(90deg,transparent,#2563eb50,transparent)':'#EDE4CC', transition:'background 0.3s' }} />
+        <div style={{ height:'1px', background:hovered?'linear-gradient(90deg,transparent,#2563eb50,transparent)':'rgba(37, 99, 235, 0.15)', transition:'background 0.3s' }} />
 
         {/* Bio */}
-        <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.875rem', color:'#6B5C3E', lineHeight:1.8, margin:0, fontWeight:300 }}>
+        <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'0.875rem', color:'#475569', lineHeight:1.8, margin:0, fontWeight:300 }}>
           {leader.bio}
         </p>
 

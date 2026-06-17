@@ -82,14 +82,14 @@ function BusinessIntelligence() {
         .bi-page * { box-sizing: border-box; }
 
         .bi-page {
-          --mttf-bg-alt: #f8fafc;
+          --mttf-bg-alt: #ffffff;
           --mttf-bg: #ffffff;
-          --mttf-primary: #D4A843;
-          --mttf-primary-light: #F5E6C0;
-          --mttf-text: #0f172a;
-          --text-mid: #4A3F35;
-          --text-light: #8A7A6E;
-          --border: #E8E0D4;
+          --mttf-primary: #2563eb;
+          --mttf-primary-light: #60a5fa;
+          --mttf-text: #0b1329;
+          --text-mid: #475569;
+          --text-light: #475569;
+          --border: rgba(37, 99, 235, 0.15);
           font-family: 'Plus Jakarta Sans', sans-serif;
           background: var(--mttf-bg-alt);
           min-height: 100vh;
@@ -168,7 +168,7 @@ function BusinessIntelligence() {
         .bi-hero h1 {
           font-size: clamp(44px, 7vw, 88px);
           font-weight: 300;
-          color: #f8fafc;
+          color: #ffffff;
           line-height: 1.0;
           margin: 0 0 24px;
           letter-spacing: -1px;
@@ -207,7 +207,7 @@ function BusinessIntelligence() {
         }
 
         .bi-btn-primary:hover {
-          background: #c49a38;
+          background: #3b82f6;
           transform: translateY(-1px);
           box-shadow: 0 8px 30px rgba(212,168,67,0.3);
         }
@@ -414,7 +414,7 @@ function BusinessIntelligence() {
           transition: transform 0.3s ease;
         }
 
-        .bi-service-item:hover { background: #fdfaf5; }
+        .bi-service-item:hover { background: #ffffff; }
         .bi-service-item:hover::before { transform: scaleY(1); }
 
         .bi-service-num {
@@ -576,7 +576,7 @@ function BusinessIntelligence() {
           position: relative;
         }
 
-        .bi-cta h2 em { font-style: italic; color: #c49a38; }
+        .bi-cta h2 em { font-style: italic; color: #3b82f6; }
 
         .bi-cta p {
           font-size: 15px;

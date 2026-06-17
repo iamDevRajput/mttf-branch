@@ -36,8 +36,8 @@ function Awards2025() {
       minHeight: "100vh",
       display: "flex",
       flexDirection: "column",
-      background: "#f8fafc",
-      color: "#0f172a",
+      background: "#ffffff",
+      color: "#0b1329",
     }}>
       <style>{`
         @keyframes accentShimmer {
@@ -61,7 +61,7 @@ function Awards2025() {
           to   { opacity: 1; transform: translateY(0); }
         }
         ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-track { background: #ffffff; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 1px; }
       `}</style>
 
@@ -82,8 +82,8 @@ function Awards2025() {
             padding: "7rem 2rem 5rem",
             textAlign: "center",
             overflow: "hidden",
-            background: "#f8fafc",
-            borderBottom: "1px solid rgba(100, 116, 139,0.1)",
+            background: "#ffffff",
+            borderBottom: "1px solid rgba(71, 85, 105,0.1)",
           }}
         >
           {/* Subtle grid */}
@@ -180,13 +180,13 @@ function Awards2025() {
               fontWeight: 700,
               lineHeight: 1.02,
               letterSpacing: "-0.025em",
-              color: "#0f172a",
+              color: "#0b1329",
               marginBottom: "0.5rem",
             }}>
               MTTF{" "}
               <span style={{
                 fontStyle: "italic",
-                background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 38%, #1d4ed8 72%, #2563eb 100%)",
+                background: "linear-gradient(120deg, #2563eb 0%, #60a5fa 38%, #3b82f6 72%, #2563eb 100%)",
                 backgroundSize: "200% auto",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -202,7 +202,7 @@ function Awards2025() {
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "clamp(1rem, 2.2vw, 1.3rem)",
               fontStyle: "italic",
-              color: "rgba(90,65,40,0.55)",
+              color: "rgba(71, 85, 105,0.55)",
               maxWidth: "560px",
               margin: "1.25rem auto 2.5rem",
               lineHeight: 1.75,
@@ -240,7 +240,7 @@ function Awards2025() {
                   <div style={{
                     fontFamily: "'Plus Jakarta Sans', sans-serif",
                     fontSize: "0.55rem",
-                    color: "rgba(90,65,40,0.38)",
+                    color: "rgba(71, 85, 105,0.38)",
                     letterSpacing: "0.16em",
                     textTransform: "uppercase",
                     marginTop: "0.3rem",
@@ -254,7 +254,7 @@ function Awards2025() {
 
         {/* ── INTRO STRIP ── */}
         <div style={{
-          borderBottom: "1px solid rgba(100, 116, 139,0.1)",
+          borderBottom: "1px solid rgba(71, 85, 105,0.1)",
           background: "rgba(37, 99, 235,0.03)",
           padding: "3rem 2rem",
           textAlign: "center",
@@ -263,7 +263,7 @@ function Awards2025() {
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "clamp(1rem, 2.3vw, 1.4rem)",
             fontStyle: "italic",
-            color: "rgba(90,65,40,0.58)",
+            color: "rgba(71, 85, 105,0.58)",
             maxWidth: "780px",
             margin: "0 auto",
             lineHeight: 1.75,
@@ -288,14 +288,14 @@ function Awards2025() {
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)",
               fontWeight: 700,
-              color: "#0f172a",
+              color: "#0b1329",
               letterSpacing: "-0.02em",
               margin: 0,
               flexShrink: 0,
             }}>
               2025 Award Categories
             </h2>
-            <div style={{ flex: 1, height: "1px", background: "rgba(100, 116, 139,0.15)", minWidth: "24px" }} />
+            <div style={{ flex: 1, height: "1px", background: "rgba(71, 85, 105,0.15)", minWidth: "24px" }} />
             <div style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "0.6rem",
@@ -316,8 +316,8 @@ function Awards2025() {
               display: "grid",
               gap: "1px",
               gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-              background: "rgba(100, 116, 139,0.1)",
-              border: "1px solid rgba(100, 116, 139,0.1)",
+              background: "rgba(71, 85, 105,0.1)",
+              border: "1px solid rgba(71, 85, 105,0.1)",
               borderRadius: "2px",
               overflow: "hidden",
             }}
@@ -326,7 +326,7 @@ function Awards2025() {
               <div
                 key={award.id}
                 style={{
-                  background: "#f8fafc",
+                  background: "#ffffff",
                   opacity: gridVisible ? 1 : 0,
                   transform: gridVisible ? "translateY(0)" : "translateY(24px)",
                   transition: `opacity 0.65s ease ${i * 0.07}s, transform 0.65s ease ${i * 0.07}s`,
@@ -360,7 +360,7 @@ function Awards2025() {
               fontWeight: 500,
               transition: "background 0.3s ease, transform 0.3s ease",
             }}
-              onMouseEnter={e => { e.target.style.background = "#1d4ed8"; e.target.style.transform = "translateY(-2px)"; }}
+              onMouseEnter={e => { e.target.style.background = "#3b82f6"; e.target.style.transform = "translateY(-2px)"; }}
               onMouseLeave={e => { e.target.style.background = "#2563eb"; e.target.style.transform = "translateY(0)"; }}
             >
               Apply Now
@@ -389,7 +389,7 @@ function Awards2025() {
 
         {/* ── CLOSING BANNER ── */}
         <section style={{
-          background: "#0f172a",
+          background: "#0b1329",
           borderTop: "1px solid rgba(37, 99, 235,0.15)",
           padding: "4rem 2rem",
           textAlign: "center",
@@ -409,7 +409,7 @@ function Awards2025() {
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: "clamp(1.1rem, 3vw, 1.75rem)",
             fontWeight: 700,
-            color: "rgba(232,217,192,0.85)",
+            color: "rgba(255, 255, 255,0.85)",
             maxWidth: "640px",
             margin: "0 auto 2rem",
             lineHeight: 1.4,

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import { Users, Building2, Award, GraduationCap } from "lucide-react";
 
@@ -14,7 +14,7 @@ export default function AboutFoundationMegaMenu() {
 
         .luxury-menu-panel {
           background: #ffffff;
-          border: 1px solid #e2e8f0;
+          border: 1px solid rgba(37, 99, 235, 0.15);
           border-top: 3px solid #2563eb;
           box-shadow:
             0 10px 25px -5px rgba(0, 0, 0, 0.08),
@@ -38,7 +38,7 @@ export default function AboutFoundationMegaMenu() {
 
         .luxury-divider {
           width: 1px;
-          background: linear-gradient(to bottom, transparent, #e2e8f0, transparent);
+          background: linear-gradient(to bottom, transparent, rgba(37, 99, 235, 0.15), transparent);
           opacity: 0.8;
         }
 
@@ -124,7 +124,7 @@ export default function AboutFoundationMegaMenu() {
                 fontSize: '10px',
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
-                color: '#64748b',
+                color: '#475569',
                 fontWeight: 600,
               }}>
                 Foundation Overview
@@ -245,7 +245,7 @@ export default function AboutFoundationMegaMenu() {
               <p style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: '11px',
-                color: '#64748b',
+                color: '#475569',
                 letterSpacing: '0.04em',
                 fontWeight: 500,
               }}>
