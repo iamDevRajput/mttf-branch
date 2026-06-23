@@ -9,7 +9,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-    origin: "http://localhost:5173", // Frontend URL
+    origin: ["http://localhost:5173", "http://localhost:5174"], // Frontend URL (both Vite ports)
     credentials: true,
   }));
   app.use(express.json());

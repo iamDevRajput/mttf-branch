@@ -1,5 +1,32 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+const COUNTRY_CODES = [
+  { code: "+91",  flag: "🇮🇳", name: "India" },
+  { code: "+1",   flag: "🇺🇸", name: "USA" },
+  { code: "+1",   flag: "🇨🇦", name: "Canada" },
+  { code: "+44",  flag: "🇬🇧", name: "UK" },
+  { code: "+61",  flag: "🇦🇺", name: "Australia" },
+  { code: "+971", flag: "🇦🇪", name: "UAE" },
+  { code: "+966", flag: "🇸🇦", name: "Saudi Arabia" },
+  { code: "+65",  flag: "🇸🇬", name: "Singapore" },
+  { code: "+60",  flag: "🇲🇾", name: "Malaysia" },
+  { code: "+92",  flag: "🇵🇰", name: "Pakistan" },
+  { code: "+880", flag: "🇧🇩", name: "Bangladesh" },
+  { code: "+94",  flag: "🇱🇰", name: "Sri Lanka" },
+  { code: "+977", flag: "🇳🇵", name: "Nepal" },
+  { code: "+49",  flag: "🇩🇪", name: "Germany" },
+  { code: "+33",  flag: "🇫🇷", name: "France" },
+  { code: "+39",  flag: "🇮🇹", name: "Italy" },
+  { code: "+34",  flag: "🇪🇸", name: "Spain" },
+  { code: "+81",  flag: "🇯🇵", name: "Japan" },
+  { code: "+82",  flag: "🇰🇷", name: "South Korea" },
+  { code: "+86",  flag: "🇨🇳", name: "China" },
+  { code: "+55",  flag: "🇧🇷", name: "Brazil" },
+  { code: "+27",  flag: "🇿🇦", name: "South Africa" },
+  { code: "+254", flag: "🇰🇪", name: "Kenya" },
+  { code: "+234", flag: "🇳🇬", name: "Nigeria" },
+];
 
 export default function Auth() {
   const navigate = useNavigate();
@@ -7,13 +34,17 @@ export default function Auth() {
   const [membershipType, setMembershipType] = useState("individual");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const [user, setUser] = useState(null);
+  const [terms, setTerms] = useState(false);
+  const [countryCode, setCountryCode] = useState("+91");
   const [form, setForm] = useState({
     name: "",
     phone: "",
     email: "",
     password: "",
     confirmPassword: "",
+    dob: "",
     institutionSize: "",
   });
 
@@ -22,9 +53,27 @@ export default function Auth() {
   const handleSignup = async (e) => {
     e.preventDefault();
     setError("");
+    setSuccess("");
+
+    // Client-side checks before hitting the server
+    if (form.name.trim().length < 3) {
+      setError("Full name must be at least 3 characters.");
+      return;
+    }
+
+    const phoneDigits = form.phone; // already digits-only from onChange
+    if (!phoneDigits || phoneDigits.length < 4 || phoneDigits.length > 15) {
+      setError("Enter a valid phone number (digits only).");
+      return;
+    }
 
     if (form.password !== form.confirmPassword) {
       setError("Passwords do not match.");
+      return;
+    }
+
+    if (!terms) {
+      setError("You must accept the terms and conditions.");
       return;
     }
 
@@ -35,9 +84,10 @@ export default function Auth() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: form.name,
-          phone: form.phone,
+          phone: countryCode + form.phone,
           email: form.email,
           password: form.password,
+          dob: form.dob,
           membershipType,
           institutionSize: form.institutionSize,
         }),
@@ -45,21 +95,24 @@ export default function Auth() {
 
       const data = await res.json();
 
-      if (!data.success) {
-        setError(data.message || "Signup failed.");
+      if (!res.ok) {
+        // Show exact backend message for any non-2xx response
+        setError(data.message || "Registration failed. Please try again.");
       } else {
         localStorage.setItem("token", data.token);
         localStorage.setItem("user", JSON.stringify(data.user));
         setUser(data.user);
-        alert("Account created successfully!");
+        setSuccess("Account created successfully! Welcome aboard.");
         setPage("membership");
       }
     } catch (err) {
-      setError("Server error. Please try again.");
+      // Only true network failures reach here
+      setError("Network error. Check your connection.");
     } finally {
       setLoading(false);
     }
   };
+
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -254,6 +307,60 @@ export default function Auth() {
           margin-bottom: 16px; text-align: center; letter-spacing: 0.3px;
         }
 
+        .auth-success {
+          background: rgba(22, 163, 74, 0.08); border: 1px solid rgba(22, 163, 74, 0.35);
+          color: #16a34a; font-size: 12px; padding: 10px 14px;
+          margin-bottom: 16px; text-align: center; letter-spacing: 0.3px;
+        }
+
+        .auth-terms {
+          display: flex; align-items: flex-start; gap: 10px;
+          margin-bottom: 16px; font-size: 12px; color: #475569; line-height: 1.5;
+        }
+        .auth-terms input[type="checkbox"] { margin-top: 2px; accent-color: #2563eb; flex-shrink: 0; }
+        .auth-terms a { color: #2563eb; text-decoration: underline; text-underline-offset: 3px; }
+
+        .phone-wrap {
+          display: flex;
+          border: 1px solid rgba(37,99,235,0.25);
+          transition: border-color 0.25s;
+          height: 46px;
+        }
+        .phone-wrap:focus-within { border-color: #2563eb; }
+
+        .phone-country-select {
+          flex-shrink: 0;
+          width: 90px;
+          padding: 0 8px;
+          background: rgba(37,99,235,0.04);
+          border: none;
+          border-right: 1px solid rgba(37,99,235,0.18);
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          font-size: 13px;
+          font-weight: 500;
+          color: #0b1329;
+          outline: none;
+          cursor: pointer;
+          appearance: none;
+          -webkit-appearance: none;
+          text-align: center;
+        }
+        .phone-country-select:focus { background: rgba(37,99,235,0.07); }
+
+        .phone-number-input {
+          flex: 1;
+          padding: 0 14px;
+          background: #fff;
+          border: none;
+          outline: none;
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          font-size: 13.5px;
+          font-weight: 300;
+          color: #0b1329;
+          height: 100%;
+        }
+        .phone-number-input::placeholder { color: #9ca3af; }
+
         .auth-submit {
           width: 100%; padding: 14px; background: #0b1329;
           border: 1px solid #0b1329; color: #ffffff;
@@ -346,29 +453,55 @@ export default function Auth() {
                 </h2>
 
                 <div className="auth-toggle-wrap">
-                  <button className={`auth-toggle-btn ${page === "login" ? "active" : ""}`} onClick={() => { setPage("login"); setError(""); }}>
+                  <button className={`auth-toggle-btn ${page === "login" ? "active" : ""}`} onClick={() => { setPage("login"); setError(""); setSuccess(""); }}>
                     Sign In
                   </button>
-                  <button className={`auth-toggle-btn ${page === "signup" ? "active" : ""}`} onClick={() => { setPage("signup"); setError(""); }}>
+                  <button className={`auth-toggle-btn ${page === "signup" ? "active" : ""}`} onClick={() => { setPage("signup"); setError(""); setSuccess(""); }}>
                     Sign Up
                   </button>
                 </div>
 
                 {error && <div className="auth-error">{error}</div>}
+                {success && <div className="auth-success">{success}</div>}
 
                 {page === "signup" && (
                   <form onSubmit={handleSignup}>
-                    <div className="auth-row">
-                      <div>
-                        <label className="auth-label">Full Name</label>
-                        <input className="auth-input" type="text" placeholder="John Doe" required
-                          onChange={(e) => setForm({ ...form, name: e.target.value })} />
+                    <div className="auth-field">
+                      <label className="auth-label">Full Name</label>
+                      <input className="auth-input" type="text" placeholder="John Doe" required
+                        onChange={(e) => setForm({ ...form, name: e.target.value })} />
+                    </div>
+
+                    <div className="auth-field">
+                      <label className="auth-label">Phone Number</label>
+                      <div className="phone-wrap">
+                        <select
+                          className="phone-country-select"
+                          value={countryCode}
+                          onChange={(e) => setCountryCode(e.target.value)}
+                        >
+                          {COUNTRY_CODES.map((c, i) => (
+                            <option key={i} value={c.code}>
+                              {c.flag} {c.code}
+                            </option>
+                          ))}
+                        </select>
+                        <input
+                          className="phone-number-input"
+                          type="tel"
+                          placeholder="Enter phone number"
+                          required
+                          maxLength={15}
+                          onChange={(e) => setForm({ ...form, phone: e.target.value.replace(/\D/g, "") })}
+                        />
                       </div>
-                      <div>
-                        <label className="auth-label">Phone</label>
-                        <input className="auth-input" type="tel" placeholder="+91 12345 67890"
-                          onChange={(e) => setForm({ ...form, phone: e.target.value })} />
-                      </div>
+                    </div>
+
+                    <div className="auth-field">
+                      <label className="auth-label">Date of Birth</label>
+                      <input className="auth-input" type="date" required
+                        max={new Date().toISOString().split("T")[0]}
+                        onChange={(e) => setForm({ ...form, dob: e.target.value })} />
                     </div>
 
                     <div className="auth-field">
@@ -421,9 +554,21 @@ export default function Auth() {
                         onChange={(e) => setForm({ ...form, confirmPassword: e.target.value })} />
                     </div>
 
+                    <div className="auth-terms">
+                      <input
+                        type="checkbox"
+                        id="terms-checkbox"
+                        checked={terms}
+                        onChange={(e) => setTerms(e.target.checked)}
+                      />
+                      <label htmlFor="terms-checkbox">
+                        I agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>
+                      </label>
+                    </div>
+
                     <div className="auth-divider" />
                     <button type="submit" className="auth-submit" disabled={loading}>
-                      <span>{loading ? "Creating Account..." : "Create Account"}</span>
+                      <span>{loading ? "Registering..." : "Create Account"}</span>
                     </button>
                     <p className="auth-footer-link">
                       Already have an account?{" "}

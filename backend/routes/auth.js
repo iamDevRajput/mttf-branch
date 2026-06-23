@@ -16,20 +16,74 @@ const generateToken = (userId) => {
 router.post('/signup', async (req, res) => {
   try {
     console.log('Request body:', req.body);
-    const { name, phone, email, password, membershipType, institutionSize } = req.body;
+    const { name, phone, email, password, dob, membershipType, institutionSize } = req.body;
 
-    // Validation
-    if (!name || !email || !password || !membershipType) {
+    // 1. name: min 3 characters
+    if (!name || name.trim().length < 3) {
       return res.status(400).json({
         success: false,
-        message: 'Please provide all required fields',
+        message: 'Full name must be at least 3 characters.',
       });
     }
 
-    if (password.length < 6) {
+    // 2. phone: required + valid national number (digits after country code)
+    const phoneStr = phone ? phone.trim() : '';
+    // Extract country code prefix (+91, +1, etc.) and local number
+    const phoneMatch = phoneStr.match(/^(\+\d{1,4})(\d{4,15})$/);
+    if (!phoneStr || !phoneMatch) {
       return res.status(400).json({
         success: false,
-        message: 'Password must be at least 6 characters long',
+        message: 'Enter a valid phone number with country code.',
+      });
+    }
+    const fullPhone = phoneStr; // stored as-is e.g. +91XXXXXXXXXX
+
+    // 3. phone uniqueness check (on full number including country code)
+    const existingPhone = await User.findOne({ phone: fullPhone });
+    if (existingPhone) {
+      return res.status(409).json({
+        success: false,
+        message: 'This phone number is already registered.',
+      });
+    }
+
+    // 4. email uniqueness check
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(409).json({
+        success: false,
+        message: 'This email is already registered.',
+      });
+    }
+
+    // 5. dob: required + must be a valid past date
+    if (!dob) {
+      return res.status(400).json({
+        success: false,
+        message: 'Enter a valid date of birth.',
+      });
+    }
+    const dobDate = new Date(dob);
+    if (isNaN(dobDate.getTime()) || dobDate >= new Date()) {
+      return res.status(400).json({
+        success: false,
+        message: 'Enter a valid date of birth.',
+      });
+    }
+
+    // 6. password: min 6 characters
+    if (!password || password.length < 6) {
+      return res.status(400).json({
+        success: false,
+        message: 'Password must be at least 6 characters.',
+      });
+    }
+
+    // 7. membershipType validation
+    if (!membershipType) {
+      return res.status(400).json({
+        success: false,
+        message: 'Please select a membership type.',
       });
     }
 
@@ -40,21 +94,13 @@ router.post('/signup', async (req, res) => {
       });
     }
 
-    // Check if user already exists
-    const existingUser = await User.findOne({ email });
-    if (existingUser) {
-      return res.status(400).json({
-        success: false,
-        message: 'User with this email already exists',
-      });
-    }
-
-    // Create new user
+    // Create new user — bcrypt hash kept exactly as is (salt 12)
     const hashedPassword = await bcrypt.hash(password, 12);
     console.log('Creating user with hashed password');
     const user = new User({
-      name,
-      phone,
+      name: name.trim(),
+      phone: fullPhone,
+      dob: dobDate,
       email,
       password: hashedPassword,
       membershipType,
@@ -88,6 +134,7 @@ router.post('/signup', async (req, res) => {
     });
   }
 });
+
 
 // @route   POST /api/auth/login
 // @desc    Login user

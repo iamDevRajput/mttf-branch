@@ -10,8 +10,13 @@ const userSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
-    trim: true,
-    default: ''
+    required: [true, 'Phone number is required'],
+    unique: true,
+    trim: true
+  },
+  dob: {
+    type: Date,
+    required: [true, 'Date of birth is required']
   },
   email: {
     type: String,
