@@ -72,7 +72,7 @@ export default function AdminLogin() {
         }
         .adm-left-logo img {
           height: 48px; width: auto; object-fit: contain;
-          filter: brightness(0) invert(1);
+          border-radius: 6px;
         }
         .adm-left-logo-text {
           font-size: 11px; font-weight: 700; letter-spacing: 2.5px;

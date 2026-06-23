@@ -143,7 +143,7 @@ export default function AdminDashboard() {
         }
         .adm-sidebar-logo img {
           height: 36px; width: auto; object-fit: contain;
-          filter: brightness(0) invert(1);
+          border-radius: 4px;
         }
         .adm-sidebar-logo-txt {
           font-size: 9px; font-weight: 700; letter-spacing: 2px;
