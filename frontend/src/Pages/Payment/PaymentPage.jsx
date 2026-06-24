@@ -4,6 +4,38 @@ import MTTF_LOGO from "../../assets/MTTF_REC.jfif";
 
 const API = "http://localhost:8000/api";
 
+let cashfreeSdkPromise;
+
+const loadCashfreeSdk = () => {
+  if (window.Cashfree) {
+    return Promise.resolve(window.Cashfree);
+  }
+
+  if (!cashfreeSdkPromise) {
+    cashfreeSdkPromise = new Promise((resolve, reject) => {
+      const existingScript = document.getElementById("cashfree-sdk-v3");
+      if (existingScript) {
+        existingScript.addEventListener("load", () => resolve(window.Cashfree));
+        existingScript.addEventListener("error", () => reject(new Error("Cashfree SDK failed to load.")));
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.id = "cashfree-sdk-v3";
+      script.src = "https://sdk.cashfree.com/js/v3/cashfree.js";
+      script.async = true;
+      script.onload = () => {
+        if (window.Cashfree) resolve(window.Cashfree);
+        else reject(new Error("Cashfree SDK is unavailable."));
+      };
+      script.onerror = () => reject(new Error("Cashfree SDK failed to load."));
+      document.body.appendChild(script);
+    });
+  }
+
+  return cashfreeSdkPromise;
+};
+
 const BENEFITS = {
   individual: [
     "Access to all MTTF research publications",
@@ -28,33 +60,99 @@ const BENEFITS = {
 
 export default function PaymentPage() {
   const navigate = useNavigate();
-  const [prices, setPrices] = useState({ individual: 2000, institutional: 5000 });
+  const [prices, setPrices] = useState({});
   const [loadingPrice, setLoadingPrice] = useState(true);
   const [paying, setPaying] = useState(false);
   const [paid, setPaid] = useState(false);
   const [error, setError] = useState("");
 
+  const token = localStorage.getItem("token");
   const userRaw = localStorage.getItem("user");
   const user = userRaw ? JSON.parse(userRaw) : null;
   const membershipType = user?.membershipType || "individual";
-  const price = prices[membershipType] || 2000;
+  const price = prices[membershipType];
 
   useEffect(() => {
-    if (!user) { navigate("/auth"); return; }
-    if (user.isMembershipPaid) setPaid(true);
-    fetch(`${API}/admin/prices`)
-      .then(r => r.json())
-      .then(d => { if (d.success) setPrices(d.prices); })
-      .catch(() => {})
-      .finally(() => setLoadingPrice(false));
+    if (!user || !token) { navigate("/auth"); return; }
+
+    const headers = { Authorization: `Bearer ${token}` };
+    const loadPaymentContext = async () => {
+      setLoadingPrice(true);
+      setError("");
+      try {
+        const [meRes, configRes] = await Promise.all([
+          fetch(`${API}/auth/me`, { headers }),
+          fetch(`${API}/payments/config`, { headers }),
+        ]);
+
+        if (meRes.status === 401 || configRes.status === 401) {
+          localStorage.removeItem("token");
+          localStorage.removeItem("user");
+          navigate("/auth");
+          return;
+        }
+
+        const meData = await meRes.json();
+        const configData = await configRes.json();
+
+        if (meData.success) {
+          localStorage.setItem("user", JSON.stringify(meData.user));
+          setPaid(Boolean(meData.user.isMembershipPaid));
+        }
+        if (configData.success) {
+          setPrices(configData.prices || {});
+        } else {
+          setError(configData.message || "Unable to load membership price.");
+        }
+      } catch {
+        setError("Unable to load secure payment configuration.");
+      } finally {
+        setLoadingPrice(false);
+      }
+    };
+
+    loadPaymentContext();
   }, []);
 
   const handlePay = async () => {
     setError("");
     setPaying(true);
-    await new Promise(r => setTimeout(r, 1800));
-    setPaying(false);
-    setError("Payment gateway integration coming soon. Your registration is saved.");
+    try {
+      const res = await fetch(`${API}/payments/create-order`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({}),
+      });
+
+      const data = await res.json();
+      if (res.status === 401) {
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        navigate("/auth");
+        return;
+      }
+      if (!res.ok || !data.success) {
+        if (res.status === 409) setPaid(true);
+        throw new Error(data.message || "Unable to create secure payment order.");
+      }
+
+      const Cashfree = await loadCashfreeSdk();
+      const cashfree = Cashfree({
+        mode: data.order.cashfreeEnvironment === "production" ? "production" : "sandbox",
+      });
+
+      await cashfree.checkout({
+        paymentSessionId: data.order.paymentSessionId,
+        redirectTarget: "_self",
+      });
+    } catch (err) {
+      setError(err.message || "Payment could not be started. Please try again.");
+    } finally {
+      setPaying(false);
+    }
   };
 
   const fmt = (n) => `₹${Number(n).toLocaleString("en-IN")}`;
@@ -460,11 +558,13 @@ export default function PaymentPage() {
                       <div className="loading-price">
                         <span className="loading-dot" /><span className="loading-dot" style={{ animationDelay: "0.2s" }} /><span className="loading-dot" style={{ animationDelay: "0.4s" }} />
                       </div>
+                    ) : !price ? (
+                      <div className="price-period">Price unavailable</div>
                     ) : (
                       <>
                         <div className="price-display">
                           <span className="price-currency">₹</span>
-                          <span className="price-amount">{price.toLocaleString("en-IN")}</span>
+                          <span className="price-amount">{Number(price).toLocaleString("en-IN")}</span>
                         </div>
                         <div className="price-period">One-time · Lifetime membership</div>
                       </>
@@ -486,10 +586,10 @@ export default function PaymentPage() {
                     </div>
                     <div className="summary-row total">
                       <span className="label">Total Payable</span>
-                      <span className="val">{loadingPrice ? "—" : fmt(price)}</span>
+                      <span className="val">{loadingPrice ? "—" : price ? fmt(price) : "Unavailable"}</span>
                     </div>
 
-                    <button className="pay-btn" onClick={handlePay} disabled={paying || loadingPrice}>
+                    <button className="pay-btn" onClick={handlePay} disabled={paying || loadingPrice || !price}>
                       {paying ? (
                         <><span className="pay-spinner" /> Processing…</>
                       ) : (
@@ -498,7 +598,7 @@ export default function PaymentPage() {
                             <rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="1.8"/>
                             <path d="M2 10h20" stroke="currentColor" strokeWidth="1.8"/>
                           </svg>
-                          Pay {loadingPrice ? "" : fmt(price)} Securely
+                          Pay {loadingPrice || !price ? "" : fmt(price)} Securely
                         </>
                       )}
                     </button>
@@ -517,7 +617,7 @@ export default function PaymentPage() {
                           <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5"/>
                           <path d="M12 8v4l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
                         </svg>
-                        Instant Activation
+                        Verified Activation
                       </span>
                       <span className="badge">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none">

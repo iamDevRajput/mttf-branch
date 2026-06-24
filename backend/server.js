@@ -1,19 +1,52 @@
 const express = require("express");
 const cors = require("cors");
+const helmet = require("helmet");
 require("dotenv").config();
 const connectDB = require("./config/db");
+const sanitizeInput = require("./middleware/sanitizeInput");
+const { apiLimiter, authLimiter } = require("./middleware/rateLimiters");
+const { notFound, errorHandler } = require("./middleware/errorHandler");
 
 // Connect to MongoDB
 connectDB();
 
 const app = express();
 
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "http://127.0.0.1:5173",
+  "http://127.0.0.1:5174",
+].filter(Boolean);
+
+app.set("trust proxy", 1);
+app.use(helmet());
 app.use(cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"], // Frontend URL (both Vite ports)
-    credentials: true,
-  }));
-  app.use(express.json());
-  app.use(express.urlencoded({ extended: true }));
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error("Not allowed by CORS."));
+  },
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: [
+    "Content-Type",
+    "Authorization",
+    "x-webhook-signature",
+    "x-webhook-timestamp",
+  ],
+}));
+app.use(apiLimiter);
+app.use(express.json({
+  limit: "1mb",
+  verify: (req, res, buffer) => {
+    req.rawBody = Buffer.from(buffer);
+  },
+}));
+app.use(express.urlencoded({ extended: true, limit: "1mb" }));
+app.use(sanitizeInput);
 
   // Test Route
 app.get("/", (req, res) => {
@@ -26,8 +59,13 @@ app.get("/", (req, res) => {
 
 const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin');
-app.use('/api/auth', authRoutes);
+const paymentRoutes = require('./routes/payments');
+app.use('/api/auth', authLimiter, authRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/payments', paymentRoutes);
+
+app.use(notFound);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import MainPage from "./Pages/Mainpage";
 import Auth from "./Pages/Auth/Auth";
 import PaymentPage from "./Pages/Payment/PaymentPage";
+import PaymentResultPage from "./Pages/Payment/PaymentResultPage";
 import AdminLogin from "./Pages/Admin/AdminLogin";
 import AdminDashboard from "./Pages/Admin/AdminDashboard";
 
@@ -70,6 +71,9 @@ function App() {
         {/*===================== AUTH ======================*/}
           <Route path="/auth" element={<Auth />} />
           <Route path="/payment" element={<PaymentPage />} />
+          <Route path="/payment/status" element={<PaymentResultPage />} />
+          <Route path="/payment/success" element={<PaymentResultPage fallbackStatus="success" />} />
+          <Route path="/payment/failure" element={<PaymentResultPage fallbackStatus="failure" />} />
 
         {/*===================== ADMIN (Hidden) ======================*/}
           <Route path="/mttf-admin-2025" element={<AdminLogin />} />

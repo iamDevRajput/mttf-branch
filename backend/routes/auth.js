@@ -124,6 +124,8 @@ router.post('/signup', async (req, res) => {
         membershipType: user.membershipType,
         institutionSize: user.institutionSize,
         isMembershipPaid: user.isMembershipPaid,
+        membershipId: user.membershipId,
+        membershipActivatedAt: user.membershipActivatedAt,
       },
     });
   } catch (error) {
@@ -182,6 +184,8 @@ router.post('/login', async (req, res) => {
         membershipType: user.membershipType,
         institutionSize: user.institutionSize,
         isMembershipPaid: user.isMembershipPaid,
+        membershipId: user.membershipId,
+        membershipActivatedAt: user.membershipActivatedAt,
       },
     });
   } catch (error) {
@@ -229,6 +233,8 @@ router.get('/me', async (req, res) => {
         isEmailVerified: user.isEmailVerified,
         isMembershipPaid: user.isMembershipPaid,
         membershipPaidAt: user.membershipPaidAt,
+        membershipId: user.membershipId,
+        membershipActivatedAt: user.membershipActivatedAt,
         createdAt: user.createdAt,
       },
     });

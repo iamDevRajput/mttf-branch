@@ -64,6 +64,15 @@ const userSchema = new mongoose.Schema({
   },
   membershipPaidAt: {
     type: Date
+  },
+  membershipActivatedAt: {
+    type: Date
+  },
+  membershipId: {
+    type: String,
+    unique: true,
+    sparse: true,
+    trim: true
   }
 }, {
   timestamps: true

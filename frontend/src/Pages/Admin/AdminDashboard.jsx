@@ -35,11 +35,15 @@ export default function AdminDashboard() {
   const [prices, setPrices] = useState({ individual: 2000, institutional: 5000 });
   const [priceForm, setPriceForm] = useState({ individual: 2000, institutional: 5000 });
   const [users, setUsers] = useState([]);
+  const [payments, setPayments] = useState([]);
   const [loadingStats, setLoadingStats] = useState(true);
   const [loadingUsers, setLoadingUsers] = useState(false);
+  const [loadingPayments, setLoadingPayments] = useState(false);
   const [savingPrice, setSavingPrice] = useState(false);
   const [priceMsg, setPriceMsg] = useState({ text: "", ok: true });
   const [search, setSearch] = useState("");
+  const [paymentSearch, setPaymentSearch] = useState("");
+  const [paymentStatus, setPaymentStatus] = useState("");
 
   const token = localStorage.getItem("adminToken");
 
@@ -77,6 +81,41 @@ export default function AdminDashboard() {
 
   useEffect(() => { if (tab === "users") loadUsers(); }, [tab]);
 
+  const loadPayments = useCallback(async () => {
+    setLoadingPayments(true);
+    try {
+      const params = new URLSearchParams();
+      if (paymentSearch) params.set("search", paymentSearch);
+      if (paymentStatus) params.set("status", paymentStatus);
+      const res = await fetch(`${API}/payments?${params.toString()}`, { headers });
+      if (res.status === 401) { logout(); return; }
+      const data = await res.json();
+      if (data.success) setPayments(data.payments);
+    } catch {}
+    finally { setLoadingPayments(false); }
+  }, [paymentSearch, paymentStatus]);
+
+  useEffect(() => { if (tab === "payments") loadPayments(); }, [tab, paymentStatus]);
+
+  const exportPayments = async () => {
+    try {
+      const params = new URLSearchParams();
+      if (paymentSearch) params.set("search", paymentSearch);
+      if (paymentStatus) params.set("status", paymentStatus);
+      const res = await fetch(`${API}/payments/export.csv?${params.toString()}`, { headers });
+      if (res.status === 401) { logout(); return; }
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `payments-${Date.now()}.csv`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    } catch {}
+  };
+
   const savePrice = async () => {
     setSavingPrice(true); setPriceMsg({ text: "", ok: true });
     try {
@@ -104,12 +143,32 @@ export default function AdminDashboard() {
   );
 
   const fmt = (n) => `₹${Number(n).toLocaleString("en-IN")}`;
+  const safeText = (value) => {
+    if (value == null || value === "") return "—";
+    if (typeof value === "object") return JSON.stringify(value);
+    return String(value);
+  };
 
   const TABS = [
     { key: "overview", label: "Overview", icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8"/></svg> },
     { key: "pricing", label: "Pricing", icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></svg> },
     { key: "users", label: "Members", icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="1.8"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/><path d="M16 3.13a4 4 0 010 7.75M21 21v-2a4 4 0 00-3-3.87" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></svg> },
+    { key: "payments", label: "Payments", icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="1.8"/><path d="M2 10h20M7 15h4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></svg> },
   ];
+
+  const getPageTitle = () => {
+    if (tab === "overview") return "Dashboard Overview";
+    if (tab === "pricing") return "Membership Pricing";
+    if (tab === "payments") return "Payment Registry";
+    return "Member Registry";
+  };
+
+  const getPageSub = () => {
+    if (tab === "overview") return "Live stats and membership summary";
+    if (tab === "pricing") return "Set fees for Individual & Institutional members";
+    if (tab === "payments") return `${payments.length} payment records`;
+    return `${users.length} registered members`;
+  };
 
   return (
     <>
@@ -383,6 +442,10 @@ export default function AdminDashboard() {
         }
         .adm-status-pill.paid { background: rgba(22,163,74,0.08); color: #16a34a; border: 1px solid rgba(22,163,74,0.25); }
         .adm-status-pill.pending { background: rgba(245,158,11,0.08); color: #d97706; border: 1px solid rgba(245,158,11,0.25); }
+        .adm-status-pill.success { background: rgba(22,163,74,0.08); color: #16a34a; border: 1px solid rgba(22,163,74,0.25); }
+        .adm-status-pill.failed { background: rgba(220,38,38,0.08); color: #dc2626; border: 1px solid rgba(220,38,38,0.25); }
+        .adm-status-pill.cancelled { background: rgba(100,116,139,0.08); color: #64748b; border: 1px solid rgba(100,116,139,0.25); }
+        .adm-status-pill.refunded { background: rgba(124,58,237,0.08); color: #7c3aed; border: 1px solid rgba(124,58,237,0.25); }
         .adm-status-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
 
         .adm-type-badge {
@@ -403,6 +466,39 @@ export default function AdminDashboard() {
           width: 18px; height: 18px;
           border: 2px solid rgba(37,99,235,0.15); border-top-color: #2563eb;
           border-radius: 50%; animation: spin 0.7s linear infinite;
+        }
+
+        .adm-filter-row {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+        .adm-select {
+          padding: 10px 14px;
+          background: #f8faff;
+          border: 1.5px solid rgba(37,99,235,0.12);
+          border-radius: 10px;
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          font-size: 12px;
+          color: #0b1329;
+          outline: none;
+        }
+        .adm-export-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 10px 14px;
+          background: #0b1329;
+          border: none;
+          border-radius: 999px;
+          color: #fff;
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          cursor: pointer;
         }
 
         @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
@@ -454,10 +550,10 @@ export default function AdminDashboard() {
           <div className="adm-topbar">
             <div className="adm-topbar-left">
               <div className="adm-page-title">
-                {tab === "overview" ? "Dashboard Overview" : tab === "pricing" ? "Membership Pricing" : "Member Registry"}
+                {getPageTitle()}
               </div>
               <div className="adm-page-sub">
-                {tab === "overview" ? "Live stats and membership summary" : tab === "pricing" ? "Set fees for Individual & Institutional members" : `${users.length} registered members`}
+                {getPageSub()}
               </div>
             </div>
             <div className="adm-topbar-right">
@@ -615,6 +711,90 @@ export default function AdminDashboard() {
                           </td>
                           <td style={{ fontSize: 12, color: "#94a3b8" }}>
                             {new Date(u.createdAt).toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" })}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                )}
+              </div>
+            )}
+
+            {/* ── PAYMENTS ── */}
+            {tab === "payments" && (
+              <div className="adm-section-wrap">
+                <div className="adm-section-head">
+                  <div>
+                    <div className="adm-section-title">Payment Registry</div>
+                    <div className="adm-section-sub">Search, filter, failed/refunded review, and CSV export</div>
+                  </div>
+                  <div className="adm-filter-row">
+                    <input
+                      className="adm-search"
+                      placeholder="Search order, name, email…"
+                      value={paymentSearch}
+                      onChange={e => setPaymentSearch(e.target.value)}
+                      onKeyDown={e => { if (e.key === "Enter") loadPayments(); }}
+                    />
+                    <select className="adm-select" value={paymentStatus} onChange={e => setPaymentStatus(e.target.value)}>
+                      <option value="">All Statuses</option>
+                      <option value="PENDING">Pending</option>
+                      <option value="SUCCESS">Success</option>
+                      <option value="FAILED">Failed</option>
+                      <option value="REFUNDED">Refunded</option>
+                      <option value="CANCELLED">Cancelled</option>
+                    </select>
+                    <button className="adm-refresh-btn" onClick={loadPayments}>Search</button>
+                    <button className="adm-export-btn" onClick={exportPayments}>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 3v12M7 10l5 5 5-5M5 21h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      Export CSV
+                    </button>
+                  </div>
+                </div>
+
+                {loadingPayments ? (
+                  <div className="adm-loading"><span className="adm-loading-spin" /> Loading payments…</div>
+                ) : payments.length === 0 ? (
+                  <div className="adm-empty">No payments found.</div>
+                ) : (
+                  <table className="adm-table">
+                    <thead>
+                      <tr>
+                        <th>Order</th>
+                        <th>Member</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Webhook</th>
+                        <th>Method</th>
+                        <th>Created</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {payments.map((p) => (
+                        <tr key={p._id}>
+                          <td style={{ fontFamily: "monospace", fontSize: 11, color: "#475569" }}>{p.orderId}</td>
+                          <td>
+                            <div style={{ fontWeight: 700, color: "#0b1329" }}>{p.userName}</div>
+                            <div style={{ fontSize: 11, color: "#94a3b8" }}>{p.userEmail}</div>
+                          </td>
+                          <td style={{ fontWeight: 700, color: "#0b1329" }}>{fmt(p.amount)}</td>
+                          <td>
+                            <span className={`adm-status-pill ${String(p.paymentStatus || "pending").toLowerCase()}`}>
+                              <span className="adm-status-dot" />
+                              {p.paymentStatus}
+                            </span>
+                          </td>
+                          <td>
+                            <span className={`adm-status-pill ${p.webhookVerified ? "success" : "pending"}`}>
+                              <span className="adm-status-dot" />
+                              {p.webhookVerified ? "Verified" : "Waiting"}
+                            </span>
+                          </td>
+                          <td style={{ fontSize: 12, color: "#475569" }}>{safeText(p.paymentMethod)}</td>
+                          <td style={{ fontSize: 12, color: "#94a3b8" }}>
+                            {new Date(p.createdAt).toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" })}
                           </td>
                         </tr>
                       ))}
