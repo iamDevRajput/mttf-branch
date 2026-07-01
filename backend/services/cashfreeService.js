@@ -57,6 +57,14 @@ const cashfreeRequest = async (path, options = {}) => {
 };
 
 const createOrder = async ({ orderId, amount, currency, user, returnUrl, notifyUrl }) => {
+  if (process.env.CASHFREE_MOCK_MODE === "true") {
+    return {
+      order_id: orderId,
+      order_status: "ACTIVE",
+      order_amount: amount,
+      payment_session_id: "mock_session_" + orderId
+    };
+  }
   const body = {
     order_id: orderId,
     order_amount: Number(amount),
@@ -80,13 +88,23 @@ const createOrder = async ({ orderId, amount, currency, user, returnUrl, notifyU
   });
 };
 
-const fetchOrder = (orderId) => cashfreeRequest(`/orders/${encodeURIComponent(orderId)}`, {
-  method: "GET",
-});
+const fetchOrder = (orderId) => {
+  if (process.env.CASHFREE_MOCK_MODE === "true") {
+    return { order_id: orderId, order_status: "PAID", order_currency: "INR" };
+  }
+  return cashfreeRequest(`/orders/${encodeURIComponent(orderId)}`, {
+    method: "GET",
+  });
+};
 
-const fetchOrderPayments = (orderId) => cashfreeRequest(`/orders/${encodeURIComponent(orderId)}/payments`, {
-  method: "GET",
-});
+const fetchOrderPayments = (orderId) => {
+  if (process.env.CASHFREE_MOCK_MODE === "true") {
+    return [{ payment_status: "SUCCESS", payment_group: "netbanking", payment_method: "netbanking" }];
+  }
+  return cashfreeRequest(`/orders/${encodeURIComponent(orderId)}/payments`, {
+    method: "GET",
+  });
+};
 
 const verifyWebhookSignature = ({ rawBody, signature, timestamp }) => {
   const { secretKey } = ensureConfigured();

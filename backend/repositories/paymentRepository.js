@@ -21,8 +21,8 @@ const appendAuditLog = (orderId, log) => Payment.updateOne(
   { $push: { auditLogs: { ...log, createdAt: new Date() } } }
 );
 
-const updatePayment = (orderId, update) => Payment.findOneAndUpdate(
-  { orderId },
+const updatePayment = (orderId, update, userId = null) => Payment.findOneAndUpdate(
+  userId ? { orderId, userId } : { orderId },
   update,
   { new: true }
 );

@@ -260,6 +260,26 @@ const verifyPaymentWithGateway = async ({ orderId, user, req }) => {
   };
 
   const updatedPayment = await paymentRepository.updatePayment(orderId, update);
+
+  if (nextStatus === "SUCCESS" && !payment.webhookVerified) {
+    try {
+      await membershipService.activateMembershipForPayment({
+        payment: updatedPayment,
+        ...context,
+      });
+      const freshUser = await require("../models/User").findById(user._id);
+      return toClientPayment(updatedPayment, freshUser);
+    } catch (activationError) {
+      await paymentRepository.appendAuditLog(orderId, {
+        event: "MEMBERSHIP_ACTIVATION_ERROR",
+        status: "SUCCESS",
+        message: "Payment verified but membership activation failed during client verify.",
+        ...context,
+        metadata: { error: activationError.message },
+      });
+    }
+  }
+
   return toClientPayment(updatedPayment, user);
 };
 

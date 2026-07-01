@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import MTTF_LOGO from "../../assets/MTTF_REC.jfif";
 
-const API = "http://localhost:8000/api";
+const API = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 
 export default function PaymentResultPage({ fallbackStatus = "status" }) {
   const navigate = useNavigate();

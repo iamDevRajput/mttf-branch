@@ -24,14 +24,19 @@ const status = asyncHandler(async (req, res) => {
   res.json({ success: true, payment });
 });
 
-const verify = asyncHandler(async (req, res) => {
-  const payment = await paymentService.verifyPaymentWithGateway({
-    orderId: req.body.orderId,
-    user: req.user,
-    req,
-  });
-  res.json({ success: true, payment });
-});
+const verify = async (req, res) => {
+  try {
+    const payment = await paymentService.verifyPaymentWithGateway({
+      orderId: req.body.orderId,
+      user: req.user,
+      req,
+    });
+    res.json({ success: true, payment });
+  } catch (error) {
+    console.error("VERIFY_ERROR_STACK:", error.stack);
+    res.status(500).json({ success: false, message: error.message, stack: error.stack });
+  }
+};
 
 const history = asyncHandler(async (req, res) => {
   const payments = await paymentService.getPaymentHistory({ user: req.user });

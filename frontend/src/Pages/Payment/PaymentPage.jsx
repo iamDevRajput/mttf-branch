@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import MTTF_LOGO from "../../assets/MTTF_REC.jfif";
 
-const API = "http://localhost:8000/api";
+const API = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 
 let cashfreeSdkPromise;
 
@@ -68,7 +68,8 @@ export default function PaymentPage() {
 
   const token = localStorage.getItem("token");
   const userRaw = localStorage.getItem("user");
-  const user = userRaw ? JSON.parse(userRaw) : null;
+  let user = null;
+  try { user = userRaw ? JSON.parse(userRaw) : null; } catch { user = null; }
   const membershipType = user?.membershipType || "individual";
   const price = prices[membershipType];
 
@@ -137,6 +138,13 @@ export default function PaymentPage() {
       if (!res.ok || !data.success) {
         if (res.status === 409) setPaid(true);
         throw new Error(data.message || "Unable to create secure payment order.");
+      }
+
+      if (data.order.paymentSessionId.startsWith("mock_session_")) {
+        setTimeout(() => {
+          window.location.href = `/payment/status?order_id=${data.order.orderId}`;
+        }, 1000);
+        return;
       }
 
       const Cashfree = await loadCashfreeSdk();
