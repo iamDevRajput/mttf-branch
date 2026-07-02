@@ -14,8 +14,8 @@ const donationCreateLimiter = rateLimit({
 });
 
 router.post("/create-order", donationCreateLimiter, asyncHandler(async (req, res) => {
-  const { donorName, donorEmail, donorPhone, amount, message } = req.body;
-  const order = await donationService.createDonationOrder({ donorName, donorEmail, donorPhone, amount, message });
+  const { donorName, donorEmail, donorPhone, amount, message, donationCategory } = req.body;
+  const order = await donationService.createDonationOrder({ donorName, donorEmail, donorPhone, amount, message, donationCategory });
   res.status(201).json({ success: true, order });
 }));
 

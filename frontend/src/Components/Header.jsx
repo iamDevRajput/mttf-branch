@@ -14,6 +14,7 @@ const navItems = [
   { name: "Our Programs", href: "/programs" },
   { name: "Research & Ideas", href: "/research" },
   { name: "About the Foundation", href: "/about" },
+  { name: "Donate", href: "/donate" },
   { name: "Contact", href: "/contact" },
 ];
 

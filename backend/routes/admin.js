@@ -2,6 +2,7 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const Payment = require('../models/Payment');
+const Donation = require('../models/Donation');
 const Admin = require('../models/Admin');
 const membershipConfigRepository = require('../repositories/membershipConfigRepository');
 const { requireAdmin } = require('../middleware/adminMiddleware');
@@ -126,6 +127,14 @@ router.get('/stats', requireAdmin, async (req, res) => {
     const pendingPayments = await Payment.countDocuments({ paymentStatus: 'PENDING' });
     const revenue = revenueAgg[0]?.revenue || 0;
 
+    // donation stats
+    const donationTotalCount = await Donation.countDocuments();
+    const donationSuccessCount = await Donation.countDocuments({ paymentStatus: 'SUCCESS' });
+    const donationAmountAgg = await Donation.aggregate([
+      { $match: { paymentStatus: 'SUCCESS', webhookVerified: true } },
+      { $group: { _id: null, total: { $sum: '$amount' } } },
+    ]);
+
     res.json({
       success: true,
       stats: {
@@ -137,6 +146,9 @@ router.get('/stats', requireAdmin, async (req, res) => {
         failedPayments,
         refundedPayments,
         pendingPayments,
+        donationTotalCount,
+        donationSuccessCount,
+        donationTotalAmount: donationAmountAgg[0]?.total || 0,
       }
     });
   } catch (err) {
@@ -213,6 +225,121 @@ router.get('/payments/export.csv', requireAdmin, async (req, res) => {
     res.header('Content-Type', 'text/csv');
     res.attachment(`payments-${Date.now()}.csv`);
     res.send([header.map(csvValue).join(','), ...rows].join('\n'));
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Server error.' });
+  }
+});
+
+// ─── Donation Query Helper ─────────────────────────────────────────────────
+const buildDonationQuery = ({ status, search }) => {
+  const query = {};
+  if (status && ['PENDING', 'SUCCESS', 'FAILED', 'CANCELLED'].includes(String(status).toUpperCase())) {
+    query.paymentStatus = String(status).toUpperCase();
+  }
+  if (search) {
+    const safeSearch = new RegExp(escapeRegex(String(search)), 'i');
+    query.$or = [
+      { donationId: safeSearch },
+      { donorName: safeSearch },
+      { donorEmail: safeSearch },
+      { cfPaymentId: safeSearch },
+    ];
+  }
+  return query;
+};
+
+// ─── GET /api/admin/donations ──────────────────────────────────────────────
+router.get('/donations', requireAdmin, async (req, res) => {
+  try {
+    const { status, search, limit = 100 } = req.query;
+    const donations = await Donation.find(buildDonationQuery({ status, search }))
+      .select('-gatewayResponse -paymentSessionId -processedWebhookKeys')
+      .sort({ createdAt: -1 })
+      .limit(Math.min(Number(limit) || 100, 500));
+
+    res.json({ success: true, donations });
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Server error.' });
+  }
+});
+
+// ─── GET /api/admin/donations/export.csv ──────────────────────────────────
+router.get('/donations/export.csv', requireAdmin, async (req, res) => {
+  try {
+    const { status, search } = req.query;
+    const donations = await Donation.find(buildDonationQuery({ status, search }))
+      .select('-gatewayResponse -paymentSessionId -processedWebhookKeys')
+      .sort({ createdAt: -1 })
+      .limit(5000);
+
+    const header = [
+      'Donation ID',
+      'Donor Name',
+      'Email',
+      'Phone',
+      'Amount',
+      'Currency',
+      'Category',
+      'Status',
+      'CF Payment ID',
+      'Webhook Verified',
+      'Receipt Sent',
+      'Created At',
+    ];
+
+    const rows = donations.map((d) => [
+      d.donationId,
+      d.donorName,
+      d.donorEmail,
+      d.donorPhone,
+      d.amount,
+      d.currency,
+      d.donationCategory,
+      d.paymentStatus,
+      d.cfPaymentId,
+      d.webhookVerified,
+      d.receiptSent,
+      d.createdAt?.toISOString(),
+    ].map(csvValue).join(','));
+
+    res.header('Content-Type', 'text/csv');
+    res.attachment(`donations-${Date.now()}.csv`);
+    res.send([header.map(csvValue).join(','), ...rows].join('\n'));
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Server error.' });
+  }
+});
+
+// ─── GET /api/admin/donations/stats ────────────────────────────────────────
+router.get('/donations/stats', requireAdmin, async (req, res) => {
+  try {
+    const totalDonations = await Donation.countDocuments();
+    const successfulDonations = await Donation.countDocuments({ paymentStatus: 'SUCCESS' });
+    const pendingDonations = await Donation.countDocuments({ paymentStatus: 'PENDING' });
+    const failedDonations = await Donation.countDocuments({ paymentStatus: 'FAILED' });
+
+    const amountAgg = await Donation.aggregate([
+      { $match: { paymentStatus: 'SUCCESS', webhookVerified: true } },
+      { $group: { _id: null, totalAmount: { $sum: '$amount' } } },
+    ]);
+
+    const categoryAgg = await Donation.aggregate([
+      { $match: { paymentStatus: 'SUCCESS' } },
+      { $group: { _id: '$donationCategory', count: { $sum: 1 }, amount: { $sum: '$amount' } } },
+      { $sort: { amount: -1 } },
+    ]);
+
+    res.json({
+      success: true,
+      donationStats: {
+        totalDonations,
+        successfulDonations,
+        pendingDonations,
+        failedDonations,
+        totalDonationAmount: amountAgg[0]?.totalAmount || 0,
+        byCategory: categoryAgg.map(c => ({ category: c._id, count: c.count, amount: c.amount })),
+      },
+    });
   } catch (err) {
     res.status(500).json({ success: false, message: 'Server error.' });
   }

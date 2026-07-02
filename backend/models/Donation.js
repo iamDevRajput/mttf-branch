@@ -12,7 +12,7 @@ const donationSchema = new mongoose.Schema({
     type: String,
     enum: [
       "Student Scholarships",
-      "Artificial Intelligence & Data Science Education",
+      "AI & Data Science Education",
       "Research & Innovation",
       "Digital Learning Infrastructure",
       "Faculty Development",
@@ -20,9 +20,9 @@ const donationSchema = new mongoose.Schema({
       "Women in STEM",
       "Innovation & Entrepreneurship",
       "Library & Knowledge Resources",
-      "General Fund",
+      "General Fund (Greatest Need)",
     ],
-    default: "General Fund",
+    default: "General Fund (Greatest Need)",
   },
   paymentStatus: {
     type: String,
