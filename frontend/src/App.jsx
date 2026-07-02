@@ -8,6 +8,8 @@ import PaymentPage from "./Pages/Payment/PaymentPage";
 import PaymentResultPage from "./Pages/Payment/PaymentResultPage";
 import AdminLogin from "./Pages/Admin/AdminLogin";
 import AdminDashboard from "./Pages/Admin/AdminDashboard";
+import DonationPage from "./Pages/Donation/DonationPage";
+import DonationResultPage from "./Pages/Donation/DonationResultPage";
 
 /* ===================== CONSULTANCY SERVICES ===================== */
 import ConsultancyServices from "./Pages/OurPrograms/Consultancy_Services/ConsultancyServices";
@@ -74,6 +76,8 @@ function App() {
           <Route path="/payment/status" element={<PaymentResultPage />} />
           <Route path="/payment/success" element={<PaymentResultPage fallbackStatus="success" />} />
           <Route path="/payment/failure" element={<PaymentResultPage fallbackStatus="failure" />} />
+          <Route path="/donate" element={<DonationPage />} />
+          <Route path="/donation/status" element={<DonationResultPage />} />
 
         {/*===================== ADMIN (Hidden) ======================*/}
           <Route path="/mttf-admin-2025" element={<AdminLogin />} />
