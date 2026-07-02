@@ -16,6 +16,14 @@ const authLimiter = rateLimit({
   message: { success: false, message: "Too many auth attempts. Please try again later." },
 });
 
+const otpLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 5,
+  standardHeaders: "draft-8",
+  legacyHeaders: false,
+  message: { success: false, message: "Too many OTP requests. Please wait 15 minutes before trying again." },
+});
+
 const paymentCreateLimiter = rateLimit({
   windowMs: 10 * 60 * 1000,
   limit: 10,
@@ -37,4 +45,5 @@ module.exports = {
   authLimiter,
   paymentCreateLimiter,
   webhookLimiter,
+  otpLimiter,
 };

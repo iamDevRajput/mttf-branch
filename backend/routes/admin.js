@@ -2,8 +2,25 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const Payment = require('../models/Payment');
+const Admin = require('../models/Admin');
 const membershipConfigRepository = require('../repositories/membershipConfigRepository');
 const { requireAdmin } = require('../middleware/adminMiddleware');
+
+// Seed initial admin if none exists
+const seedAdmin = async () => {
+  try {
+    const count = await Admin.countDocuments();
+    if (count === 0 && process.env.ADMIN_EMAIL && process.env.ADMIN_PASSWORD) {
+      const bcrypt = require('bcryptjs');
+      const hashedPassword = await bcrypt.hash(process.env.ADMIN_PASSWORD, 12);
+      await Admin.create({ email: process.env.ADMIN_EMAIL, password: hashedPassword });
+      console.log('Seeded initial admin account from environment.');
+    }
+  } catch (err) {
+    console.error('Error seeding admin:', err);
+  }
+};
+seedAdmin();
 const router = express.Router();
 
 // ─── Helper: Get or init prices ──────────────────────────────────────────────
@@ -34,20 +51,24 @@ const csvValue = (value) => {
 };
 
 // ─── POST /api/admin/login ────────────────────────────────────────────────────
-router.post('/login', (req, res) => {
-  const { email, password } = req.body;
-  const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
-  const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+router.post('/login', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    if (!email || !password) {
+      return res.status(400).json({ success: false, message: 'Email and password required.' });
+    }
 
-  if (!email || !password)
-    return res.status(400).json({ success: false, message: 'Email and password required.' });
+    const admin = await Admin.findOne({ email });
+    if (!admin || !(await admin.comparePassword(password))) {
+      return res.status(401).json({ success: false, message: 'Invalid admin credentials.' });
+    }
 
-  if (email !== ADMIN_EMAIL || password !== ADMIN_PASSWORD)
-    return res.status(401).json({ success: false, message: 'Invalid admin credentials.' });
-
-  const token = jwt.sign({ isAdmin: true, email }, process.env.JWT_SECRET, { expiresIn: '8h' });
-
-  res.json({ success: true, token });
+    const token = jwt.sign({ isAdmin: true, email: admin.email, adminId: admin._id }, process.env.JWT_SECRET, { expiresIn: '8h' });
+    res.json({ success: true, token });
+  } catch (error) {
+    console.error('Admin login error:', error);
+    res.status(500).json({ success: false, message: 'Server error during admin login.' });
+  }
 });
 
 // ─── GET /api/admin/settings ──────────────────────────────────────────────────

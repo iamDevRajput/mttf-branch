@@ -185,6 +185,13 @@ router.post('/login', async (req, res) => {
       });
     }
 
+    if (!user.isEmailVerified) {
+      return res.status(403).json({
+        success: false,
+        message: 'Please verify your email to login.',
+      });
+    }
+
     // Generate token
     const token = generateToken(user._id);
 
@@ -263,7 +270,8 @@ router.get('/me', async (req, res) => {
 });
 
 // POST /api/auth/send-otp
-router.post('/send-otp', async (req, res) => {
+const { otpLimiter } = require('../middleware/rateLimiters');
+router.post('/send-otp', otpLimiter, async (req, res) => {
   try {
     const { email, type = 'signup' } = req.body;
     if (!email) return res.status(400).json({ success: false, message: 'Email is required.' });
