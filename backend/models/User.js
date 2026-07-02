@@ -10,13 +10,11 @@ const userSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
-    required: [true, 'Phone number is required'],
-    unique: true,
-    trim: true
+    trim: true,
+    sparse: true
   },
   dob: {
-    type: Date,
-    required: [true, 'Date of birth is required']
+    type: Date
   },
   email: {
     type: String,
@@ -73,7 +71,12 @@ const userSchema = new mongoose.Schema({
     unique: true,
     sparse: true,
     trim: true
-  }
+  },
+  legacyUniversity: { type: String },
+  legacyDepartment: { type: String },
+  legacyJobTitle: { type: String },
+  legacyEducationLevel: { type: String },
+  legacyRegisteredDate: { type: Date }
 }, {
   timestamps: true
 });

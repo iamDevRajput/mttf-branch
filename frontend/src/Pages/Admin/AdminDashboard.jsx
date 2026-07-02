@@ -44,6 +44,7 @@ export default function AdminDashboard() {
   const [search, setSearch] = useState("");
   const [paymentSearch, setPaymentSearch] = useState("");
   const [paymentStatus, setPaymentStatus] = useState("");
+  const [selectedUser, setSelectedUser] = useState(null);
 
   const token = localStorage.getItem("adminToken");
 
@@ -139,7 +140,8 @@ export default function AdminDashboard() {
 
   const filteredUsers = users.filter(u =>
     u.name?.toLowerCase().includes(search.toLowerCase()) ||
-    u.email?.toLowerCase().includes(search.toLowerCase())
+    u.email?.toLowerCase().includes(search.toLowerCase()) ||
+    u.membershipId?.toLowerCase().includes(search.toLowerCase())
   );
 
   const fmt = (n) => `₹${Number(n).toLocaleString("en-IN")}`;
@@ -503,6 +505,29 @@ export default function AdminDashboard() {
 
         @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Modal Styles */
+        .adm-modal-overlay {
+          position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(0,0,0,0.5); z-index: 1000;
+          display: flex; align-items: center; justify-content: center;
+          padding: 20px;
+        }
+        .adm-modal-content {
+          background: #fff; border-radius: 12px; width: 100%; max-width: 500px;
+          padding: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+          animation: fadeUp 0.2s ease-out; position: relative;
+        }
+        .adm-modal-close {
+          position: absolute; top: 16px; right: 16px; background: none; border: none;
+          font-size: 20px; cursor: pointer; color: #64748b;
+        }
+        .adm-modal-close:hover { color: #000; }
+        .adm-modal-title { font-size: 18px; font-weight: 700; color: #0b1329; margin-bottom: 16px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px;}
+        .adm-modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .adm-modal-field { display: flex; flex-direction: column; }
+        .adm-modal-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: #64748b; font-weight: 700; }
+        .adm-modal-value { font-size: 13px; color: #0b1329; font-weight: 500; margin-top: 2px;}
       `}</style>
 
       <div className="adm-dash-shell">
@@ -672,7 +697,7 @@ export default function AdminDashboard() {
                   </div>
                   <input
                     className="adm-search"
-                    placeholder="Search name or email…"
+                    placeholder="Search name, email, or member ID…"
                     value={search}
                     onChange={e => setSearch(e.target.value)}
                   />
@@ -693,6 +718,7 @@ export default function AdminDashboard() {
                         <th>Type</th>
                         <th>Payment</th>
                         <th>Joined</th>
+                        <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -711,6 +737,11 @@ export default function AdminDashboard() {
                           </td>
                           <td style={{ fontSize: 12, color: "#94a3b8" }}>
                             {new Date(u.createdAt).toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" })}
+                          </td>
+                          <td>
+                            <button className="adm-refresh-btn" style={{ padding: "4px 8px", fontSize: "11px" }} onClick={() => setSelectedUser(u)}>
+                              View Profile
+                            </button>
                           </td>
                         </tr>
                       ))}
@@ -807,6 +838,59 @@ export default function AdminDashboard() {
           </div>
         </main>
       </div>
+
+      {/* User Profile Modal */}
+      {selectedUser && (
+        <div className="adm-modal-overlay" onClick={() => setSelectedUser(null)}>
+          <div className="adm-modal-content" onClick={e => e.stopPropagation()}>
+            <button className="adm-modal-close" onClick={() => setSelectedUser(null)}>×</button>
+            <div className="adm-modal-title">{selectedUser.name}'s Profile</div>
+            
+            <div className="adm-modal-grid">
+              <div className="adm-modal-field">
+                <span className="adm-modal-label">Email</span>
+                <span className="adm-modal-value">{selectedUser.email}</span>
+              </div>
+              <div className="adm-modal-field">
+                <span className="adm-modal-label">Phone</span>
+                <span className="adm-modal-value">{selectedUser.phone || "N/A"}</span>
+              </div>
+              <div className="adm-modal-field">
+                <span className="adm-modal-label">Member ID</span>
+                <span className="adm-modal-value" style={{ color: "#2563eb" }}>{selectedUser.membershipId || "N/A"}</span>
+              </div>
+              <div className="adm-modal-field">
+                <span className="adm-modal-label">Registration Date</span>
+                <span className="adm-modal-value">
+                  {selectedUser.legacyRegisteredDate 
+                    ? new Date(selectedUser.legacyRegisteredDate).toLocaleDateString("en-IN") 
+                    : new Date(selectedUser.createdAt).toLocaleDateString("en-IN")}
+                </span>
+              </div>
+            </div>
+
+            <div className="adm-modal-title" style={{ marginTop: 24, fontSize: 14 }}>Legacy Data (2021)</div>
+            <div className="adm-modal-grid">
+              <div className="adm-modal-field">
+                <span className="adm-modal-label">University/Institution</span>
+                <span className="adm-modal-value">{selectedUser.legacyUniversity || "N/A"}</span>
+              </div>
+              <div className="adm-modal-field">
+                <span className="adm-modal-label">Department</span>
+                <span className="adm-modal-value">{selectedUser.legacyDepartment || "N/A"}</span>
+              </div>
+              <div className="adm-modal-field">
+                <span className="adm-modal-label">Job Title</span>
+                <span className="adm-modal-value">{selectedUser.legacyJobTitle || "N/A"}</span>
+              </div>
+              <div className="adm-modal-field">
+                <span className="adm-modal-label">Education Level</span>
+                <span className="adm-modal-value">{selectedUser.legacyEducationLevel || "N/A"}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
